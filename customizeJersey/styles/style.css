@@ -1,0 +1,181 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+/* 重置所有標籤的樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* RWD不累加內距padding與邊框border */
+}
+
+/* 重置字體 */
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+/* 重置列表 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 重置連接 */
+a {
+    /* 已知此網頁的a都"不是文字超連結"，因此先把a設定為區塊 */
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+:root{
+    /* 主色調 */
+    --Orange: #FEB75D;
+    --Lightblue: #55C9EA;
+    --Blue: #013B63;
+    --Darkblue: #000E2B;
+
+    /* 透明色 */
+
+    /* 漸層色 */
+    --White-White: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .1) 30% , rgba(255, 255, 255, .4) 100%;
+    --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Lightblue) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
+    --ToRight-White-Orange: #fff 0%,  #FEB75D 47%, #FC8D00 98%;
+
+
+}
+
+
+/* header */
+#topbar {
+    background-color: var(--Darkblue);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 0px 80px;
+    z-index: 998;
+
+}
+
+.menuList {
+    display: flex;
+    align-items: center;
+}
+
+.menuItem ul{
+    display: flex;
+}
+
+.menuItem ul li a {
+    margin-left: 70px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+/* home區 */
+#home {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue) );
+    position: relative;
+}
+
+#home .frontCarousel {
+    position: absolute;
+    bottom: 0px;
+    right: 80px;
+    width: 32%;
+    height: 96vh;
+    z-index: 999;
+    background-image: url(../images/carousel-img-2.png);
+    background-position: center;
+    background-size: cover;
+    /* border: 1px solid red; */
+    /* 問題二: 此figure會遮到cartIcon的連接範圍 */
+}
+
+#home .backgroundCarousel {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 66%;
+    height: 100vh;
+    z-index: 995;
+    background-image: url(../images/carousel-img-2back.png);
+    background-position: bottom;
+    background-size: cover;
+    border: 1px solid greenyellow;
+}
+
+
+
+
+.homeInfo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 45%;
+    left: 80px;
+    /* width: 576px; */
+    height: auto;
+    /* border: 1px solid red; */
+}
+
+.sloganNbtn {
+    display: flex;
+    padding-top: 48px;
+    width: 100%;;
+}
+
+.brandName {
+    width: 80%;
+}
+
+.sloganNbtn figure {
+    width: 368px;
+    padding-right: 12px;
+}
+
+.sloganNbtn button {
+    width: 212px;
+    height: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(140deg, var(--ToRight-White-Orange));
+    border-radius: 15px;
+    border: 2px solid white;
+    /* 問題1：border不會加漸層 */
+    color: var(--Darkblue);
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
