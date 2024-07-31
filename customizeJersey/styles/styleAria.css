@@ -87,8 +87,20 @@ a {
     align-items: center;
 }
 
+.menuList h1 {
+    /* width: 20%; */
+}
+
+.menuItem {
+    /* width: 80%; */
+}
+
 .menuItem ul{
     display: flex;
+}
+
+.menuItem ul li {
+    
 }
 
 .menuItem ul li a {
@@ -114,13 +126,16 @@ a {
     position: absolute;
     bottom: 0px;
     right: 80px;
-    width: 32%;
-    height: 96vh;
+    width: 44%;
+    height: 100vh;
     z-index: 998;
     background-image: url(../images/carousel-img-2.png);
-    background-position: center;
+    /* background-image: url(../images/carousel-img-1.png); */
+    /* background-image: url(../images/test-img.jpg); */
+    background-position: top;
     background-size: cover;
-    /* border: 1px solid red; */
+    /* background-repeat: no-repeat; */
+    border: 1px solid red;
     /* 問題二: 此figure會遮到cartIcon的連接範圍 */
 }
 
@@ -149,7 +164,7 @@ a {
     background-image: url(../images/bg-vs-vs.png);
     background-position: top;
     background-size: cover;
-    border: 1px solid rgb(182, 47, 255);
+    /* border: 1px solid rgb(182, 47, 255); */
 }
 
 
