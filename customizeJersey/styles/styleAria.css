@@ -78,7 +78,7 @@ a {
     align-items: center;
     position: fixed;
     padding: 0px 80px;
-    z-index: 998;
+    z-index: 997;
 
 }
 
@@ -116,7 +116,7 @@ a {
     right: 80px;
     width: 32%;
     height: 96vh;
-    z-index: 999;
+    z-index: 998;
     background-image: url(../images/carousel-img-2.png);
     background-position: center;
     background-size: cover;
@@ -129,8 +129,9 @@ a {
     bottom: 0px;
     right: 0px;
     width: 66%;
+    min-width: 808px;
     height: 100vh;
-    z-index: 994;
+    z-index: 995;
     background-image: url(../images/carousel-img-2back.png);
     background-position: bottom;
     background-size: cover;
@@ -144,7 +145,7 @@ a {
     left: 0px;
     width: 66%;
     height: 100vh;
-    z-index: 995;
+    z-index: 996;
     background-image: url(../images/bg-vs-vs.png);
     background-position: top;
     background-size: cover;
@@ -154,7 +155,7 @@ a {
 
 .homeInfo {
     position: absolute;
-    z-index: 996;
+    z-index: 999;
     display: flex;
     flex-direction: column;
     top: 45%;
@@ -167,7 +168,7 @@ a {
 .sloganNbtn {
     display: flex;
     padding-top: 48px;
-    width: 100%;;
+    width: 100%;
 }
 
 .brandName {
@@ -186,7 +187,7 @@ a {
     background-image: linear-gradient(140deg, var(--ToRight-White-Orange));
     border-radius: 15px;
     border: 2px solid white;
-    /* 問題1：border不會加漸層 */
+    /* 問題1：border不會加漸層  ==> chatGpt解決 */
     color: var(--Darkblue);
     font-family: "Noto Sans TC", sans-serif;
     font-size: 24px;
