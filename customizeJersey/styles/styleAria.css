@@ -50,7 +50,7 @@ a {
     font-family: "Noto Sans TC", sans-serif;
 }
 
-:root{
+:root {
     /* 主色調 */
     --Orange: #FEB75D;
     --Lightblue: #55C9EA;
@@ -60,9 +60,9 @@ a {
     /* 透明色 */
 
     /* 漸層色 */
-    --White-White: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .1) 30% , rgba(255, 255, 255, .4) 100%;
+    --White-White: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .1) 30%, rgba(255, 255, 255, .4) 100%;
     --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Lightblue) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
-    --ToRight-White-Orange: #fff 0%,  #FEB75D 47%, #FC8D00 98%;
+    --ToRight-White-Orange: #fff 0%, #FEB75D 47%, #FC8D00 98%;
 
 
 }
@@ -95,13 +95,11 @@ a {
     /* width: 80%; */
 }
 
-.menuItem ul{
+.menuItem ul {
     display: flex;
 }
 
-.menuItem ul li {
-    
-}
+.menuItem ul li {}
 
 .menuItem ul li a {
     margin-left: 40px;
@@ -118,53 +116,66 @@ a {
 #home {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue) );
+    /* background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue)); */
     position: relative;
+    overflow: hidden;
+
+    /* 8/1 測試 */
+    background-image: url(../images/carousel-img-2.png),
+        url(../images/bg-vs-vs.png),
+        url(../images/carousel-img-2back.png),
+        linear-gradient(to right, var(--ToRight-Blue-Darkblue));
+    background-position: top right, left, bottom right, center;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-attachment: fixed;
 }
 
-#home .frontCarousel {
-    position: absolute;
-    bottom: 0px;
-    right: 80px;
-    width: 44%;
-    height: 100vh;
-    z-index: 998;
-    background-image: url(../images/carousel-img-2.png);
-    /* background-image: url(../images/carousel-img-1.png); */
-    /* background-image: url(../images/test-img.jpg); */
-    background-position: top;
-    background-size: cover;
-    /* background-repeat: no-repeat; */
-    border: 1px solid red;
-    /* 問題二: 此figure會遮到cartIcon的連接範圍 */
+
+
+/* #home .frontCarousel { */
+/* 問題二: 此figure會遮到cartIcon的連接範圍 */
+position: absolute;
+bottom: 0px;
+right: 80px;
+width: 44%;
+height: 100vh;
+z-index: 998;
+background-image: url(../images/carousel-img-2.png);
+/* background-image: url(../images/carousel-img-1.png); */
+/* background-image: url(../images/test-img.jpg); */
+background-position: top;
+background-size: cover;
+background-repeat: no-repeat;
+/* border: 1px solid red; */
 }
 
-#home .backgroundCarousel {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    width: 66%;
-    min-width: 808px;
-    height: 100vh;
-    z-index: 995;
-    background-image: url(../images/carousel-img-2back.png);
-    background-position: bottom;
-    background-size: cover;
-    opacity: 50%;
-    /* border: 1px solid greenyellow; */
+
+/* #home .backgroundCarousel { */
+position: absolute;
+bottom: 0px;
+right: 0px;
+width: 66%;
+min-width: 808px;
+height: 100vh;
+z-index: 995;
+background-image: url(../images/carousel-img-2back.png);
+background-position: bottom;
+background-size: cover;
+opacity: 50%;
+/* border: 1px solid greenyellow; */
 }
 
-#home .backgroundLogo {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 66%;
-    height: 100vh;
-    z-index: 996;
-    background-image: url(../images/bg-vs-vs.png);
-    background-position: top;
-    background-size: cover;
-    /* border: 1px solid rgb(182, 47, 255); */
+/* #home .backgroundLogo { */
+position: absolute;
+bottom: 0px;
+left: 0px;
+width: 66%;
+height: 100vh;
+z-index: 996;
+background-image: url(../images/bg-vs-vs.png);
+background-position: top;
+background-size: cover;
+/* border: 1px solid rgb(182, 47, 255); */
 }
 
 
