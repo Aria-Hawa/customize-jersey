@@ -70,14 +70,16 @@ a {
 
 /* header */
 #topbar {
-    background-color: var(--Darkblue);
+    /* background-color: var(--Darkblue); */
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    padding: 0px 80px;
+    /* position: fixed; */      /* 8/2 del */
+    position: absolute;
+    /* padding: 0px 80px; */        /* 8/2 del */
+    padding: 0% 3%;     /* 8/2 add */
     z-index: 997;
 
 }
@@ -85,6 +87,7 @@ a {
 .menuList {
     display: flex;
     align-items: center;
+    width: 55%;
 }
 
 .menuList h1 {
@@ -116,58 +119,42 @@ a {
 #home {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
+    /* background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue)); */
     position: relative;
     overflow: hidden;
+
+    /* 8/1 測試 
+    background-image: url(../images/bg-vs-vs.png),
+        url(../images/carousel-img-2back.png),
+        linear-gradient(to right, var(--ToRight-Blue-Darkblue));
+    background-position: top left, bottom right, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-attachment: fixed;*/
 }
 
-
-
-#home .frontCarousel {
-/* 問題二: 此figure會遮到cartIcon的連接範圍 */
-position: absolute;
-bottom: 0px;
-right: 80px;
-width: 44%;
-height: 100vh;
-z-index: 998;
-background-image: url(../images/carousel-img-2.png);
-/* background-image: url(../images/carousel-img-1.png); */
-/* background-image: url(../images/test-img.jpg); */
-background-position: top;
-background-size: cover;
-background-repeat: no-repeat;
-/* border: 1px solid red; */
+#home::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    width: 40%;
+    height: 96vh ;
+    z-index: 999;
+    background-image: url(../images/carousel-img-2.png);
+    background-repeat: no-repeat;
+    background-position: right 2% bottom 0%;
+    background-size: contain;
+    border: 1px solid rgb(0, 255, 8);
 }
 
-
-#home .backgroundCarousel {
-position: absolute;
-bottom: 0px;
-right: 0px;
-width: 66%;
-min-width: 808px;
-height: 100vh;
-z-index: 995;
-background-image: url(../images/carousel-img-2back.png);
-background-position: bottom;
-background-size: cover;
-opacity: 50%;
-/* border: 1px solid greenyellow; */
+#home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    
 }
 
-#home .backgroundLogo {
-position: absolute;
-bottom: 0px;
-left: 0px;
-width: 66%;
-height: 100vh;
-z-index: 996;
-background-image: url(../images/bg-vs-vs.png);
-background-position: top;
-background-size: cover;
-/* border: 1px solid rgb(182, 47, 255); */
-}
 
 
 .homeInfo {
