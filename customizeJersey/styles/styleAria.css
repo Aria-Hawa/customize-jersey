@@ -63,43 +63,51 @@ a {
     --White-White: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .1) 30%, rgba(255, 255, 255, .4) 100%;
     --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Lightblue) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
     --ToRight-White-Orange: #fff 0%, #FEB75D 47%, #FC8D00 98%;
-
+    --ToRight-Lightblue-Darkbllue: var(--Lightblue) 5%, var(--Blue) 28%, var(--Darkblue) 61%;
 
 }
 
+/* home區 */
+#home {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
+    /* position: relative; */
+    overflow: hidden;
+}
 
-/* header */
-#topbar {
+header {
     background-color: var(--Darkblue);
     width: 100%;
     height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    padding: 0px 80px;
-    z-index: 997;
+    position: absolute;
+    z-index: 60;
+}
 
+.topbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    position: absolute;
+    z-index: 999;
 }
 
 .menuList {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 92%;
 }
 
 .menuList h1 {
-    /* width: 20%; */
-}
-
-.menuItem {
-    /* width: 80%; */
+    width: 129px;
 }
 
 .menuItem ul {
     display: flex;
 }
-
-.menuItem ul li {}
 
 .menuItem ul li a {
     margin-left: 40px;
@@ -109,77 +117,57 @@ a {
 }
 
 
+.frontCarousel {
+    background-image: url(../images/carousel-img-1.png);
+    /* background-image: url(../images/carousel-img-2.png); */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 560px;
+    height: 96vh ;
+    z-index: 80;
+    background-repeat: no-repeat;
+    background-position: right 2% bottom 0%;
+    background-size: contain;
+}
 
+.backgroundCarousel {
+    background-image: url(../images/carousel-img-1back.png);
+    /* background-image: url(../images/carousel-img-2back.png); */
+    position: absolute;
+    z-index: 68;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 96vh;
+    opacity: 60%;
+    background-repeat: no-repeat;
+    background-position: right 2% bottom 0%;
+    background-size: cover;
+}
 
-
-/* home區 */
-#home {
+.backgroundLogo {
+    background-image: url(../images/bg-vs-vs.png);
+    position: absolute;
+    z-index: 69;
+    top: 0;
+    left: 0;
+    width: 750px;
     height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
-    position: relative;
-    overflow: hidden;
-}
-
-
-
-#home .frontCarousel {
-/* 問題二: 此figure會遮到cartIcon的連接範圍 */
-position: absolute;
-bottom: 0px;
-right: 80px;
-width: 44%;
-height: 100vh;
-z-index: 998;
-background-image: url(../images/carousel-img-2.png);
-/* background-image: url(../images/carousel-img-1.png); */
-/* background-image: url(../images/test-img.jpg); */
-background-position: top;
-background-size: cover;
-background-repeat: no-repeat;
-/* border: 1px solid red; */
-}
-
-
-#home .backgroundCarousel {
-position: absolute;
-bottom: 0px;
-right: 0px;
-width: 66%;
-min-width: 808px;
-height: 100vh;
-z-index: 995;
-background-image: url(../images/carousel-img-2back.png);
-background-position: bottom;
-background-size: cover;
-opacity: 50%;
-/* border: 1px solid greenyellow; */
-}
-
-#home .backgroundLogo {
-position: absolute;
-bottom: 0px;
-left: 0px;
-width: 66%;
-height: 100vh;
-z-index: 996;
-background-image: url(../images/bg-vs-vs.png);
-background-position: top;
-background-size: cover;
-/* border: 1px solid rgb(182, 47, 255); */
+    background-repeat: no-repeat;
+    background-position: right 0% top 0%;
+    background-size: cover;
 }
 
 
 .homeInfo {
     position: absolute;
-    z-index: 999;
+    z-index: 70;
     display: flex;
     flex-direction: column;
-    top: 45%;
+    top: 36%;
     left: 80px;
-    /* width: 576px; */
     height: auto;
-    /* border: 1px solid red; */
 }
 
 .sloganNbtn {
@@ -197,16 +185,83 @@ background-size: cover;
     padding-right: 12px;
 }
 
-.sloganNbtn button {
+.sloganNbtn a {
     width: 212px;
-    height: 100%;
-    background-color: transparent;
+    height: 65px;
     background-image: linear-gradient(140deg, var(--ToRight-White-Orange));
     border-radius: 15px;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.7);
     /* 問題1：border不會加漸層  ==> chatGpt解決 */
     color: var(--Darkblue);
     font-family: "Noto Sans TC", sans-serif;
     font-size: 24px;
     font-weight: 500;
+    text-align: center;
+    line-height: 3.8rem;
+}
+
+.bottomIcon {
+    background-image: linear-gradient(to right, var(--ToRight-Lightblue-Darkbllue));
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 79;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+}
+
+.bottomIcon ul {
+    display: flex;
+    width: 100%;
+    padding-left: 80px;
+}
+
+.bottomIcon ul li {
+    padding-right: 40px;
+}
+
+
+
+
+/* footer區 */
+footer {
+    background-color: var(--Darkblue);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px;
+    width: 100%;
+    height: 170px;
+    
+}
+
+.footerList {
+    display: flex;
+    
+}
+
+.footerItem {
+    padding-right: 80px;
+    font-size: 18px;
+}
+
+.footerItem li {
+    padding-top: 8px;
+    font-size: 12px;
+}
+
+.footerItem li:first-child {
+    padding-top: 24px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer div small {
+    padding-top: 12px;
 }
