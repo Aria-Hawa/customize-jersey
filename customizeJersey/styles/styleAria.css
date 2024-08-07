@@ -14,6 +14,7 @@ body {
     font-family: "Noto Sans TC", sans-serif;
     font-size: 100%;
     line-height: 1.5;
+    color: white;
 }
 
 /* 重置標題 */
@@ -64,6 +65,7 @@ a {
     --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Lightblue) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
     --ToRight-White-Orange: #fff 0%, #FEB75D 47%, #FC8D00 98%;
     --ToRight-Lightblue-Darkbllue: var(--Lightblue) 5%, var(--Blue) 28%, var(--Darkblue) 61%;
+    --Lightblue-White: var(--Lightblue) 0%, #fff 100%;
 
 }
 
@@ -76,7 +78,7 @@ a {
     overflow: hidden;
 }
 
-header {
+#home header {
     background-color: var(--Darkblue);
     width: 100%;
     height: 80px;
@@ -84,7 +86,7 @@ header {
     z-index: 71;
 }
 
-.topbar {
+#home .bar {
     width: 100%;
     height: 80px;
     display: flex;
@@ -223,6 +225,158 @@ header {
 .bottomIcon ul li {
     padding-right: 40px;
 }
+
+
+
+/* customize網頁區 */
+
+
+/* fixed header區 */
+#fixedTopbar {
+    /* background-color: var(--Darkblue); */
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 999;
+    border-bottom: 1px solid white;
+}
+
+#fixedTopbar .topbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+#fixedTopbar .menuList .rightList {
+    display: flex;
+    align-items: center;
+}
+
+#fixedTopbar .rightList .customizeBtn {
+    margin-right: 20px;
+    width: 132px;
+    height: 44px;
+    background-image: linear-gradient(90deg, var(--Lightblue-White));
+    position: relative;
+}
+
+#fixedTopbar .rightList .customizeBtn::before {
+    content: "訂製專區";
+    text-align: center;
+    line-height: 40px;
+    background-color: var(--Darkblue);
+    position: absolute;
+    width: 128px;
+    height: 40px;
+    left: 2px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    background-position: center;
+}
+
+/* customizePlace區 */
+#customizePlace {
+    background-color: var(--Blue);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+#customizePlace #operate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid white;
+    margin-top: 80px;
+}
+
+#operate .style {
+    display: flex;
+    align-items: center;
+}
+
+.style .styleItem {
+    padding-left: 80px;
+    padding-right: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 656px;
+}
+
+
+
+.style .styleInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.styleInfo .styleCaption {
+    width: 100%;
+    border-bottom: 1px solid white;
+    padding-bottom: 21px;
+}
+
+.styleInfo .styleCaption img {
+    width: 152px;
+    padding-bottom: 8px;
+}
+
+.styleInfo .stylePreview {
+    width: 347px;
+    height: 546px;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.styleInfo .stylePreview img {
+    width: 152px;
+    height: auto;
+}
+
+#operate .productInfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid rgb(136, 255, 0);
+    padding: 24px 0px;
+}
+
+.productInfo img {
+    width: 80px;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
