@@ -266,9 +266,9 @@ a {
     content: "訂製專區";
     text-align: center;
     line-height: 40px;
-    background-color: var(--Darkblue);
+    background-color: var(--Blue);
     position: absolute;
-    width: 128px;
+    width: 96%;
     height: 40px;
     left: 2px;
     top: 50%;
@@ -291,7 +291,8 @@ a {
     justify-content: space-between;
     border: 1px solid white;
     margin-top: 80px;
-    flex-shrink: 0.35;
+    /* flex-shrink: 0.35; */
+    flex-grow: 0.05;
 }
 
 #operate .style {
@@ -377,12 +378,34 @@ a {
 
 #operate .productInfo {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
     border-top: 1px solid white;
     flex-grow: 0.3;
 }
+
+.productInfo .productInfoContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    padding-right: 56px;
+    border-right: 1px solid white;
+}
+
+.productInfo .productInfoContent .discontTxt {
+    color: var(--Lightblue);
+    padding: 8px;
+    border: 1px solid var(--Lightblue);
+}
+
+.productInfo .productInfoContent .unitPrice span {
+    font-size: 24px;
+}
+
+
 
 .productInfo img {
     width: 80px;
@@ -394,10 +417,37 @@ a {
 #customizePlace #preview {
     display: flex;
     flex-direction: column;
-    flex-shrink: 0.65;
+    align-items: center;
+    margin-top: 80px;
+    /* width: 100%; */
+    /* flex-shrink: 0.65; */
+    flex-grow: 0.95;
+    
 }
 
+#preview .preJersey {
+    width: 80%;
+    height: 100%;
+    margin-top: 40px;
+    /* border: 1px solid red; */
+}
 
+#preview .preJersey figure {
+    width: 100%;
+    height: 100%;
+    /* object-fit: contain; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-image: url(../images/preview-shape.svg);
+}
+
+#preview .preOption ul {
+    display: flex;
+    justify-content: space-around;
+    width: 560px;
+    padding: 20px 0px 30px 0px;
+}
 
 
 
