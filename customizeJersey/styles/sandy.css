@@ -1,0 +1,285 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+/* 套用字體 */
+@font-face {
+    font-family: ROGFonts;
+    src: url(../webfonts/ROGFonts.otf);
+}
+
+/* 重置所有標籤的樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* RWD不累加內距padding與邊框border */
+}
+
+/* 重置字體 */
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+/* 重置列表 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 重置連接 */
+a {
+    /* 已知此網頁的a都"不是文字超連結"，因此先把a設定為區塊 */
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+:root {
+    /* 主色調 */
+    --Orange: #FEB75D;
+    --Lightblue: #55C9EA;
+    --Blue: #013B63;
+    --Darkblue: #000E2B;
+
+    /* 透明色 */
+
+    /* 漸層色 */
+    --White-White: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .1) 30%, rgba(255, 255, 255, .4) 100%;
+    --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Lightblue) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
+    --ToRight-White-Orange: #fff 0%, #FEB75D 47%, #FC8D00 98%;
+    --ToRight-Lightblue-Darkbllue: var(--Lightblue) 5%, var(--Blue) 28%, var(--Darkblue) 61%;
+
+}
+
+
+/* 頁首區 */
+header {
+    background-color: var(--Darkblue);
+    width: 100%;
+    height: 80px;
+    position: fixed; /*頁首釘選*/
+    z-index: 999;
+}
+
+.topbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.menuList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 92%;
+}
+
+.menuList h1 {
+    width: 129px;
+}
+
+.menuItem ul {
+    display: flex;
+}
+
+.menuItem ul li a {
+    margin-left: 40px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+section{
+    
+    height: 100vh;
+}
+
+/* 品牌理念 */
+#banner{
+    background-image:url(../images/brandConcept-background.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center center;
+    /*背景圖片置中剪裁*/
+}
+#banner .textArea{
+    margin: 0 0 0 50;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height:82%
+    
+}
+
+.brandName{
+width: 30%;
+margin-right: 10px;
+}
+.sloganNbtn{
+    width: 35%;
+}
+#banner .roller{
+    background-image: linear-gradient(to right,var(--ToRight-Lightblue-Darkbllue));
+    width: 100%;
+    height: 6%;   
+    display: flex; 
+    align-items:center;
+}
+
+#content .roller{
+    background-image: linear-gradient(to right,var(--ToRight-Lightblue-Darkbllue));
+    width: 100%;
+    height: 3.7%;   
+    display: flex; 
+    align-items:center;
+}
+
+#banner .roller p{
+    color: #ffffff;
+}
+
+#content{
+    width: 100%;
+    height:155%;
+    background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
+        display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.title{
+    display: flex;
+    justify-content:center;
+}
+
+.box__list{
+    /* 水平排 */
+    display: flex;
+    justify-content:center;
+}
+
+.box__list .item{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    margin: 0 10px;
+    width: 330px;
+    color: #ffffff;
+
+    
+}
+
+.item img{
+    border-radius: 0 15px 0 0;
+    border: 1px solid red;
+}
+.content{
+    margin: 15px 0 50px;
+    text-align: center;
+}
+
+.gradient1{
+    position: absolute;
+    margin: 50px 0 0 0 ;
+    right: 0;
+    width: 35%;
+    height: 50px;
+}
+
+.gradient1Text{
+    position: absolute;
+    right: 0;
+}
+.bigPicture{
+    width: 77%;
+}
+
+/* 文字區 */
+
+h2{
+    font-family: ROGFonts, sans-serif;
+    font-size: 45px;
+    letter-spacing: .2rem;
+    color:#ffffff;
+    padding-top:40px;
+    padding-bottom:30px;
+    line-height: 60px
+
+}
+
+h3{
+    font-family: ROGFonts, sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: .2rem;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    color:#ffffff;
+    background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
+}
+/* footer區 */
+footer {
+    background-color: var(--Darkblue);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px;
+    width: 100%;
+    height: 170px;
+    
+}
+
+.footerList {
+    display: flex;
+    
+}
+
+.footerItem {
+    padding-right: 80px;
+    font-size: 18px;
+}
+
+.footerItem li {
+    padding-top: 8px;
+    font-size: 12px;
+}
+
+.footerItem li:first-child {
+    padding-top: 24px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer div small {
+    padding-top: 12px;
+}
