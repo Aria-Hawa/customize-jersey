@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@font-face {
+    font-family: "ROGFonts";
+    src: url(../webfonts/ROGFonts.otf);
+}
 
 /* 重置所有標籤的樣式 */
 * {
@@ -54,6 +58,7 @@ a {
 :root {
     /* 主色調 */
     --Orange: #FEB75D;
+    --Darkorange: #FC8D00;
     --Lightblue: #55C9EA;
     --Blue: #013B63;
     --Darkblue: #000E2B;
@@ -63,7 +68,7 @@ a {
     /* 漸層色 */
     --White-White: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .1) 30%, rgba(255, 255, 255, .4) 100%;
     --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Lightblue) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
-    --ToRight-White-Orange: #fff 0%, #FEB75D 47%, #FC8D00 98%;
+    --ToRight-White-Orange: #fff 0%, var(--Orange) 47%, var(--Darkorange) 98%;
     --ToRight-Lightblue-Darkbllue: var(--Lightblue) 5%, var(--Blue) 28%, var(--Darkblue) 61%;
     --Lightblue-White: var(--Lightblue) 0%, #fff 100%;
 
@@ -262,6 +267,10 @@ a {
     position: relative;
 }
 
+#fixedTopbar .rightList .customizeBtn:hover {
+    background-image: linear-gradient(350deg, var(--Lightblue-White));
+}
+
 #fixedTopbar .rightList .customizeBtn::before {
     content: "訂製專區";
     text-align: center;
@@ -282,7 +291,7 @@ a {
     display: flex;
     width: 100%;
     height: 100vh;
-    display: flex;
+    padding-top: 80px;
 }
 
 #customizePlace #operate {
@@ -290,7 +299,6 @@ a {
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid white;
-    margin-top: 80px;
     /* flex-shrink: 0.35; */
     flex-grow: 0.05;
 }
@@ -299,19 +307,144 @@ a {
     display: flex;
     align-items: center;
     flex-grow: 0.7;
+    height: 70%;
 }
 
 .style .styleItem {
-    padding: 0px 16px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 100%;
 }
 
+.style .styleItem li {
+    width: 72px;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
 
+.style .styleItem li a {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.styleItem li #shapeItem {
+    background-image: url(../images/icon-shape.svg);
+    background-size: 48px 48px;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.styleItem li #designItem {
+    background-image: url(../images/icon-design.svg);
+    background-size: 48px 48px;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.styleItem li #textItem {
+    background-image: url(../images/icon-text.svg);
+    background-size: 48px 48px;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.styleItem li #colorItem {
+    background-image: url(../images/icon-color.svg);
+    background-size: 48px 48px;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.styleItem li #pictureItem {
+    background-image: url(../images/icon-picture.svg);
+    background-size: 48px 48px;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.styleItem li #numberItem {
+    background-image: url(../images/icon-number.svg);
+    background-size: 48px 48px;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.styleItem li #shapeItem:hover,
+.styleItem li #shapeItem:focus {
+    background-image: url(../images/icon-orangeShape.svg);
+    background-size: 48px 48px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: var(--Darkblue);
+    transition: .2s ease-out;
+}
+
+.styleItem li #designItem:hover,
+.styleItem li #designItem:focus {
+    background-image: url(../images/icon-orangeDesign.svg);
+    background-size: 48px 48px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: var(--Darkblue);
+    transition: .2s ease-out;
+}
+
+.styleItem li #textItem:hover,
+.styleItem li #textItem:focus {
+    background-image: url(../images/icon-orangeText.svg);
+    background-size: 48px 48px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: var(--Darkblue);
+    transition: .2s ease-out;
+}
+
+.styleItem li #colorItem:hover,
+.styleItem li #colorItem:focus {
+    background-image: url(../images/icon-orangeColor.svg);
+    background-size: 48px 48px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: var(--Darkblue);
+    transition: .2s ease-out;
+}
+
+.styleItem li #pictureItem:hover,
+.styleItem li #pictureItem:focus {
+    background-image: url(../images/icon-orangePicture.svg);
+    background-size: 48px 48px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: var(--Darkblue);
+    transition: .2s ease-out;
+}
+
+.styleItem li #numberItem:hover,
+.styleItem li #numberItem:focus {
+    background-image: url(../images/icon-orangeNumber.svg);
+    background-size: 48px 48px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: var(--Darkblue);
+    transition: .2s ease-out;
+}
 
 .style .styleInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    height: 100%;
+    width: 100%;
+}
+
+.styleInfo .area {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -324,29 +457,44 @@ a {
 .styleInfo .styleCaption {
     width: 90%;
     border-bottom: 1px solid white;
-    padding: 16px 0px 21px 0px;
+    padding: 16px 0px;
     flex-grow: 0.2;
 }
 
-.styleInfo .styleCaption img {
-    width: 152px;
-    padding-bottom: 8px;
+.styleInfo .styleCaption h3 {
+    font-family: "ROGFonts", sans-serif;
+    font-size: 32px;
+    letter-spacing: 3px;
+    line-height: 40px;
 }
 
 .styleInfo .stylePreview {
     width: 330px;
     height: 546px;
-    overflow: auto;
     display: flex;
     flex-wrap: wrap;
     flex-grow: 0.8;
     margin: 16px;
+    overflow: auto;
 }
 
-.styleInfo .stylePreview img {
+.stylePreview a {
     width: 152px;
     height: auto;
     opacity: 50%;
+}
+
+.stylePreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.stylePreview a:hover,
+.stylePreview a:focus {
+    width: 152px;
+    height: auto;
+    opacity: 100%;
 }
 
 /* stylePreview滾動條樣式 */
@@ -371,6 +519,12 @@ a {
 /* 滾動條的手柄hover */
 .styleInfo .stylePreview::-webkit-scrollbar-thumb:hover {
     background-color: #ffce8d;
+}
+
+
+
+#designArea {
+    display: none;
 }
 
 
@@ -405,20 +559,28 @@ a {
     font-size: 24px;
 }
 
-
-
-.productInfo img {
+.productInfo a {
     width: 80px;
-    height: auto;
+    height: 80px;
+    background-color: white;
+    mask-image: url(../images/icon-BlackOrder.png);
+    mask-repeat: no-repeat;
+    mask-position: center;
 }
 
+.productInfo a:hover {
+    background-color: var(--Orange);
+}
+
+.productInfo a:active {
+    background-color: var(--Darkorange);
+}
 
 
 #customizePlace #preview {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
     /* width: 100%; */
     /* flex-shrink: 0.65; */
     flex-grow: 0.95;
@@ -429,7 +591,6 @@ a {
     width: 80%;
     height: 100%;
     margin-top: 40px;
-    /* border: 1px solid red; */
 }
 
 #preview .preJersey figure {
@@ -449,20 +610,49 @@ a {
     padding: 20px 0px 30px 0px;
 }
 
+.preOption ul li a {
+    background-color: white;
+    width: 56px;
+    height: 75px;
+}
 
+.preOption ul li #turnOption {
+    mask-image: url(../images/icon-blackTurn.png);
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
 
+.preOption ul li #undoOption {
+    mask-image: url(../images/icon-blackUndo.png);
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
 
+.preOption ul li #redoOption {
+    mask-image: url(../images/icon-blackRedo.png);
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
 
+.preOption ul li #clearOption {
+    mask-image: url(../images/icon-blackClear.png);
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
 
+.preOption ul li #saveOption {
+    mask-image: url(../images/icon-blackSave.png);
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
 
+.preOption ul li a:hover {
+    background-color: var(--Orange);
+}
 
-
-
-
-
-
-
-
+.preOption ul li a:active {
+    background-color: var(--Darkorange);
+}
 
 
 

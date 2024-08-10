@@ -34,29 +34,60 @@
             <div id="operate">
                 <div class="style">
                     <ul class="styleItem">
-                        <li><a href=""><img src="./images/icon-shape.svg" alt="款式"></a></li>
-                        <li><a href=""><img src="./images/icon-design.svg" alt="設計"></a></li>
-                        <li><a href=""><img src="./images/icon-text.svg" alt="文字"></a></li>
-                        <li><a href=""><img src="./images/icon-color.svg" alt="顏色"></a></li>
-                        <li><a href=""><img src="./images/icon-picture.svg" alt="圖片"></a></li>
-                        <li><a href=""><img src="./images/icon-number.svg" alt="號碼"></a></li>
+                        <li><a href="#" id="shapeItem" onclick="displayShape()"></a></li>
+                        <li><a href="#" id="designItem" onclick="displayDesign()"></a></li>
+                        <li><a href="#" id="textItem" onclick="displayText()"></a></li>
+                        <li><a href="#" id="colorItem" onclick="displayColor()"></a></li>
+                        <li><a href="#" id="pictureItem" onclick="displayPicture()"></a></li>
+                        <li><a href="#" id="numberItem" onclick="displayItem()"></a></li>
                     </ul>
                     <div class="styleInfo">
-                        <div class="styleCaption">
-                            <img src="./images/text-shape.png" alt="">
-                            <p>選擇您想要的衣服版型</p>
+                        <!-- shape區 -->
+                        <div class="area" id="shapeArea">
+                            <div class="styleCaption">
+                                <h3>SHAPE</h3>
+                                <p>選擇您想要的衣服版型</p>
+                            </div>
+                            <div class="stylePreview">
+                                <a href="#"><img src="./images/shape-1.svg" alt=""></a>
+                                <a href="#"><img src="./images/shape-2.svg" alt=""></a>
+                                <a href="#"><img src="./images/shape-3.svg" alt=""></a>
+                                <a href="#"><img src="./images/shape-1.svg" alt=""></a>
+                                <a href="#"><img src="./images/shape-2.svg" alt=""></a>
+                                <a href="#"><img src="./images/shape-3.svg" alt=""></a>
+                                <a href="#"><img src="./images/shape-1.svg" alt=""></a>
+                                <a href="#"><img src="./images/shape-2.svg" alt=""></a>
+                                <a href="#"><img src="./images/shape-3.svg" alt=""></a>
+                            </div>
                         </div>
-                        <div class="stylePreview">
-                            <img src="./images/shape-1.svg" alt="">
-                            <img src="./images/shape-2.svg" alt="">
-                            <img src="./images/shape-3.svg" alt="">
-                            <img src="./images/shape-1.svg" alt="">
-                            <img src="./images/shape-2.svg" alt="">
-                            <img src="./images/shape-3.svg" alt="">
-                            <img src="./images/shape-1.svg" alt="">
-                            <img src="./images/shape-2.svg" alt="">
-                            <img src="./images/shape-3.svg" alt="">
+                        <!-- design區 -->
+                        <div class="area" id="designArea">
+                            <div class="styleCaption">
+                                <h3>DESIGN</h3>
+                                <p>選擇您想要的設計樣式</p>
+                            </div>
+                            <div class="stylePreview">
+                                <a href="#"><img src="./images/design-1.svg" alt=""></a>
+                                <a href="#"><img src="./images/design-2.svg" alt=""></a>
+                                <a href="#"><img src="./images/design-3.svg" alt=""></a>
+                                <a href="#"><img src="./images/design-1.svg" alt=""></a>
+                                <a href="#"><img src="./images/design-2.svg" alt=""></a>
+                                <a href="#"><img src="./images/design-3.svg" alt=""></a>
+                                <a href="#"><img src="./images/design-1.svg" alt=""></a>
+                                <a href="#"><img src="./images/design-2.svg" alt=""></a>
+                                <a href="#"><img src="./images/design-3.svg" alt=""></a>
+                            </div>
                         </div>
+
+
+
+
+
+
+
+
+
+                        
                     </div>
                 </div>
                 <div class="productInfo">
@@ -64,7 +95,7 @@
                         <P class="discontTxt">35% 數量折扣</P>
                         <p class="unitPrice">單件價格 : NT$ <span>36.90</span> </p>
                     </div>
-                    <img src="./images/icon-order.png" alt="">
+                    <a href="#"></a>
                 </div>
             </div>
             <div id="preview">
@@ -73,11 +104,11 @@
                 </div>
                 <div class="preOption">
                     <ul>
-                        <li><a href=""><img src="./images/icon-turn.png" alt="翻面"></a></li>
-                        <li><a href=""><img src="./images/icon-undo.png" alt="上一步"></a></li>
-                        <li><a href=""><img src="./images/icon-redo.png" alt="下一步"></a></li>
-                        <li><a href=""><img src="./images/icon-clear.png" alt="清除"></a></li>
-                        <li><a href=""><img src="./images/icon-save.png" alt="存檔"></a></li>
+                        <li><a href="#" id="turnOption"></a></li>
+                        <li><a href="#" id="undoOption"></a></li>
+                        <li><a href="#" id="redoOption"></a></li>
+                        <li><a href="#" id="clearOption"></a></li>
+                        <li><a href="#" id="saveOption"></a></li>
                     </ul>
                 </div>
             </div>
@@ -85,7 +116,7 @@
     </main>
 
 
-
+    <script src="./js/jsAria.js"></script>
 </body>
 
 </html>
