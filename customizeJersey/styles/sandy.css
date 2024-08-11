@@ -71,7 +71,7 @@ a {
     --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Lightblue) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
     --ToRight-White-Orange: #fff 0%, #FEB75D 47%, #FC8D00 98%;
     --ToRight-Lightblue-Darkbllue: var(--Lightblue) 5%, var(--Blue) 28%, var(--Darkblue) 61%;
-    --Lightblue-Lightblue: rgba(85, 201, 234, .5), 50%,rgba(85, 201, 234, .0) 95%;
+    --Lightblue-Lightblue: rgba(85, 201, 234, .5), 50%, rgba(85, 201, 234, .0) 95%;
     --Orange-Darkblue: var(--Orange) 0%, rgba(0, 14, 43, .0) 80%;
     --Blue-Darkblue: #287DA2 0%, var(--Blue) 40%, var(--Darkblue) 80%;
 
@@ -221,7 +221,7 @@ section {
     border-radius: 0 15px 0 0;
     border: solid 2px transparent;
     border-radius: 0 15px 0 0;
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(252, 250, 250,.0)),
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(252, 250, 250, .0)),
         linear-gradient(to bottom, var(--Lightblue-Lightblue));
     background-origin: border-box;
     background-clip: content-box, border-box;
@@ -237,7 +237,7 @@ section {
 .jerseyIntroduction {
     position: relative;
     margin-top: 50px;
-    height: 80vh;
+    height: 100vh;
 }
 
 .copyWriting {
@@ -277,6 +277,7 @@ section {
     top: 113px;
 
 }
+
 .title-2 .bevel {
     position: absolute;
     left: 152px;
@@ -309,23 +310,23 @@ section {
     width: 77%;
     z-index: 888;
 }
-.jerseyIntroduction .button{
+
+.jerseyIntroduction .button {
     position: absolute;
-    left: 800px;
-    top: 300px;
     z-index: 990;
-    right: 100px;
     flex-direction: column;
     width: 100%;
     height: 100%;
+
 }
+
 .jerseyIntroduction a {
     width: fit-content;
     height: fit-content;
 
     background-color: #000E2B;
     padding: 10px 20px 10px 20px;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 /* 下半部 滾條 */
@@ -337,6 +338,66 @@ section {
     align-items: center;
 }
 
+
+/* 專案成果 */
+
+/* 上半部 */
+#projectBanner {
+    background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
+    width: 100%;
+    height:100%;
+    
+}
+/* 主圖 */
+.projectTheme{
+    width: 100%;
+    padding-top: 80px;
+}
+/* 背景藍色塊 */
+/* .blueBlock {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 700;
+    width: 33.5%;
+    height: 100%;
+    background-color: #013B63;
+    z-index:1;
+    } */
+/* 主圖下方文字 */
+.projectcontent{
+    /* width: 100%; */
+    height: 100%;
+    background-color: #e11212;
+    margin-left: 80px;
+    padding-left:30px;
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+}
+.projectText{
+
+
+}
+
+/* 下半部 */
+#projectjJersey {
+    background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
+    width: 100%;
+}
+
+/* 專案成果文字處 */
+.projectTitle h2{
+    font-family: ROGFonts, sans-serif;
+    font-size:45px;
+    letter-spacing: .2rem;
+    color: #ffffff;
+    line-height: 50px
+}
+
+
+
 /* 文字區 */
 .titleBig h2 {
     font-family: ROGFonts, sans-serif;
@@ -347,7 +408,6 @@ section {
     padding-top: 40px;
     padding-bottom: 30px;
     line-height: 60px
-    
 }
 
 .textTitle h3 {
