@@ -234,8 +234,6 @@ a {
 
 
 /* customize網頁區 */
-
-
 /* fixed header區 */
 #fixedTopbar {
     /* background-color: var(--Darkblue); */
@@ -294,6 +292,48 @@ a {
     padding-top: 80px;
 }
 
+/* customizePlace共用區 */
+/* customizePlace共用區-button */
+.customizePlaceBtn {
+    background-color: white;
+    color: var(--Blue);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 3px;margin-left: 10px;
+}
+
+.customizePlaceBtn:hover {
+    cursor: pointer;
+    background-color: var(--Orange);
+}
+
+.customizePlaceBtn:active {
+    background-color: var(--Darkorange);
+}
+
+/* customizePlace共用區-Input */
+#customizePlace input {
+    width: 310px;
+    padding: 10px;
+    /* margin-bottom: 16px; */
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+#customizePlace input::placeholder {
+    color: rgba(255, 255, 255, .5);
+}
+
+#customizePlace input:focus {
+    outline: none;
+}
+
+/* customizePlace共用區-operate */
 #customizePlace #operate {
     display: flex;
     flex-direction: column;
@@ -478,6 +518,11 @@ a {
     overflow: auto;
 }
 
+.styleInfo .stylePreview figure {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .stylePreview a {
     width: 152px;
     height: auto;
@@ -518,18 +563,122 @@ a {
 
 /* 滾動條的手柄hover */
 .styleInfo .stylePreview::-webkit-scrollbar-thumb:hover {
-    background-color: #ffce8d;
+    background-color: var(--Orange);
 }
 
 
 
-#designArea {
+
+
+
+
+
+
+/* customizePlace各style各自樣式區 */
+/* textArea樣式設定 */
+#textStyleInput #textStyleBtn {
+    width: 310px;
+    padding: 10px;
+    border: 1px solid white;
+    background-color: white;
+    border: none;
+    color: var(--Darkblue);
+    margin-top: 16px;
+}
+
+#textStyleInput #textStyleBtn:hover {
+    cursor: pointer;
+    background-color: var(--Orange);
+}
+
+#textStyleInput #textStyleBtn:active {
+    background-color: var(--Darkorange);
+}
+
+#textArea-1st, #textArea-2nd, #textArea-3rd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    height: 100%;
+    width: 100%;
+}
+
+.styleInfo #textArea .stylePreview {
+    justify-content: flex-end;
+    padding-right: 8px;
+}
+
+#textStyleValue #textWords {
+    margin-bottom: 6px;
+}
+
+#textStyleValue hr {
+    margin: 9px 0px;
+}
+
+#toTextArea-3rdBtn {
+    width: 80px;
+    margin-right: 124px;
+    height: 2rem;
+}
+
+#textStyleValueBtn {
+    width: 60px;
+    height: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#designArea,
+#textArea {
+    display: none;
+}
+
+#textArea-2nd, #textArea-3rd {
     display: none;
 }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* customizePlace區productInfo樣式設定 */
 #operate .productInfo {
     display: flex;
     justify-content: space-evenly;
@@ -545,7 +694,7 @@ a {
     align-items: flex-end;
     justify-content: center;
     height: 100%;
-    padding-right: 56px;
+    padding-right: 32px;
     border-right: 1px solid white;
 }
 
@@ -576,7 +725,7 @@ a {
     background-color: var(--Darkorange);
 }
 
-
+/* customizePlace區preview樣式設定 */
 #customizePlace #preview {
     display: flex;
     flex-direction: column;
