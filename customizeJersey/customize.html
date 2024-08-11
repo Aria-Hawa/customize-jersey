@@ -49,15 +49,17 @@
                                 <p>選擇您想要的衣服版型</p>
                             </div>
                             <div class="stylePreview">
-                                <a href="#"><img src="./images/shape-1.svg" alt=""></a>
-                                <a href="#"><img src="./images/shape-2.svg" alt=""></a>
-                                <a href="#"><img src="./images/shape-3.svg" alt=""></a>
-                                <a href="#"><img src="./images/shape-1.svg" alt=""></a>
-                                <a href="#"><img src="./images/shape-2.svg" alt=""></a>
-                                <a href="#"><img src="./images/shape-3.svg" alt=""></a>
-                                <a href="#"><img src="./images/shape-1.svg" alt=""></a>
-                                <a href="#"><img src="./images/shape-2.svg" alt=""></a>
-                                <a href="#"><img src="./images/shape-3.svg" alt=""></a>
+                                <figure>
+                                    <a href="#"><img src="./images/shape-1.svg" alt=""></a>
+                                    <a href="#"><img src="./images/shape-2.svg" alt=""></a>
+                                    <a href="#"><img src="./images/shape-3.svg" alt=""></a>
+                                    <a href="#"><img src="./images/shape-1.svg" alt=""></a>
+                                    <a href="#"><img src="./images/shape-2.svg" alt=""></a>
+                                    <a href="#"><img src="./images/shape-3.svg" alt=""></a>
+                                    <a href="#"><img src="./images/shape-1.svg" alt=""></a>
+                                    <a href="#"><img src="./images/shape-2.svg" alt=""></a>
+                                    <a href="#"><img src="./images/shape-3.svg" alt=""></a>
+                                </figure>
                             </div>
                         </div>
                         <!-- design區 -->
@@ -67,15 +69,83 @@
                                 <p>選擇您想要的設計樣式</p>
                             </div>
                             <div class="stylePreview">
-                                <a href="#"><img src="./images/design-1.svg" alt=""></a>
-                                <a href="#"><img src="./images/design-2.svg" alt=""></a>
-                                <a href="#"><img src="./images/design-3.svg" alt=""></a>
-                                <a href="#"><img src="./images/design-1.svg" alt=""></a>
-                                <a href="#"><img src="./images/design-2.svg" alt=""></a>
-                                <a href="#"><img src="./images/design-3.svg" alt=""></a>
-                                <a href="#"><img src="./images/design-1.svg" alt=""></a>
-                                <a href="#"><img src="./images/design-2.svg" alt=""></a>
-                                <a href="#"><img src="./images/design-3.svg" alt=""></a>
+                                <figure>
+                                    <a href="#"><img src="./images/design-1.svg" alt=""></a>
+                                    <a href="#"><img src="./images/design-2.svg" alt=""></a>
+                                    <a href="#"><img src="./images/design-3.svg" alt=""></a>
+                                    <a href="#"><img src="./images/design-1.svg" alt=""></a>
+                                    <a href="#"><img src="./images/design-2.svg" alt=""></a>
+                                    <a href="#"><img src="./images/design-3.svg" alt=""></a>
+                                    <a href="#"><img src="./images/design-1.svg" alt=""></a>
+                                    <a href="#"><img src="./images/design-2.svg" alt=""></a>
+                                    <a href="#"><img src="./images/design-3.svg" alt=""></a>
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- text區 -->
+                        <div class="area" id="textArea">
+                            <!-- 第一步驟: 輸入文字 -->
+                            <div id="textArea-1st">
+                                <div class="styleCaption">
+                                    <h3>TEXT</h3>
+                                    <p>輸入球衣上的文字，例如校名/姓名等</p>
+                                </div>
+                                <div class="stylePreview">
+                                    <form action method="post" name="textStyleInput" id="textStyleInput"
+                                        title="輸入球衣上文字">
+                                        <label for="textStyle"></label>
+                                        <input type="text" name="textStyle" id="textStyle" title="輸入文字欄位"
+                                            placeholder="輸入文字" autocomplete>
+                                        <input type="button" name="textStyleBtn" id="textStyleBtn" title="確定按鈕"
+                                            value="確定" onclick="display2ndStep()">
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- 第二步驟: 選擇位子 -->
+                            <div id="textArea-2nd">
+                                <div class="styleCaption">
+                                    <h3>TEXT</h3>
+                                    <p>輸入球衣上的文字，例如校名/姓名等
+                                        <button class="customizePlaceBtn" id="backBtn" onclick="display1stStep()">←|Back</button>
+                                    </p>
+                                </div>
+                                <div class="stylePreview">
+                                    <figure>
+                                        <a href="#"><img src="./images/txtPosition-1.svg" alt=""></a>
+                                        <a href="#"><img src="./images/txtPosition-2.svg" alt=""></a>
+                                        <a href="#"><img src="./images/txtPosition-3.svg" alt=""></a>
+                                        <a href="#"><img src="./images/txtPosition-4.svg" alt=""></a>
+                                    </figure>
+                                    <button class="customizePlaceBtn" id="toTextArea-3rdBtn" onclick="display3rdStep()">Next</button>
+                                </div>
+                            </div>
+                            <!-- 第三步驟:  -->
+                            <div id="textArea-3rd">
+                                <div class="styleCaption textArea-3rd">
+                                    <h3>TEXT</h3>
+                                    <p>輸入球衣上的文字，例如校名/姓名等
+                                        <button class="customizePlaceBtn" id="backBtn" onclick="display2ndStep()">←|Back</button>
+                                    </p>
+                                </div>
+                                <div class="stylePreview textArea-3rd">
+                                    <form action method="post" name="textStyleValue" id="textStyleValue" title="球衣上的文字">
+                                        <label for="textWords"></label>
+                                        <input type="text" name="textWords" id="textWords" title="球衣上的文字欄位"
+                                            value="北商大互動六-抓之前資料" readonly>
+                                        <hr>
+                                        <label for="textFonts">字體</label>
+                                        <hr>
+                                        <label for="textColor">顏色</label>
+                                        <hr>
+                                        <label for="textPlace">位置</label>
+                                        <hr>
+                                        <label for="textSize">大小</label>
+                                        <br>
+                                        <small>(字高建議不超過10公分)</small>
+                                        <hr>
+                                    </form>
+                                    <button class="customizePlaceBtn" id="textStyleValueBtn" onclick="">ok</button>
+                                </div>
                             </div>
                         </div>
 
@@ -87,7 +157,7 @@
 
 
 
-                        
+
                     </div>
                 </div>
                 <div class="productInfo">
