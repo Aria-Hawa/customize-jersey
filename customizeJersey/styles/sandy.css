@@ -59,9 +59,10 @@ a {
 :root {
     /* 主色調 */
     --Orange: #FEB75D;
-    --Lightblue: #55C9EA;
+    --Lightblue: rgb(85, 201, 234);
     --Blue: #013B63;
     --Darkblue: #000E2B;
+    --White: #ffffff;
 
     /* 透明色 */
 
@@ -70,7 +71,7 @@ a {
     --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Lightblue) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
     --ToRight-White-Orange: #fff 0%, #FEB75D 47%, #FC8D00 98%;
     --ToRight-Lightblue-Darkbllue: var(--Lightblue) 5%, var(--Blue) 28%, var(--Darkblue) 61%;
-    --Lightblue-Lightblue: var(--Lightblue) 50%, var(--Lightblue) 0%;
+    --Lightblue-Lightblue: rgba(85, 201, 234, .5), 50%,rgba(85, 201, 234, .0) 95%;
     --Orange-Darkblue: var(--Orange) 0%, rgba(0, 14, 43, .0) 80%;
     --Blue-Darkblue: #287DA2 0%, var(--Blue) 40%, var(--Darkblue) 80%;
 
@@ -84,7 +85,8 @@ header {
     background-color: var(--Darkblue);
     width: 100%;
     height: 80px;
-    position: fixed; /*頁首釘選*/
+    position: fixed;
+    /*頁首釘選*/
     z-index: 999;
 }
 
@@ -111,6 +113,7 @@ header {
     display: flex;
 }
 
+
 .menuItem ul li a {
     margin-left: 40px;
     font-size: 18px;
@@ -118,14 +121,16 @@ header {
     letter-spacing: 2px;
 }
 
-section{
-    
+section {
+
     height: 100vh;
 }
 
 /* 品牌理念 */
-#banner{
-    background-image:url(../images/brandConcept-background.png);
+
+/* 上半部 */
+#banner {
+    background-image: url(../images/brandConcept-background.png);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -133,155 +138,242 @@ section{
     background-position: center center;
     /*背景圖片置中剪裁*/
 }
-#banner .textArea{
+
+/* 上半部標題內容 */
+#banner .textArea {
     margin: 0 0 0 50;
     display: flex;
-    justify-content:center;
-    align-items:center;
-    height:82%
-    
+    justify-content: center;
+    align-items: center;
+    height: 82%
 }
 
-.brandName{
-width: 30%;
-margin-right: 10px;
+/* vser LOGO */
+.brandName {
+    width: 30%;
+    margin-right: 10px;
 }
-.sloganNbtn{
+
+/* vser 意涵 */
+.sloganNbtn {
     width: 35%;
 }
-#banner .roller{
-    background-image: linear-gradient(to right,var(--ToRight-Lightblue-Darkbllue));
+
+/* 上半部 滾條 */
+#banner .roller {
+    background-image: linear-gradient(to right, var(--ToRight-Lightblue-Darkbllue));
     width: 100%;
-    height: 6%;   
-    display: flex; 
-    align-items:center;
+    height: 6%;
+    display: flex;
+    align-items: center;
 }
 
-#content .roller{
-    background-image: linear-gradient(to right,var(--ToRight-Lightblue-Darkbllue));
-    width: 100%;
-    height: 3.7%;   
-    display: flex; 
-    align-items:center;
-}
-
-#banner .roller p{
+#banner .roller p {
     color: #ffffff;
 }
 
-#content{
+/* 下半部 */
+#content {
     width: 100%;
-    height:155%;
+    height: 155%;
     background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
-        display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-#content .title{
-    display: flex;
-    justify-content:center;
+#content .title {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    /* background-color: #FC8D00; */
 }
 
-.box__list{
+#content .title .titleBig {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    z-index: 990;
+
+}
+
+
+
+.box__list {
     /* 水平排 */
     display: flex;
-    justify-content:center;
+    justify-content: center;
 }
 
-.box__list .item{
+.box__list .item {
     display: flex;
-    flex-direction:column;
-    justify-content:center;
+    flex-direction: column;
+    justify-content: center;
     margin: 0 10px;
     width: 330px;
     color: #ffffff;
-
-    
 }
 
-.item img{
+.item img {
+
     border-radius: 0 15px 0 0;
-    border-style:solid 1px;
+    border: solid 2px transparent;
+    border-radius: 0 15px 0 0;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(252, 250, 250,.0)),
+        linear-gradient(to bottom, var(--Lightblue-Lightblue));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 
 }
-.content{
-    margin: 15px 0 50px;
+
+.item .content {
+    margin: 15px 0 0 0;
     text-align: center;
 }
 
 
-.jerseyIntroduction{
+.jerseyIntroduction {
     position: relative;
+    margin-top: 50px;
+    height: 80vh;
 }
 
-.copyWriting{
+.copyWriting {
     position: absolute;
-    width: 33%;
+    width: 400px;
     height: 170px;
     right: 0;
 }
-.copyWriting .title-2{
+
+.copyWriting .title-2 {
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
     position: relative;
-    background-image:linear-gradient(to right, var(--Blue-Darkblue));
+    z-index: 990;
+    background-image: linear-gradient(to right, var(--Blue-Darkblue));
 }
+
 .textTitle {
     position: absolute;
-    z-index: 99;
+    z-index: 990;
+    width: 100%;
+    height: 100%;
 }
 
-.bevel{
-    background:linear-gradient(120deg, transparent 25px, var(--Orange-Darkblue) 0)top right;
+
+
+.bevel {
+    background: linear-gradient(120deg, transparent 25px, var(--Orange-Darkblue) 0)top right;
     width: fit-content;
-}
-.title-2 .bevel{
-    position: absolute;
-    right: 30px;
-    top: 110px;
-    z-index: 2;
-    
+
 }
 
-.bigPicture{
+.title .bevel {
+    position: absolute;
+    left: 740px;
+    top: 113px;
+
+}
+.title-2 .bevel {
+    position: absolute;
+    left: 152px;
+    top: 110px;
+}
+
+.jerseyIntroduction .content {
+    position: absolute;
+    border: #ffffff solid 2px;
+    margin-right: 80px;
+    right: 0;
+    top: 150px;
+    width: 320px;
+}
+
+.jerseyIntroduction .content p {
+    letter-spacing: 0.08rem;
+    color: #ffffff;
+    background-image: linear-gradient(to right, var(--White-White));
+    padding-top: 80px;
+    padding-left: 155px;
+    padding-right: 35px;
+    padding-bottom: 30px;
+    line-height: 30px
+}
+
+.bigPicture {
+    position: absolute;
+    left: 0;
     width: 77%;
+    z-index: 888;
+}
+.jerseyIntroduction .button{
+    position: absolute;
+    left: 800px;
+    top: 300px;
+    z-index: 990;
+    right: 100px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.jerseyIntroduction a {
+    width: fit-content;
+    height: fit-content;
+
+    background-color: #000E2B;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 0;
+}
+
+/* 下半部 滾條 */
+#content .roller {
+    background-image: linear-gradient(to right, var(--ToRight-Lightblue-Darkbllue));
+    width: 100%;
+    height: 3.7%;
+    display: flex;
+    align-items: center;
 }
 
 /* 文字區 */
-
-h2{
+.titleBig h2 {
     font-family: ROGFonts, sans-serif;
-    font-size: 45px;
+    width: fit-content;
+    font-size: 39px;
     letter-spacing: .2rem;
-    color:#ffffff;
-    padding-top:40px;
-    padding-bottom:30px;
+    color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 30px;
     line-height: 60px
-
+    
 }
 
-h3{
+.textTitle h3 {
     font-family: ROGFonts, sans-serif;
     font-size: 30px;
     letter-spacing: .2rem;
     padding-top: 10px;
     padding-left: 30px;
-    padding-bottom: 30px;
-    color:#ffffff;
+    /* padding-bottom: 30px; */
+    color: #ffffff;
     /* background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue)); */
 }
 
-h4{
+.bevel h4 {
     font-size: 20px;
     letter-spacing: .08rem;
-    color:#ffffff;
+    color: #ffffff;
     /* background-image: linear-gradient(to right, var(--Orange-Darkblue)); */
-    
+
     padding-left: 50px;
     padding-top: 5px;
     padding-right: 40px;
     padding-bottom: 5px;
 
 }
+
 /* footer區 */
 footer {
     background-color: var(--Darkblue);
@@ -292,12 +384,12 @@ footer {
     padding: 0px 80px;
     width: 100%;
     height: 170px;
-    
+
 }
 
 .footerList {
     display: flex;
-    
+
 }
 
 .footerItem {
