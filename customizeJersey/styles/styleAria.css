@@ -300,7 +300,8 @@ a {
     border-radius: 5px;
     font-size: 14px;
     font-weight: 600;
-    padding: 3px;margin-left: 10px;
+    padding: 3px;
+    margin-left: 10px;
 }
 
 .customizePlaceBtn:hover {
@@ -522,7 +523,7 @@ a {
     flex-wrap: wrap;
 }
 
-.stylePreview a {
+.stylePreview figure a {
     width: 152px;
     height: auto;
     opacity: 50%;
@@ -534,8 +535,8 @@ a {
     object-fit: contain;
 }
 
-.stylePreview a:hover,
-.stylePreview a:focus {
+.stylePreview figure a:hover,
+.stylePreview figure a:focus {
     width: 152px;
     height: auto;
     opacity: 100%;
@@ -609,6 +610,11 @@ a {
     padding-right: 8px;
 }
 
+#textArea-2nd .stylePreview figure {
+    border-bottom: 1px solid white;
+    margin-bottom: 16px;
+}
+
 #textStyleValue #textWords {
     margin-bottom: 6px;
 }
@@ -617,9 +623,66 @@ a {
     margin: 9px 0px;
 }
 
+#textArea label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stylePreview .arrow {
+    width: 20px;
+    height: 20px;
+    opacity: 50%;
+}
+
+.stylePreview .arrow:hover {
+    width: 20px;
+    height: 20px;
+    opacity: 100%;
+}
+
+.arrow.beClick img {
+    transform: rotate(90deg);
+}
+
+.arrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: rotate(180deg);
+}
+
+#chooseTextFonts {
+    width: 200px;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 3px;
+    color: white;
+    background-color: transparent;
+    animation: hide 1.35s both;
+    display: none;
+}
+
+#chooseTextFonts.show {
+    display: block;
+    animation: show 0.35s both;
+}
+
+#chooseTextFonts option {
+    color: var(--Darkblue);
+}
+
+#chooseTextFonts #NotoFont {
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+#chooseTextFonts #RogFont{
+    font-family: "ROGFonts", sans-serif;
+}
+
 #toTextArea-3rdBtn {
     width: 80px;
-    margin-right: 124px;
+    /* margin-right: 124px; */
     height: 2rem;
 }
 
@@ -850,6 +913,30 @@ footer div {
 footer div small {
     padding-top: 12px;
 }
+
+/* 動畫設定 */
+@keyframes hide {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@keyframes show {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* home區 */
 @media (max-width:820px){

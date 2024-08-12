@@ -1,4 +1,49 @@
 
+// 使用jQuery
+$(function(){
+    // 按下#lblForTextFonts的.arrow
+    // 1.新增.arrow的.beClick類別
+    // 2. 新增#chooseTextFonts的.show類別
+    $('#lblForTextFonts .arrow').click(function () {
+        $('.arrow').toggleClass('beClick');
+        $('#chooseTextFonts').toggleClass('show');
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //styleInfo區域動態顯示
 let shapeAreaDiv = document.querySelector('#shapeArea');
 let designAreaDiv = document.querySelector('#designArea');
@@ -22,9 +67,6 @@ function displayNone() {
     // prePictureDiv.style.display = 'none';
     // preNumberDiv.style.display = 'none';
 }
-
-
-
 
 function displayShape() {
     displayNone();
@@ -68,7 +110,18 @@ function display2ndStep() {
     textArea2nd.style.display = 'flex';
 }
 
-function display3rdStep () {
+function display3rdStep() {
     textStepDisplayNone();
     textArea3rd.style.display = 'flex';
 }
+
+// 讓用戶在textArea-1st 輸入的文字呈現在textArea-3rd的文字方塊內
+let getTextStyleInput = document.getElementById('textStyle');
+let getTextWordsValue = document.getElementById('textWords');
+function showTextStyleInputValue() {
+    getTextStyleInput = getTextStyleInput.value
+    getTextWordsValue = document.getElementById('textWords');
+    getTextWordsValue.value = getTextStyleInput;
+    console.log(getTextWordsValue);
+}
+
