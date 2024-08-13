@@ -513,6 +513,7 @@ a {
     height: 546px;
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
     flex-grow: 0.8;
     margin: 16px;
     overflow: auto;
@@ -544,25 +545,29 @@ a {
 
 /* stylePreview滾動條樣式 */
 /* 滾動條基底 */
-.styleInfo .stylePreview::-webkit-scrollbar {
+.styleInfo .stylePreview::-webkit-scrollbar,
+#chooseTextColor::-webkit-scrollbar {
     width: 5px;
 }
 
 
 /* 滾動條的軌道 */
-.styleInfo .stylePreview::-webkit-scrollbar-track {
+.styleInfo .stylePreview::-webkit-scrollbar-track,
+#chooseTextColor::-webkit-scrollbar-track {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
 
 /* 滾動條的手柄 */
-.styleInfo .stylePreview::-webkit-scrollbar-thumb {
+.styleInfo .stylePreview::-webkit-scrollbar-thumb,
+#chooseTextColor::-webkit-scrollbar-thumb {
     background-color: white;
 }
 
 
 /* 滾動條的手柄hover */
-.styleInfo .stylePreview::-webkit-scrollbar-thumb:hover {
+.styleInfo .stylePreview::-webkit-scrollbar-thumb:hover,
+#chooseTextColor::-webkit-scrollbar-thumb:hover {
     background-color: var(--Orange);
 }
 
@@ -653,7 +658,7 @@ a {
 }
 
 #chooseTextFonts {
-    width: 200px;
+    width: 250px;
     font-size: 14px;
     font-weight: 300;
     padding: 3px;
@@ -691,7 +696,30 @@ a {
     height: 2rem;
 }
 
+#chooseTextColor {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    overflow: auto;
+    animation: hide 1.35s both;
+    display: none;
+}
 
+#chooseTextColor.show {
+    display: flex;
+    animation: show 0.55s both;
+    margin-top: 10px;
+}
+
+#chooseTextColor a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid white;
+    border-radius: 9px;
+    margin: 8px;
+}
 
 
 
