@@ -23,7 +23,7 @@
                     </ul>
                 </nav>
                 <div class="rightList">
-                    <a href="./customize.html" class="customizeBtn"></a>
+                    <a href="#" class="customizeBtn"></a>
                     <a href="#" class="cartBtn"><img src="./images/icon-cart.png" alt="cartIcon"></a>
                 </div>
             </div>
@@ -97,7 +97,7 @@
                                         <input type="text" name="textStyle" id="textStyle" title="輸入文字欄位"
                                             placeholder="輸入文字" autocomplete>
                                         <input type="button" name="textStyleBtn" id="textStyleBtn" title="確定按鈕"
-                                            value="確定" onclick="display2ndStep()">
+                                            value="確定" onclick="display2ndStep(),showTextStyleInputValue();">
                                     </form>
                                 </div>
                             </div>
@@ -105,8 +105,9 @@
                             <div id="textArea-2nd">
                                 <div class="styleCaption">
                                     <h3>TEXT</h3>
-                                    <p>輸入球衣上的文字，例如校名/姓名等
-                                        <button class="customizePlaceBtn" id="backBtn" onclick="display1stStep()">←|Back</button>
+                                    <p>選擇球衣上的文字位置
+                                        <button class="customizePlaceBtn" id="backBtn"
+                                            onclick="display1stStep()">←|Back</button>
                                     </p>
                                 </div>
                                 <div class="stylePreview">
@@ -116,31 +117,61 @@
                                         <a href="#"><img src="./images/txtPosition-3.svg" alt=""></a>
                                         <a href="#"><img src="./images/txtPosition-4.svg" alt=""></a>
                                     </figure>
-                                    <button class="customizePlaceBtn" id="toTextArea-3rdBtn" onclick="display3rdStep()">Next</button>
+                                    <button class="customizePlaceBtn" id="toTextArea-3rdBtn"
+                                        onclick="display3rdStep()">Next</button>
                                 </div>
                             </div>
                             <!-- 第三步驟:  -->
                             <div id="textArea-3rd">
                                 <div class="styleCaption textArea-3rd">
                                     <h3>TEXT</h3>
-                                    <p>輸入球衣上的文字，例如校名/姓名等
-                                        <button class="customizePlaceBtn" id="backBtn" onclick="display2ndStep()">←|Back</button>
+                                    <p>設定您想要的文字樣式
+                                        <button class="customizePlaceBtn" id="backBtn"
+                                            onclick="display2ndStep()">←|Back</button>
                                     </p>
                                 </div>
                                 <div class="stylePreview textArea-3rd">
                                     <form action method="post" name="textStyleValue" id="textStyleValue" title="球衣上的文字">
                                         <label for="textWords"></label>
-                                        <input type="text" name="textWords" id="textWords" title="球衣上的文字欄位"
-                                            value="北商大互動六-抓之前資料" readonly>
+                                        <input type="text" name="textWords" id="textWords" title="球衣上的文字欄位" value=""
+                                            readonly>
                                         <hr>
-                                        <label for="textFonts">字體</label>
+                                        <label for="textFonts" id="lblForTextFonts">字體
+                                            <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
+                                        </label>
+                                        <select name="textFonts" id="chooseTextFonts" title="選擇文字字型">
+                                            <option value="Noto Sans TC" id="NotoFont">Noto Sans TC</option>
+                                            <option value="ROG LyonsType" id="RogFont">ROG LyonsType</option>
+                                        </select>
                                         <hr>
-                                        <label for="textColor">顏色</label>
+                                        <label for="textColor" id="lblForTextColor">顏色
+                                            <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
+                                        </label>
+                                        <div id="chooseTextColor">
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                            <a href="#"></a>
+                                        </div>
                                         <hr>
-                                        <label for="textPlace">位置</label>
-                                        <hr>
-                                        <label for="textSize">大小</label>
-                                        <br>
+                                        <label for="textSize">大小
+                                            <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
+                                        </label>
                                         <small>(字高建議不超過10公分)</small>
                                         <hr>
                                     </form>
@@ -186,6 +217,10 @@
     </main>
 
 
+
+    <!-- 設定jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./js/jsAria.js"></script>
 </body>
 
