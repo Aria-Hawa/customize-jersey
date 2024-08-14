@@ -1,6 +1,6 @@
 
 // 使用jQuery
-$(function(){
+$(function () {
 
     // 按下#lblForTextFonts的.arrow 
     // 1.新增.arrow的.beClick類別
@@ -23,30 +23,7 @@ $(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 })
-
-
-
-
-
-
-
-
-
 
 
 
@@ -131,6 +108,22 @@ function showTextStyleInputValue() {
     getTextStyleInput = getTextStyleInput.value
     getTextWordsValue = document.getElementById('textWords');
     getTextWordsValue.value = getTextStyleInput;
-    console.log(getTextWordsValue);
+    // console.log(getTextWordsValue);
 }
 
+// textSize Range設定
+function range() {
+    let getTextSize = document.querySelector('.textsizeRange');
+    getTextSize.addEventListener('input', function () {
+        let chooseTextSize = document.getElementById('chooseTextSize');
+        let textSizeValue = document.getElementById('textSizeValue');
+        var x = chooseTextSize.value;
+        // 設定range滑條的樣式
+        chooseTextSize.style.background = `linear-gradient(to right, var(--Orange) ${(x-3)*8.3}%,  rgba(255,255,255,.5) ${(x-3)*8.3}%)`;
+        // 設定spane顯示的數字隨著x變化
+        textSizeValue.textContent = `${x}`;
+        
+    })
+}
+
+range();

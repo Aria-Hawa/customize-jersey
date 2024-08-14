@@ -723,19 +723,24 @@ a {
 
 .textsizeRange {
     display: flex;
-    width: 300px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 307px;
     height: 56px;
-    margin-bottom: 20px;
-    position: relative;
 }
 
-/* #customizePlace #chooseTextSize, */
+#customizePlace #chooseTextSize,
 #chooseTextSize::-webkit-slider-thumb {
     appearance: none;
 }
 
 #customizePlace #chooseTextSize {
     border: none;
+    width: 240px;
+    height: 8px;
+    padding: 0px;
+    margin-right: 10px;
+    background-image: linear-gradient(to right, var(--Orange) 20%,  rgba(255,255,255,.5) 20%);
 }
 
 #chooseTextSize::-webkit-slider-thumb {
@@ -745,14 +750,9 @@ a {
     border-radius: 3px;
 }
 
-#textSizeValue {
-    position: absolute;
-    top: 45px;
-    left: 62px;
+.sizeValueBorder {
     border: 1px solid white;
-    width: 25px;
-    height: 25px;
-    text-align: center;
+    padding: 0px 3px;
 }
 
 
