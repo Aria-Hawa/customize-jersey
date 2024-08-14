@@ -1,19 +1,21 @@
 
 // 使用jQuery
 $(function(){
-    // 新增所有.arrow的.beClick類別
-    $('.arrow').click(function (){
-        $('.arrow').toggleClass('beClick');
-    })
 
-    // 按下#lblForTextFonts的.arrow 新增#chooseTextFonts的.show類別
+    // 按下#lblForTextFonts的.arrow 
+    // 1.新增.arrow的.beClick類別
+    // 2.新增#chooseTextFonts的.show類別
     $('#lblForTextFonts .arrow').click(function () {
+        $('#lblForTextFonts .arrow').toggleClass('beClick');
         $('#chooseTextFonts').toggleClass('show');
     })
 
-    // 按下#lblForTextColor的.arrow 新增#chooseTextFonts的.show類別
+    // 按下#lblForTextColor的.arrow
+    // 1. 新增.arrow的.beClick類別
+    // 2. 新增#chooseTextFonts的.show類別
     $('#lblForTextColor .arrow').click(function () {
         $('#chooseTextColor').toggleClass('show');
+        $('#lblForTextColor .arrow').toggleClass('beClick');
     })
 
 

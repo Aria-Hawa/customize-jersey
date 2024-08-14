@@ -716,14 +716,44 @@ a {
 #chooseTextColor a {
     width: 36px;
     height: 36px;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, .3);
     border-radius: 9px;
     margin: 8px;
 }
 
+.textsizeRange {
+    display: flex;
+    width: 300px;
+    height: 56px;
+    margin-bottom: 20px;
+    position: relative;
+}
 
+/* #customizePlace #chooseTextSize, */
+#chooseTextSize::-webkit-slider-thumb {
+    appearance: none;
+}
 
+#customizePlace #chooseTextSize {
+    border: none;
+}
 
+#chooseTextSize::-webkit-slider-thumb {
+    width: 10px;
+    height: 25px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+#textSizeValue {
+    position: absolute;
+    top: 45px;
+    left: 62px;
+    border: 1px solid white;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
 
 
 
