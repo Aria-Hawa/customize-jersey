@@ -150,13 +150,20 @@ section {
 
 /* vser LOGO */
 .brandName {
-    width: 30%;
+    width: 330px;
     margin-right: 10px;
 }
 
 /* vser 意涵 */
 .sloganNbtn {
-    width: 35%;
+    width: fit-content;
+}
+
+.sloganNbtn h3{
+    font-family: ROGFonts, sans-serif;
+    font-size: 30px;
+    letter-spacing: .2rem;
+    color: #ffffff;
 }
 
 /* 上半部 滾條 */
@@ -184,9 +191,11 @@ section {
 
 #content .title {
     position: relative;
-    width: 100%;
+    width: 900px;
     height: 180px;
     /* background-color: #FC8D00; */
+    left: 50%;
+    transform: translate(-50%,0);
 }
 
 #content .title .titleBig {
@@ -195,11 +204,15 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     height: fit-content;
+    width: max-content;
     z-index: 990;
 
 }
 
-
+.IntroductionArea{
+    width: 100%;
+    height: 100%;
+}
 
 .box__list {
     /* 水平排 */
@@ -237,7 +250,8 @@ section {
 .jerseyIntroduction {
     position: relative;
     margin-top: 50px;
-    height: 100vh;
+    height: 596px;
+    overflow: hidden;
 }
 
 .copyWriting {
@@ -245,10 +259,10 @@ section {
     width: 400px;
     height: 170px;
     right: 0;
+    margin-top: 40px;
 }
 
 .copyWriting .title-2 {
-    margin-top: 40px;
     width: 100%;
     height: 100%;
     position: relative;
@@ -273,8 +287,8 @@ section {
 
 .title .bevel {
     position: absolute;
-    left: 740px;
-    top: 113px;
+    left: 570px;
+    top: 110px;
 
 }
 
@@ -285,38 +299,50 @@ section {
 }
 
 .jerseyIntroduction .content {
-    position: absolute;
-    border: #ffffff solid 2px;
-    margin-right: 80px;
-    right: 0;
-    top: 150px;
+    display: flex;
+    border-right: #ffffff solid 2px;
+    border-bottom: #ffffff solid 2px;
+    margin: 140px 80px 0 0 ;
     width: 320px;
+    height:  fit-content;
+    /* right: 80px;
+    top:137px;
+    z-index: 889; */
 }
 
 .jerseyIntroduction .content p {
     letter-spacing: 0.08rem;
     color: #ffffff;
     background-image: linear-gradient(to right, var(--White-White));
-    padding-top: 80px;
-    padding-left: 155px;
-    padding-right: 35px;
-    padding-bottom: 30px;
+    padding: 105px 40px 40px 40px;
     line-height: 30px
 }
 
 .bigPicture {
-    position: absolute;
+    /* position: absolute; */
     left: 0;
-    width: 77%;
+    width: 140%;
+    height: 85vh;
     z-index: 888;
+}
+
+.bigPicture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Test{
+    display: flex;
 }
 
 .jerseyIntroduction .button {
     position: absolute;
     z-index: 990;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+    right: 360px;
+    top:370px;
+    /* border: 1px solid #e11212; */
+    letter-spacing: 0.08rem;
 
 }
 
@@ -325,15 +351,15 @@ section {
     height: fit-content;
 
     background-color: #000E2B;
-    padding: 10px 20px 10px 20px;
-    margin: 15px 0;
+    padding: 12px 40px 12px 40px;
+    margin: 20px 0;
 }
 
 /* 下半部 滾條 */
 #content .roller {
     background-image: linear-gradient(to right, var(--ToRight-Lightblue-Darkbllue));
     width: 100%;
-    height: 3.7%;
+    height: 37.44px;
     display: flex;
     align-items: center;
 }
@@ -343,9 +369,10 @@ section {
 
 /* 上半部 */
 #projectBanner {
+    position: relative;
     background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
     width: 100%;
-    height:100%;
+    height:100vh;
     
 }
 /* 主圖 */
@@ -354,7 +381,7 @@ section {
     padding-top: 80px;
 }
 /* 背景藍色塊 */
-/* .blueBlock {
+.blueBlock {
     position: absolute;
     top:50%;
     left: 50%;
@@ -364,11 +391,17 @@ section {
     height: 100%;
     background-color: #013B63;
     z-index:1;
-    } */
+    }
+.theme{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index:2;
+}
 /* 主圖下方文字 */
 .projectcontent{
-    /* width: 100%; */
-    height: 100%;
+    width: 100%;
+    /* height: 100%; */
     background-color: #e11212;
     margin-left: 80px;
     padding-left:30px;
@@ -402,7 +435,7 @@ section {
 .titleBig h2 {
     font-family: ROGFonts, sans-serif;
     width: fit-content;
-    font-size: 39px;
+    font-size: 45px;
     letter-spacing: .2rem;
     color: #ffffff;
     padding-top: 40px;
