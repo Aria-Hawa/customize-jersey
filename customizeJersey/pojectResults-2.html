@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專案成果</title>
+    <link rel="stylesheet" href="./styles/sandy.css">
+</head>
+
+<body>
+    <!-- 頁首區 -->
+    <header>
+        <div class="topbar">
+            <h1><a href="#"><img src="./images/LOGO.png" alt="VSER客製化球衣"></a></h1>
+            <div class="menuList">
+                <nav class="menuItem">
+                    <ul>
+                        <li><a href="#">品牌理念</a></li>
+                        <li><a href="#">專案成果</a></li>
+                        <li><a href="#">商品瀏覽</a></li>
+                        <li><a href="#">訂購說明</a></li>
+                        <li><a href="#">會員專區</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="cartBtn"><img src="./images/icon-cart.png" alt="cartIcon"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="projectBanner">
+            <!-- 背景藍色色塊 -->
+            <div class="blueBlock"></div>
+            <!-- 裝飾小方塊 -->
+            <div class="smallSquares"></div>
+            <!-- 裝飾斜方塊 -->
+            <div class="smallincline"></div>
+            <!-- 長方形選單 -->
+            <div class="rectangularMenu">
+                <!-- 長方形小選單 -->
+                <div class="menu-1" onclick="changemenu1();">
+                    <div class="figure"></div>
+                    <div class="word">
+                        <h4>Storm <br>
+                            Knights <br>
+                            Football<br>
+                            Club</h4>
+                            <p>企業甲組聯賽</p>
+                    </div>
+                </div>
+                <div class="menu-2" onclick="changemenu2();">
+                <div class="figure"></div>
+                    <div class="word">
+                        <h4>Thunder<br>
+                            Lions <br>
+                            Football <br>
+                            Club</h4>
+                            <p>企業甲組聯賽</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 圖文開始 -->
+            <div class="contentArea">
+                <!-- 主圖 -->
+                <div class="projectTheme"></div>
+                <div class="projectTheme1" style="display: none;"></div>
+                <!-- 主圖下方文字 -->
+                <div class="projectContent">
+                    <!-- 左邊標題處 -->
+                    <div class="pjTitle">
+                        <!-- 文字浮水印 -->
+                        <div class="textWatermark">
+                            <h1>Storm<br>
+                                Knights </h1>
+                        </div>
+                        <!-- 文字標題 -->
+                        <div class="Title">
+                            <h2>jersey<br>
+                                design</h2>
+                        </div>
+                    </div>
+                    <!-- 右邊小字處 -->
+                    <div class="pjWord" >
+                        <p>＂球衣上的閃電圖案和線條設計象徵著球隊在場上的迅捷和力量，強調積極進攻和強悍防守的風格。＂</p>
+                    </div>
+                    <div class="pjWord1" style="display: none;">
+                        <p>＂文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描＂</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projectjJersey">
+            <!-- 背景藍色色塊 -->
+            <div class="blueBlock"></div>
+            <!-- 球衣款式成列 -->
+            <div class="pjBox__list">
+                <div class="pjshape svc-1"></div>
+                <div class="pjshape svc-2"></div>
+                <div class="pjshape svc-3"></div>
+            </div>
+            <div class="pjBox__list1" style="display: none;">
+                <div class="pjshape svc-4"></div>
+                <div class="pjshape svc-5"></div>
+                <div class="pjshape svc-6"></div>
+            </div>
+
+        </section>
+    </main>
+    <!-- 頁尾曲 -->
+    <footer>
+        <ul class="footerList">
+            <li class="footerItem">About
+                <ul>
+                    <li>關於VSER</li>
+                </ul>
+            </li>
+            <li class="footerItem">SERVICE
+                <ul>
+                    <li>條款與細則</li>
+                    <li>隱私權政策</li>
+                    <li>客製化政策</li>
+                </ul>
+            </li>
+            <li class="footerItem">CONTACT
+                <ul>
+                    <li>新北市汐止區新台五路二段77號15樓之3</li>
+                    <li>vser.tw@gmail.com</li>
+                    <li>02-86482203</li>
+                </ul>
+            </li>
+        </ul>
+        <div>
+            <figure><img src="./images/logo-2.png" alt=""></figure>
+            <small>&copy;2024 VSER, Inc. 版權所有</small>
+        </div>
+    </footer>
+
+    <!-- 互動區 -->
+
+    <script>
+
+        let projectThemeDiv = '';
+        let projectTheme1Div = '';
+        let pjWordDiv = '';
+        let pjWord1Div = '';
+        // let pjBox__listDiv = '';
+        let pjBox__list1Div = '';
+
+        function getDiv() {
+            // 1.先取得操作的標籤div
+            projectThemeDiv = document.querySelector('.projectTheme');
+            projectTheme1Div = document.querySelector('.projectTheme1');
+            pjWordDiv = document.querySelector('.pjWord');
+            pjWord1Div = document.querySelector('.pjWord1');
+            pjBox__listDiv = document.querySelector('.pjBox__list');
+            pjBox__list1Div = document.querySelector('.pjBox__list1');
+
+            // 2.再對標籤div操作
+            projectThemeDiv.style.display = "none";
+            projectTheme1Div.style.display = "none";
+            pjWordDiv.style.display = "none";
+            pjWord1Div.style.display = "none";
+            pjBox__listDiv.style.display = "none";
+            pjBox__list1Div.style.display = "none";
+        }
+
+
+
+
+        // changemenu1
+        function changemenu1() {
+            getDiv();
+            projectThemeDiv.style.display = "block";
+            pjWordDiv.style.display = "block";
+            pjBox__listDiv.style.display = "flex";
+        }
+
+        // changemenu2
+        function changemenu2() {
+            getDiv();
+            projectTheme1Div.style.display = "block";
+            pjWord1Div.style.display = "block";
+            pjBox__list1Div.style.display = "flex";
+        }
+
+    </script>
+</body>
+
+</html>
