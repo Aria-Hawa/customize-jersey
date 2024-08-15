@@ -1,34 +1,22 @@
 
 // 使用jQuery
-$(function(){
-    // 新增所有.arrow的.beClick類別
-    $('.arrow').click(function (){
-        $('.arrow').toggleClass('beClick');
-    })
+$(function () {
 
-    // 按下#lblForTextFonts的.arrow 新增#chooseTextFonts的.show類別
+    // 按下#lblForTextFonts的.arrow 
+    // 1.新增.arrow的.beClick類別
+    // 2.新增#chooseTextFonts的.show類別
     $('#lblForTextFonts .arrow').click(function () {
+        $('#lblForTextFonts .arrow').toggleClass('beClick');
         $('#chooseTextFonts').toggleClass('show');
     })
 
-    // 按下#lblForTextColor的.arrow 新增#chooseTextFonts的.show類別
+    // 按下#lblForTextColor的.arrow
+    // 1. 新增.arrow的.beClick類別
+    // 2. 新增#chooseTextFonts的.show類別
     $('#lblForTextColor .arrow').click(function () {
         $('#chooseTextColor').toggleClass('show');
+        $('#lblForTextColor .arrow').toggleClass('beClick');
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -36,15 +24,6 @@ $(function(){
 
 
 })
-
-
-
-
-
-
-
-
-
 
 
 
@@ -129,6 +108,22 @@ function showTextStyleInputValue() {
     getTextStyleInput = getTextStyleInput.value
     getTextWordsValue = document.getElementById('textWords');
     getTextWordsValue.value = getTextStyleInput;
-    console.log(getTextWordsValue);
+    // console.log(getTextWordsValue);
 }
 
+// textSize Range設定
+function range() {
+    let getTextSize = document.querySelector('.textsizeRange');
+    getTextSize.addEventListener('input', function () {
+        let chooseTextSize = document.getElementById('chooseTextSize');
+        let textSizeValue = document.getElementById('textSizeValue');
+        var x = chooseTextSize.value;
+        // 設定range滑條的樣式
+        chooseTextSize.style.background = `linear-gradient(to right, var(--Orange) ${(x-3)*8.3}%,  rgba(255,255,255,.5) ${(x-3)*8.3}%)`;
+        // 設定spane顯示的數字隨著x變化
+        textSizeValue.textContent = `${x}`;
+        
+    })
+}
+
+range();

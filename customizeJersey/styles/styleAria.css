@@ -716,14 +716,44 @@ a {
 #chooseTextColor a {
     width: 36px;
     height: 36px;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, .3);
     border-radius: 9px;
     margin: 8px;
 }
 
+.textsizeRange {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 307px;
+    height: 56px;
+}
 
+#customizePlace #chooseTextSize,
+#chooseTextSize::-webkit-slider-thumb {
+    appearance: none;
+}
 
+#customizePlace #chooseTextSize {
+    border: none;
+    width: 240px;
+    height: 8px;
+    padding: 0px;
+    margin-right: 10px;
+    background-image: linear-gradient(to right, var(--Orange) 20%,  rgba(255,255,255,.5) 20%);
+}
 
+#chooseTextSize::-webkit-slider-thumb {
+    width: 10px;
+    height: 25px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.sizeValueBorder {
+    border: 1px solid white;
+    padding: 0px 3px;
+}
 
 
 
