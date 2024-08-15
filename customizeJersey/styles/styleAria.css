@@ -139,8 +139,8 @@ a {
 }
 
 .backgroundCarousel {
-    /* background-image: url(../images/carousel-img-1back.png); */
-    background-image: url(../images/carousel-img-2back.png);
+    background-image: url(../images/carousel-img-1back.png);
+    /* background-image: url(../images/carousel-img-2back.png); */
     position: absolute;
     z-index: 68;
     bottom: 0;
@@ -315,9 +315,8 @@ a {
 
 /* customizePlace共用區-Input */
 #customizePlace input {
-    width: 310px;
+    width: 300px;
     padding: 10px;
-    /* margin-bottom: 16px; */
     background-color: transparent;
     border: 1px solid white;
     border-radius: 10px;
@@ -513,8 +512,6 @@ a {
     line-height: 40px;
 }
 
-.styleInfo .stylePreview,
-.styleInfo .stylePreview,
 .styleInfo .stylePreview {
     width: 330px;
     height: 546px;
@@ -522,7 +519,7 @@ a {
     flex-wrap: wrap;
     align-content: flex-start;
     flex-grow: 0.8;
-    margin: 16px;
+    margin: 10px 0px;
     overflow: auto;
 }
 
@@ -532,7 +529,7 @@ a {
 }
 
 .styleInfo form {
-    width: 100%;
+    width: 97%;
 }
 
 
@@ -555,6 +552,32 @@ a {
     opacity: 100%;
 }
 
+/* stylePreview內的顏色選則設定 */
+.chooseColor {
+    width: 95%;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: auto;
+    animation: hide 1.35s both;
+    display: none;
+}
+
+.chooseColor.show {
+    display: flex;
+    animation: show 0.55s both;
+    margin-top: 10px;
+}
+
+.chooseColor a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    margin: 8px;
+}
+
 
 
 /* stylePreview滾動條樣式 */
@@ -562,6 +585,7 @@ a {
 .styleInfo .stylePreview::-webkit-scrollbar,
 .chooseColor::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
 }
 
 
@@ -585,33 +609,36 @@ a {
     background-color: var(--Orange);
 }
 
-/* customizePlace各style各自樣式區 */
-/* ???樣式設定 */
-
-
-
-
-
 
 
 /* customizePlace各style各自樣式區 */
 /* textArea樣式設定 */
-#textStyleInput #textStyleBtn {
+#textStyleInput #textStyle,
+#upload #uploadPicture,
+#numberInput # {
     width: 310px;
-    padding: 10px;
-    border: 1px solid white;
+}
+
+#textStyleInput #textStyleBtn,
+#upload #uploadPictureBtn,
+#numberInput #inputNumberBtn {
+    width: 310px;
     background-color: white;
     border: none;
     color: var(--Darkblue);
     margin-top: 16px;
 }
 
-#textStyleInput #textStyleBtn:hover {
+#textStyleInput #textStyleBtn:hover,
+#upload #uploadPictureBtn:hover,
+#numberInput #inputNumberBtn:hover {
     cursor: pointer;
     background-color: var(--Orange);
 }
 
-#textStyleInput #textStyleBtn:active {
+#textStyleInput #textStyleBtn:active,
+#upload #uploadPictureBtn:active,
+#numberInput #inputNumberBtn:active {
     background-color: var(--Darkorange);
 }
 
@@ -640,7 +667,6 @@ a {
     margin-bottom: 6px;
 }
 
-/* #textStyleValue hr, */
 hr {
     margin: 9px 0px;
 }
@@ -650,6 +676,8 @@ hr {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    letter-spacing: 1.5px;
+    width: 300px;
 }
 
 .stylePreview .arrow {
@@ -705,38 +733,12 @@ hr {
 
 #toTextArea-3rdBtn {
     width: 80px;
-    /* margin-right: 124px; */
     height: 2rem;
 }
 
 #textStyleValueBtn {
     width: 60px;
-    height: 2rem;
-}
-
-.chooseColor {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    overflow: auto;
-    animation: hide 1.35s both;
-    display: none;
-}
-
-.chooseColor.show {
-    display: flex;
-    animation: show 0.55s both;
-    margin-top: 10px;
-}
-
-.chooseColor a {
-    width: 36px;
-    height: 36px;
-    border: 1px solid rgba(255, 255, 255, .3);
-    border-radius: 50%;
-    margin: 8px;
+    height: 1.5rem;
 }
 
 .textsizeRange {
@@ -783,7 +785,7 @@ animation: show 0.55s both;
 /* customizePlace各style各自樣式區 */
 /* ColorArea樣式設定 */
 .stylePreview .whichFace {
-    width: 330px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
 }
@@ -792,6 +794,18 @@ animation: show 0.55s both;
     width: 165px;
     text-align: center;
     padding-bottom: 12px;
+    border-bottom: 1px solid white;
+    margin-bottom: 16px;
+}
+
+.whichFace a:hover,
+.whichFace a:focus {
+    background-color: var(--Darkblue);
+    border-color: var(--Orange);
+}
+
+#backColorSpace {
+    display: none;
 }
 
 
@@ -799,27 +813,16 @@ animation: show 0.55s both;
 
 
 
-
-
-
-
-
-
-/* #colorArea, */
-#shapeArea,
+#colorArea,
 #designArea,
-#textArea    {
+#textArea,
+#pictureArea,
+#numberArea {
     display: none;
 }
 
 #textArea-2nd, #textArea-3rd {
     display: none;
-}
-
-#chooseFaceColor {
-    display: flex;
-    animation: none;
-    /* display: none; */
 }
 
 
