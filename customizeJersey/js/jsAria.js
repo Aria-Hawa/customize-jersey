@@ -14,11 +14,17 @@ $(function () {
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#chooseTextFonts的.show類別
     $('#lblForTextColor .arrow').click(function () {
-        $('#chooseTextColor').toggleClass('show');
+        $('.chooseColor').toggleClass('show');
         $('#lblForTextColor .arrow').toggleClass('beClick');
     })
 
-
+    // 按下#lblForTextSize的.arrow
+    // 1. 新增.arrow的.beClick類別
+    // 2. 新增#chooseTextSize的.show類別
+    $('#lblForTextSize .arrow').click(function () {
+        $('.textsizeRange').toggleClass('show');
+        $('#lblForTextSize .arrow').toggleClass('beClick');
+    })
 
 
 
@@ -102,28 +108,26 @@ function display3rdStep() {
 }
 
 // 讓用戶在textArea-1st 輸入的文字呈現在textArea-3rd的文字方塊內
-let getTextStyleInput = document.getElementById('textStyle');
-let getTextWordsValue = document.getElementById('textWords');
-function showTextStyleInputValue() {
-    getTextStyleInput = getTextStyleInput.value
-    getTextWordsValue = document.getElementById('textWords');
-    getTextWordsValue.value = getTextStyleInput;
-    // console.log(getTextWordsValue);
-}
+// !!!!!監聽用change!!!!!!!!!
+let getTextStyleForm = document.getElementById('textStyleInput');
+getTextStyleForm.addEventListener('change',function () {
+    let getTextStyleInput = document.getElementById('textStyle');
+    let getTextWordsValue = document.getElementById('textWords');
+    getTextWordsValue.value = getTextStyleInput.value;
+})
+
+
 
 // textSize Range設定
-function range() {
-    let getTextSize = document.querySelector('.textsizeRange');
-    getTextSize.addEventListener('input', function () {
-        let chooseTextSize = document.getElementById('chooseTextSize');
-        let textSizeValue = document.getElementById('textSizeValue');
-        var x = chooseTextSize.value;
-        // 設定range滑條的樣式
-        chooseTextSize.style.background = `linear-gradient(to right, var(--Orange) ${(x-3)*8.3}%,  rgba(255,255,255,.5) ${(x-3)*8.3}%)`;
-        // 設定spane顯示的數字隨著x變化
-        textSizeValue.textContent = `${x}`;
-        
-    })
-}
+let getTextSize = document.querySelector('.textsizeRange');
+getTextSize.addEventListener('input', function () {
+    let chooseTextSize = document.getElementById('chooseTextSize');
+    let textSizeValue = document.getElementById('textSizeValue');
+    var x = chooseTextSize.value;
+    // 設定range滑條的樣式
+    chooseTextSize.style.background = `linear-gradient(to right, var(--Orange) ${(x - 3) * 8.3}%,  rgba(255,255,255,.5) ${(x - 3) * 8.3}%)`;
+    // 設定spane顯示的數字隨著x變化
+    textSizeValue.textContent = `${x}`;
+});
 
-range();
+// 

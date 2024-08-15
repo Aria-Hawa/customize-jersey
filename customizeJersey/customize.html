@@ -97,7 +97,7 @@
                                         <input type="text" name="textStyle" id="textStyle" title="輸入文字欄位"
                                             placeholder="輸入文字" autocomplete>
                                         <input type="button" name="textStyleBtn" id="textStyleBtn" title="確定按鈕"
-                                            value="確定" onclick="display2ndStep(),showTextStyleInputValue();">
+                                            value="確定" onclick="display2ndStep();">
                                     </form>
                                 </div>
                             </div>
@@ -147,51 +147,49 @@
                                         <label for="textColor" id="lblForTextColor">顏色
                                             <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
                                         </label>
-                                        <div id="chooseTextColor">
-                                            <a href="#" id="color01" style="background-color: #F1EB9C;"></a>
-                                            <a href="#" id="color02" style="background-color: #E9EC6B;"></a>
-                                            <a href="#" id="color03" style="background-color: #FEDD00;"></a>
-                                            <a href="#" id="color04" style="background-color: #FFCD00;"></a>
-                                            <a href="#" id="color05" style="background-color: #FFB81C;"></a>
-                                            <a href="#" id="color06" style="background-color: #FF8200;"></a>
-                                            <a href="#" id="color07" style="background-color: #FF8674;"></a>
-                                            <a href="#" id="color08" style="background-color: #FE5000;"></a>
-                                            <a href="#" id="color09" style="background-color: #F9423A;"></a>
-                                            <a href="#" id="color10" style="background-color: #D50032;"></a>
-                                            <a href="#" id="color11" style="background-color: #A6192E;"></a>
-                                            <a href="#" id="color12" style="background-color: #A9431E;"></a>
-                                            <a href="#" id="color13" style="background-color: #FABBCB;"></a>
-                                            <a href="#" id="color14" style="background-color: #D48BC8;"></a>
-                                            <a href="#" id="color15" style="background-color: #9678D3;"></a>
-                                            <a href="#" id="color16" style="background-color: #E31C79;"></a>
-                                            <a href="#" id="color17" style="background-color: #CE0058;"></a>
-                                            <a href="#" id="color18" style="background-color: #93328E;"></a>
-                                            <a href="#" id="color19" style="background-color: #5BC2E7;"></a>
-                                            <a href="#" id="color20" style="background-color: #0057B7;"></a>
-                                            <a href="#" id="color21" style="background-color: #004C97;"></a>
-                                            <a href="#" id="color22" style="background-color: #171C8F;"></a>
-                                            <a href="#" id="color23" style="background-color: #582C83;"></a>
-                                            <a href="#" id="color24" style="background-color: #6A3460;"></a>
-                                            <a href="#" id="color25" style="background-color: #BDD6E6;"></a>
-                                            <a href="#" id="color26" style="background-color: #8DC8E8;"></a>
-                                            <a href="#" id="color27" style="background-color: #8BB8E8;"></a>
-                                            <a href="#" id="color28" style="background-color: #01426A;"></a>
-                                            <a href="#" id="color29" style="background-color: #003865;"></a>
-                                            <a href="#" id="color30" style="background-color: #051C2C;"></a>
+                                        <div class="chooseColor" id="chooseTextColor">
+                                            <a href="#" class="color01" style="background-color: #F1EB9C;"></a>
+                                            <a href="#" class="color02" style="background-color: #E9EC6B;"></a>
+                                            <a href="#" class="color03" style="background-color: #FEDD00;"></a>
+                                            <a href="#" class="color04" style="background-color: #FFCD00;"></a>
+                                            <a href="#" class="color05" style="background-color: #FFB81C;"></a>
+                                            <a href="#" class="color06" style="background-color: #FF8200;"></a>
+                                            <a href="#" class="color07" style="background-color: #FF8674;"></a>
+                                            <a href="#" class="color08" style="background-color: #FE5000;"></a>
+                                            <a href="#" class="color09" style="background-color: #F9423A;"></a>
+                                            <a href="#" class="color10" style="background-color: #D50032;"></a>
+                                            <a href="#" class="color11" style="background-color: #A6192E;"></a>
+                                            <a href="#" class="color12" style="background-color: #A9431E;"></a>
+                                            <a href="#" class="color13" style="background-color: #FABBCB;"></a>
+                                            <a href="#" class="color14" style="background-color: #D48BC8;"></a>
+                                            <a href="#" class="color15" style="background-color: #9678D3;"></a>
+                                            <a href="#" class="color16" style="background-color: #E31C79;"></a>
+                                            <a href="#" class="color17" style="background-color: #CE0058;"></a>
+                                            <a href="#" class="color18" style="background-color: #93328E;"></a>
+                                            <a href="#" class="color19" style="background-color: #5BC2E7;"></a>
+                                            <a href="#" class="color20" style="background-color: #0057B7;"></a>
+                                            <a href="#" class="color21" style="background-color: #004C97;"></a>
+                                            <a href="#" class="color22" style="background-color: #171C8F;"></a>
+                                            <a href="#" class="color23" style="background-color: #582C83;"></a>
+                                            <a href="#" class="color24" style="background-color: #6A3460;"></a>
+                                            <a href="#" class="color25" style="background-color: #BDD6E6;"></a>
+                                            <a href="#" class="color26" style="background-color: #8DC8E8;"></a>
+                                            <a href="#" class="color27" style="background-color: #8BB8E8;"></a>
+                                            <a href="#" class="color28" style="background-color: #01426A;"></a>
+                                            <a href="#" class="color29" style="background-color: #003865;"></a>
+                                            <a href="#" class="color30" style="background-color: #051C2C;"></a>
                                         </div>
                                         <hr>
-                                        <label for="textSize">大小
+                                        <label for="textSize" id="lblForTextSize">大小
                                             <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
                                         </label>
                                         <small>(字高建議不超過10公分)</small><br>
                                         <div class="textsizeRange">
-                                            <!-- <small>3</small> -->
                                             <input type="range" name="textSize" id="chooseTextSize" title="選擇文字大小"
                                                 value="5" min="3" max="15" step="1">
                                             <div class="sizeValueBorder">
                                                 <span id="textSizeValue">5</span> <small>公分</small>
                                             </div>
-                                            <!-- <small>15</small> -->
                                         </div>
                                         <hr>
                                     </form>
@@ -199,6 +197,59 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- color區 -->
+                        <div class="area" id="colorArea">
+                            <div class="styleCaption">
+                                <h3>COLOR</h3>
+                                <p>設計出您想要的配色</p>
+                            </div>
+                            <div class="stylePreview">
+                                <div class="whichFace">
+                                    <a href="#">正面顏色</a>
+                                    <a href="#">背面顏色</a>
+                                </div>
+                                <form class="">
+                                    <hr>
+                                    <label for="faceColor" id="lblForFaceColor">顏色
+                                        <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
+                                    </label>
+                                    <div class="chooseColor" id="chooseFaceColor">
+                                        <a href="#" class="color01" style="background-color: #F1EB9C;"></a>
+                                        <a href="#" class="color02" style="background-color: #E9EC6B;"></a>
+                                        <a href="#" class="color03" style="background-color: #FEDD00;"></a>
+                                        <a href="#" class="color04" style="background-color: #FFCD00;"></a>
+                                        <a href="#" class="color05" style="background-color: #FFB81C;"></a>
+                                        <a href="#" class="color06" style="background-color: #FF8200;"></a>
+                                        <a href="#" class="color07" style="background-color: #FF8674;"></a>
+                                        <a href="#" class="color08" style="background-color: #FE5000;"></a>
+                                        <a href="#" class="color09" style="background-color: #F9423A;"></a>
+                                        <a href="#" class="color10" style="background-color: #D50032;"></a>
+                                        <a href="#" class="color11" style="background-color: #A6192E;"></a>
+                                        <a href="#" class="color12" style="background-color: #A9431E;"></a>
+                                        <a href="#" class="color13" style="background-color: #FABBCB;"></a>
+                                        <a href="#" class="color14" style="background-color: #D48BC8;"></a>
+                                        <a href="#" class="color15" style="background-color: #9678D3;"></a>
+                                        <a href="#" class="color16" style="background-color: #E31C79;"></a>
+                                        <a href="#" class="color17" style="background-color: #CE0058;"></a>
+                                        <a href="#" class="color18" style="background-color: #93328E;"></a>
+                                        <a href="#" class="color19" style="background-color: #5BC2E7;"></a>
+                                        <a href="#" class="color20" style="background-color: #0057B7;"></a>
+                                        <a href="#" class="color21" style="background-color: #004C97;"></a>
+                                        <a href="#" class="color22" style="background-color: #171C8F;"></a>
+                                        <a href="#" class="color23" style="background-color: #582C83;"></a>
+                                        <a href="#" class="color24" style="background-color: #6A3460;"></a>
+                                        <a href="#" class="color25" style="background-color: #BDD6E6;"></a>
+                                        <a href="#" class="color26" style="background-color: #8DC8E8;"></a>
+                                        <a href="#" class="color27" style="background-color: #8BB8E8;"></a>
+                                        <a href="#" class="color28" style="background-color: #01426A;"></a>
+                                        <a href="#" class="color29" style="background-color: #003865;"></a>
+                                        <a href="#" class="color30" style="background-color: #051C2C;"></a>
+                                    </div>
+                                    <hr>
+                                </form>
+                            </div>
+                        </div>
+
 
 
 
