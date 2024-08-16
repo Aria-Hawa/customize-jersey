@@ -857,6 +857,7 @@ animation: show 0.55s both;
     mask-image: url(../images/icon-BlackOrder.png);
     mask-repeat: no-repeat;
     mask-position: center;
+    mask-size: cover;
 }
 
 .productInfo a:hover {
@@ -911,30 +912,35 @@ animation: show 0.55s both;
     mask-image: url(../images/icon-blackTurn.png);
     mask-repeat: no-repeat;
     mask-position: center;
+    mask-size: cover;
 }
 
 .preOption ul li #undoOption {
     mask-image: url(../images/icon-blackUndo.png);
     mask-repeat: no-repeat;
     mask-position: center;
+    mask-size: cover;
 }
 
 .preOption ul li #redoOption {
     mask-image: url(../images/icon-blackRedo.png);
     mask-repeat: no-repeat;
     mask-position: center;
+    mask-size: cover;
 }
 
 .preOption ul li #clearOption {
     mask-image: url(../images/icon-blackClear.png);
     mask-repeat: no-repeat;
     mask-position: center;
+    mask-size: cover;
 }
 
 .preOption ul li #saveOption {
     mask-image: url(../images/icon-blackSave.png);
     mask-repeat: no-repeat;
     mask-position: center;
+    mask-size: cover;
 }
 
 .preOption ul li a:hover {
