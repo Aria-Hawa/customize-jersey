@@ -194,7 +194,7 @@ a {
   width: 100%;
 }
 
-.box_list .title{
+.box_list .title {
   display: flex;
   width: 100%;
   position: absolute;
@@ -205,7 +205,7 @@ a {
   letter-spacing: .2rem;
 }
 
-.box_list .title2{
+.box_list .title2 {
   display: none;
 }
 .box_list .arrow {
@@ -219,6 +219,9 @@ a {
   font-size: 18px;
 }
 
+.box_list h3{
+  font-family: "ROGFonts", sans-serif;
+}
 .box_list p {
   letter-spacing: .2rem;
   font-size: 18px;
@@ -339,7 +342,6 @@ footer div small {
   position: absolute;
   justify-content: center;
   padding: 10% 10%;
-  font-family: "ROGFonts", sans-serif;
   font-size: 38px;
   letter-spacing: .2rem;
 
