@@ -680,13 +680,13 @@ hr {
     width: 300px;
 }
 
-.stylePreview .arrow {
+.arrow {
     width: 20px;
     height: 20px;
     opacity: 50%;
 }
 
-.stylePreview .arrow:hover {
+.arrow:hover {
     width: 20px;
     height: 20px;
     opacity: 100%;
@@ -808,11 +808,6 @@ animation: show 0.55s both;
     display: none;
 }
 
-
-
-
-
-
 #colorArea,
 #designArea,
 #textArea,
@@ -824,29 +819,6 @@ animation: show 0.55s both;
 #textArea-2nd, #textArea-3rd {
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* customizePlace區productInfo樣式設定 */
 #operate .productInfo {
@@ -972,6 +944,94 @@ animation: show 0.55s both;
 .preOption ul li a:active {
     background-color: var(--Darkorange);
 }
+
+/* project網頁區 */
+#projectPlace {
+    background-color: var(--Blue);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 80px 80px 0px 80px;
+
+}
+
+#projectPlace .pageTitle h3{
+    font-family: "ROGFonts", sans-serif;
+    font-size: 32px;
+}
+
+.table {
+    width: 90%;
+    text-align: center;
+}
+
+.table table {
+    width: 100%;
+}
+
+.table .tableCaption {
+    height: 150px;
+    border: 1px solid white;
+    border-top-left-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.table .tableCaption figure {
+    width: 100px;
+    height: 140px;
+    border: 1px solid white;
+    background-image: url(../images/projectResults1_pjshape2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.table tr {
+    height: 50px;
+}
+
+
+.table table, th, td {
+    border: 1px solid white;
+    border-collapse:collapse;
+}
+
+.table input,
+.table select {
+    width: 90%;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.table select option {
+    color: var(--Darkblue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
