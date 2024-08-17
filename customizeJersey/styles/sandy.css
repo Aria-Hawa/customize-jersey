@@ -59,13 +59,16 @@ a {
 :root {
     /* 主色調 */
     --Orange: #FEB75D;
-    --Lightblue: rgb(85, 201, 234);
+    --Lightblue: #55c9ea;
     --Blue: #013B63;
     --Darkblue: #000E2B;
     --White: #ffffff;
-    --Blue2:#287DA2;
+    --Blue2: #287DA2;
 
     /* 透明色 */
+    --Lightblue_04: rgb(85, 201, 234, .4);
+    --Darkblue_05: rgb(0, 14, 41, .5);
+
 
     /* 漸層色 */
     --White-White: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .1) 30%, rgba(255, 255, 255, .4) 100%;
@@ -74,10 +77,10 @@ a {
     --ToRight-Lightblue-Darkbllue: var(--Blue2) 5%, var(--Blue) 28%, var(--Darkblue) 61%;
     --Lightblue-Lightblue: rgba(85, 201, 234, .5), 50%, rgba(85, 201, 234, .0) 95%;
     --Orange-Darkblue: var(--Orange) 0%, rgba(0, 14, 43, .0) 80%;
+    --Orange-Lightblue-Orange: var(--Orange) 0%, var(--Lightblue_04) 77%, var(--Orange) 100%;
     --Blue-Darkblue: #287DA2 0%, var(--Blue) 40%, var(--Darkblue) 80%;
-
-
-
+    --Blue-Darkblue-Blue: var(--Blue) 5%, var(--Darkblue) 55%, var(--Blue) 85%;
+    --Darkblue-Blue: var(--Darkblue) 38%, var(--Blue) 100%;
 }
 
 
@@ -411,8 +414,6 @@ section {
     height: 17px;
     background-color: #FEB75D;
     z-index: 999;
-
-
 }
 
 /* 長方形選單 */
@@ -428,15 +429,9 @@ section {
     z-index: 5;
 }
 
-
 /* 長方形小選單 */
-.rectangularMenu .menu-1 {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    color: #000E2B;
-}
 
+.rectangularMenu .menu-1,
 .rectangularMenu .menu-2 {
     display: flex;
     width: 100%;
@@ -464,6 +459,8 @@ section {
     background-size: cover;
     /*縮放到適合位置*/
 }
+
+
 
 .rectangularMenu .word {
     width: 50%;
@@ -497,7 +494,8 @@ section {
 }
 
 /* 主圖 */
-.projectTheme1 {
+.projectTheme1,
+.projectTheme {
     width: 100%;
     height: 77%;
     background-image: url(../images/pojectResults-projectTheme.svg);
@@ -507,15 +505,6 @@ section {
     /*縮放到適合位置*/
 }
 
-.projectTheme {
-    width: 100%;
-    height: 77%;
-    background-image: url(../images/pojectResults-projectTheme-1.png);
-    background-position: center;
-    /*下面四張圖置中裁切*/
-    background-size: cover;
-    /*縮放到適合位置*/
-}
 
 /* 主圖下方文字 */
 .projectContent {
@@ -570,7 +559,7 @@ section {
 }
 
 .pjTitle .Title h2,
-.pbTitle h2{
+.pbTitle h2 {
     font-family: ROGFonts, sans-serif;
     font-size: 45px;
     letter-spacing: .2rem;
@@ -579,14 +568,7 @@ section {
 }
 
 /* 右邊小字處 */
-.pjWord {
-    position: relative;
-    right: 0;
-    width: 67%;
-    height: 100%;
-    margin-right: 80px;
-}
-
+.pjWord,
 .pjWord1 {
     position: relative;
     right: 0;
@@ -595,15 +577,7 @@ section {
     margin-right: 80px;
 }
 
-.pjWord p {
-    position: absolute;
-    color: #ffffff;
-    z-index: 4;
-    bottom: 8%;
-    right: 0px;
-    letter-spacing: .08rem;
-}
-
+.pjWord p,
 .pjWord1 p {
     position: absolute;
     color: #ffffff;
@@ -621,19 +595,7 @@ section {
     height: 475px;
 }
 
-.pjBox__list {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    /* background-color: #FC8D00; */
-    width: 85%;
-    height: 400px;
-    z-index: 2;
-    margin: 30px 0 40px 0;
-    justify-content: space-between;
-}
-
+.pjBox__list,
 .pjBox__list1 {
     display: flex;
     position: absolute;
@@ -682,104 +644,314 @@ section {
     background-image: url(../images/projectResults1_pjshape3.png);
 }
 
+
 /* 商品瀏覽 */
-#productBrowsing{
+#productBrowsing {
     position: relative;
-    padding-top: 80px ;
+    padding-top: 80px;
     width: 100%;
-    height: 100vh;
+    height: 91.5vh;
     background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
 }
+
 /* 背景底圖 */
-.backgroundBasemap{
+.backgroundBasemap {
     position: absolute;
     z-index: 1;
     width: 100%;
-    height: 87.3vh;
-    background-image:url(../images/productBrowsing_backgroundBasemap1.png);
-    background-position:  top;
+    height: 80.5vh;
+    background-image: url(../images/productBrowsing_backgroundBasemap1.png);
+    background-position: top;
     /*下面四張圖置中裁切*/
     background-size: cover;
     /*縮放到適合位置*/
     mix-blend-mode: overlay;
     backdrop-filter: opacity(70%);
 }
-.productBrowsing{
+
+.productBrowsing {
     position: absolute;
     z-index: 2;
     width: 100%;
-    height: 87.3vh;
+    height: 80.5vh;
 }
-.pbTitleMenu{
+
+.pbTitleMenu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     height: 30%;
-    border:2px solid #FC8D00;
 }
 
 /* 標題 */
-.pbTitle{
-    padding-left:80px;
-    padding-bottom:20px;
-}
-/* 選單 */
-.pbMenu{
-    padding-left:80px;
-}
-.pbItem{
-    position: relative;
-    width: fit-content;
-    
-}
-.pbItem ul{
-    
-    display: flex;
-    /* border: 2px solid white; */
-    width: fit-content;
-    padding: 0 30px 0 30px ;
+.pbTitle {
+    padding-left: 80px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
-.pbItem::before {
-    position: absolute;
+/* 選單 */
+.pbMenu {
+    padding-left: 80px;
+}
+
+/* 平行四邊選單 */
+.pbItem {
+    position: relative;
+    width: fit-content;
     z-index: -1;
     content: '';
-    top: 0; right: 0; bottom: 0; left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     border: 2px solid #ffffff;
     transform: skew(-30deg);
 }
-.pbItem ul li{
-    padding: 10px 50px 10px 50px;
-    /* border-right: solid 2px #ffffff; */
-    background:
-    /* linear-gradient(120deg, transparent 10%, white 10%, white 50.5%, transparent 50.5%); */
-    /* menu 按鈕間的線 */
-    }
+
+/* 平行四邊選單垂直排 */
+.pbItem ul {
+    display: flex;
+}
+
+/* 平行四邊選單右邊間隔線 */
+.pbItem ul li {
+    padding: 7px 60px 7px 60px;
+    border-right: solid 2px #ffffff;
+}
+
+/* 平行四邊選單最後間隔線取消 */
+.pbItem ul li:last-child {
+    border-right: none;
+}
+
+/* 平行四邊選單文字取消請斜 */
+.pbItem a {
+    display: block;
+    transform: skew(30deg);
+}
+
 /* 款式 */
-.pbCommodity{
-    padding-left:80px;
-    padding-right:80px;
+.pbCommodity {
+    padding: 10px 80px 50px 80px;
     display: flex;
     width: 100%;
     height: 70%;
-    border:2px solid #8600fc;
+    /* border: 2px solid #8600fc; */
 }
-.pbShape{
+
+.pbShape {
+    position: relative;
     width: 33%;
-    height: 80%;
-    background-color: #FC8D00;
+    /* height: 80%; */
+    /* border: 1px solid #FFFFFF; */
     margin-right: 20px;
 }
+
+/* 滑過變色 */
+.pbShape:hover {
+    /* 底與框 */
+    .frame {
+        border: 3px solid transparent;
+        border-radius: 15px 0 15px 0;
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+        background-image: linear-gradient(-45deg, var(--Blue-Darkblue-Blue)), linear-gradient(45deg, var(--Orange-Lightblue-Orange));
+    }
+}
+.pbShape:hover {
+    .pbBescribe {
+        position: absolute;
+        z-index: 3;
+        bottom: 0;
+        width: 100%;
+        color: #fff;
+        padding: 20px 30px 20px 30px;
+        height: 45%;
+        background-image: linear-gradient(180deg, var(--Darkblue-Blue)), linear-gradient(45deg, var(--Orange-Lightblue-Orange));
+        border: 3px solid transparent;
+        border-radius: 0 0 15px 0;
+        background-clip: padding-box;
+        background-origin: padding-box, border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+}
+.pbShape:hover {
+    .pbShape .pbBescribe .pbText{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 5px;
+    }
+}
+.pbShape:hover {
+    .pbShape .pbBescribe .pbTBtn{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        margin-top: 15px;
+        width: 60%;
+        height: 43px;
+        border:1px solid #ffffff;
+        border-radius: 99px;
+        
+    }
+}
+
+/* 測試滑過 */
+.pbBescribeA {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    padding: 20px 30px 20px 30px;
+    height: 45%;
+    background-image: linear-gradient(180deg, var(--Darkblue-Blue)), linear-gradient(45deg, var(--Orange-Lightblue-Orange));
+    border: 3px solid transparent;
+    border-radius: 0 0 15px 0;
+    background-clip: padding-box;
+    background-origin: padding-box, border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+.pbShape .pbBescribeA .pbText{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+}
+.pbShape .pbBescribeA .pbTBtn{
+    margin-top: 15px;
+    width: 60%;
+    height: 43px;
+    border:1px solid #ffffff;
+    border-radius: 99px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
 .pbShape:last-child {
-    margin-right: none;
+    margin-right: unset;
     /* 承上 menu 按鈕間的線最後一個刪除 */
 }
 
+/* 透明淺藍框 */
+.frame {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    border: 3px solid var(--Lightblue_04);
+    border-radius: 15px 0 15px 0;
+
+}
+
+/* 小方框 */
+.smallBox {
+    position: absolute;
+    z-index: 990;
+    top: 10%;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: var(--Lightblue_04);
+}
+
+.smallBoxIcon {
+    position: absolute;
+    display: flex;
+    background-image: url(../images/productBrowsing_love.svg);
+    width: 30px;
+    height: 25.5px;
+    background-position: center;
+    /*下面四張圖置中裁切*/
+    background-size: contain;
+    /*縮放到適合位置*/
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -46%);
+}
+
+/* 商品圖片區 */
+.pbShape .pbshapeimg {
+    position: absolute;
+    top: -7px;
+    width: 100%;
+    height: 79%;
+    /* background-color: #df7e1d; */
+}
+
+/* 圖片區開始*/
+.pbShape .pbshapeimg .pbImage {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    background-position: center;
+    /*下面四張圖置中裁切*/
+    background-size: cover;
+    /*縮放到適合位置*/
+}
+
+/* 圖片(前) */
+.pbShape .pbshapeimg .A {
+    /* background-color: #770f16; */
+    position: absolute;
+    z-index: 3;
+    left: 20px;
+}
+
+/* 圖片(後) */
+.pbShape .pbshapeimg .B {
+    /* background-color: #2e0f77; */
+    z-index: 2;
+    right: 20px;
+}
+
+/* 塞圖片 */
+.pbshapeimg .svc-1 {
+    background-image: url(../images/productBrowsing_pbShapeA_1.png);
+}
+
+.pbshapeimg .svc-2 {
+    background-image: url(../images/productBrowsing_pbShapeA_2.png);
+}
+
+/* 商品文案區 */
+.pbShape .pbBescribe {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    /* background-color: #562674; */
+    color: #fff;
+    padding: 20px 30px 25px 30px;
+}
+
+.pbShape .pbBescribe .pbText{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 16px 0;
+}
+
+
+
+
 
 /* 文字區 */
-.titleBig h2
- {
+.titleBig h2 {
     font-family: ROGFonts, sans-serif;
     width: fit-content;
     font-size: 45px;
@@ -789,7 +961,6 @@ section {
     padding-bottom: 30px;
     line-height: 60px
 }
-
 
 .textTitle h3 {
     font-family: ROGFonts, sans-serif;
@@ -802,18 +973,32 @@ section {
     /* background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue)); */
 }
 
-.bevel h4 {
+h4 {
     font-size: 20px;
-    letter-spacing: .08rem;
+    letter-spacing: .12rem;
     color: #ffffff;
     /* background-image: linear-gradient(to right, var(--Orange-Darkblue)); */
 
+}
+
+h5 {
+    font-size: 12px;
+    letter-spacing: .08rem;
+    color: #ffffff;
+
+}
+
+.bevel h4 {
     padding-left: 50px;
     padding-top: 5px;
     padding-right: 40px;
     padding-bottom: 5px;
-
 }
+
+.word h4 {
+    color: var(--Darkblue);
+}
+
 
 /* footer區 */
 footer {
