@@ -81,6 +81,7 @@ a {
     --Blue-Darkblue: #287DA2 0%, var(--Blue) 40%, var(--Darkblue) 80%;
     --Blue-Darkblue-Blue: var(--Blue) 5%, var(--Darkblue) 55%, var(--Blue) 85%;
     --Darkblue-Blue: var(--Darkblue) 38%, var(--Blue) 100%;
+    --Lightblue-White:var(--Lightblue)0%,var(--White)100;
 }
 
 
@@ -443,7 +444,7 @@ section {
 .rectangularMenu .menu-2 .figure {
     width: 50%;
     height: 100%;
-    background-image: url(../images/projectResults_rectangleThumbnail1.png);
+    background-image: url(../images/projectResults_rectangleThumbnail2.png);
     background-position: center;
     /*下面四張圖置中裁切*/
     background-size: cover;
@@ -453,7 +454,7 @@ section {
 .rectangularMenu .menu-1 .figure {
     width: 50%;
     height: 100%;
-    background-image: url(../images/projectResults_rectangleThumbnail2.png);
+    background-image: url(../images/projectResults_rectangleThumbnail1.png);
     background-position: center;
     /*下面四張圖置中裁切*/
     background-size: cover;
@@ -498,11 +499,17 @@ section {
 .projectTheme {
     width: 100%;
     height: 77%;
-    background-image: url(../images/pojectResults-projectTheme.svg);
     background-position: center;
     /*下面四張圖置中裁切*/
     background-size: cover;
     /*縮放到適合位置*/
+}
+.projectTheme {
+    background-image: url(../images/pojectResults-projectTheme.svg);
+}
+
+.projectTheme1 {
+    background-image: url(../images/pojectResults-projectTheme-1.png);
 }
 
 
@@ -650,7 +657,7 @@ section {
     position: relative;
     padding-top: 80px;
     width: 100%;
-    height: 91.5vh;
+    height: 100vh;
     background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
 }
 
@@ -659,7 +666,7 @@ section {
     position: absolute;
     z-index: 1;
     width: 100%;
-    height: 80.5vh;
+    height: 88vh;
     background-image: url(../images/productBrowsing_backgroundBasemap1.png);
     background-position: top;
     /*下面四張圖置中裁切*/
@@ -673,7 +680,7 @@ section {
     position: absolute;
     z-index: 2;
     width: 100%;
-    height: 80.5vh;
+    height: 88vh;
 }
 
 .pbTitleMenu {
@@ -706,7 +713,9 @@ section {
     right: 0;
     bottom: 0;
     left: 0;
-    border: 2px solid #ffffff;
+    border: 2px solid;
+    border-image-source: linear-gradient(to right, #55c9ea, #ffffff);
+    border-image-slice: 1;
     transform: skew(-30deg);
 }
 
@@ -762,21 +771,21 @@ section {
 }
 .pbShape:hover {
     .pbBescribe {
-        position: absolute;
-        z-index: 3;
-        bottom: 0;
-        width: 100%;
-        color: #fff;
-        padding: 20px 30px 20px 30px;
-        height: 45%;
-        background-image: linear-gradient(180deg, var(--Darkblue-Blue)), linear-gradient(45deg, var(--Orange-Lightblue-Orange));
-        border: 3px solid transparent;
-        border-radius: 0 0 15px 0;
-        background-clip: padding-box;
-        background-origin: padding-box, border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    padding: 10px 30px 20px 30px;
+    height: 45%;
+    background-image: linear-gradient(180deg, var(--Darkblue-Blue)), linear-gradient(45deg, var(--Orange-Lightblue-Orange));
+    border: 3px solid transparent;
+    border-radius: 0 0 15px 0;
+    background-clip: padding-box;
+    background-origin: padding-box, border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
         }
 }
 .pbShape:hover {
@@ -790,15 +799,14 @@ section {
 }
 .pbShape:hover {
     .pbShape .pbBescribe .pbTBtn{
-        display: flex;
-        justify-content:center;
-        align-items: center;
         margin-top: 15px;
         width: 60%;
         height: 43px;
         border:1px solid #ffffff;
         border-radius: 99px;
-        
+        display: flex;
+        justify-content:center;
+        align-items: center;
     }
 }
 
@@ -809,7 +817,7 @@ section {
     bottom: 0;
     width: 100%;
     color: #fff;
-    padding: 20px 30px 20px 30px;
+    padding: 10px 30px 20px 30px;
     height: 45%;
     background-image: linear-gradient(180deg, var(--Darkblue-Blue)), linear-gradient(45deg, var(--Orange-Lightblue-Orange));
     border: 3px solid transparent;

@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="pbCommodity">
-                    <div class="pbShape">
+                    <div class="pbShape" onmouseenter="showBtn();" onmouseleave="turnoffBtn();">
                         <!-- 透明淺藍框 -->
                         <div class="frame"></div>
                         <!-- 小方框 -->
@@ -58,7 +58,7 @@
                             <div class="smallBoxIcon"></div>
                         </div>
                         <!-- 商品圖片區 -->
-                        <div class="pbshapeimg">
+                        <div class="pbshapeimg" >
                             <div class="pbImage A svc-1"></div>
                             <div class="pbImage B svc-2"></div>
                         </div>
@@ -170,6 +170,23 @@
             <small>&copy;2024 VSER, Inc. 版權所有</small>
         </div>
     </footer>
+
+    <!-- 互動區 -->
+     <script>
+         let pbTBtnDiv = '';
+         function getDiv() {
+            pbTBtnDiv = document.querySelector('.pbTBtn');
+        }
+        function showBtn() {
+            getDiv();
+            pbTBtnDiv.style.display = "flex";
+        }
+        function turnoffBtn() {
+            getDiv();
+            pbTBtnDiv.style.display = "none";
+        }
+        
+     </script>
 
 </body>
 
