@@ -8,7 +8,7 @@ $(function () {
     $('#lblForTextFonts .arrow').click(function () {
         $('#lblForTextFonts .arrow').toggleClass('beClick');
         $('#chooseTextFonts').toggleClass('show');
-    })
+    });
 
     // 按下#lblForTextColor的.arrow
     // 1. 新增.arrow的.beClick類別
@@ -16,7 +16,7 @@ $(function () {
     $('#lblForTextColor .arrow').click(function () {
         $('#lblForTextColor .arrow').toggleClass('beClick');
         $('.chooseColor').toggleClass('show');
-    })
+    });
 
     // 按下#lblForTextSize的.arrow
     // 1. 新增.arrow的.beClick類別
@@ -24,7 +24,7 @@ $(function () {
     $('#lblForTextSize .arrow').click(function () {
         $('#lblForTextSize .arrow').toggleClass('beClick');
         $('.textsizeRange').toggleClass('show');
-    })
+    });
 
     // 按下#frontSide
     // 1. #backColorSpace加入.hiden類別
@@ -32,15 +32,15 @@ $(function () {
     $('#frontSide').click(function () {
         $('#backColorSpace').hide();
         $('#frontColorSpace').show();
-    })
+    });
 
-     // 按下#backSide
+    // 按下#backSide
     // 1. #frontColorSpace加入.hiden類別
     // 2. #backSideSpace加入.show類別
     $('#backSide').click(function () {
         $('#frontColorSpace').hide();
         $('#backColorSpace').show();
-    })
+    });
 
     // 按下#lblForFront-1的.arrow
     // 1. 新增.arrow的.beClick類別
@@ -48,7 +48,7 @@ $(function () {
     $('#lblForFront-1 .arrow').click(function () {
         $('#lblForFront-1 .arrow').toggleClass('beClick');
         $('#frontColor-1.chooseColor').toggleClass('show');
-    })
+    });
 
     // 按下#lblForFront-2的.arrow
     // 1. 新增.arrow的.beClick類別
@@ -56,7 +56,7 @@ $(function () {
     $('#lblForFront-2 .arrow').click(function () {
         $('#lblForFront-2 .arrow').toggleClass('beClick');
         $('#frontColor-2.chooseColor').toggleClass('show');
-    })
+    });
 
     // 按下#lblForFront-3的.arrow
     // 1. 新增.arrow的.beClick類別
@@ -64,7 +64,7 @@ $(function () {
     $('#lblForFront-3 .arrow').click(function () {
         $('#lblForFront-3 .arrow').toggleClass('beClick');
         $('#frontColor-3.chooseColor').toggleClass('show');
-    })
+    });
 
 
     // 按下#lblForBack-1的.arrow
@@ -73,7 +73,7 @@ $(function () {
     $('#lblForBack-1 .arrow').click(function () {
         $('#lblForBack-1 .arrow').toggleClass('beClick');
         $('#backColor-1.chooseColor').toggleClass('show');
-    })
+    });
 
     // 按下#lblForBack-2的.arrow
     // 1. 新增.arrow的.beClick類別
@@ -81,7 +81,7 @@ $(function () {
     $('#lblForBack-2 .arrow').click(function () {
         $('#lblForBack-2 .arrow').toggleClass('beClick');
         $('#backColor-2.chooseColor').toggleClass('show');
-    })
+    });
 
     // 按下#lblForBack-3的.arrow
     // 1. 新增.arrow的.beClick類別
@@ -89,11 +89,9 @@ $(function () {
     $('#lblForBack-3 .arrow').click(function () {
         $('#lblForBack-3 .arrow').toggleClass('beClick');
         $('#backColor-3.chooseColor').toggleClass('show');
-    })
+    });
 
-
-})
-
+});
 
 
 
@@ -193,11 +191,11 @@ getTextStyleForm.addEventListener('change', function () {
     let getTextStyleInput = document.getElementById('textStyle');
     let getTextWordsValue = document.getElementById('textWords');
     getTextWordsValue.value = getTextStyleInput.value;
-})
+});
 
 
 
-// textSize Range設定
+// textSize Range設定 => 參考https://codepen.io/davidsonaguiar/pen/ExvvaRz
 let getTextSize = document.querySelector('.textsizeRange');
 getTextSize.addEventListener('input', function () {
     let chooseTextSize = document.getElementById('chooseTextSize');

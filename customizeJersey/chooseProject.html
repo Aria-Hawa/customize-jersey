@@ -36,13 +36,13 @@
                 <p>請點選您的球衣樣式,並填寫尺寸、號碼、姓名（如不需要請點選無）</p>
             </div>
             <div id="project-1" class="table">
-                <div div class="tableCaption">
-                    <a href="">
+                <div class="tableCaption">
+                    <div class="captionLeft">
                         <figure></figure>
                         <p>球衣樣式名稱</p>
-                    </a>
-                    <div>
-                        <p class="unitPrice">單件價格 : NT$ <span>36.90</span> </p>
+                    </div>
+                    <div class="captionRight">
+                        <p class="unitPrice">單件價格 : NT$ <span>3,690</span> </p>
                         <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
                     </div>
                 </div>
@@ -76,18 +76,129 @@
                                     <option value="">2L</option>
                                     <option value="">3L</option>
                                 </select>
-
                             </td>
                             <td><input type="number" name="" id="" title="選擇數量列表" autocomplete></td>
+                            <td>刪除/確認</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" name="" id="" title="輸入球號列表" autocomplete></td>
+                            <td><input type="text" name="" id="" title="輸入名字列表" autocomplete></td>
+                            <td>
+                                <select name="" id="" title="選擇尺寸列表">
+                                    <option value="選擇尺寸"></option>
+                                    <option value="">120cm</option>
+                                    <option value="">130cm</option>
+                                    <option value="">140cm</option>
+                                    <option value="">XS</option>
+                                    <option value="">S</option>
+                                    <option value="">M</option>
+                                    <option value="">L</option>
+                                    <option value="">XL</option>
+                                    <option value="">2L</option>
+                                    <option value="">3L</option>
+                                </select>
+                            </td>
+                            <td><input type="number" name="" id="" title="選擇數量列表" autocomplete></td>
+                            <td>刪除/確認</td>
                         </tr>
                     </tbody>
                     <tfoot>
-
-
+                        <tr>
+                            <td colspan="1000">
+                                <a class="tableFoot">
+                                    <figure class="addBtn"></figure>
+                                    <p>新增件數</p>
+                                </a>
+                            </td>
+                        </tr>
                     </tfoot>
                 </table>
             </div>
-
+            <div id="project-2" class="table">
+                <div class="tableCaption">
+                    <div class="captionLeft">
+                        <figure></figure>
+                        <p>球衣樣式名稱</p>
+                    </div>
+                    <div class="captionRight">
+                        <p class="unitPrice">單件價格 : NT$ <span>3,690</span> </p>
+                        <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>項次</th>
+                            <th>球號</th>
+                            <th>名字</th>
+                            <th>尺寸</th>
+                            <th>數量</th>
+                            <th>編輯</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" name="" id="" title="輸入球號列表" autocomplete></td>
+                            <td><input type="text" name="" id="" title="輸入名字列表" autocomplete></td>
+                            <td>
+                                <select name="" id="" title="選擇尺寸列表">
+                                    <option value="選擇尺寸"></option>
+                                    <option value="">120cm</option>
+                                    <option value="">130cm</option>
+                                    <option value="">140cm</option>
+                                    <option value="">XS</option>
+                                    <option value="">S</option>
+                                    <option value="">M</option>
+                                    <option value="">L</option>
+                                    <option value="">XL</option>
+                                    <option value="">2L</option>
+                                    <option value="">3L</option>
+                                </select>
+                            </td>
+                            <td><input type="number" name="" id="" title="選擇數量列表" autocomplete></td>
+                            <td>刪除/確認</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" name="" id="" title="輸入球號列表" autocomplete></td>
+                            <td><input type="text" name="" id="" title="輸入名字列表" autocomplete></td>
+                            <td>
+                                <select name="" id="" title="選擇尺寸列表">
+                                    <option value="選擇尺寸"></option>
+                                    <option value="">120cm</option>
+                                    <option value="">130cm</option>
+                                    <option value="">140cm</option>
+                                    <option value="">XS</option>
+                                    <option value="">S</option>
+                                    <option value="">M</option>
+                                    <option value="">L</option>
+                                    <option value="">XL</option>
+                                    <option value="">2L</option>
+                                    <option value="">3L</option>
+                                </select>
+                            </td>
+                            <td><input type="number" name="" id="" title="選擇數量列表" autocomplete></td>
+                            <td>刪除/確認</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="1000">
+                                <div class="tableFoot">
+                                    <figure class="addBtn"></figure>
+                                    <p>新增件數</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
 
 
 
@@ -100,7 +211,7 @@
     <!-- 設定jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="./js/jsAria.js"></script>
+    <script src="./js/jsAriaProject.js"></script>
 </body>
 
 </html>
