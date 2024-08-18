@@ -71,7 +71,7 @@ a {
     --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Lightblue) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
     --ToRight-White-Orange: #fff 0%, var(--Orange) 47%, var(--Darkorange) 98%;
     --ToRight-Lightblue-Darkbllue: var(--Lightblue) 5%, var(--Blue) 28%, var(--Darkblue) 61%;
-    --Lightblue-White: var(--Lightblue) 0%, #fff 100%;
+    --Lightblue-White: var(--Lightblue) 70%, #fff 80%;
 
 }
 
@@ -260,33 +260,29 @@ a {
 
 #fixedTopbar .rightList .customizeBtn {
     margin-right: 20px;
-    width: 132px;
+    /* width: 132px; */
+    width: 100px;
     height: fit-content;
     text-align: center;
     padding: 8px;
     border: 3px solid transparent;
-    border-image: linear-gradient(90deg, var(--Lightblue-White)) 3 round;
+    border-image: linear-gradient(0deg, var(--Lightblue-White)) 1 round;
     position: relative;
-    animation: rotate 3s infinite linear;
+    animation: rotate 3s linear infinite ;
 }
 
-/* #fixedTopbar .rightList .customizeBtn:hover {
-    background-image: linear-gradient(350deg, var(--Lightblue-White));
-} */
-/* 
-#fixedTopbar .rightList .customizeBtn::before {
-    content: "訂製專區";
-    text-align: center;
-    line-height: 40px;
-    background-color: var(--Blue);
-    position: absolute;
-    width: 97%;
-    height: 40px;
-    left: 1.5%;
-    top: 50%;
-    transform: translate(0%, -50%);
-    background-position: center;
-} */
+@keyframes rotate {
+    0% {
+        border-image: linear-gradient(0deg, var(--Lightblue-White)) 1 round;
+    }
+    50% {
+        border-image: linear-gradient(180deg, var(--Lightblue-White)) 1 round;
+    }
+    100% {
+        border-image: linear-gradient(360deg, var(--Lightblue-White)) 1 round;
+    }
+}
+
 
 /* customizePlace區 */
 #customizePlace {
@@ -1243,19 +1239,7 @@ footer div small {
     }
 }
 
-@keyframes rotate {
-    0% {
-        border-image: linear-gradient(0deg, var(--Lightblue-White)) 10 round;
-    }
 
-    50% {
-        border-image: linear-gradient(180deg, var(--Lightblue-White)) 10 round;
-    }
-
-    100% {
-        border-image: linear-gradient(360deg, var(--Lightblue-White)) 10 round;
-    }
-}
 
 
 
