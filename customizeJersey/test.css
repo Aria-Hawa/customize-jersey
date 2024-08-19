@@ -1,7 +1,0 @@
-.frame {
-    border-image: linear-gradient(red, yellow) 30; 
-    mask: linear-gradient(rgb(219, 33, 33), black);
-    border-width: 30px;
-    border-radius: 16px;
-    border-style: solid;
-  }
