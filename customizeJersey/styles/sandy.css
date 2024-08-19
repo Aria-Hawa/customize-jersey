@@ -778,7 +778,7 @@ section {
 }
 
 /* 滑過變色 */
-.pbShape .frame:hover  {/* 底與框 */
+.pbShape:hover .frame{/* 底與框 */
         border: 3px solid transparent;
         border-radius: 15px 0 15px 0;
         background-clip: padding-box, border-box;
@@ -786,14 +786,13 @@ section {
         background-image: linear-gradient(-45deg, var(--Blue-Darkblue-Blue)), 
         linear-gradient(-45deg, var(--Orange-Lightblue-Orange));
     }
+.pbShape:hover .pbBescribe{
     
-.pbShape .pbBescribe:hover {
         bottom: 0;
         padding: 10px 30px 20px 30px;
         height: 45%;
         background-image: linear-gradient(180deg, var(--Darkblue-Blue)), linear-gradient(45deg, var(--Orange-Lightblue-Orange));
         }
-
 .pbShape .pbBescribe .pbTBtn{
     margin-top: 15px;
     width: 60%;
