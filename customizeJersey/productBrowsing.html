@@ -33,7 +33,7 @@
         <section id="productBrowsing">
             <!-- 背景底圖 -->
             <div class="backgroundBasemap"></div>
-           <!-- 圖文開始 -->
+            <!-- 圖文開始 -->
             <div class="productBrowsing">
                 <div class="pbTitleMenu">
                     <div class="pbTitle">
@@ -42,70 +42,17 @@
                     <div class="pbMenu ">
                         <nav class="pbItem">
                             <ul>
-                                <li ><a href="#">昇華球衣</a></li>
-                                <li ><a href="#">排汗上衣</a></li>
-                                <li ><a href="#">訓練短褲</a></li>
+                                <li><a href="#">昇華球衣</a></li>
+                                <li><a href="#">排汗上衣</a></li>
+                                <li><a href="#">訓練短褲</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
                 <div class="pbCommodity">
-                    <div class="pbShape" onmouseenter="showBtn();" onmouseleave="turnoffBtn();">
-                        <!-- 透明淺藍框 -->
-                        <div class="frame"></div>
-                        <!-- 小方框 -->
-                        <div class="smallBox">
-                            <div class="smallBoxIcon"></div>
-                        </div>
-                        <!-- 商品圖片區 -->
-                        <div class="pbshapeimg" >
-                            <div class="pbImage A svc-1"></div>
-                            <div class="pbImage B svc-2"></div>
-                        </div>
-                        <!-- 商品文案區 -->
-                        <div class="pbBescribe">
-                            <div class="pbText">
-                                <h4>款式AAAAA</h4>
-                                <h5>款式$1000</h5>
-                            </div>
-                            <div class="pbText">
-                                <p>款式介紹款式介紹款式介紹</p>
-                                <h5>★ ★ ★ ★ ★</h5>
-                            </div>
-                            <div class="pbTBtn" style="display: none;">
-                                <a href="#">詳細介紹</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pbShape">
-                        <!-- 透明淺藍框 -->
-                        <div class="frame"></div>
-                        <!-- 小方框 -->
-                        <div class="smallBox">
-                            <div class="smallBoxIcon"></div>
-                        </div>
-                        <!-- 商品圖片區 -->
-                        <div class="pbshapeimg">
-                            <div class="pbImage A svc-1"></div>
-                            <div class="pbImage B svc-2"></div>
-                        </div>
-                        <!-- 商品文案區 -->
-                        <div class="pbBescribeA">
-                            <div class="pbText">
-                                <h4>款式AAAAA</h4>
-                                <h5>款式$1000</h5>
-                            </div>
-                            <div class="pbText">
-                                <p>款式介紹款式介紹款式介紹</p>
-                                <h5>★ ★ ★ ★ ★</h5>
-                            </div>
-                            <div class="pbTBtn">
-                                <a href="#">詳細介紹</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="pbShape">
+                    <div class="arrow1"></div>
+                    <div class="arrow2"></div>
+                    <div  class="pbShape" onmouseenter="showBtn(1);" onmouseleave="turnoffBtn(1);">
                         <!-- 透明淺藍框 -->
                         <div class="frame"></div>
                         <!-- 小方框 -->
@@ -127,17 +74,66 @@
                                 <p>款式介紹款式介紹款式介紹</p>
                                 <h5>★ ★ ★ ★ ★</h5>
                             </div>
+                            <div id="pb1" class="pbTBtn" style="display: none;">
+                                <a href="#">詳細介紹</a>
+                            </div>
                         </div>
                     </div>
-                    
+                    <div class="pbShape" onmouseenter="showBtn(2);" onmouseleave="turnoffBtn(2);">
+                        <!-- 透明淺藍框 -->
+                        <div class="frame"></div>
+                        <!-- 小方框 -->
+                        <div class="smallBox">
+                            <div class="smallBoxIcon"></div>
+                        </div>
+                        <!-- 商品圖片區 -->
+                        <div class="pbshapeimg">
+                            <div class="pbImage A svc-1"></div>
+                            <div class="pbImage B svc-2"></div>
+                        </div>
+                        <!-- 商品文案區 -->
+                        <div class="pbBescribe">
+                            <div class="pbText">
+                                <h4>款式AAAAA</h4>
+                                <h5>款式$1000</h5>
+                            </div>
+                            <div class="pbText">
+                                <p>款式介紹款式介紹款式介紹</p>
+                                <h5>★ ★ ★ ★ ★</h5>
+                            </div>
+                            <div id="pb2" class="pbTBtn" style="display: none;">
+                                <a href="#">詳細介紹</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pbShape" onmouseenter="showBtn(3);" onmouseleave="turnoffBtn(3);">
+                        <!-- 透明淺藍框 -->
+                        <div class="frame"></div>
+                        <!-- 小方框 -->
+                        <div class="smallBox">
+                            <div class="smallBoxIcon"></div>
+                        </div>
+                        <!-- 商品圖片區 -->
+                        <div class="pbshapeimg">
+                            <div class="pbImage A svc-1"></div>
+                            <div class="pbImage B svc-2"></div>
+                        </div>
+                        <!-- 商品文案區 -->
+                        <div class="pbBescribe">
+                            <div class="pbText">
+                                <h4>款式AAAAA</h4>
+                                <h5>款式$1000</h5>
+                            </div>
+                            <div class="pbText">
+                                <p>款式介紹款式介紹款式介紹</p>
+                                <h5>★ ★ ★ ★ ★</h5>
+                            </div>
+                            <div  id="pb3" class="pbTBtn" style="display: none;">
+                                <a href="#">詳細介紹</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-
-
-
-
-
             </div>
 
         </section>
@@ -172,21 +168,27 @@
     </footer>
 
     <!-- 互動區 -->
-     <script>
-         let pbTBtnDiv = '';
-         function getDiv() {
-            pbTBtnDiv = document.querySelector('.pbTBtn');
+    <script>
+        let pbTBtnDiv = '';
+        function getDiv(curNum) {
+            pbTBtnDiv = document.getElementById('pb'+curNum);
+            console.log(pbTBtnDiv);
+            // pbTBtnDiv = document.querySelector('.pbTBtn');
+            
         }
-        function showBtn() {
-            getDiv();
+
+        function showBtn(pbNum) {
+            getDiv(pbNum);
+              
             pbTBtnDiv.style.display = "flex";
+            
         }
-        function turnoffBtn() {
-            getDiv();
+
+        function turnoffBtn(pbNum) {
+            getDiv(pbNum);
             pbTBtnDiv.style.display = "none";
         }
-        
-     </script>
+    </script>
 
 </body>
 
