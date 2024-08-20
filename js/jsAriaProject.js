@@ -2,9 +2,17 @@
 $(function () {
     // 共用
     // .arrow的互動
-    $('.arrow').click(function () {
+    // $('.arrow').click(function () {
+    //     // .arrow旋轉
+    //     $(this).toggleClass('beClick');
+    //     // 新增.show類別
+    //     $(this).closest('.table').find('table').toggleClass('show');
+    //     $(this).closest('.tableCaption').toggleClass('show');
+    // });
+
+    $('.tableCaption').click(function () {
         // .arrow旋轉
-        $(this).toggleClass('beClick');
+        $(this).find('.arrow').toggleClass('beClick');
         // 新增.show類別
         $(this).closest('.table').find('table').toggleClass('show');
         $(this).closest('.tableCaption').toggleClass('show');

@@ -69,7 +69,7 @@ a {
     /* 漸層色 */
     --White-White: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .1) 30%, rgba(255, 255, 255, .4) 100%;
     --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Lightblue) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
-    --ToRight-White-Orange: #fff 0%, var(--Orange) 47%, var(--Darkorange) 98%;
+    --ToRight-White-Orange: #fff 0%, var(--Orange) 47%, var(--Darkorange) 90%;
     --ToRight-Lightblue-Darkbllue: var(--Lightblue) 5%, var(--Blue) 28%, var(--Darkblue) 61%;
     --Lightblue-White: var(--Lightblue) 70%, #fff 80%;
 
@@ -196,12 +196,11 @@ a {
 }
 
 .sloganNbtn a {
-    width: 212px;
-    height: 65px;
-    background-image: linear-gradient(140deg, var(--ToRight-White-Orange));
+    width: 250px;
+    height: fit-content;
+    /* background-image: linear-gradient(140deg, var(--ToRight-White-Orange));
     border-radius: 15px;
-    border: 2px solid rgba(255, 255, 255, 0.7);
-    /* 問題1：border不會加漸層  ==> chatGpt解決 */
+    border: 2px solid rgba(255, 255, 255, 0.7); */
     color: var(--Darkblue);
     font-family: "Noto Sans TC", sans-serif;
     font-size: 24px;
@@ -209,6 +208,38 @@ a {
     text-align: center;
     line-height: 62px;
     letter-spacing: 2px;
+    /* 以下8/20測試平行四邊形 */
+    background-image: linear-gradient(290deg, transparent 10%, white 10%, var(--ToRight-White-Orange) 90%, transparent 90%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* 以下8/20新增，測試before光條 */
+    position: relative;
+    overflow: hidden;
+}
+
+.sloganNbtn a:hover {
+    transition: .4s all cubic-bezier(0, 0, 0.05, 0.92);
+    transform: translateX(25px);
+}
+
+/* 以下8/20新增，測試before光條 */
+.sloganNbtn a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(290deg, transparent 40%, rgba(255, 255, 255, .8) 40%, rgba(255, 255, 255, .3) 60%, transparent 60%);
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.sloganNbtn a:hover::before {
+    /* transition: all 1.3s ease-in-out;
+    transform: translatex(300px); */
+    animation: lightRun 1.5s cubic-bezier(0.26, 0.02, 0.09, 0.99) infinite;
 }
 
 .bottomIcon {
@@ -268,16 +299,18 @@ a {
     border: 3px solid transparent;
     border-image: linear-gradient(0deg, var(--Lightblue-White)) 1 round;
     position: relative;
-    animation: rotate 3s linear infinite ;
+    animation: rotate 3s linear infinite;
 }
 
 @keyframes rotate {
     0% {
         border-image: linear-gradient(0deg, var(--Lightblue-White)) 1 round;
     }
+
     50% {
         border-image: linear-gradient(180deg, var(--Lightblue-White)) 1 round;
     }
+
     100% {
         border-image: linear-gradient(360deg, var(--Lightblue-White)) 1 round;
     }
@@ -987,10 +1020,20 @@ hr {
 .table .tableCaption {
     width: 100%;
     height: 150px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.table .tableCaption:hover {
+    cursor: pointer;
+    border: 4px solid transparent;
+    background-image: linear-gradient(var(--Blue), var(--Blue)), linear-gradient(-45deg, var(--Lightblue-White));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-repeat: no-repeat;
+    animation: borderRun 2s ease-in-out;
 }
 
 .table .tableCaption.show {
@@ -1239,8 +1282,45 @@ footer div small {
     }
 }
 
+@keyframes lightRun {
+    0% {
+        opacity: 0;
+        left: -100px;
+    }
 
+    35% {
+        opacity: 1;
+        left: 80px;
+    }
 
+    100% {
+        opacity: 0;
+        left: 80px;
+    }
+}
+
+@keyframes borderRun {
+    0% {
+        background-size: 100%, 0% 5%;
+        background-position: center, 0px 146px;
+    }
+    25% {
+        background-size: 100%, 100% 5%;
+        background-position: center, 0px 146px;
+    }
+    50% {
+        background-size: 100%, 1% 100%;
+        background-position: center, 1030px 0px;
+    }
+    75%{
+    background-size: 100%, 100% 5%;
+        background-position: center, 0px 0px;
+    }
+    100%{
+        background-size: 100%, 5% 100%;
+        background-position: center, 0px 0px;
+    }
+}
 
 
 
