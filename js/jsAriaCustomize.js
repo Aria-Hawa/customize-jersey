@@ -1,34 +1,34 @@
 
 // 使用jQuery
 $(function () {
-
-
-
     // 按下.arrow 互動
     // 1.新增.arrow的.beClick類別
-    $('.arrow').click(function () {
-        $(this).toggleClass('beClick');
-    });
+    // $('.arrow').click(function () {
+    //     $(this).toggleClass('beClick');
+    // });
 
 
     // 按下#lblForTextFonts的.arrow 
     // 1.新增.arrow的.beClick類別
     // 2.新增#chooseTextFonts的.show類別
-    $('#lblForTextFonts .arrow').click(function () {
+    $('#lblForTextFonts').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
         $('#chooseTextFonts').toggleClass('show');
     });
 
     // 按下#lblForTextColor的.arrow
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#chooseTextColor的.show類別
-    $('#lblForTextColor .arrow').click(function () {
+    $('#lblForTextColor').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
         $('.chooseColor').toggleClass('show');
     });
 
     // 按下#lblForTextSize的.arrow
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#chooseTextSize的.show類別
-    $('#lblForTextSize .arrow').click(function () {
+    $('#lblForTextSize').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
         $('.textsizeRange').toggleClass('show');
     });
 
@@ -51,21 +51,24 @@ $(function () {
     // 按下#lblForFront-1的.arrow
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#frontColor-1.chooseColor的.show類別
-    $('#lblForFront-1 .arrow').click(function () {
+    $('#lblForFront-1').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
         $('#frontColor-1.chooseColor').toggleClass('show');
     });
 
     // 按下#lblForFront-2的.arrow
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#frontColor-2.chooseColor的.show類別
-    $('#lblForFront-2 .arrow').click(function () {
+    $('#lblForFront-2').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
         $('#frontColor-2.chooseColor').toggleClass('show');
     });
 
     // 按下#lblForFront-3的.arrow
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#frontColor-3.chooseColor的.show類別
-    $('#lblForFront-3 .arrow').click(function () {
+    $('#lblForFront-3').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
         $('#frontColor-3.chooseColor').toggleClass('show');
     });
 
@@ -73,22 +76,41 @@ $(function () {
     // 按下#lblForBack-1的.arrow
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#backColor-1.chooseColor的.show類別
-    $('#lblForBack-1 .arrow').click(function () {
+    $('#lblForBack-1').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
         $('#backColor-1.chooseColor').toggleClass('show');
     });
 
     // 按下#lblForBack-2的.arrow
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#backColor-2.chooseColor的.show類別
-    $('#lblForBack-2 .arrow').click(function () {
+    $('#lblForBack-2').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
         $('#backColor-2.chooseColor').toggleClass('show');
     });
 
     // 按下#lblForBack-3的.arrow
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#backColor-3.chooseColor的.show類別
-    $('#lblForBack-3 .arrow').click(function () {
+    $('#lblForBack-3').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
         $('#backColor-3.chooseColor').toggleClass('show');
+    });
+
+    // 按下shape區的衣服變更preview
+    $('#shapeArea .stylePreview a').click(function () {
+        let shapeNo = $(this).find('img').attr('alt');
+        $('.preJersey img').css('display','block');
+        $('.preJersey img').attr('src', `./images/${shapeNo}.svg`);
+        $('.preJersey svg').css('display','none');
+    });
+
+    // 按下design區的衣服變更preview
+    $('#designArea .stylePreview a').click(function () {
+        let designNo = $(this).find('img').attr('alt');
+        $('.preJersey img').css('display','none');
+        $('.preJersey svg').css('display','none');
+        $(`#${designNo}`).css('display','block');
     });
 
 });
