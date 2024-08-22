@@ -372,7 +372,7 @@ a {
     justify-content: space-between;
     border: 1px solid white;
     /* flex-shrink: 0.35; */
-    flex-grow: 0.05;
+    /* flex-grow: 0.05; */
 }
 
 #operate .style {
@@ -890,8 +890,8 @@ hr {
 }
 
 .productInfo a {
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 64px;
     background-color: white;
     mask-image: url(../images/icon-BlackOrder.png);
     mask-repeat: no-repeat;
@@ -917,25 +917,26 @@ hr {
     flex-direction: column;
     align-items: center;
     /* flex-shrink: 0.65; */
-    flex-grow: 0.95;
-
+    /* flex-grow: 0.95; */
+    flex-grow: 1;
 }
 
 #preview .preJersey {
     width: 80%;
     height: 80%;
-    margin-top: 40px;
+    /* margin-top: 40px; */
+    padding-top: 30px;
+    flex-grow: 1;
 }
 
 #preview .preJersey figure {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border: 1px solid red;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* background-image: url(../images/preview-shape.svg); */
+    background-image: url(../images/shape-1.svg);
 }
 
 #preview .preJersey figure svg {
@@ -944,72 +945,81 @@ hr {
     object-fit: contain;
 }
 
+#preview .preOption {
+    width: fit-content;
+    height: fit-content;
+}
+
 #preview .preOption ul {
     display: flex;
     justify-content: space-around;
     width: 560px;
-    padding: 20px 0px 30px 0px;
+    height: fit-content;
+    padding: 20px 0px;
 }
 
 .preOption ul li a {
     background-color: white;
     width: 56px;
-    height: 75px;
+    height: 56px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
 }
 
 .preOption ul li #turnOption {
     mask-image: url(../images/icon-blackTurn.png);
-    mask-repeat: no-repeat;
+    /* mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: cover;
+    mask-size: cover; */
     -webkit-mask-image: url(../images/icon-blackTurn.png);
-    -webkit-mask-repeat: no-repeat;
+    /* -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
-    -webkit-mask-size: cover;
+    -webkit-mask-size: cover; */
 }
 
 .preOption ul li #undoOption {
     mask-image: url(../images/icon-blackUndo.png);
-    mask-repeat: no-repeat;
+    /* mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: cover;
+    mask-size: cover; */
     -webkit-mask-image: url(../images/icon-blackUndo.png);
-    -webkit-mask-repeat: no-repeat;
+    /* -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
-    -webkit-mask-size: cover;
+    -webkit-mask-size: cover; */
 }
 
 .preOption ul li #redoOption {
     mask-image: url(../images/icon-blackRedo.png);
-    mask-repeat: no-repeat;
+    /* mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: cover;
+    mask-size: cover; */
     -webkit-mask-image: url(../images/icon-blackRedo.png);
-    -webkit-mask-repeat: no-repeat;
+    /* -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
-    -webkit-mask-size: cover;
+    -webkit-mask-size: cover; */
 }
 
 .preOption ul li #clearOption {
     mask-image: url(../images/icon-blackClear.png);
-    mask-repeat: no-repeat;
+    /* mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: cover;
+    mask-size: cover; */
     -webkit-mask-image: url(../images/icon-blackClear.png);
-    -webkit-mask-repeat: no-repeat;
+    /* -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
-    -webkit-mask-size: cover;
+    -webkit-mask-size: cover; */
 }
 
 .preOption ul li #saveOption {
     mask-image: url(../images/icon-blackSave.png);
-    mask-repeat: no-repeat;
+    /* mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: cover;
+    mask-size: cover; */
     -webkit-mask-image: url(../images/icon-blackSave.png);
-    -webkit-mask-repeat: no-repeat;
+    /* -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
-    -webkit-mask-size: cover;
+    -webkit-mask-size: cover; */
 }
 
 .preOption ul li a:hover {
