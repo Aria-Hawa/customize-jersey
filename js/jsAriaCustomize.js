@@ -100,15 +100,16 @@ $(function () {
     // 按下shape區的衣服變更preview
     $('#shapeArea .stylePreview a').click(function () {
         let shapeNo = $(this).find('img').attr('alt');
-        $('.preJersey img').css('display','block');
-        $('.preJersey img').attr('src', `./images/${shapeNo}.svg`);
+        // $('.preJersey img').css('display','block');
+        // $('.preJersey img').attr('src', `./images/${shapeNo}.svg`);
         $('.preJersey svg').css('display','none');
+        $('.preJersey figure').css('background-image', `url(./images/${shapeNo}.svg)`);
     });
 
     // 按下design區的衣服變更preview
     $('#designArea .stylePreview a').click(function () {
         let designNo = $(this).find('img').attr('alt');
-        $('.preJersey img').css('display','none');
+        $('.preJersey figure').css('background-image','none');
         $('.preJersey svg').css('display','none');
         $(`#${designNo}`).css('display','block');
     });

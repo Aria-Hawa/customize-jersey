@@ -519,8 +519,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
     height: 100%;
     width: 100%;
 }
@@ -568,6 +566,7 @@ a {
 .stylePreview figure a {
     width: 152px;
     height: 152px;
+    margin: 0px 0px 8px 8px;
     opacity: 50%;
 }
 
@@ -579,8 +578,6 @@ a {
 
 .stylePreview figure a:hover,
 .stylePreview figure a:focus {
-    width: 152px;
-    height: 152px;
     opacity: 100%;
 }
 
@@ -900,6 +897,10 @@ hr {
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: cover;
+    -webkit-mask-image: url(../images/icon-BlackOrder.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
 }
 
 .productInfo a:hover {
@@ -915,7 +916,6 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* width: 100%; */
     /* flex-shrink: 0.65; */
     flex-grow: 0.95;
 
@@ -931,13 +931,14 @@ hr {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* background-size: contain;
+    border: 1px solid red;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../images/preview-shape.svg); */
+    /* background-image: url(../images/preview-shape.svg); */
 }
 
-#preview .preJersey figure img {
+#preview .preJersey figure svg {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -961,6 +962,10 @@ hr {
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: cover;
+    -webkit-mask-image: url(../images/icon-blackTurn.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
 }
 
 .preOption ul li #undoOption {
@@ -968,6 +973,10 @@ hr {
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: cover;
+    -webkit-mask-image: url(../images/icon-blackUndo.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
 }
 
 .preOption ul li #redoOption {
@@ -975,6 +984,10 @@ hr {
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: cover;
+    -webkit-mask-image: url(../images/icon-blackRedo.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
 }
 
 .preOption ul li #clearOption {
@@ -982,6 +995,10 @@ hr {
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: cover;
+    -webkit-mask-image: url(../images/icon-blackClear.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
 }
 
 .preOption ul li #saveOption {
@@ -989,6 +1006,10 @@ hr {
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: cover;
+    -webkit-mask-image: url(../images/icon-blackSave.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
 }
 
 .preOption ul li a:hover {
@@ -1127,11 +1148,15 @@ td {
     width: 40px;
     height: 40px;
     background-color: white;
+    margin-right: 16px;
     mask-image: url(../images/icon-blackCross.png);
     mask-repeat: no-repeat;
     mask-size: contain;
     mask-position: center;
-    margin-right: 16px;
+    -webkit-mask-image: url(../images/icon-blackCross.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
 }
 
 .delBtn:hover {
@@ -1168,6 +1193,10 @@ td {
     mask-repeat: no-repeat;
     mask-size: contain;
     mask-position: center;
+    -webkit-mask-image: url(../images/icon-blackAdd.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
 }
 
 .pageBottom #projectInfo {
@@ -1326,6 +1355,7 @@ footer div small {
         background-position: center, 0px 148px;
         border: 2px solid transparent;
     }
+
     60% {
         background-image: linear-gradient(var(--Darkblue), var(--Darkblue)), linear-gradient(-45deg, var(--Lightblue-White));
         background-origin: border-box;
@@ -1334,6 +1364,7 @@ footer div small {
         background-size: 100%, 100% 80%;
         background-position: center, 0px 148px;
     }
+
     100% {
         background-color: var(--Darkblue);
     }
