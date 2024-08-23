@@ -237,8 +237,6 @@ a {
 }
 
 .sloganNbtn a:hover::before {
-    /* transition: all 1.3s ease-in-out;
-    transform: translatex(300px); */
     animation: lightRun 1.5s cubic-bezier(0.26, 0.02, 0.09, 0.99) infinite;
 }
 
@@ -374,7 +372,7 @@ a {
     justify-content: space-between;
     border: 1px solid white;
     /* flex-shrink: 0.35; */
-    flex-grow: 0.05;
+    /* flex-grow: 0.05; */
 }
 
 #operate .style {
@@ -521,8 +519,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
     height: 100%;
     width: 100%;
 }
@@ -569,7 +565,8 @@ a {
 
 .stylePreview figure a {
     width: 152px;
-    height: auto;
+    height: 152px;
+    margin: 0px 0px 8px 8px;
     opacity: 50%;
 }
 
@@ -581,8 +578,6 @@ a {
 
 .stylePreview figure a:hover,
 .stylePreview figure a:focus {
-    width: 152px;
-    height: auto;
     opacity: 100%;
 }
 
@@ -713,6 +708,12 @@ hr {
     justify-content: space-between;
     letter-spacing: 1.5px;
     width: 300px;
+    padding-left: 5px;
+}
+
+#textArea label:hover,
+#colorArea label:hover {
+    cursor: pointer;
 }
 
 .arrow {
@@ -727,8 +728,10 @@ hr {
     opacity: 100%;
 }
 
-.arrow.beClick img {
-    transform: rotate(180deg);
+.arrow.beClick {
+    opacity: 100%;
+    transform: rotate(90deg);
+
 }
 
 .arrow img {
@@ -887,13 +890,17 @@ hr {
 }
 
 .productInfo a {
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 64px;
     background-color: white;
     mask-image: url(../images/icon-BlackOrder.png);
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: cover;
+    -webkit-mask-image: url(../images/icon-BlackOrder.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
 }
 
 .productInfo a:hover {
@@ -909,74 +916,110 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* width: 100%; */
     /* flex-shrink: 0.65; */
-    flex-grow: 0.95;
-
+    /* flex-grow: 0.95; */
+    flex-grow: 1;
 }
 
 #preview .preJersey {
     width: 80%;
-    height: 100%;
-    margin-top: 40px;
+    height: 80%;
+    /* margin-top: 40px; */
+    padding-top: 30px;
+    flex-grow: 1;
 }
 
 #preview .preJersey figure {
     width: 100%;
     height: 100%;
-    /* object-fit: contain; */
+    object-fit: contain;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../images/preview-shape.svg);
+    background-image: url(../images/shape-1.svg);
+}
+
+#preview .preJersey figure svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#preview .preOption {
+    width: fit-content;
+    height: fit-content;
 }
 
 #preview .preOption ul {
     display: flex;
     justify-content: space-around;
     width: 560px;
-    padding: 20px 0px 30px 0px;
+    height: fit-content;
+    padding: 20px 0px;
 }
 
 .preOption ul li a {
     background-color: white;
     width: 56px;
-    height: 75px;
+    height: 56px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
 }
 
 .preOption ul li #turnOption {
     mask-image: url(../images/icon-blackTurn.png);
-    mask-repeat: no-repeat;
+    /* mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: cover;
+    mask-size: cover; */
+    -webkit-mask-image: url(../images/icon-blackTurn.png);
+    /* -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover; */
 }
 
 .preOption ul li #undoOption {
     mask-image: url(../images/icon-blackUndo.png);
-    mask-repeat: no-repeat;
+    /* mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: cover;
+    mask-size: cover; */
+    -webkit-mask-image: url(../images/icon-blackUndo.png);
+    /* -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover; */
 }
 
 .preOption ul li #redoOption {
     mask-image: url(../images/icon-blackRedo.png);
-    mask-repeat: no-repeat;
+    /* mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: cover;
+    mask-size: cover; */
+    -webkit-mask-image: url(../images/icon-blackRedo.png);
+    /* -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover; */
 }
 
 .preOption ul li #clearOption {
     mask-image: url(../images/icon-blackClear.png);
-    mask-repeat: no-repeat;
+    /* mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: cover;
+    mask-size: cover; */
+    -webkit-mask-image: url(../images/icon-blackClear.png);
+    /* -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover; */
 }
 
 .preOption ul li #saveOption {
     mask-image: url(../images/icon-blackSave.png);
-    mask-repeat: no-repeat;
+    /* mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: cover;
+    mask-size: cover; */
+    -webkit-mask-image: url(../images/icon-blackSave.png);
+    /* -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover; */
 }
 
 .preOption ul li a:hover {
@@ -1020,7 +1063,7 @@ hr {
 .table .tableCaption {
     width: 100%;
     height: 150px;
-    /* border: 1px solid white; */
+    border: 2px solid white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1028,11 +1071,7 @@ hr {
 
 .table .tableCaption:hover {
     cursor: pointer;
-    border: 4px solid transparent;
-    background-image: linear-gradient(var(--Blue), var(--Blue)), linear-gradient(-45deg, var(--Lightblue-White));
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    background-repeat: no-repeat;
+    border: 2px solid white;
     animation: borderRun 2s ease-in-out;
 }
 
@@ -1069,6 +1108,9 @@ hr {
 
 .table table {
     width: 100%;
+    border: 2px solid white;
+    border-top: none;
+    border-collapse: collapse;
     display: none;
 }
 
@@ -1080,13 +1122,12 @@ hr {
     height: 50px;
 }
 
-.table table,
 th,
 td {
     border: 1px solid white;
     border-top: none;
     border-collapse: collapse;
-    min-width: 48px;
+    min-width: 72px;
 }
 
 .table input,
@@ -1117,11 +1158,22 @@ td {
     width: 40px;
     height: 40px;
     background-color: white;
+    margin-right: 16px;
     mask-image: url(../images/icon-blackCross.png);
     mask-repeat: no-repeat;
     mask-size: contain;
     mask-position: center;
-    margin-right: 16px;
+    -webkit-mask-image: url(../images/icon-blackCross.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+}
+
+.delBtn:hover {
+    color: var(--Orange);
+    text-align: center;
+    letter-spacing: 3px;
+    cursor: pointer;
 }
 
 .pageBottom {
@@ -1151,6 +1203,10 @@ td {
     mask-repeat: no-repeat;
     mask-size: contain;
     mask-position: center;
+    -webkit-mask-image: url(../images/icon-blackAdd.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
 }
 
 .pageBottom #projectInfo {
@@ -1301,24 +1357,26 @@ footer div small {
 
 @keyframes borderRun {
     0% {
-        background-size: 100%, 0% 5%;
-        background-position: center, 0px 146px;
+        background-image: linear-gradient(var(--Darkblue), var(--Darkblue)), linear-gradient(-45deg, var(--Lightblue-White));
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        background-repeat: no-repeat;
+        background-size: 100%, 0% 2px;
+        background-position: center, 0px 148px;
+        border: 2px solid transparent;
     }
-    25% {
-        background-size: 100%, 100% 5%;
-        background-position: center, 0px 146px;
+
+    60% {
+        background-image: linear-gradient(var(--Darkblue), var(--Darkblue)), linear-gradient(-45deg, var(--Lightblue-White));
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        background-repeat: no-repeat;
+        background-size: 100%, 100% 80%;
+        background-position: center, 0px 148px;
     }
-    50% {
-        background-size: 100%, 1% 100%;
-        background-position: center, 1030px 0px;
-    }
-    75%{
-    background-size: 100%, 100% 5%;
-        background-position: center, 0px 0px;
-    }
-    100%{
-        background-size: 100%, 5% 100%;
-        background-position: center, 0px 0px;
+
+    100% {
+        background-color: var(--Darkblue);
     }
 }
 
