@@ -1046,12 +1046,12 @@ hr {
 .table .tableCaption:hover {
     cursor: pointer;
     border: 2px solid white;
-    animation: borderRun 2s ease-in-out;
+    animation: borderRun 2.3s ease-in-out;
 }
 
 .table .tableCaption.show {
     background-color: var(--Darkblue);
-    border-top-left-radius: 15px;
+    border-top-left-radius: 21px;
 }
 
 
@@ -1212,17 +1212,45 @@ td {
     margin-right: 8px;
 }
 
-.nextBtn {
-    width: 80%;
-    background-color: transparent;
-    color: white;
-    outline: none;
-    border: 1px solid white;
-    border-radius: 15px;
-    font-size: 24px;
-    padding: 16px 0px;
+.test {
+    display: flex;
+    width: 240px;
 }
 
+.nextBtn {
+    width: 120px;
+    background-color: transparent;
+    color: white;
+    /* border: 1px solid white; */
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0px;
+    position: relative;
+}
+
+.nextBtn:hover {
+    width: 240px;
+    transition: all .5s ease-in-out;
+}
+
+.nextBtn::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid white;
+    transform: skewX(-40deg);
+    border-image: linear-gradient(316deg, var(--ToRight-White-Orange)) 1;
+}
+
+.nextBtn:hover::before {
+    width: 100%;
+    transform: skewX(-40deg);
+    transition: all .5s ease-in-out;
+    background-color: transparent;
+}
 
 
 
@@ -1340,17 +1368,13 @@ footer div small {
         border: 2px solid transparent;
     }
 
-    60% {
+    100% {
         background-image: linear-gradient(var(--Darkblue), var(--Darkblue)), linear-gradient(-45deg, var(--Lightblue-White));
         background-origin: border-box;
         background-clip: padding-box, border-box;
         background-repeat: no-repeat;
         background-size: 100%, 100% 80%;
         background-position: center, 0px 148px;
-    }
-
-    100% {
-        background-color: var(--Darkblue);
     }
 }
 
