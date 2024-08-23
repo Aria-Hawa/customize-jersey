@@ -81,7 +81,7 @@ a {
     --Blue-Darkblue: #287DA2 0%, var(--Blue) 40%, var(--Darkblue) 80%;
     --Blue-Darkblue-Blue: var(--Blue) 5%, var(--Darkblue) 55%, var(--Blue) 85%;
     --Darkblue-Blue: var(--Darkblue) 38%, var(--Blue) 100%;
-    --Lightblue-White:var(--Lightblue)0%,var(--White)100;
+    --Lightblue-White: var(--Lightblue)0%, var(--White)100;
 }
 
 
@@ -504,6 +504,7 @@ section {
     background-size: cover;
     /*縮放到適合位置*/
 }
+
 .projectTheme {
     background-image: url(../images/pojectResults-projectTheme.svg);
 }
@@ -667,13 +668,18 @@ section {
     z-index: 1;
     width: 100%;
     height: 88vh;
-    background-image: url(../images/productBrowsing_backgroundBasemap1.png);
     background-position: top;
     /*下面四張圖置中裁切*/
     background-size: cover;
     /*縮放到適合位置*/
     mix-blend-mode: overlay;
-    backdrop-filter: opacity(70%);
+    opacity:.7;
+}
+.bgsvc-1{
+    background-image: url(../images/productBrowsing_backgroundBasemap1.png);
+}
+.bgsvc-2{
+    background-image: url(../images/productBrowsing_backgroundBasemap2.png);
 }
 
 .productBrowsing {
@@ -745,69 +751,90 @@ section {
 .pbCommodity {
     padding: 10px 80px 50px 80px;
     display: flex;
+    justify-content: center;
     width: 100%;
     height: 70%;
     /* border: 2px solid #8600fc; */
     overflow: hidden;
     position: relative;
 }
-.arrow1{
+
+.arrow1 {
     background-image: url(../images/productBrowsing_icon_1.svg);
     width: 35px;
     height: 60px;
     position: absolute;
     z-index: 999;
     right: 60px;
-    top: 60%;
+    top: 42%;
 }
-.arrow2{
+
+.arrow2 {
     background-image: url(../images/productBrowsing_icon_2.svg);
     width: 35px;
     height: 60px;
     position: absolute;
     z-index: 999;
     left: 60px;
-    top: 60%;
+    top: 42%;
 }
+
 li.pbShape {
     position: relative;
-    width: 33%;
+    width: 353.6px;
     height: 100%;
     /* height: 80%; */
     /* border: 1px solid #FFFFFF; */
     margin-right: 20px;
     overflow: hidden;
-    
+
 }
 
 /* 滑過變色 */
-.pbShape:hover .frame{/* 底與框 */
-        border: 3px solid transparent;
-        border-radius: 15px 0 15px 0;
-        background-clip: padding-box, border-box;
-        background-origin: padding-box, border-box;
-        background-image: linear-gradient(-45deg, var(--Blue-Darkblue-Blue)), 
+.pbShape:hover .frame {
+    /* 底與框 */
+    border: 3px solid transparent;
+    border-radius: 15px 0 15px 0;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(-45deg, var(--Blue-Darkblue-Blue)),
         linear-gradient(-45deg, var(--Orange-Lightblue-Orange));
-    }
-.pbShape:hover .pbBescribe{
-        bottom: 0;
-        height: 45%;
-        background-image: linear-gradient(180deg, var(--Darkblue-Blue)), linear-gradient(45deg, var(--Orange-Lightblue-Orange));
-        mix-blend-mode: multiply;
-        opacity:.7;
-        }
+}
 
 
-.pbShape .pbBescribe .pbTBtn{
+.pbShape:hover .pbBescribe {
+
+    bottom: 0;
+    height: 45%;
+    background-image: linear-gradient(180deg, var(--Darkblue-Blue)), linear-gradient(45deg, var(--Orange-Lightblue-Orange));
+    /* mix-blend-mode: multiply; */
+    opacity: .8;
+}
+
+.pbShape .pbBescribe .pbText {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    mix-blend-mode: normal;
+    opacity: normal;
+}
+
+.pbShape .pbBescribe .pbTBtn {
     margin-top: 15px;
     width: 60%;
     height: 43px;
-    border:1px solid #ffffff;
+    border: 1px solid #ffffff;
     border-radius: 99px;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
+    mix-blend-mode: normal;
+    opacity: normal;
 }
+
+
 
 .pbShape:last-child {
     margin-right: unset;
@@ -914,18 +941,6 @@ li.pbShape {
     flex-direction: column;
     align-items: center;
 }
-
-.pbShape .pbBescribe .pbText{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 5px;
-}
-
-
-
-
 
 /* 文字區 */
 .titleBig h2 {

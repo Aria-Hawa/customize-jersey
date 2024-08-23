@@ -1,5 +1,5 @@
 function slideCarousel(direction) {
-	var templateSize = 367.6 // technically 192px, but accounting for 16px margin
+	var templateSize = 369 // technically 192px, but accounting for 16px margin
 	var templates = $('#templates');
 	// create variable for width
 	var templateWidth = 0 
@@ -8,7 +8,7 @@ function slideCarousel(direction) {
 		templateWidth += $(this).outerWidth( true );
 	});
 	// the amount we want to scroll the templates
-	var paginationSize = (templateSize * 3) 
+	var paginationSize = (templateSize * 1) 
 	
 	// for sliding right
 	if (direction == "right") { 
@@ -48,12 +48,12 @@ function slideCarousel(direction) {
 	if (direction == "left") {
 		
 			var currentTemplatePos = parseInt(templates.css('left'))
-			var newTemplatePos = currentTemplatePos + (templateSize * 3)
+			var newTemplatePos = currentTemplatePos + (templateSize * 1)
 			
 			// if left arrow is visible
 			if ($('#carousel-left').hasClass('showing')) {
 				// if the template "page" is close to zero state
-				if (currentTemplatePos > -(templateSize * 3)) {
+				if (currentTemplatePos > -(templateSize * 1)) {
 					// set it to zero state
 					templates.css("left", 0 + "px");
 				} else {

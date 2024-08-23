@@ -4,27 +4,23 @@
   box-sizing: border-box;
 }
 .container {
-  width: 100%;
+  width: 1091px;
 
 }
-ul {
+ul#templates {
   display: flex;
   position: relative;
   left: 0;
   transition: all 0.35s ease-in-out;
 }
 ul#templates li {
-  width: 32%;
+  width: 353px;
   height: 340px;
   margin-right: 16px;
   flex: 1 0 auto;
   transition: all 0.2s ease-in-out;
   transform: scale(1);
 }
-
-/* ul#templates li:nth-child(3n) {
-  margin-right: 0;
-} */
 
 ul li:hover {
   cursor: pointer;
