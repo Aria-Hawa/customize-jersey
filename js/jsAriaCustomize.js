@@ -114,6 +114,9 @@ $(function () {
         $(`#${designNo}`).css('display','block');
     });
 
+    // 找preview區域的顏色顯示在chooseColor上
+    
+
 });
 
 

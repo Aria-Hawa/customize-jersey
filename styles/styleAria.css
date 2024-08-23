@@ -334,6 +334,8 @@ a {
     font-weight: 600;
     padding: 3px;
     margin-left: 10px;
+    /* 8/23 RWD測試 */
+    height: fit-content;
 }
 
 .customizePlaceBtn:hover {
@@ -347,7 +349,7 @@ a {
 
 /* customizePlace共用區-Input */
 #customizePlace input {
-    width: 310px;
+    /* width: 310px; */
     padding: 10px;
     background-color: transparent;
     border: 1px solid white;
@@ -355,6 +357,8 @@ a {
     color: white;
     letter-spacing: 2px;
     font-size: 18px;
+    /* 8/23 RWD測試 */
+    width: 100%;
 }
 
 #customizePlace input::placeholder {
@@ -373,6 +377,9 @@ a {
     border: 1px solid white;
     /* flex-shrink: 0.35; */
     /* flex-grow: 0.05; */
+    /* 8/23 RWD測試 */
+    min-width: 300px;
+    max-width: 464px;
 }
 
 #operate .style {
@@ -380,6 +387,8 @@ a {
     align-items: center;
     flex-grow: 0.7;
     height: 70%;
+    /* 8/23 RWD測試 */
+    max-width: 408px;
 }
 
 .style .styleItem {
@@ -391,119 +400,84 @@ a {
 
 .style .styleItem li {
     width: 72px;
-    height: 64px;
+    height: 12%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    /* 8/23 RWD測試 */
+    min-height: 64px;
 }
 
 .style .styleItem li a {
     width: 100%;
     height: 100%;
-    padding: 10px;
+    /* 8/23 RWD測試 */
+    /* padding: 10px; */
+    /* background-size: 48px 48px; */
+    background-size: auto;
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
 .styleItem li #shapeItem {
     background-image: url(../images/icon-shape.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
 }
 
 .styleItem li #designItem {
     background-image: url(../images/icon-design.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
 }
 
 .styleItem li #textItem {
     background-image: url(../images/icon-text.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
 }
 
 .styleItem li #colorItem {
     background-image: url(../images/icon-color.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
 }
 
 .styleItem li #pictureItem {
     background-image: url(../images/icon-picture.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
 }
 
 .styleItem li #numberItem {
     background-image: url(../images/icon-number.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
+}
+
+.style .styleItem li a:hover,
+.style .styleItem li a:focus {
+    background-color: var(--Darkblue);
+    transition: .2s ease-out;
 }
 
 .styleItem li #shapeItem:hover,
 .styleItem li #shapeItem:focus {
     background-image: url(../images/icon-orangeShape.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-color: var(--Darkblue);
-    transition: .2s ease-out;
 }
 
 .styleItem li #designItem:hover,
 .styleItem li #designItem:focus {
     background-image: url(../images/icon-orangeDesign.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-color: var(--Darkblue);
-    transition: .2s ease-out;
 }
 
 .styleItem li #textItem:hover,
 .styleItem li #textItem:focus {
     background-image: url(../images/icon-orangeText.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-color: var(--Darkblue);
-    transition: .2s ease-out;
 }
 
 .styleItem li #colorItem:hover,
 .styleItem li #colorItem:focus {
     background-image: url(../images/icon-orangeColor.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-color: var(--Darkblue);
-    transition: .2s ease-out;
 }
 
 .styleItem li #pictureItem:hover,
 .styleItem li #pictureItem:focus {
     background-image: url(../images/icon-orangePicture.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-color: var(--Darkblue);
-    transition: .2s ease-out;
 }
 
 .styleItem li #numberItem:hover,
 .styleItem li #numberItem:focus {
     background-image: url(../images/icon-orangeNumber.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-color: var(--Darkblue);
-    transition: .2s ease-out;
 }
 
 .style .styleInfo {
