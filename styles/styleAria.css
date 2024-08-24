@@ -332,10 +332,12 @@ a {
     border-radius: 5px;
     font-size: 14px;
     font-weight: 600;
-    padding: 3px;
     margin-left: 10px;
     /* 8/23 RWD測試 */
-    height: fit-content;
+    /* padding: 3px; */
+    height: 2rem;
+    width: 66px;
+    padding: 0px 5px;
 }
 
 .customizePlaceBtn:hover {
@@ -414,9 +416,8 @@ a {
     height: 100%;
     /* 8/23 RWD測試 */
     /* padding: 10px; */
-    /* background-size: 48px 48px; */
-    background-size: auto;
-    background-position: right;
+    background-size: 40%;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -444,39 +445,39 @@ a {
     background-image: url(../images/icon-number.svg);
 }
 
-.style .styleItem li a:hover,
-.style .styleItem li a:focus {
+.style .styleItem li:hover,
+.style .styleItem li a.focus {
     background-color: var(--Darkblue);
     transition: .2s ease-out;
 }
 
 .styleItem li #shapeItem:hover,
-.styleItem li #shapeItem:focus {
+.styleItem li #shapeItem.focus {
     background-image: url(../images/icon-orangeShape.svg);
 }
 
 .styleItem li #designItem:hover,
-.styleItem li #designItem:focus {
+.styleItem li #designItem.focus {
     background-image: url(../images/icon-orangeDesign.svg);
 }
 
 .styleItem li #textItem:hover,
-.styleItem li #textItem:focus {
+.styleItem li #textItem.focus {
     background-image: url(../images/icon-orangeText.svg);
 }
 
 .styleItem li #colorItem:hover,
-.styleItem li #colorItem:focus {
+.styleItem li #colorItem.focus {
     background-image: url(../images/icon-orangeColor.svg);
 }
 
 .styleItem li #pictureItem:hover,
-.styleItem li #pictureItem:focus {
+.styleItem li #pictureItem.focus {
     background-image: url(../images/icon-orangePicture.svg);
 }
 
 .styleItem li #numberItem:hover,
-.styleItem li #numberItem:focus {
+.styleItem li #numberItem.focus {
     background-image: url(../images/icon-orangeNumber.svg);
 }
 
@@ -495,6 +496,7 @@ a {
     align-items: center;
     height: 100%;
     width: 100%;
+    border: 2px solid greenyellow;
 }
 
 .styleInfo .styleCaption {
@@ -517,13 +519,13 @@ a {
 }
 
 .styleInfo .stylePreview {
-    width: 330px;
-    height: 546px;
+    width: 90%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     flex-grow: 0.8;
-    margin: 10px 0px;
+    margin: 10px auto;
     overflow: auto;
 }
 
@@ -533,15 +535,15 @@ a {
 }
 
 .styleInfo form {
-    width: 97%;
+    width: 100%;
 }
 
-
 .stylePreview figure a {
-    width: 152px;
-    height: 152px;
+    width: 45%;
+    height: auto;
     margin: 0px 0px 8px 8px;
     opacity: 50%;
+    min-width: 120px;
 }
 
 .stylePreview img {
@@ -554,34 +556,6 @@ a {
 .stylePreview figure a:focus {
     opacity: 100%;
 }
-
-/* stylePreview內的顏色選則設定 */
-.chooseColor {
-    width: 95%;
-    height: 150px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow: auto;
-    animation: hide 1.35s both;
-    display: none;
-}
-
-.chooseColor.show {
-    display: flex;
-    animation: show 0.55s both;
-    margin-top: 10px;
-}
-
-.chooseColor a {
-    width: 36px;
-    height: 36px;
-    border: 1px solid rgba(255, 255, 255, .3);
-    border-radius: 50%;
-    margin: 8px;
-}
-
-
 
 /* stylePreview滾動條樣式 */
 /* 滾動條基底 */
@@ -612,20 +586,23 @@ a {
     background-color: var(--Orange);
 }
 
-
-
 /* customizePlace各style各自樣式區 */
 /* textArea樣式設定 */
+/* #textStyleInput {
+    width: 100%;
+} */
+
+
 #textStyleInput #textStyle,
 #upload #uploadPicture,
 #numberInput {
-    width: 310px;
+    width: 100%;
 }
 
 #textStyleInput #textStyleBtn,
 #upload #uploadPictureBtn,
 #numberInput #inputNumberBtn {
-    width: 310px;
+    width: 100%;
     background-color: white;
     border: none;
     color: var(--Darkblue);
@@ -651,24 +628,35 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 1px solid white;
     height: 100%;
     width: 100%;
 }
 
 .styleInfo #textArea .stylePreview {
-    justify-content: flex-end;
+    justify-content: center;
+    /* 以下8/24 RWD測試 */
     /* padding-right: 8px; */
-    margin: 16px 0px;
+    /* margin: 16px 0px; */
 }
 
 #textArea-2nd .stylePreview figure {
     border-bottom: 1px solid white;
     margin-bottom: 16px;
+    width: 95%;
 }
 
+/* 以下8/24 RWD測試 */
+.textAreaBtnDiv {
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-end;
+}
+/* 以上8/24 RWD測試 */
+
+/* textArea-3rd樣式設定 */
 #textStyleValue #textWords {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 hr {
@@ -681,8 +669,10 @@ hr {
     align-items: center;
     justify-content: space-between;
     letter-spacing: 1.5px;
-    width: 300px;
     padding-left: 5px;
+    /* 8/24 RWD測試 */
+    /* width: 300px; */
+    width: 100%;
 }
 
 #textArea label:hover,
@@ -690,6 +680,7 @@ hr {
     cursor: pointer;
 }
 
+/* customizePlace共用區-arrow */
 .arrow {
     width: 20px;
     height: 20px;
@@ -705,7 +696,6 @@ hr {
 .arrow.beClick {
     opacity: 100%;
     transform: rotate(90deg);
-
 }
 
 .arrow img {
@@ -715,8 +705,14 @@ hr {
     transform: rotate(90deg);
 }
 
+/* 以下8/24 RWD測試 */
+#textStyleValue {
+    width: 95%;
+    margin-bottom: 10px;
+}
+/* 以上8/24 RWD測試 */
+
 #chooseTextFonts {
-    width: 250px;
     font-size: 14px;
     font-weight: 300;
     padding: 3px;
@@ -724,6 +720,9 @@ hr {
     background-color: transparent;
     animation: hide 1.35s both;
     display: none;
+    /* 8/24 RWD測試*/
+    /* width: 250px; */
+    width: 80%;
 }
 
 #chooseTextFonts.show {
@@ -743,24 +742,30 @@ hr {
     font-family: "ROGFonts", sans-serif;
 }
 
-#toTextArea-3rdBtn {
+#chooseTextColor {
+    border: 1px solid ;
+}
+
+
+/* 8/24 RWD測試 */
+/* #toTextArea-3rdBtn {
     width: 80px;
     height: 2rem;
 }
-
 #textStyleValueBtn {
     width: 60px;
-    height: 1.5rem;
-}
+} */
 
 .textsizeRange {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 307px;
+    /* width: 307px; */
     height: 56px;
     animation: hide 1.35s both;
     display: none;
+    /* 8/24 RWD測試 */
+    width: 100%;
 }
 
 .textsizeRange.show {
@@ -776,11 +781,13 @@ hr {
 
 #customizePlace #chooseTextSize {
     border: none;
-    width: 240px;
+    /* width: 240px; */
     height: 8px;
     padding: 0px;
     margin-right: 10px;
     background-image: linear-gradient(to right, var(--Orange) 20%, rgba(255, 255, 255, .5) 20%);
+    /* 8/24 RWD測試 */
+    width: 75%;
 }
 
 #chooseTextSize::-webkit-slider-thumb {
@@ -790,12 +797,50 @@ hr {
     border-radius: 3px;
 }
 
+/* 以下8/27 RWD測試 */
+.sizeValueBorder {
+    width: 20%;
+    text-align: center;
+    min-width: 55px;
+}
+/* 以上8/27 RWD測試 */
+
 #textSizeValue {
     font-size: 18px;
 }
 
 /* customizePlace各style各自樣式區 */
 /* ColorArea樣式設定 */
+/* stylePreview內的顏色選則設定 */
+.chooseColor {
+    width: 95%;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: auto;
+    animation: hide 1.35s both;
+    display: none;
+}
+
+.chooseColor.show {
+    display: flex;
+    animation: show 0.55s both;
+    margin-top: 10px;
+}
+
+.chooseColor a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    margin: 8px;
+}
+
+
+
+
+
 .stylePreview .whichFace {
     width: 100%;
     display: flex;
@@ -1375,6 +1420,7 @@ footer div small {
         background-repeat: no-repeat;
         background-size: 100%, 100% 80%;
         background-position: center, 0px 148px;
+
     }
 }
 

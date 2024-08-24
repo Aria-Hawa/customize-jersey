@@ -208,32 +208,88 @@ function displayNone() {
 function displayShape() {
     displayNone();
     shapeAreaDiv.style.display = 'flex';
+    if(shapeAreaDiv.style.display == 'flex'){
+        document.querySelector('#shapeItem').classList.add("focus");
+        document.querySelector('#designItem').classList.remove('focus');
+        document.querySelector('#textItem').classList.remove('focus');
+        document.querySelector('#colorItem').classList.remove('focus');
+        document.querySelector('#pictureItem').classList.remove('focus');
+        document.querySelector('#numberItem').classList.remove('focus');
+    };
 }
 
 function displayDesign() {
     displayNone();
     designAreaDiv.style.display = 'flex';
+    if(designAreaDiv.style.display == 'flex'){
+        document.querySelector('#shapeItem').classList.remove('focus');
+        document.querySelector('#designItem').classList.add("focus");
+        document.querySelector('#textItem').classList.remove('focus');
+        document.querySelector('#colorItem').classList.remove('focus');
+        document.querySelector('#pictureItem').classList.remove('focus');
+        document.querySelector('#numberItem').classList.remove('focus');
+    };
 }
 
 function displayText() {
     displayNone();
     textAreaDiv.style.display = 'flex';
+    if(textAreaDiv.style.display == 'flex'){
+        document.querySelector('#shapeItem').classList.remove('focus');
+        document.querySelector('#designItem').classList.remove('focus');
+        document.querySelector('#textItem').classList.add("focus");
+        document.querySelector('#colorItem').classList.remove('focus');
+        document.querySelector('#pictureItem').classList.remove('focus');
+        document.querySelector('#numberItem').classList.remove('focus');
+    };
 }
 
 function displayColor() {
     displayNone();
     colorAreaDiv.style.display = 'flex';
+    if(colorAreaDiv.style.display == 'flex'){
+        document.querySelector('#shapeItem').classList.remove('focus');
+        document.querySelector('#designItem').classList.remove('focus');
+        document.querySelector('#textItem').classList.remove('focus');
+        document.querySelector('#colorItem').classList.add("focus");
+        document.querySelector('#pictureItem').classList.remove('focus');
+        document.querySelector('#numberItem').classList.remove('focus');
+    };
 }
 
 function displayPicture() {
     displayNone();
     pictureAreaDiv.style.display = 'flex';
+    if(pictureAreaDiv.style.display == 'flex'){
+        document.querySelector('#shapeItem').classList.remove('focus');
+        document.querySelector('#designItem').classList.remove('focus');
+        document.querySelector('#textItem').classList.remove('focus');
+        document.querySelector('#colorItem').classList.remove('focus');
+        document.querySelector('#pictureItem').classList.add("focus");
+        document.querySelector('#numberItem').classList.remove('focus');
+    };
 }
 
 function displayNumber() {
     displayNone();
     numberAreaDiv.style.display = 'flex';
+    if(numberAreaDiv.style.display == 'flex'){
+        document.querySelector('#shapeItem').classList.remove('focus');
+        document.querySelector('#designItem').classList.remove('focus');
+        document.querySelector('#textItem').classList.remove('focus');
+        document.querySelector('#colorItem').classList.remove('focus');
+        document.querySelector('#pictureItem').classList.remove('focus');
+        document.querySelector('#numberItem').classList.add("focus");
+    };
 }
+
+
+
+
+
+
+
+
 
 
 
