@@ -31,7 +31,7 @@
     <main>
         <section id="banner">
 
-            <div class="textArea">
+            <div class="textArea smoove">
                 <!-- div.brandName>figure>img -->
                 <div class="brandName">
                     <figure><img src="./images/brandConcept-brandName.png" alt=""></figure>
@@ -51,7 +51,7 @@
 
         <section id="content">
             <div class="IntroductionArea">
-                <div class="title">
+                <div class="title  smoove">
                     <div class="titleBig">
                         <h2>Create a pioneering <br>
                             path in sports</h2>
@@ -60,7 +60,7 @@
                         <h4>開創運動先鋒之路</h4>
                     </div>
                 </div>
-                <div class="box__list">
+                <div class="box__list   smoove">
                     <article class="item">
                         <figure><img src="./images/brandConcept-item (3).png" alt=""></figure>
                         <div class="content">
@@ -85,7 +85,7 @@
                 </div>
                 <div class="jerseyIntroduction">
                     <div class="copyWriting">
-                        <div class="title-2">
+                        <div class="title-2  smoove">
                             <div class="textTitle">
 
                                 <h3>Exclusive<br>
@@ -97,8 +97,8 @@
                         </div>
                     </div>
                     <div class="Test">
-                        <div class="bigPicture"><img src="./images/brandConcept-bigpicture.png" alt=""></div>
-                        <div class="content">
+                        <div class="bigPicture smoove" data-move-x="-120%" data-rotate-y="-90deg"><img src="./images/brandConcept-bigpicture.png" alt=""></div>
+                        <div class="content smoove" data-move-x="120%" data-rotate-y="90deg">
                             <p>
                                 客製球衣以頂尖設計和高品質，展現個人風格與團隊精神，引領充滿激情與活力的運動生活。
                             </p>
@@ -148,6 +148,28 @@
             <small>&copy;2024 VSER, Inc. 版權所有</small>
         </div>
     </footer>
+
+     <!-- JQuery官方CDN -->
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+ <!-- JQuery Smoove -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+
+ <script>
+    // 多個元素共用樣式可以寫在JS區
+    // 淡出淡入
+    $(".smoove").smoove({
+        offset:"20%",}
+        );
+    $('.smoove-z').smoove({
+        // 由後往前得效果
+        moveZ : '-500px',
+        rotateX:"90deg",
+        moveY:"250px"
+
+    });
+
+
+ </script>
 </body>
 
 </html>
