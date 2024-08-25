@@ -39,24 +39,24 @@
             <!-- 長方形選單 -->
             <div class="rectangularMenu">
                 <!-- 長方形小選單 -->
-                <div class="menu-1" onclick="changemenu1();">
+                <div id="menu-1" class="menu-1" onclick="changemenu1();">
                     <div class="figure"></div>
                     <div class="word">
                         <h4>Storm <br>
                             Knights <br>
                             Football<br>
                             Club</h4>
-                            <p>企業甲組聯賽</p>
+                        <p>企業甲組聯賽</p>
                     </div>
                 </div>
-                <div class="menu-2" onclick="changemenu2();">
-                <div class="figure"></div>
+                <div id="menu-2" class="menu-2" onclick="changemenu2();">
+                    <div class="figure"></div>
                     <div class="word">
                         <h4>Thunder<br>
                             Lions <br>
                             Football <br>
                             Club</h4>
-                            <p>企業甲組聯賽</p>
+                        <p>企業甲組聯賽</p>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <!-- 右邊小字處 -->
-                    <div class="pjWord" >
+                    <div class="pjWord">
                         <p>＂球衣上的閃電圖案和線條設計象徵著球隊在場上的迅捷和力量，強調積極進攻和強悍防守的風格。＂</p>
                     </div>
                     <div class="pjWord1" style="display: none;">
@@ -90,20 +90,20 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="projectjJersey">
             <!-- 背景藍色色塊 -->
             <div class="blueBlock"></div>
             <!-- 球衣款式成列 -->
-            <div class="pjBox__list">
-                <div class="pjshape svc-1"></div>
-                <div class="pjshape svc-2"></div>
-                <div class="pjshape svc-3"></div>
+            <div id="pjBox__list" class="pjBox__list">
+                <div class="pjshape svc-1 smoove" data-move-x="-400px"></div>
+                <div class="pjshape svc-2 smoove" data-move-y="400px"></div>
+                <div class="pjshape svc-3 smoove" data-move-x="400px"></div>
             </div>
-            <div class="pjBox__list1" style="display: none;">
-                <div class="pjshape svc-4"></div>
-                <div class="pjshape svc-5"></div>
-                <div class="pjshape svc-6"></div>
+            <div id="pjBox__list1" class="pjBox__list1" style="display: none;">
+                <div class="pjshape svc-4 smoove" data-move-x="-400px"></div>
+                <div class="pjshape svc-5 smoove" data-move-y="400px"></div>
+                <div class="pjshape svc-6 smoove" data-move-x="400px"></div>
             </div>
 
         </section>
@@ -138,7 +138,10 @@
     </footer>
 
     <!-- 互動區 -->
-
+    <!-- JQuery官方CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- JQuery Smoove -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
     <script>
 
         let projectThemeDiv = '';
@@ -174,7 +177,7 @@
             getDiv();
             projectThemeDiv.style.display = "block";
             pjWordDiv.style.display = "block";
-            pjBox__listDiv.style.display = "flex";
+            $(pjBox__listDiv).fadeIn(500);
         }
 
         // changemenu2
@@ -182,8 +185,20 @@
             getDiv();
             projectTheme1Div.style.display = "block";
             pjWord1Div.style.display = "block";
-            pjBox__list1Div.style.display = "flex";
+            $(pjBox__list1Div).fadeIn(500);
         }
+
+        $(document).ready(function () {
+            $('#menu-1').click(function () {
+                changemenu1();
+            });            
+        });
+
+        $(document).ready(function () {
+            $('#menu-2').click(function () {
+                changemenu2();
+            });            
+        });
 
     </script>
 </body>
