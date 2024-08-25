@@ -332,8 +332,12 @@ a {
     border-radius: 5px;
     font-size: 14px;
     font-weight: 600;
-    padding: 3px;
     margin-left: 10px;
+    /* 8/23 RWD測試 */
+    /* padding: 3px; */
+    height: 2rem;
+    width: 66px;
+    padding: 0px 5px;
 }
 
 .customizePlaceBtn:hover {
@@ -347,7 +351,7 @@ a {
 
 /* customizePlace共用區-Input */
 #customizePlace input {
-    width: 310px;
+    /* width: 310px; */
     padding: 10px;
     background-color: transparent;
     border: 1px solid white;
@@ -355,6 +359,8 @@ a {
     color: white;
     letter-spacing: 2px;
     font-size: 18px;
+    /* 8/23 RWD測試 */
+    width: 100%;
 }
 
 #customizePlace input::placeholder {
@@ -373,6 +379,9 @@ a {
     border: 1px solid white;
     /* flex-shrink: 0.35; */
     /* flex-grow: 0.05; */
+    /* 8/23 RWD測試 */
+    min-width: 300px;
+    max-width: 464px;
 }
 
 #operate .style {
@@ -380,6 +389,8 @@ a {
     align-items: center;
     flex-grow: 0.7;
     height: 70%;
+    /* 8/23 RWD測試 */
+    max-width: 408px;
 }
 
 .style .styleItem {
@@ -391,119 +402,83 @@ a {
 
 .style .styleItem li {
     width: 72px;
-    height: 64px;
+    height: 12%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    /* 8/23 RWD測試 */
+    min-height: 64px;
 }
 
 .style .styleItem li a {
     width: 100%;
     height: 100%;
-    padding: 10px;
+    /* 8/23 RWD測試 */
+    /* padding: 10px; */
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .styleItem li #shapeItem {
     background-image: url(../images/icon-shape.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
 }
 
 .styleItem li #designItem {
     background-image: url(../images/icon-design.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
 }
 
 .styleItem li #textItem {
     background-image: url(../images/icon-text.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
 }
 
 .styleItem li #colorItem {
     background-image: url(../images/icon-color.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
 }
 
 .styleItem li #pictureItem {
     background-image: url(../images/icon-picture.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
 }
 
 .styleItem li #numberItem {
     background-image: url(../images/icon-number.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
+}
+
+.style .styleItem li:hover,
+.style .styleItem li a.focus {
+    background-color: var(--Darkblue);
+    transition: .2s ease-out;
 }
 
 .styleItem li #shapeItem:hover,
-.styleItem li #shapeItem:focus {
+.styleItem li #shapeItem.focus {
     background-image: url(../images/icon-orangeShape.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-color: var(--Darkblue);
-    transition: .2s ease-out;
 }
 
 .styleItem li #designItem:hover,
-.styleItem li #designItem:focus {
+.styleItem li #designItem.focus {
     background-image: url(../images/icon-orangeDesign.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-color: var(--Darkblue);
-    transition: .2s ease-out;
 }
 
 .styleItem li #textItem:hover,
-.styleItem li #textItem:focus {
+.styleItem li #textItem.focus {
     background-image: url(../images/icon-orangeText.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-color: var(--Darkblue);
-    transition: .2s ease-out;
 }
 
 .styleItem li #colorItem:hover,
-.styleItem li #colorItem:focus {
+.styleItem li #colorItem.focus {
     background-image: url(../images/icon-orangeColor.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-color: var(--Darkblue);
-    transition: .2s ease-out;
 }
 
 .styleItem li #pictureItem:hover,
-.styleItem li #pictureItem:focus {
+.styleItem li #pictureItem.focus {
     background-image: url(../images/icon-orangePicture.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-color: var(--Darkblue);
-    transition: .2s ease-out;
 }
 
 .styleItem li #numberItem:hover,
-.styleItem li #numberItem:focus {
+.styleItem li #numberItem.focus {
     background-image: url(../images/icon-orangeNumber.svg);
-    background-size: 48px 48px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-color: var(--Darkblue);
-    transition: .2s ease-out;
 }
 
 .style .styleInfo {
@@ -521,6 +496,7 @@ a {
     align-items: center;
     height: 100%;
     width: 100%;
+    border: 2px solid greenyellow;
 }
 
 .styleInfo .styleCaption {
@@ -543,13 +519,13 @@ a {
 }
 
 .styleInfo .stylePreview {
-    width: 330px;
-    height: 546px;
+    width: 90%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     flex-grow: 0.8;
-    margin: 10px 0px;
+    margin: 10px auto;
     overflow: auto;
 }
 
@@ -559,15 +535,15 @@ a {
 }
 
 .styleInfo form {
-    width: 97%;
+    width: 100%;
 }
 
-
 .stylePreview figure a {
-    width: 152px;
-    height: 152px;
+    width: 45%;
+    height: auto;
     margin: 0px 0px 8px 8px;
     opacity: 50%;
+    min-width: 120px;
 }
 
 .stylePreview img {
@@ -580,34 +556,6 @@ a {
 .stylePreview figure a:focus {
     opacity: 100%;
 }
-
-/* stylePreview內的顏色選則設定 */
-.chooseColor {
-    width: 95%;
-    height: 150px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow: auto;
-    animation: hide 1.35s both;
-    display: none;
-}
-
-.chooseColor.show {
-    display: flex;
-    animation: show 0.55s both;
-    margin-top: 10px;
-}
-
-.chooseColor a {
-    width: 36px;
-    height: 36px;
-    border: 1px solid rgba(255, 255, 255, .3);
-    border-radius: 50%;
-    margin: 8px;
-}
-
-
 
 /* stylePreview滾動條樣式 */
 /* 滾動條基底 */
@@ -638,20 +586,23 @@ a {
     background-color: var(--Orange);
 }
 
-
-
 /* customizePlace各style各自樣式區 */
 /* textArea樣式設定 */
+/* #textStyleInput {
+    width: 100%;
+} */
+
+
 #textStyleInput #textStyle,
 #upload #uploadPicture,
 #numberInput {
-    width: 310px;
+    width: 100%;
 }
 
 #textStyleInput #textStyleBtn,
 #upload #uploadPictureBtn,
 #numberInput #inputNumberBtn {
-    width: 310px;
+    width: 100%;
     background-color: white;
     border: none;
     color: var(--Darkblue);
@@ -677,24 +628,35 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 1px solid white;
     height: 100%;
     width: 100%;
 }
 
 .styleInfo #textArea .stylePreview {
-    justify-content: flex-end;
+    justify-content: center;
+    /* 以下8/24 RWD測試 */
     /* padding-right: 8px; */
-    margin: 16px 0px;
+    /* margin: 16px 0px; */
 }
 
 #textArea-2nd .stylePreview figure {
     border-bottom: 1px solid white;
     margin-bottom: 16px;
+    width: 95%;
 }
 
+/* 以下8/24 RWD測試 */
+.textAreaBtnDiv {
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-end;
+}
+/* 以上8/24 RWD測試 */
+
+/* textArea-3rd樣式設定 */
 #textStyleValue #textWords {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 hr {
@@ -707,8 +669,10 @@ hr {
     align-items: center;
     justify-content: space-between;
     letter-spacing: 1.5px;
-    width: 300px;
     padding-left: 5px;
+    /* 8/24 RWD測試 */
+    /* width: 300px; */
+    width: 100%;
 }
 
 #textArea label:hover,
@@ -716,6 +680,7 @@ hr {
     cursor: pointer;
 }
 
+/* customizePlace共用區-arrow */
 .arrow {
     width: 20px;
     height: 20px;
@@ -731,7 +696,6 @@ hr {
 .arrow.beClick {
     opacity: 100%;
     transform: rotate(90deg);
-
 }
 
 .arrow img {
@@ -741,8 +705,14 @@ hr {
     transform: rotate(90deg);
 }
 
+/* 以下8/24 RWD測試 */
+#textStyleValue {
+    width: 95%;
+    margin-bottom: 10px;
+}
+/* 以上8/24 RWD測試 */
+
 #chooseTextFonts {
-    width: 250px;
     font-size: 14px;
     font-weight: 300;
     padding: 3px;
@@ -750,6 +720,9 @@ hr {
     background-color: transparent;
     animation: hide 1.35s both;
     display: none;
+    /* 8/24 RWD測試*/
+    /* width: 250px; */
+    width: 80%;
 }
 
 #chooseTextFonts.show {
@@ -769,24 +742,30 @@ hr {
     font-family: "ROGFonts", sans-serif;
 }
 
-#toTextArea-3rdBtn {
+#chooseTextColor {
+    border: 1px solid ;
+}
+
+
+/* 8/24 RWD測試 */
+/* #toTextArea-3rdBtn {
     width: 80px;
     height: 2rem;
 }
-
 #textStyleValueBtn {
     width: 60px;
-    height: 1.5rem;
-}
+} */
 
 .textsizeRange {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 307px;
+    /* width: 307px; */
     height: 56px;
     animation: hide 1.35s both;
     display: none;
+    /* 8/24 RWD測試 */
+    width: 100%;
 }
 
 .textsizeRange.show {
@@ -802,11 +781,13 @@ hr {
 
 #customizePlace #chooseTextSize {
     border: none;
-    width: 240px;
+    /* width: 240px; */
     height: 8px;
     padding: 0px;
     margin-right: 10px;
     background-image: linear-gradient(to right, var(--Orange) 20%, rgba(255, 255, 255, .5) 20%);
+    /* 8/24 RWD測試 */
+    width: 75%;
 }
 
 #chooseTextSize::-webkit-slider-thumb {
@@ -816,12 +797,50 @@ hr {
     border-radius: 3px;
 }
 
+/* 以下8/27 RWD測試 */
+.sizeValueBorder {
+    width: 20%;
+    text-align: center;
+    min-width: 55px;
+}
+/* 以上8/27 RWD測試 */
+
 #textSizeValue {
     font-size: 18px;
 }
 
 /* customizePlace各style各自樣式區 */
 /* ColorArea樣式設定 */
+/* stylePreview內的顏色選則設定 */
+.chooseColor {
+    width: 95%;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: auto;
+    animation: hide 1.35s both;
+    display: none;
+}
+
+.chooseColor.show {
+    display: flex;
+    animation: show 0.55s both;
+    margin-top: 10px;
+}
+
+.chooseColor a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    margin: 8px;
+}
+
+
+
+
+
 .stylePreview .whichFace {
     width: 100%;
     display: flex;
@@ -1072,12 +1091,12 @@ hr {
 .table .tableCaption:hover {
     cursor: pointer;
     border: 2px solid white;
-    animation: borderRun 2s ease-in-out;
+    animation: borderRun 2.3s ease-in-out;
 }
 
 .table .tableCaption.show {
     background-color: var(--Darkblue);
-    border-top-left-radius: 15px;
+    border-top-left-radius: 21px;
 }
 
 
@@ -1238,17 +1257,45 @@ td {
     margin-right: 8px;
 }
 
-.nextBtn {
-    width: 80%;
-    background-color: transparent;
-    color: white;
-    outline: none;
-    border: 1px solid white;
-    border-radius: 15px;
-    font-size: 24px;
-    padding: 16px 0px;
+.test {
+    display: flex;
+    width: 240px;
 }
 
+.nextBtn {
+    width: 120px;
+    background-color: transparent;
+    color: white;
+    /* border: 1px solid white; */
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0px;
+    position: relative;
+}
+
+.nextBtn:hover {
+    width: 240px;
+    transition: all .5s ease-in-out;
+}
+
+.nextBtn::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid white;
+    transform: skewX(-40deg);
+    border-image: linear-gradient(316deg, var(--ToRight-White-Orange)) 1;
+}
+
+.nextBtn:hover::before {
+    width: 100%;
+    transform: skewX(-40deg);
+    transition: all .5s ease-in-out;
+    background-color: transparent;
+}
 
 
 
@@ -1366,17 +1413,14 @@ footer div small {
         border: 2px solid transparent;
     }
 
-    60% {
+    100% {
         background-image: linear-gradient(var(--Darkblue), var(--Darkblue)), linear-gradient(-45deg, var(--Lightblue-White));
         background-origin: border-box;
         background-clip: padding-box, border-box;
         background-repeat: no-repeat;
         background-size: 100%, 100% 80%;
         background-position: center, 0px 148px;
-    }
 
-    100% {
-        background-color: var(--Darkblue);
     }
 }
 

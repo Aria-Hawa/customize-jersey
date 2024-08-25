@@ -72,6 +72,22 @@ $(function () {
         $('#frontColor-3.chooseColor').toggleClass('show');
     });
 
+    // 按下#lblForFront-4的.arrow
+    // 1. 新增.arrow的.beClick類別
+    // 2. 新增#frontColor-4.chooseColor的.show類別
+    $('#lblForFront-4').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
+        $('#frontColor-4.chooseColor').toggleClass('show');
+    });
+
+    // 按下#lblForFront-5的.arrow
+    // 1. 新增.arrow的.beClick類別
+    // 2. 新增#frontColor-5.chooseColor的.show類別
+    $('#lblForFront-5').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
+        $('#frontColor-5.chooseColor').toggleClass('show');
+    });
+
 
     // 按下#lblForBack-1的.arrow
     // 1. 新增.arrow的.beClick類別
@@ -97,22 +113,67 @@ $(function () {
         $('#backColor-3.chooseColor').toggleClass('show');
     });
 
+    // 按下#lblForBack-4的.arrow
+    // 1. 新增.arrow的.beClick類別
+    // 2. 新增#backColor-4.chooseColor的.show類別
+    $('#lblForBack-4').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
+        $('#backColor-4.chooseColor').toggleClass('show');
+    });
+
     // 按下shape區的衣服變更preview
     $('#shapeArea .stylePreview a').click(function () {
         let shapeNo = $(this).find('img').attr('alt');
         // $('.preJersey img').css('display','block');
         // $('.preJersey img').attr('src', `./images/${shapeNo}.svg`);
-        $('.preJersey svg').css('display','none');
+        $('.preJersey svg').css('display', 'none');
         $('.preJersey figure').css('background-image', `url(./images/${shapeNo}.svg)`);
     });
 
     // 按下design區的衣服變更preview
     $('#designArea .stylePreview a').click(function () {
         let designNo = $(this).find('img').attr('alt');
-        $('.preJersey figure').css('background-image','none');
-        $('.preJersey svg').css('display','none');
-        $(`#${designNo}`).css('display','block');
+        $('.preJersey figure').css('background-image', 'none');
+        $('.preJersey svg').css('display', 'none');
+        $(`#${designNo}`).css('display', 'block');
+
+        // 找preview區域的顏色顯示在chooseColor上
+        let FlblColor01 = $(`#${designNo}`).find('.Fcollar').attr('fill');
+        let FlblColor02 = $(`#${designNo}`).find('.FC2').attr('fill');
+        let FlblColor03 = $(`#${designNo}`).find('.FC3').attr('fill');
+        let FlblColor04 = $(`#${designNo}`).find('.FC4').attr('fill');
+        $('#lblForFront-1 div a').css('background-color',FlblColor01);
+        $('#lblForFront-2 div a').css('background-color',FlblColor02);
+        $('#lblForFront-3 div a').css('background-color',FlblColor03);
+        $('#lblForFront-3 div a').css('background-color',FlblColor04);
+
+        // 換色功能
+        $('#frontColor-1 a').click(function () {
+            // $(`#${designNo}`).find('.Fcollar').attr('stroke','white');
+            $(`#${designNo}`).find('.Fcollar').attr('fill',$(this).css('background-color'));
+            FlblColor01 = $(`#${designNo}`).find('.Fcollar').attr('fill');
+            $('#lblForFront-1 div a').css('background-color',FlblColor01);
+        });
+        $('#frontColor-2 a').click(function () {
+            $(`#${designNo}`).find('.FC2').attr('fill',$(this).css('background-color'));
+            FlblColor02 = $(`#${designNo}`).find('.FC2').attr('fill');
+            $('#lblForFront-2 div a').css('background-color',FlblColor02);
+        });
+        $('#frontColor-3 a').click(function () {
+            $(`#${designNo}`).find('.FC3').attr('fill',$(this).css('background-color'));
+            FlblColor03 = $(`#${designNo}`).find('.FC3').attr('fill');
+            $('#lblForFront-3 div a').css('background-color',FlblColor03);
+        });
+        $('#frontColor-4 a').click(function () {
+            $(`#${designNo}`).find('.FC4').attr('fill',$(this).css('background-color'));
+            FlblColor04 = $(`#${designNo}`).find('.FC4').attr('fill');
+            $('#lblForFront43 div a').css('background-color',FlblColor04);
+        });
+
     });
+
+
+
 
 });
 
@@ -147,32 +208,88 @@ function displayNone() {
 function displayShape() {
     displayNone();
     shapeAreaDiv.style.display = 'flex';
+    if(shapeAreaDiv.style.display == 'flex'){
+        document.querySelector('#shapeItem').classList.add("focus");
+        document.querySelector('#designItem').classList.remove('focus');
+        document.querySelector('#textItem').classList.remove('focus');
+        document.querySelector('#colorItem').classList.remove('focus');
+        document.querySelector('#pictureItem').classList.remove('focus');
+        document.querySelector('#numberItem').classList.remove('focus');
+    };
 }
 
 function displayDesign() {
     displayNone();
     designAreaDiv.style.display = 'flex';
+    if(designAreaDiv.style.display == 'flex'){
+        document.querySelector('#shapeItem').classList.remove('focus');
+        document.querySelector('#designItem').classList.add("focus");
+        document.querySelector('#textItem').classList.remove('focus');
+        document.querySelector('#colorItem').classList.remove('focus');
+        document.querySelector('#pictureItem').classList.remove('focus');
+        document.querySelector('#numberItem').classList.remove('focus');
+    };
 }
 
 function displayText() {
     displayNone();
     textAreaDiv.style.display = 'flex';
+    if(textAreaDiv.style.display == 'flex'){
+        document.querySelector('#shapeItem').classList.remove('focus');
+        document.querySelector('#designItem').classList.remove('focus');
+        document.querySelector('#textItem').classList.add("focus");
+        document.querySelector('#colorItem').classList.remove('focus');
+        document.querySelector('#pictureItem').classList.remove('focus');
+        document.querySelector('#numberItem').classList.remove('focus');
+    };
 }
 
 function displayColor() {
     displayNone();
     colorAreaDiv.style.display = 'flex';
+    if(colorAreaDiv.style.display == 'flex'){
+        document.querySelector('#shapeItem').classList.remove('focus');
+        document.querySelector('#designItem').classList.remove('focus');
+        document.querySelector('#textItem').classList.remove('focus');
+        document.querySelector('#colorItem').classList.add("focus");
+        document.querySelector('#pictureItem').classList.remove('focus');
+        document.querySelector('#numberItem').classList.remove('focus');
+    };
 }
 
 function displayPicture() {
     displayNone();
     pictureAreaDiv.style.display = 'flex';
+    if(pictureAreaDiv.style.display == 'flex'){
+        document.querySelector('#shapeItem').classList.remove('focus');
+        document.querySelector('#designItem').classList.remove('focus');
+        document.querySelector('#textItem').classList.remove('focus');
+        document.querySelector('#colorItem').classList.remove('focus');
+        document.querySelector('#pictureItem').classList.add("focus");
+        document.querySelector('#numberItem').classList.remove('focus');
+    };
 }
 
 function displayNumber() {
     displayNone();
     numberAreaDiv.style.display = 'flex';
+    if(numberAreaDiv.style.display == 'flex'){
+        document.querySelector('#shapeItem').classList.remove('focus');
+        document.querySelector('#designItem').classList.remove('focus');
+        document.querySelector('#textItem').classList.remove('focus');
+        document.querySelector('#colorItem').classList.remove('focus');
+        document.querySelector('#pictureItem').classList.remove('focus');
+        document.querySelector('#numberItem').classList.add("focus");
+    };
 }
+
+
+
+
+
+
+
+
 
 
 
