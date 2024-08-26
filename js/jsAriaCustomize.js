@@ -142,10 +142,12 @@ $(function () {
         let FlblColor02 = $(`#${designNo}`).find('.FC2').attr('fill');
         let FlblColor03 = $(`#${designNo}`).find('.FC3').attr('fill');
         let FlblColor04 = $(`#${designNo}`).find('.FC4').attr('fill');
+        let FlblColor05 = $(`#${designNo}`).find('.VSERwd').attr('fill');
         $('#lblForFront-1 div a').css('background-color',FlblColor01);
         $('#lblForFront-2 div a').css('background-color',FlblColor02);
         $('#lblForFront-3 div a').css('background-color',FlblColor03);
-        $('#lblForFront-3 div a').css('background-color',FlblColor04);
+        $('#lblForFront-4 div a').css('background-color',FlblColor04);
+        $('#lblForFront-5 div a').css('background-color',FlblColor05);
 
         // 換色功能
         $('#frontColor-1 a').click(function () {
@@ -167,16 +169,27 @@ $(function () {
         $('#frontColor-4 a').click(function () {
             $(`#${designNo}`).find('.FC4').attr('fill',$(this).css('background-color'));
             FlblColor04 = $(`#${designNo}`).find('.FC4').attr('fill');
-            $('#lblForFront43 div a').css('background-color',FlblColor04);
+            $('#lblForFront-4 div a').css('background-color',FlblColor04);
+        });
+        $('#frontColor-5 a').click(function () {
+            $(`#${designNo}`).find('.VSERwd').attr('fill',$(this).css('background-color'));
+            FlblColor05 = $(`#${designNo}`).find('.VSERwd').attr('fill');
+            $('#lblForFront-5 div a').css('background-color',FlblColor05);
         });
 
     });
-
-
-
-
+    
+    
+    
+    
+    
 });
 
+let designProject = document.getElementById('design-1');
+console.log(designProject);
+localStorage.setItem('desiginProject',designProject);
+// let call = localStorage.getItem('designProject');
+// console.log(call);
 
 
 

@@ -71,7 +71,7 @@ a {
     --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Lightblue) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
     --ToRight-White-Orange: #fff 0%, var(--Orange) 47%, var(--Darkorange) 90%;
     --ToRight-Lightblue-Darkbllue: var(--Lightblue) 5%, var(--Blue) 28%, var(--Darkblue) 61%;
-    --Lightblue-White: var(--Lightblue) 70%, #fff 80%;
+    --Lightblue-White: var(--Lightblue) 0%, #fff 100%;
 
 }
 
@@ -282,6 +282,10 @@ a {
     padding: 0 80px;
 }
 
+.topbar h1 {
+    min-width: 129px;
+}
+
 #fixedTopbar .menuList .rightList {
     display: flex;
     align-items: center;
@@ -289,7 +293,6 @@ a {
 
 #fixedTopbar .rightList .customizeBtn {
     margin-right: 20px;
-    /* width: 132px; */
     width: 100px;
     height: fit-content;
     text-align: center;
@@ -298,7 +301,9 @@ a {
     border-image: linear-gradient(0deg, var(--Lightblue-White)) 1 round;
     position: relative;
     animation: rotate 3s linear infinite;
+    font-size: 18px;
 }
+
 
 @keyframes rotate {
     0% {
@@ -376,12 +381,14 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid white;
     /* flex-shrink: 0.35; */
     /* flex-grow: 0.05; */
     /* 8/23 RWD測試 */
-    min-width: 300px;
+    /* border: 1px solid white; */
+    border-right: 1px solid white;
+    min-width: 360px;
     max-width: 464px;
+    width: 100%;
 }
 
 #operate .style {
@@ -390,7 +397,9 @@ a {
     flex-grow: 0.7;
     height: 70%;
     /* 8/23 RWD測試 */
-    max-width: 408px;
+    min-width: 360px;
+    max-width: 464px;
+    width: 100%;
 }
 
 .style .styleItem {
@@ -416,7 +425,7 @@ a {
     height: 100%;
     /* 8/23 RWD測試 */
     /* padding: 10px; */
-    background-size: 40%;
+    background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -496,7 +505,6 @@ a {
     align-items: center;
     height: 100%;
     width: 100%;
-    border: 2px solid greenyellow;
 }
 
 .styleInfo .styleCaption {
@@ -652,6 +660,7 @@ a {
     display: flex;
     justify-content: flex-end;
 }
+
 /* 以上8/24 RWD測試 */
 
 /* textArea-3rd樣式設定 */
@@ -710,6 +719,7 @@ hr {
     width: 95%;
     margin-bottom: 10px;
 }
+
 /* 以上8/24 RWD測試 */
 
 #chooseTextFonts {
@@ -741,11 +751,6 @@ hr {
 #chooseTextFonts #RogFont {
     font-family: "ROGFonts", sans-serif;
 }
-
-#chooseTextColor {
-    border: 1px solid ;
-}
-
 
 /* 8/24 RWD測試 */
 /* #toTextArea-3rdBtn {
@@ -803,6 +808,7 @@ hr {
     text-align: center;
     min-width: 55px;
 }
+
 /* 以上8/27 RWD測試 */
 
 #textSizeValue {
@@ -838,9 +844,6 @@ hr {
 }
 
 
-
-
-
 .stylePreview .whichFace {
     width: 100%;
     display: flex;
@@ -848,11 +851,14 @@ hr {
 }
 
 .whichFace a {
-    width: 165px;
     text-align: center;
     padding-bottom: 12px;
     border-bottom: 1px solid white;
     margin-bottom: 16px;
+    /* 8/25 RWD測試 */
+    /* width: 165px; */
+    width: 45%;
+    min-width: 135px;
 }
 
 .whichFace a:hover,
