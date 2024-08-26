@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 載入React,Babel -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>專案成果</title>
+    <link rel="stylesheet" href="./styles/sandy.css">
+    <link rel="stylesheet" href="./styles/sandy_test.css">
+    <script type="text/babel" src="./jsx/Header.jsx"></script>
+    <script type="text/babel" src="./jsx/Footer.jsx"></script>
+</head>
+
+<!-- 頁首區 -->
+
+<body>
+    <!-- 以下react開始 -->
+    <div id="root"></div>
+    <script type="text/babel">
+        function Button(props) {
+            return <>
+                <div id={props.menu} className={props.menu}>
+                    <div className="figure"></div>
+                    <div className="word">
+                        <h4>{props.teamTame}</h4>
+                        <p>{props.alliance}</p>
+                        <span className='line-1'></span>
+                        <span className='line-2'></span>
+                        <span className='line-3'></span>
+                        <span className='line-4'></span>
+                    </div>
+                </div>
+            </>
+        }
+        function Img(props){
+            return <>
+            <div className={`pjshape ${props.figure}`}></div>
+            </>
+        }
+
+        function App() {
+            return (<>
+                <Header />
+                <main>
+                    <section id="projectBanner">
+                        <div className="blueBlock"></div>
+                        <div className="smallSquares"></div>
+                        <div className="smallincline"></div>
+                        <div className="rectangularMenu">
+                            <Button menu="menu-1" teamTame="Storm
+                            Knights
+                            Football
+                            Club"Thunder Lions
+                                alliance="企業甲組聯賽" />
+                            <Button menu="menu-2" teamTame="Thunder
+                                    Lions 
+                                    Football
+                                    Club"
+                                alliance="企業甲組聯賽" />
+                        </div>
+                        <div className="contentArea">
+                            <div className="projectTheme"></div>
+                            <div className="projectContent">
+                                <div className="pjTitle">
+                                    <div className="textWatermark">
+                                        <h1>Storm<br />
+                                            Knights</h1>
+                                    </div>
+                                    <div className="Title">
+                                        <h2>jersey<br />
+                                            design</h2>
+                                    </div>
+                                </div>
+                                <div className="pjWord">
+                                    <p>＂球衣上的閃電圖案和線條設計象徵著球隊在場上的迅捷和力量，強調積極進攻和強悍防守的風格。＂</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="projectjJersey">
+                        <div className="blueBlock"></div>
+                        <div id="pjBox__list" class="pjBox__list">
+                            <Img figure="svc-1"/>
+                            <Img figure="svc-2"/>
+                            <Img figure="svc-3"/>
+                        </div>
+                    </section>
+                </main>
+                <Footer />
+            </>)
+        }
+        ReactDOM
+            .createRoot(document.getElementById('root'))
+            .render(<App />);
+    </script>
+
+</body>
+
+</html>
