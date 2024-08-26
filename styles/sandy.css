@@ -128,8 +128,9 @@ header {
     letter-spacing: 1px;
     /* border-bottom: solid 2px transparent; */
 }
-.menuItem ul li a:hover{
-    color:var(--Orange);
+
+.menuItem ul li a:hover {
+    color: var(--Orange);
     transition: 0.5s;
     /* border-bottom: solid 1px var(--Orange); */
 }
@@ -138,6 +139,7 @@ section {
 
     height: 100vh;
 }
+
 /* customize網頁區 */
 /* fixed header區 */
 #fixedTopbar {
@@ -177,20 +179,24 @@ section {
     font-weight: 400;
     letter-spacing: 1px;
 }
+
 #fixedTopbar .rightList .customizeBtn:hover {
     color: var(--Orange);
     transition: 0.5s;
     border: 2px solid transparent;
     border-image: linear-gradient(135deg, var(--Orange-White)) 1 round;
 }
-#fixedTopbar .rightList a  {
+
+#fixedTopbar .rightList a {
     width: 40px;
-    height:  40px;
+    height: 40px;
 }
-#fixedTopbar .rightList .cartBtn  {
+
+#fixedTopbar .rightList .cartBtn {
     background-image: url(../images/cartBtnICON.svg);
 }
-#fixedTopbar .rightList .cartBtn:hover  {
+
+#fixedTopbar .rightList .cartBtn:hover {
     transition: 0.5s;
     background-image: url(../images/cartBtnICON_1.svg);
 }
@@ -225,7 +231,7 @@ section {
 
 /* 上半部標題內容 */
 #banner .textArea {
-    flex:1;
+    flex: 1;
     margin: 0 0 0 50;
     display: flex;
     justify-content: center;
@@ -310,7 +316,7 @@ section {
     flex-direction: column;
     justify-content: center;
     margin: 0 10px;
-    width:26.55%;
+    width: 26.55%;
     color: #ffffff;
 }
 
@@ -361,7 +367,7 @@ section {
     z-index: 990;
     width: 100%;
     height: 100%;
-    flex:1;
+    flex: 1;
 }
 
 
@@ -512,7 +518,7 @@ section {
     height: 141px;
     /* background-color: #e11212; */
     z-index: 5;
-    
+
 
 }
 
@@ -525,33 +531,38 @@ section {
     height: 100%;
     margin-left: 15px;
     color: #000E2B;
-    opacity:0.8;
+    opacity: 0.8;
 }
 
 .rectangularMenu .menu-1:hover,
 .rectangularMenu .menu-2:hover {
-    opacity:1;
+    opacity: 1;
     transition: 0.5s;
 }
 
-.rectangularMenu .menu-2 .figure {
+.rectangularMenu .menu-2 .figure,
+.rectangularMenu .menu-1 .figure {
     width: 50%;
     height: 100%;
-    background-image: url(../images/projectResults_rectangleThumbnail2.png);
     background-position: center;
     /*下面四張圖置中裁切*/
     background-size: cover;
     /*縮放到適合位置*/
 }
 
+.rectangularMenu .menu-2 .figure {
+    background-image: url(../images/projectResults_rectangleThumbnail2.png);
+}
+
 .rectangularMenu .menu-1 .figure {
-    width: 50%;
-    height: 100%;
     background-image: url(../images/projectResults_rectangleThumbnail1.png);
-    background-position: center;
-    /*下面四張圖置中裁切*/
-    background-size: cover;
-    /*縮放到適合位置*/
+}
+
+@media (max-width:1024px) {
+    .rectangularMenu .menu-2 .figure,
+    .rectangularMenu .menu-1 .figure {
+        width: 35%;
+    }
 }
 
 
@@ -561,6 +572,11 @@ section {
     height: 100%;
     background-color: var(--Orange);
 }
+@media (max-width:1024px) {
+    .rectangularMenu .word{
+        width: 65%;
+    }
+}
 
 .rectangularMenu .word h4 {
     font-family: ROGFonts, sans-serif;
@@ -569,6 +585,7 @@ section {
     line-height: 22px;
     padding: 14px 0 0 14px;
 }
+
 
 .rectangularMenu .word p {
     position: static;
@@ -613,12 +630,14 @@ section {
 /* 主圖下方文字 */
 .projectContent {
     width: 100%;
-    height: 23%;
+    height: 21%;
     /* background-color: #e11212; */
     /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    position: absolute;
+    bottom: 0%;
 }
 
 /* 左邊文字區塊 */
@@ -630,16 +649,18 @@ section {
 }
 
 /* 浮水印 */
-.textWatermark {
+.textWatermark,
+.textWatermark1 {
     position: absolute;
-    left: -30px;
+    left: -20px;
     width: fit-content;
     height: fit-content;
     top: 50%;
     transform: translate(0, -50%);
 }
 
-.textWatermark h1 {
+.textWatermark h1,
+.textWatermark1 h1 {
     font-family: ROGFonts, sans-serif;
     font-size: 66px;
     letter-spacing: .2rem;
@@ -680,6 +701,15 @@ section {
     height: 100%;
     margin-right: 80px;
 }
+@media (max-width:1024px){
+    .pjWord,
+    .pjWord1{
+        right: -27px;
+        width: 57%;
+    }
+}
+
+
 
 .pjWord p,
 .pjWord1 p {
@@ -769,12 +799,14 @@ section {
     background-size: cover;
     /*縮放到適合位置*/
     mix-blend-mode: overlay;
-    opacity:.7;
+    opacity: .7;
 }
-.bgsvc-1{
+
+.bgsvc-1 {
     background-image: url(../images/productBrowsing_backgroundBasemap1.png);
 }
-.bgsvc-2{
+
+.bgsvc-2 {
     background-image: url(../images/productBrowsing_backgroundBasemap2.png);
 }
 
@@ -1125,7 +1157,8 @@ footer div {
     flex-direction: column;
     align-items: center;
 }
-footer div img{
+
+footer div img {
     width: 217px;
 }
 
