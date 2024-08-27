@@ -663,22 +663,47 @@ a {
     width: 95%;
 }
 
-#showTxtOnJersy {
+.showTxtOnJersy {
     position: relative;
     font-size: 32px;
     font-weight: bold;
     text-align: center;
-    top: 165px;
+    top: 180px;
     left: 0px;
 }
 
-#showTxtOnJersy.txtPosition-1 {
-    top: 165px;
+.showTxtOnJersy.txtPosition-1 {
+    top: 180px;
 }
 
-#showTxtOnJersy.txtPosition-2 {
-    top:225px;
+.showTxtOnJersy.txtPosition-2 {
+    top:230px;
 }
+
+.showImgOnJersy {
+    width: 80px;
+    height: auto;
+    position: relative;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    top: 100px;
+    left: 340px;
+}
+
+.showNumOnJersy {
+    font-family: "ROGFonts", sans-serif;
+    letter-spacing: 1rem;
+    position: relative;
+    font-size: 160px;
+    font-weight: bold;
+    text-align: center;
+    top: 220px;
+    left: 0px;
+}
+
+
+
 
 /* 以下8/24 RWD測試 */
 .textAreaBtnDiv {
@@ -889,6 +914,20 @@ hr {
     display: none;
 }
 
+#pictureArea form {
+    height: 100%;
+}
+
+#showPicture {
+    margin-top: 16px;
+    width: 100%;
+    height: 70%;
+    object-fit: contain;
+}
+
+
+
+/* 預設display none */
 #colorArea,
 #designArea,
 #textArea,

@@ -142,10 +142,14 @@
                                             <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
                                         </label>
                                         <select name="textFonts" id="chooseTextFonts" title="選擇文字字型">
-                                            <option value="Noto Sans TC" id="NotoSansTC" style="font-family: 'Noto Sans TC', sans-serif;">Noto Sans TC</option>
-                                            <option value="標楷體" id="kaiu" style="font-family: 'kaiu', sans-serif;">標楷體</option>
-                                            <option value="微軟正黑體-標準" id="msjh" style="font-family: 'msjh', sans-serif;">微軟正黑體-標準</option>
-                                            <option value="ROG LyonsType" id="ROGFonts" style="font-family: 'ROGFonts', sans-serif;">ROG LyonsType</option>
+                                            <option value="Noto Sans TC" id="NotoSansTC"
+                                                style="font-family: 'Noto Sans TC', sans-serif;">Noto Sans TC</option>
+                                            <option value="標楷體" id="kaiu" style="font-family: 'kaiu', sans-serif;">標楷體
+                                            </option>
+                                            <option value="微軟正黑體-標準" id="msjh" style="font-family: 'msjh', sans-serif;">
+                                                微軟正黑體-標準</option>
+                                            <option value="ROG LyonsType" id="ROGFonts"
+                                                style="font-family: 'ROGFonts', sans-serif;">ROG LyonsType</option>
                                         </select>
                                         <hr>
                                         <label for="textColor" id="lblForTextColor">顏色
@@ -836,6 +840,7 @@
                                         title="上傳圖片欄位">
                                     <input type="button" name="uploadPictureBtn" id="uploadPictureBtn" title="上傳按鈕"
                                         value="上傳">
+                                    <img src="" alt="" id="showPicture">
                                 </form>
                             </div>
                         </div>
@@ -890,12 +895,14 @@
                                 </clipPath>
 
                                 <g clip-path="url(#D1-clip)">
-                                    <foreignObject x="659" y="266" width="600px" height="546px"
-                                        style="border: 1px solid red;">
-                                        <div id="showTxtOnJersy">
-                                            測試文字</div>
-                                        <img src="./images/logo-orange.svg" alt=""
-                                            style="width: 250px; position: relative; top: 180px; left: 230px;">
+                                    <foreignObject x="659" y="266" width="600px" height="546px">
+                                        <div class="showTxtOnJersy"></div>
+                                    </foreignObject>
+                                    <foreignObject x="659" y="266" width="600px" height="546px">
+                                        <img class="showImgOnJersy" src="./images/logo-orange.svg" alt="">
+                                    </foreignObject>
+                                    <foreignObject x="659" y="266" width="600px" height="546px">
+                                        <div class="showNumOnJersy"></div>
                                     </foreignObject>
                                     <path
                                         d="m867.38 280.39-65.384 21.06-33.794 23.019-51.426 49.222-51.671 55.834-2.204 9.3056 47.753 59.752 19.836 14.938 11.999 0.97954 33.549-33.06 22.04-22.529h5.8772l-10.285 211.09-1.2244 79.833 2.204 42.12 11.754 5.3875 144.73 13.714 131.99-8.8159 41.141-7.8363 4.6528-54.854-11.754-280.88 3.9182-0.97954 46.283 46.773 11.51 9.5505 19.101-4.8977 56.813-65.384 3.9182-9.3056-47.508-53.14-55.589-52.895-35.508-25.958-69.058-21.795-9.0607 23.754-26.448 34.529-42.365 25.958-13.714 3.1835-24.244-8.0812-27.182-18.611-19.346-22.04-16.897-27.917z"
@@ -939,13 +946,14 @@
                                     </clipPath>
 
                                     <g clip-path="url(#D2-clip)">
-                                        <foreignObject x="234" y="178" width="600px" height="546px"
-                                            style="border: 1px solid red;">
-                                            <div id="showTxtOnJersy">
-                                                測試文字
-                                            </div>
-                                            <img src="./images/logo-orange.svg" alt=""
-                                                style="width: 250px; position: relative; top: 180px; left: 230px;">
+                                        <foreignObject x="234" y="178" width="600px" height="546px">
+                                            <div class="showTxtOnJersy"></div>
+                                        </foreignObject>
+                                        <foreignObject x="234" y="178" width="600px" height="546px">
+                                            <img class="showImgOnJersy" src="./images/logo-orange.svg" alt="">
+                                        </foreignObject>
+                                        <foreignObject x="234" y="178" width="600px" height="546px">
+                                            <div class="showNumOnJersy"></div>
                                         </foreignObject>
                                         <path
                                             d="m442.56 190.64-62.534 19.482-53.394 37.28-89.231 93.56v8.899l53.875 63.736 20.684 11.304 20.925-14.671 37.761-40.647 8.418-2.6457-2.1646 55.559-7.5923 165.97-3.0612 97.28 5.1021 18.708 85.715 12.585 109.87 3.0613 120.41-12.585 14.286-6.4626 0.34014-65.987-10.544-270.07 13.946 9.5239 48.64 49.66 9.864-1.3606 42.858-39.456 26.191-36.395-8.8436-16.327-81.633-82.994-38.776-29.932-62.926-24.15-13.606-3.7415-15.306 31.633-32.653 37.755-46.259 21.089-58.504-34.354-28.912-43.878z"
@@ -990,13 +998,14 @@
                                 </clipPath>
 
                                 <g clip-path="url(#D3-clip)">
-                                    <foreignObject x="1142" y="202" width="600px" height="546px"
-                                        style="border: 1px solid red;">
-                                        <div id="showTxtOnJersy">
-                                            測試文字
-                                        </div>
-                                        <img src="./images/logo-orange.svg" alt=""
-                                            style="width: 250px; position: relative; top: 180px; left: 230px;">
+                                    <foreignObject x="1142" y="202" width="600px" height="546px">
+                                        <div class="showTxtOnJersy"></div>
+                                    </foreignObject>
+                                    <foreignObject x="1142" y="202" width="600px" height="546px">
+                                        <img class="showImgOnJersy" src="./images/logo-orange.svg" alt="">
+                                    </foreignObject>
+                                    <foreignObject x="1142" y="202" width="600px" height="546px">
+                                        <div class="showNumOnJersy"></div>
                                     </foreignObject>
                                     <path
                                         d="m1349.6 217.55-45.624 13.64-34.335 15.521-61.145 52.208-57.852 63.967-6.5848 11.759 39.039 47.034 22.576 24.458 17.403 6.1145 26.81-25.399 27.75-28.691 7.9959-5.1738 1.8814 18.343-4.2331 70.552-8.9366 195.66 2.8221 51.738 7.5255 4.2331 78.548 9.8772 80.429 3.7628 84.192-5.1738 78.077-10.818 4.2331-16.462-3.7628-165.56-7.5255-155.68 7.5255 1.8814 35.276 38.098 20.225 17.403 11.759-0.47035 45.624-44.683 22.106-32.454-24.458-33.394-41.39-41.39-47.975-43.742-29.632-19.284-45.624-14.581-17.403-4.7034-19.284 37.628-32.924 33.394-39.979 18.343-42.802-20.225-35.746-37.157z"
