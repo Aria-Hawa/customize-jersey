@@ -1,30 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/sandy.css">
     <link rel="stylesheet" href="./styles/sandy_test.css">
+    <link rel="stylesheet" href="./styles/pbCarousel.css">
 </head>
+<style>
+    body {
+        background-color: black;
+    }
+    .box{
+     background-color: rgb(212, 32, 32);
+}
+.boxA{
+     background-color: rgb(240, 141, 141);
+}
+.buttonTEST{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+</style>
+
+
 <body>
-
-
-            <div id="menu-1" class="menu-1" onclick="changemenu1();">
-                <div class="figure"></div>
-                <div class="word">
-                    <h4>Storm <br>
-                        Knights <br>
-                        Football<br>
-                        Club</h4>
-                    <p>企業甲組聯賽</p>
-                </div>
-                <span class='line-1'></span>
-                <span class='line-2'></span>
-                <span class='line-3'></span>
-                <span class='line-4'></span>
+    <nav class="pbItem">
+        <ul>
+            <li><a href="#" onclick="changeJersey();">昇華球衣</a></li>
+            <li><a href="#" onclick="changeSweat();">排汗上衣</a></li>
+            <li><a href="#">訓練短褲</a></li>
+        </ul>
+    </nav>
+    <div class="pbCommodity">
+        <div class="container">
+            <div class="carousel-wrapper">
+                <ul id="templates" class="templatesA">
+                    <li class="box" >
+                        
+                    </li>
+                    <li class="box">
+                        
+                    </li>
+                    <li class="box">
+                       
+                    </li>
+                    <li class="box">
+                        
+                    </li>
+                </ul>
+                <ul id="templates" class="templatesB" style="display: none;">
+                    <li class="boxA">
+                        
+                    </li>
+                    <li class="boxA">
+                        
+                    </li>
+                    <li class="boxA">
+                       
+                    </li>
+                    <li class="boxA">
+                        
+                    </li>
+                </ul>
             </div>
+            <!-- 下列為箭頭區 -->
 
-        </a>
+        </div>
+    </div>
+    <div class="arrowGroup">
+        <div class="arrow2" id="carousel-left">
+        </div>
+        <div class="arrow1 showing" id="carousel-right">
+        </div>
+    </div>
+<!-- 
+    <hr>
+
+
+    <a href="javascript: void(0)" class="btn">
+        <div>
+            <span>Button</span>
+            <span>Button</span>
+        </div>
+    </a>
+    -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="./js/pbCarousel2.js"></script>
+
 </body>
+
 </html>

@@ -1,80 +1,11 @@
-// 宣告三個背景變數
-let bgsvc_1="";
-let bgsvc_2="";
-let bgsvc_3="";
-// 宣告三個換圖輪播變數
-let templatesA = '';
-let templatesB = '';
-let templatesC = '';
 
-// 宣告點選到輪播的templates變數
-let templatesDIV = '';
-
-function getTemplatesDiv() {
-	// 1.先取得操作的標籤div
-	templatesADiv = document.querySelector('.templatesA');
-	templatesBDiv = document.querySelector('.templatesB');
-	templatesCDiv = document.querySelector('.templatesC');
-	bgsvc_1Div = document.querySelector('.bgsvc_1');
-	bgsvc_2Div = document.querySelector('.bgsvc_2');
-	bgsvc_3Div = document.querySelector('.bgsvc_3');
-
-	// 2.再對標籤div操作
-	templatesADiv.style.display = "none";
-	templatesBDiv.style.display = "none";
-	templatesCDiv.style.display = "none";
-	bgsvc_1Div.style.display = "none";
-	bgsvc_2Div.style.display = "none";
-	bgsvc_3Div.style.display = "none";
-}
-
-function changeJersey() {
-	getTemplatesDiv();
-	templatesDIV = $('.templatesA');
-	templatesADiv.style.display = "flex";
-	bgsvc_1Div.style.display = "flex";
-}
-
-function changeSweat() {
-	getTemplatesDiv();
-	templatesDIV = $('.templatesB');
-	templatesBDiv.style.display = "flex";
-	bgsvc_2Div.style.display = "flex";
-}
-function changeShorts() {
-	getTemplatesDiv();
-	templatesDIV = $('.templatesC');
-	templatesCDiv.style.display = "flex";
-	bgsvc_3Div.style.display = "flex";
-}
-
-// 以下是按鈕
-let pbTBtnDiv = '';
-function getDiv(curNum) {
-	pbTBtnDiv = document.getElementById('pb' + curNum);
-	console.log(pbTBtnDiv);
-	// pbTBtnDiv = document.querySelector('.pbTBtn');
-
-}
-function showBtn(pbNum) {
-	getDiv(pbNum);
-
-	pbTBtnDiv.style.display = "flex";
-
-}
-function turnoffBtn(pbNum) {
-	getDiv(pbNum);
-	pbTBtnDiv.style.display = "none";
-}
-
-// 下面為換圖輪播
 function slideCarousel(direction) {
 	var templateSize = 1107 // technically 192px, but accounting for 16px margin
-	var templates = templatesDIV
+	var templates = $("#templates");
 	// create variable for width
 	var templateWidth = 0
 	// add width of each template tile
-	templates.each(function () {
+	templates.children().each(function () {
 		templateWidth += $(this).outerWidth(true);
 	});
 	// the amount we want to scroll the templates
@@ -157,9 +88,4 @@ $('#carousel-left').click(function () {
 
 $('#carousel-right').click(function () {
 	slideCarousel("right");
-});
-
-// 在这里添加初始化代码
-$(document).ready(function() {
-    changeJersey(); // 或 changeSweat(); 根据你的默认显示需求
 });

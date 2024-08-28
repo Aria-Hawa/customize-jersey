@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .container {
-  width: 1091px;
+  width: 100%;
 
 }
 ul#templates {
