@@ -6,6 +6,16 @@
     src: url(../webfonts/ROGFonts.otf);
 }
 
+@font-face {
+    font-family: "kaiu";
+    src: url(../webfonts/kaiu.ttf);
+}
+
+@font-face {
+    font-family: "msjh";
+    src: url(../webfonts/msjh.ttc);
+}
+
 /* 重置所有標籤的樣式 */
 * {
     margin: 0;
@@ -653,6 +663,48 @@ a {
     width: 95%;
 }
 
+.showTxtOnJersy {
+    position: relative;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    top: 180px;
+    left: 0px;
+}
+
+.showTxtOnJersy.txtPosition-1 {
+    top: 180px;
+}
+
+.showTxtOnJersy.txtPosition-2 {
+    top:230px;
+}
+
+.showImgOnJersy {
+    width: 80px;
+    height: auto;
+    position: relative;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    top: 100px;
+    left: 340px;
+}
+
+.showNumOnJersy {
+    font-family: "ROGFonts", sans-serif;
+    letter-spacing: 1rem;
+    position: relative;
+    font-size: 160px;
+    font-weight: bold;
+    text-align: center;
+    top: 220px;
+    left: 0px;
+}
+
+
+
+
 /* 以下8/24 RWD測試 */
 .textAreaBtnDiv {
     width: 95%;
@@ -660,7 +712,6 @@ a {
     display: flex;
     justify-content: flex-end;
 }
-
 /* 以上8/24 RWD測試 */
 
 /* textArea-3rd樣式設定 */
@@ -723,9 +774,9 @@ hr {
 /* 以上8/24 RWD測試 */
 
 #chooseTextFonts {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
-    padding: 3px;
+    padding: 4px;
     color: white;
     background-color: transparent;
     animation: hide 1.35s both;
@@ -742,14 +793,6 @@ hr {
 
 #chooseTextFonts option {
     color: var(--Darkblue);
-}
-
-#chooseTextFonts #NotoFont {
-    font-family: "Noto Sans TC", sans-serif;
-}
-
-#chooseTextFonts #RogFont {
-    font-family: "ROGFonts", sans-serif;
 }
 
 /* 8/24 RWD測試 */
@@ -871,6 +914,20 @@ hr {
     display: none;
 }
 
+#pictureArea form {
+    height: 100%;
+}
+
+#showPicture {
+    margin-top: 16px;
+    width: 100%;
+    height: 70%;
+    object-fit: contain;
+}
+
+
+
+/* 預設display none */
 #colorArea,
 #designArea,
 #textArea,

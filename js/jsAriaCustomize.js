@@ -143,53 +143,64 @@ $(function () {
         let FlblColor03 = $(`#${designNo}`).find('.FC3').attr('fill');
         let FlblColor04 = $(`#${designNo}`).find('.FC4').attr('fill');
         let FlblColor05 = $(`#${designNo}`).find('.VSERwd').attr('fill');
-        $('#lblForFront-1 div a').css('background-color',FlblColor01);
-        $('#lblForFront-2 div a').css('background-color',FlblColor02);
-        $('#lblForFront-3 div a').css('background-color',FlblColor03);
-        $('#lblForFront-4 div a').css('background-color',FlblColor04);
-        $('#lblForFront-5 div a').css('background-color',FlblColor05);
+        $('#lblForFront-1 div a').css('background-color', FlblColor01);
+        $('#lblForFront-2 div a').css('background-color', FlblColor02);
+        $('#lblForFront-3 div a').css('background-color', FlblColor03);
+        $('#lblForFront-4 div a').css('background-color', FlblColor04);
+        $('#lblForFront-5 div a').css('background-color', FlblColor05);
 
         // 換色功能
         $('#frontColor-1 a').click(function () {
             // $(`#${designNo}`).find('.Fcollar').attr('stroke','white');
-            $(`#${designNo}`).find('.Fcollar').attr('fill',$(this).css('background-color'));
+            $(`#${designNo}`).find('.Fcollar').attr('fill', $(this).css('background-color'));
             FlblColor01 = $(`#${designNo}`).find('.Fcollar').attr('fill');
-            $('#lblForFront-1 div a').css('background-color',FlblColor01);
+            $('#lblForFront-1 div a').css('background-color', FlblColor01);
         });
         $('#frontColor-2 a').click(function () {
-            $(`#${designNo}`).find('.FC2').attr('fill',$(this).css('background-color'));
+            $(`#${designNo}`).find('.FC2').attr('fill', $(this).css('background-color'));
             FlblColor02 = $(`#${designNo}`).find('.FC2').attr('fill');
-            $('#lblForFront-2 div a').css('background-color',FlblColor02);
+            $('#lblForFront-2 div a').css('background-color', FlblColor02);
         });
         $('#frontColor-3 a').click(function () {
-            $(`#${designNo}`).find('.FC3').attr('fill',$(this).css('background-color'));
+            $(`#${designNo}`).find('.FC3').attr('fill', $(this).css('background-color'));
             FlblColor03 = $(`#${designNo}`).find('.FC3').attr('fill');
-            $('#lblForFront-3 div a').css('background-color',FlblColor03);
+            $('#lblForFront-3 div a').css('background-color', FlblColor03);
         });
         $('#frontColor-4 a').click(function () {
-            $(`#${designNo}`).find('.FC4').attr('fill',$(this).css('background-color'));
+            $(`#${designNo}`).find('.FC4').attr('fill', $(this).css('background-color'));
             FlblColor04 = $(`#${designNo}`).find('.FC4').attr('fill');
-            $('#lblForFront-4 div a').css('background-color',FlblColor04);
+            $('#lblForFront-4 div a').css('background-color', FlblColor04);
         });
         $('#frontColor-5 a').click(function () {
-            $(`#${designNo}`).find('.VSERwd').attr('fill',$(this).css('background-color'));
+            $(`#${designNo}`).find('.VSERwd').attr('fill', $(this).css('background-color'));
             FlblColor05 = $(`#${designNo}`).find('.VSERwd').attr('fill');
-            $('#lblForFront-5 div a').css('background-color',FlblColor05);
+            $('#lblForFront-5 div a').css('background-color', FlblColor05);
         });
 
     });
-    
-    
-    
-    
-    
-});
+    // textPosition 位置點選變更
+    $('#textPosition a').click(function () {
+        let textPositionNo = $(this).find('img').attr('alt');
+        // 移除txtPosition開頭的class
+        $('.showTxtOnJersy').removeClass(function (index, className) {
+            return (className.match(/(^|\s)txtPosition\S+/g) || []).join(' ');
+        });
+        $('.showTxtOnJersy').addClass(textPositionNo);
+    });
 
-let designProject = document.getElementById('design-1');
-console.log(designProject);
-localStorage.setItem('desiginProject',designProject);
-// let call = localStorage.getItem('designProject');
-// console.log(call);
+    // textFont 字型選擇變更
+    $('#chooseTextFonts').change(function () {
+        let chossedFont = $(this).find('option:selected').css('font-family');
+        $('.showTxtOnJersy').css('font-family', chossedFont);
+    });
+
+    // textColor 字體顏色選擇變更
+    $('#chooseTextColor a').click(function () {
+        $('.showTxtOnJersy').css('color', $(this).css('background-color'))
+    });
+
+
+});
 
 
 
@@ -221,7 +232,7 @@ function displayNone() {
 function displayShape() {
     displayNone();
     shapeAreaDiv.style.display = 'flex';
-    if(shapeAreaDiv.style.display == 'flex'){
+    if (shapeAreaDiv.style.display == 'flex') {
         document.querySelector('#shapeItem').classList.add("focus");
         document.querySelector('#designItem').classList.remove('focus');
         document.querySelector('#textItem').classList.remove('focus');
@@ -234,7 +245,7 @@ function displayShape() {
 function displayDesign() {
     displayNone();
     designAreaDiv.style.display = 'flex';
-    if(designAreaDiv.style.display == 'flex'){
+    if (designAreaDiv.style.display == 'flex') {
         document.querySelector('#shapeItem').classList.remove('focus');
         document.querySelector('#designItem').classList.add("focus");
         document.querySelector('#textItem').classList.remove('focus');
@@ -247,7 +258,7 @@ function displayDesign() {
 function displayText() {
     displayNone();
     textAreaDiv.style.display = 'flex';
-    if(textAreaDiv.style.display == 'flex'){
+    if (textAreaDiv.style.display == 'flex') {
         document.querySelector('#shapeItem').classList.remove('focus');
         document.querySelector('#designItem').classList.remove('focus');
         document.querySelector('#textItem').classList.add("focus");
@@ -260,7 +271,7 @@ function displayText() {
 function displayColor() {
     displayNone();
     colorAreaDiv.style.display = 'flex';
-    if(colorAreaDiv.style.display == 'flex'){
+    if (colorAreaDiv.style.display == 'flex') {
         document.querySelector('#shapeItem').classList.remove('focus');
         document.querySelector('#designItem').classList.remove('focus');
         document.querySelector('#textItem').classList.remove('focus');
@@ -273,7 +284,7 @@ function displayColor() {
 function displayPicture() {
     displayNone();
     pictureAreaDiv.style.display = 'flex';
-    if(pictureAreaDiv.style.display == 'flex'){
+    if (pictureAreaDiv.style.display == 'flex') {
         document.querySelector('#shapeItem').classList.remove('focus');
         document.querySelector('#designItem').classList.remove('focus');
         document.querySelector('#textItem').classList.remove('focus');
@@ -286,7 +297,7 @@ function displayPicture() {
 function displayNumber() {
     displayNone();
     numberAreaDiv.style.display = 'flex';
-    if(numberAreaDiv.style.display == 'flex'){
+    if (numberAreaDiv.style.display == 'flex') {
         document.querySelector('#shapeItem').classList.remove('focus');
         document.querySelector('#designItem').classList.remove('focus');
         document.querySelector('#textItem').classList.remove('focus');
@@ -338,14 +349,18 @@ function display3rdStep() {
 }
 
 // 讓用戶在textArea-1st 輸入的文字呈現在textArea-3rd的文字方塊內
-// !!!!!監聽用change!!!!!!!!!
-let getTextStyleForm = document.getElementById('textStyleInput');
-getTextStyleForm.addEventListener('change', function () {
-    let getTextStyleInput = document.getElementById('textStyle');
-    let getTextWordsValue = document.getElementById('textWords');
-    getTextWordsValue.value = getTextStyleInput.value;
+// !!!!!監聽可以用change!!!!!!!!!
+let getTextStyleInput = document.getElementById('textStyle');
+getTextStyleInput.addEventListener('change', function () {
+    document.getElementById('textWords').value = getTextStyleInput.value;
 });
-
+// 同步顯示在球衣上
+getTextStyleInput.addEventListener('keyup', function () {
+    // 用forEach顯示陣列中所有的值
+    document.querySelectorAll('.showTxtOnJersy').forEach((element) => {
+        element.innerText = getTextStyleInput.value;
+    });
+});
 
 
 // textSize Range設定 => 參考https://codepen.io/davidsonaguiar/pen/ExvvaRz
@@ -354,8 +369,36 @@ getTextSize.addEventListener('input', function () {
     let chooseTextSize = document.getElementById('chooseTextSize');
     let textSizeValue = document.getElementById('textSizeValue');
     var x = chooseTextSize.value;
+    // 資料型態轉換成number
+    x = Number(x);
     // 設定range滑條的樣式
     chooseTextSize.style.background = `linear-gradient(to right, var(--Orange) ${(x - 3) * 8.3}%,  rgba(255,255,255,.5) ${(x - 3) * 8.3}%)`;
     // 設定spane顯示的數字隨著x變化
     textSizeValue.textContent = `${x}`;
+
+    // 同步變更球衣上的字體大小
+    document.querySelectorAll('.showTxtOnJersy').forEach((element)=>{
+        element.style.fontSize = `${(x + 3) * 4}px`;
+    });
+});
+
+let inputNumber = document.getElementById('inputNumber');
+inputNumber.addEventListener('keyup',function () {
+    document.querySelectorAll('.showNumOnJersy').forEach((element)=>{
+        element.innerText = inputNumber.value;
+    });
+});
+
+
+// 上傳圖片預覽 =>參考https://medium.com/coding-hot-pot/%E5%A6%82%E4%BD%95%E5%AF%A6%E4%BD%9C%E9%A0%90%E8%A6%BD%E4%B8%8A%E5%82%B3%E5%9C%96%E7%89%87%E5%8A%9F%E8%83%BD-8d75d814035a
+document.getElementById('uploadPicture').addEventListener('change',function (e){
+    let showPicture = document.getElementById('showPicture').src;
+    // 2. 使用完畢後釋放 URL
+    if (showPicture.startsWith('blob:')){
+        URL.revokeObjectURL(showPicture);
+    }
+    // 1.createObjectURL (使用e.target.files)
+    let getPictureUrl = e.target.files[0];
+    let pictureURL = URL.createObjectURL(getPictureUrl);
+    document.getElementById('showPicture').src = pictureURL;
 });
