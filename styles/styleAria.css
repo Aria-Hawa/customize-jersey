@@ -872,6 +872,11 @@ hr {
     display: none;
 }
 
+.frontColor, .backColor {
+    border-bottom: 2px solid white;
+    padding: 8px 0px;
+}
+
 .chooseColor.show {
     display: flex;
     animation: show 0.55s both;
