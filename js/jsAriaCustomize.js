@@ -124,11 +124,30 @@ $(function () {
     // 按下shape區的衣服變更preview
     $('#shapeArea .stylePreview a').click(function () {
         let shapeNo = $(this).find('img').attr('alt');
-        // $('.preJersey img').css('display','block');
-        // $('.preJersey img').attr('src', `./images/${shapeNo}.svg`);
         $('.preJersey svg').css('display', 'none');
-        $('.preJersey figure').css('background-image', `url(./images/${shapeNo}.svg)`);
+        $(`#${shapeNo}`).css('display', 'block');
+
+        // 以下測試只顯示2個color
+        let frontColorHide = $('#frontColorSpace').find('.forFrontLbl').filter((index, element) => {
+            return index > 1;
+        });
+        frontColorHide.each((index, element) => {
+            $(element).css('display', 'none');
+        })
+        // 換色功能
+        $('#frontColor-1 a').click(function () {
+            $(`#${shapeNo}`).find('.Fcollar').attr('fill', $(this).css('background-color'));
+            FlblColor01 = $(`#${shapeNo}`).find('.Fcollar').attr('fill');
+            $('#lblForFront-1 div a').css('background-color', FlblColor01);
+            $('#frontColor-2 a').click(function () {
+                $(`#${shapeNo}`).find('.FC2').attr('fill', $(this).css('background-color'));
+                FlblColor02 = $(`#${shapeNo}`).find('.FC2').attr('fill');
+                $('#lblForFront-2 div a').css('background-color', FlblColor02);
+            });
+        });
+
     });
+
 
     // 按下design區的衣服變更preview
     $('#designArea .stylePreview a').click(function () {
@@ -136,7 +155,6 @@ $(function () {
         $('.preJersey figure').css('background-image', 'none');
         $('.preJersey svg').css('display', 'none');
         $(`#${designNo}`).css('display', 'block');
-
         // 找preview區域的顏色顯示在chooseColor上
         let FlblColor01 = $(`#${designNo}`).find('.Fcollar').attr('fill');
         let FlblColor02 = $(`#${designNo}`).find('.FC2').attr('fill');
@@ -148,10 +166,8 @@ $(function () {
         $('#lblForFront-3 div a').css('background-color', FlblColor03);
         $('#lblForFront-4 div a').css('background-color', FlblColor04);
         $('#lblForFront-5 div a').css('background-color', FlblColor05);
-
         // 換色功能
         $('#frontColor-1 a').click(function () {
-            // $(`#${designNo}`).find('.Fcollar').attr('stroke','white');
             $(`#${designNo}`).find('.Fcollar').attr('fill', $(this).css('background-color'));
             FlblColor01 = $(`#${designNo}`).find('.Fcollar').attr('fill');
             $('#lblForFront-1 div a').css('background-color', FlblColor01);
@@ -176,8 +192,9 @@ $(function () {
             FlblColor05 = $(`#${designNo}`).find('.VSERwd').attr('fill');
             $('#lblForFront-5 div a').css('background-color', FlblColor05);
         });
-
     });
+
+
     // textPosition 位置點選變更
     $('#textPosition a').click(function () {
         let textPositionNo = $(this).find('img').attr('alt');
@@ -377,24 +394,24 @@ getTextSize.addEventListener('input', function () {
     textSizeValue.textContent = `${x}`;
 
     // 同步變更球衣上的字體大小
-    document.querySelectorAll('.showTxtOnJersy').forEach((element)=>{
+    document.querySelectorAll('.showTxtOnJersy').forEach((element) => {
         element.style.fontSize = `${(x + 3) * 4}px`;
     });
 });
 
 let inputNumber = document.getElementById('inputNumber');
-inputNumber.addEventListener('keyup',function () {
-    document.querySelectorAll('.showNumOnJersy').forEach((element)=>{
+inputNumber.addEventListener('keyup', function () {
+    document.querySelectorAll('.showNumOnJersy').forEach((element) => {
         element.innerText = inputNumber.value;
     });
 });
 
 
 // 上傳圖片預覽 =>參考https://medium.com/coding-hot-pot/%E5%A6%82%E4%BD%95%E5%AF%A6%E4%BD%9C%E9%A0%90%E8%A6%BD%E4%B8%8A%E5%82%B3%E5%9C%96%E7%89%87%E5%8A%9F%E8%83%BD-8d75d814035a
-document.getElementById('uploadPicture').addEventListener('change',function (e){
+document.getElementById('uploadPicture').addEventListener('change', function (e) {
     let showPicture = document.getElementById('showPicture').src;
     // 2. 使用完畢後釋放 URL
-    if (showPicture.startsWith('blob:')){
+    if (showPicture.startsWith('blob:')) {
         URL.revokeObjectURL(showPicture);
     }
     // 1.createObjectURL (使用e.target.files)
