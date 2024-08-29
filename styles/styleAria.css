@@ -604,12 +604,34 @@ a {
     background-color: var(--Orange);
 }
 
+/* directionBtn共用設定 */
+.DirBtn img {
+    width: 40px;
+    height: 40px;
+    background-color:white;
+    mask-image: url(../images/directionBtn.png);
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+}
+
+.DirBtn img:hover {
+    background-color:var(--Orange);
+    cursor: pointer;
+}
+
+.DirBtn img:active {
+    background-color:var(--Darkorange);
+}
+
+
 /* customizePlace各style各自樣式區 */
 /* textArea樣式設定 */
 /* #textStyleInput {
     width: 100%;
 } */
-#textStyleInput #textStyle {
+#textStyleInput #textStyle,
+#numberInput {
     margin-bottom: 16px;
 }
 
@@ -665,9 +687,6 @@ a {
     width: 95%;
 }
 
-
-
-
 /* 以下8/24 RWD測試 */
 .textAreaBtnDiv {
     width: 95%;
@@ -687,8 +706,10 @@ hr {
     margin: 9px 0px;
 }
 
-#textArea label,
-#colorArea label {
+/* #textArea label,
+#colorArea label,
+#numberArea label, */
+.styleInfo label {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -699,8 +720,9 @@ hr {
     width: 100%;
 }
 
-#textArea label:hover,
-#colorArea label:hover {
+/* #textArea label:hover,
+#colorArea label:hover, */
+.styleInfo label:hover {
     cursor: pointer;
 }
 
@@ -731,13 +753,14 @@ hr {
 
 /* 以下8/24 RWD測試 */
 #textStyleValue {
-    width: 95%;
+    width: 100%;
     margin-bottom: 10px;
 }
 
 /* 以上8/24 RWD測試 */
 
-#chooseTextFonts {
+#chooseTextFonts,
+#chooseNumFonts {
     font-size: 16px;
     font-weight: 300;
     padding: 4px;
@@ -750,12 +773,14 @@ hr {
     width: 80%;
 }
 
-#chooseTextFonts.show {
+#chooseTextFonts.show,
+#chooseNumFonts.show {
     display: block;
     animation: show 0.35s both;
 }
 
-#chooseTextFonts option {
+#chooseTextFonts option,
+#chooseNumFonts option {
     color: var(--Darkblue);
 }
 
@@ -768,7 +793,8 @@ hr {
     width: 60px;
 } */
 
-.textsizeRange {
+.textsizeRange,
+.NumsizeRange {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -780,18 +806,22 @@ hr {
     width: 100%;
 }
 
-.textsizeRange.show {
+.textsizeRange.show,
+.NumsizeRange.show {
     display: flex;
     animation: show 0.55s both;
     /* margin-top: 10px; */
 }
 
 #customizePlace #chooseTextSize,
-#chooseTextSize::-webkit-slider-thumb {
+#customizePlace #chooseNumSize,
+#chooseTextSize::-webkit-slider-thumb,
+#chooseNumSize::-webkit-slider-thumb {
     appearance: none;
 }
 
-#customizePlace #chooseTextSize {
+#customizePlace #chooseTextSize,
+#customizePlace #chooseNumSize {
     border: none;
     /* width: 240px; */
     height: 8px;
@@ -802,7 +832,8 @@ hr {
     width: 75%;
 }
 
-#chooseTextSize::-webkit-slider-thumb {
+#chooseTextSize::-webkit-slider-thumb,
+#chooseNumSize::-webkit-slider-thumb {
     width: 10px;
     height: 25px;
     background-color: white;
@@ -902,8 +933,16 @@ hr {
     display: none;
 }
 
-#pictureArea form {
-    height: 100%;
+#pictureArea #upload {
+    height: fit-content;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid white;
+}
+
+#pictureArea .stylePreview,
+#numberArea .stylePreview {
+    justify-content: center;
 }
 
 #showPicture {
@@ -915,12 +954,15 @@ hr {
 
 
 
+
+
 /* 預設display none */
 #colorArea,
 #designArea,
 #textArea,
 #pictureArea,
-#numberArea {
+#numberArea,
+#chooseNumFonts {
     display: none;
 }
 
@@ -993,7 +1035,7 @@ hr {
     height: 80%;
     /* margin-top: 40px; */
     padding-top: 30px;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1017,15 +1059,13 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* width: 100%;
-    height: 70vh; */
-    border: 1px solid red;
-
+    max-width: 854px;
 }
 
 #preview .preJersey #showStep img {
     width: 20%;
     margin: 24px;
+    /* max-width: 180px; */
 }
 
 #preview .preJersey figure {
@@ -1074,18 +1114,17 @@ hr {
     font-family: "ROGFonts", sans-serif;
     letter-spacing: 1rem;
     position: relative;
-    font-size: 160px;
+    font-size: 105px;
     font-weight: bold;
     text-align: center;
     top: 220px;
-    left: 0px;
+    left: 10px;
     color: black;
 }
 
 #preview .preOption {
     width: fit-content;
-    height: fit-content;
-    margin-bottom: 80px;
+    height: 20%;
 }
 
 #preview .preOption ul {

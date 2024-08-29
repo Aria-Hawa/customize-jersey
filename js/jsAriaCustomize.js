@@ -1,11 +1,18 @@
 
 // 使用jQuery
 $(function () {
-    // 按下.arrow 互動
-    // 1.新增.arrow的.beClick類別
-    // $('.arrow').click(function () {
-    //     $(this).toggleClass('beClick');
-    // });
+
+    // 按下任意styleItem或shape previw區域，Design steip會隱藏
+    $('.styleItem li').click(function () {
+        $('#showStep').hide();
+        $('.KeyArea').show(500);
+    });
+
+    $('#shapeArea a').click(function () {
+        $('#showStep').hide();
+        $('.KeyArea').show(500);
+    });
+
 
 
     // 按下#lblForTextFonts的.arrow 
@@ -127,10 +134,9 @@ $(function () {
         $('.preJersey svg').css('display', 'none');
         $(`#${shapeNo}`).css('display', 'block');
 
-        // 以下測試只顯示2個color
+        // 當預覽區是shape圖案時只顯示2個color
         let frontColorHide = $('.frontColor').filter((index, element) => {
             return index > 1;
-            // console.log($(element));
         });
         frontColorHide.each((index, element) => {
             $(element).css('display', 'none');
@@ -201,14 +207,14 @@ $(function () {
 
 
     // textPosition 位置點選變更
-    $('#textPosition a').click(function () {
-        let textPositionNo = $(this).find('img').attr('alt');
-        // 移除txtPosition開頭的class
-        $('.showTxtOnJersy').removeClass(function (index, className) {
-            return (className.match(/(^|\s)txtPosition\S+/g) || []).join(' ');
-        });
-        $('.showTxtOnJersy').addClass(textPositionNo);
-    });
+    // $('#textPosition a').click(function () {
+    //     let textPositionNo = $(this).find('img').attr('alt');
+    //     // 移除txtPosition開頭的class
+    //     $('.showTxtOnJersy').removeClass(function (index, className) {
+    //         return (className.match(/(^|\s)txtPosition\S+/g) || []).join(' ');
+    //     });
+    //     $('.showTxtOnJersy').addClass(textPositionNo);
+    // });
 
     // textFont 字型選擇變更
     $('#chooseTextFonts').change(function () {
@@ -222,46 +228,140 @@ $(function () {
     });
 
 
-    // 方向按鈕改變位置
-    let y = 180;
-    let x = 0;
-    let intervalId;
-
+    // TextArea方向按鈕改變位置
+    let ty = 180;
+    let tx = 0;
+    let TxtintervalId;
     $('#textArea .UpBtn').mousedown(function () {
-        intervalId = setInterval(function () {
-            y = y - 10;
+        TxtintervalId = setInterval(function () {
+            ty = ty - 10;
             // 每 100 毫秒更新一次
-            $('.showTxtOnJersy').css('top', `${y}px`);
+            $('.showTxtOnJersy').css('top', `${ty}px`);
         }, 100);
     });
-
     $('#textArea .DownBtn').mousedown(function () {
-        intervalId = setInterval(function () {
-            y = y + 10;
-            $('.showTxtOnJersy').css('top', `${y}px`);
+        TxtintervalId = setInterval(function () {
+            ty = ty + 10;
+            $('.showTxtOnJersy').css('top', `${ty}px`);
         }, 100);
     });
-
     $('#textArea .LeftBtn').mousedown(function () {
-        intervalId = setInterval(function () {
-            x = x - 10;
-            $('.showTxtOnJersy').css('left', `${x}px`);
+        TxtintervalId = setInterval(function () {
+            tx = tx - 10;
+            $('.showTxtOnJersy').css('left', `${tx}px`);
         }, 100);
     });
-
     $('#textArea .RightBtn').mousedown(function () {
-        intervalId = setInterval(function () {
-            x = x + 10;
-            $('.showTxtOnJersy').css('left', `${x}px`);
+        TxtintervalId = setInterval(function () {
+            tx = tx + 10;
+            $('.showTxtOnJersy').css('left', `${tx}px`);
         }, 100);
     });
-
-    $(document).mouseup(function () {
-        clearInterval(intervalId);
+    $(document).mousemove(function () {
+        clearInterval(TxtintervalId);
     });
+    $(document).mouseup(function () {
+        clearInterval(TxtintervalId);
+    });
+
+    // NumArea方向按鈕改變位置
+    let Ny = 220;
+    let Nx = 10;
+    let NumintervalId;
+    $('#numberArea .UpBtn').mousedown(function () {
+        NumintervalId = setInterval(function () {
+            Ny = Ny - 10;
+            $('.showNumOnJersy').css('top', `${Ny}px`);
+        }, 100);
+    });
+    $('#numberArea .DownBtn').mousedown(function () {
+        NumintervalId = setInterval(function () {
+            Ny = Ny + 10;
+            $('.showNumOnJersy').css('top', `${Ny}px`);
+        }, 100);
+    });
+    $('#numberArea .LeftBtn').mousedown(function () {
+        NumintervalId = setInterval(function () {
+            Nx = Nx - 10;
+            $('.showNumOnJersy').css('left', `${Nx}px`);
+        }, 100);
+    });
+    $('#numberArea .RightBtn').mousedown(function () {
+        NumintervalId = setInterval(function () {
+            Nx = Nx + 10;
+            $('.showNumOnJersy').css('left', `${Nx}px`);
+        }, 100);
+    });
+    $(document).mousemove(function () {
+        clearInterval(NumintervalId);
+    });
+    $(document).mouseup(function () {
+        clearInterval(NumintervalId);
+    });
+
+    // NumArea方向按鈕改變位置
+    let Py = 100;
+    let Px = 340;
+    let PictureIntervalId;
+    $('#pictureArea .UpBtn').mousedown(function () {
+        NumintervalId = setInterval(function () {
+            Py = Py - 10;
+            $('.showImgOnJersy').css('top', `${Py}px`);
+        }, 100);
+    });
+    $('#pictureArea .DownBtn').mousedown(function () {
+        NumintervalId = setInterval(function () {
+            Py = Py + 10;
+            $('.showImgOnJersy').css('top', `${Py}px`);
+        }, 100);
+    });
+    $('#pictureArea .LeftBtn').mousedown(function () {
+        NumintervalId = setInterval(function () {
+            Px = Px - 10;
+            $('.showImgOnJersy').css('left', `${Px}px`);
+        }, 100);
+    });
+    $('#pictureArea .RightBtn').mousedown(function () {
+        NumintervalId = setInterval(function () {
+            Px = Px + 10;
+            $('.showImgOnJersy').css('left', `${Px}px`);
+        }, 100);
+    });
+    $(document).mousemove(function () {
+        clearInterval(NumintervalId);
+    });
+    $(document).mouseup(function () {
+        clearInterval(NumintervalId);
+    });
+    // 以上方向按鈕事件
+
+    // NumberArea字體樣式設定
+    $('#NumStyleValue label').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
+    });
+    $('#lblForNumFonts').click(function () {
+        $('#chooseNumFonts').toggleClass('show');
+    });
+    $('#lblForNumColor').click(function () {
+        $('.chooseColor').toggleClass('show');
+    });
+    $('#lblForNumSize').click(function () {
+        $('.NumsizeRange').toggleClass('show');
+    })
+
+    // NumberArea樣式變更
+        $('#chooseNumFonts').change(function () {
+            let chossedFont = $(this).find('option:selected').css('font-family');
+            $('.showNumOnJersy').css('font-family', chossedFont);
+        });
+    
+        $('#chooseNumColor a').click(function () {
+            $('.showNumOnJersy').css('color', $(this).css('background-color'))
+        });
+
+
 
 });
-
 
 
 
@@ -443,6 +543,27 @@ getTextSize.addEventListener('input', function () {
         element.style.fontSize = `${(x + 3) * 4}px`;
     });
 });
+
+// NumSize Range設定
+let getNumSize = document.querySelector('.NumsizeRange');
+getNumSize.addEventListener('input', function () {
+    let chooseNumSize = document.getElementById('chooseNumSize');
+    let NumSizeValue = document.getElementById('NumSizeValue');
+    var x = chooseNumSize.value;
+    // 資料型態轉換成number
+    x = Number(x);
+    // 設定range滑條的樣式
+    chooseNumSize.style.background = `linear-gradient(to right, var(--Orange) ${(x - 3) * 8.3}%,  rgba(255,255,255,.5) ${(x - 3) * 8.3}%)`;
+    // 設定spane顯示的數字隨著x變化
+    NumSizeValue.textContent = `${x}`;
+
+    // 同步變更球衣上的字體大小
+    document.querySelectorAll('.showNumOnJersy').forEach((element) => {
+        element.style.fontSize = `${(x + 10) * 7}px`;
+    });
+});
+
+
 
 // 輸入number顯示在球衣上
 let inputNumber = document.getElementById('inputNumber');
