@@ -665,45 +665,6 @@ a {
     width: 95%;
 }
 
-.showTxtOnJersy {
-    position: relative;
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
-    top: 180px;
-    left: 0px;
-}
-
-.showTxtOnJersy.txtPosition-1 {
-    top: 180px;
-}
-
-.showTxtOnJersy.txtPosition-2 {
-    top:230px;
-}
-
-.showImgOnJersy {
-    width: 80px;
-    height: auto;
-    position: relative;
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
-    top: 100px;
-    left: 340px;
-}
-
-.showNumOnJersy {
-    font-family: "ROGFonts", sans-serif;
-    letter-spacing: 1rem;
-    position: relative;
-    font-size: 160px;
-    font-weight: bold;
-    text-align: center;
-    top: 220px;
-    left: 0px;
-}
-
 
 
 
@@ -714,6 +675,7 @@ a {
     display: flex;
     justify-content: flex-end;
 }
+
 /* 以上8/24 RWD測試 */
 
 /* textArea-3rd樣式設定 */
@@ -860,6 +822,24 @@ hr {
     font-size: 18px;
 }
 
+.DirBtn {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.DirBtn .mdDiv {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.DirBtn img {
+    width: 40px;
+}
+
+
 /* customizePlace各style各自樣式區 */
 /* ColorArea樣式設定 */
 /* stylePreview內的顏色選則設定 */
@@ -874,7 +854,8 @@ hr {
     display: none;
 }
 
-.frontColor, .backColor {
+.frontColor,
+.backColor {
     border-bottom: 2px solid white;
     padding: 8px 0px;
 }
@@ -1001,6 +982,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     /* flex-shrink: 0.65; */
     /* flex-grow: 0.95; */
     flex-grow: 1;
@@ -1012,6 +994,38 @@ hr {
     /* margin-top: 40px; */
     padding-top: 30px;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#preview .preJersey #showStep {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 70vh;
+}
+
+#preview .preJersey #showStep h2 {
+    font-family: "ROGFonts", sans-serif;
+    font-size: 32px;
+}
+
+#preview .preJersey #showStep figure {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* width: 100%;
+    height: 70vh; */
+    border: 1px solid red;
+
+}
+
+#preview .preJersey #showStep img {
+    width: 20%;
+    margin: 24px;
 }
 
 #preview .preJersey figure {
@@ -1026,18 +1040,52 @@ hr {
     object-fit: contain;
 }
 
-foreignObject {
-    /* width: fit-content; */
+
+.showTxtOnJersy {
+    position: relative;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    top: 180px;
+    left: 0px;
+    color: black;
 }
 
+.showTxtOnJersy.txtPosition-1 {
+    top: 180px;
+}
 
+.showTxtOnJersy.txtPosition-2 {
+    top: 230px;
+}
 
+.showImgOnJersy {
+    width: 80px;
+    height: auto;
+    position: relative;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    top: 100px;
+    left: 340px;
+}
 
-
+.showNumOnJersy {
+    font-family: "ROGFonts", sans-serif;
+    letter-spacing: 1rem;
+    position: relative;
+    font-size: 160px;
+    font-weight: bold;
+    text-align: center;
+    top: 220px;
+    left: 0px;
+    color: black;
+}
 
 #preview .preOption {
     width: fit-content;
     height: fit-content;
+    margin-bottom: 80px;
 }
 
 #preview .preOption ul {

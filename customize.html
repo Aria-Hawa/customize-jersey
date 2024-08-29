@@ -88,56 +88,17 @@
                             <div id="textArea-1st">
                                 <div class="styleCaption">
                                     <h3>TEXT</h3>
-                                    <p>輸入球衣上的文字，例如校名/姓名等</p>
+                                    <p>輸入您想要的文字及設定樣式</p>
                                 </div>
                                 <div class="stylePreview">
                                     <form action method="post" name="textStyleInput" id="textStyleInput"
                                         title="輸入球衣上文字">
-                                        <label for="textStyle"></label>
                                         <input type="text" name="textStyle" id="textStyle" title="輸入文字欄位"
                                             placeholder="輸入文字" autocomplete>
-                                        <input type="button" name="textStyleBtn" id="textStyleBtn" title="確定按鈕"
-                                            value="確定" onclick="display2ndStep();">
+                                        <!-- <input type="button" name="textStyleBtn" id="textStyleBtn" title="確定按鈕"
+                                            value="確定" onclick="display2ndStep();"> -->
                                     </form>
-                                </div>
-                            </div>
-                            <!-- 第二步驟: 選擇位子 -->
-                            <div id="textArea-2nd">
-                                <div class="styleCaption">
-                                    <h3>TEXT</h3>
-                                    <p>選擇球衣上的文字位置
-                                        <button class="customizePlaceBtn" id="backBtn"
-                                            onclick="display1stStep()">←|Back</button>
-                                    </p>
-                                </div>
-                                <div class="stylePreview" id="textPosition">
-                                    <figure>
-                                        <a href="#"><img src="./images/txtPosition-1.svg" alt="txtPosition-1"></a>
-                                        <a href="#"><img src="./images/txtPosition-2.svg" alt="txtPosition-2"></a>
-                                        <a href="#"><img src="./images/txtPosition-3.svg" alt="txtPosition-3"></a>
-                                        <a href="#"><img src="./images/txtPosition-4.svg" alt="txtPosition-4"></a>
-                                    </figure>
-                                    <div class="textAreaBtnDiv">
-                                        <button class="customizePlaceBtn" id="toTextArea-3rdBtn"
-                                            onclick="display3rdStep()">Next</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 第三步驟:  -->
-                            <div id="textArea-3rd">
-                                <div class="styleCaption textArea-3rd">
-                                    <h3>TEXT</h3>
-                                    <p>設定您想要的文字樣式
-                                        <button class="customizePlaceBtn" id="backBtn"
-                                            onclick="display2ndStep()">←|Back</button>
-                                    </p>
-                                </div>
-                                <div class="stylePreview textArea-3rd">
                                     <form action method="post" name="textStyleValue" id="textStyleValue" title="球衣上的文字">
-                                        <label for="textWords"></label>
-                                        <input type="text" name="textWords" id="textWords" title="球衣上的文字欄位" value=""
-                                            readonly>
-                                        <hr>
                                         <label for="textFonts" id="lblForTextFonts">字體
                                             <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
                                         </label>
@@ -224,9 +185,46 @@
                                         </div>
                                         <hr>
                                     </form>
-                                    <div class="textAreaBtnDiv">
-                                        <button class="customizePlaceBtn" id="textStyleValueBtn" onclick="">ok</button>
+                                    <!-- <div class="textAreaBtnDiv">
+                                        <button class="customizePlaceBtn" id="toTextArea-2ndBtn"
+                                            onclick="display2ndStep()">Next</button>
+                                    </div> -->
+
+                                    <!-- 8/29 測試方向鍵按鈕 -->
+                                    <div class="DirBtn">
+                                        <div>
+                                            <img src="./images/productBrowsing_icon_1-1.svg " alt="" srcset=""
+                                                style="rotate: -90deg;" class="UpBtn">
+                                        </div>
+                                        <div class="mdDiv">
+                                            <img src="./images/productBrowsing_icon_1-1.svg" alt="" srcset=""
+                                                style="rotate: 180deg;" class="LeftBtn">
+                                            <img src="./images/productBrowsing_icon_1-1.svg" alt="" srcset=""
+                                                class="RightBtn">
+                                        </div>
+                                        <div>
+                                            <img src="./images/productBrowsing_icon_1-1.svg" alt="" srcset=""
+                                                style="rotate: 90deg;" class="DownBtn">
+                                        </div>
                                     </div>
+                                </div>
+                            </div>
+                            <!-- 第二步驟: 選擇位子 -->
+                            <div id="textArea-2nd">
+                                <div class="styleCaption">
+                                    <h3>TEXT</h3>
+                                    <p>選擇球衣上的文字位置
+                                        <button class="customizePlaceBtn" id="backBtn"
+                                            onclick="display1stStep()">←|Back</button>
+                                    </p>
+                                </div>
+                                <div class="stylePreview" id="textPosition">
+                                    <figure>
+                                        <a href="#"><img src="./images/txtPosition-1.svg" alt="txtPosition-1"></a>
+                                        <a href="#"><img src="./images/txtPosition-2.svg" alt="txtPosition-2"></a>
+                                        <a href="#"><img src="./images/txtPosition-3.svg" alt="txtPosition-3"></a>
+                                        <a href="#"><img src="./images/txtPosition-4.svg" alt="txtPosition-4"></a>
+                                    </figure>
                                 </div>
                             </div>
                         </div>
@@ -888,7 +886,17 @@
             </div>
             <div id="preview">
                 <div class="preJersey">
-                    
+                    <div id="showStep">
+                        <h2>DESIGN STEP</h2>
+                        <figure>
+                            <img src="./images/step-1.svg" alt="">
+                            <img src="./images/step-2.svg" alt="">
+                            <img src="./images/step-3.svg" alt="">
+                            <img src="./images/step-4.svg" alt="">
+                            <img src="./images/step-5.svg" alt="">
+                            <img src="./images/step-6.svg" alt="">
+                        </figure>
+                    </div>
                     <figure>
                         <!-- 有剪裁功能的SVG -->
                         <!-- shape的SVG -->
