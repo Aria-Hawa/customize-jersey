@@ -128,22 +128,23 @@ $(function () {
         $(`#${shapeNo}`).css('display', 'block');
 
         // 以下測試只顯示2個color
-        let frontColorHide = $('#frontColorSpace').find('.forFrontLbl').filter((index, element) => {
+        let frontColorHide = $('.frontColor').filter((index, element) => {
             return index > 1;
+            // console.log($(element));
         });
         frontColorHide.each((index, element) => {
             $(element).css('display', 'none');
-        })
-        // 換色功能
+        });
+        // 換色
         $('#frontColor-1 a').click(function () {
             $(`#${shapeNo}`).find('.Fcollar').attr('fill', $(this).css('background-color'));
             FlblColor01 = $(`#${shapeNo}`).find('.Fcollar').attr('fill');
             $('#lblForFront-1 div a').css('background-color', FlblColor01);
-            $('#frontColor-2 a').click(function () {
-                $(`#${shapeNo}`).find('.FC2').attr('fill', $(this).css('background-color'));
-                FlblColor02 = $(`#${shapeNo}`).find('.FC2').attr('fill');
-                $('#lblForFront-2 div a').css('background-color', FlblColor02);
-            });
+        });
+        $('#frontColor-2 a').click(function () {
+            $(`#${shapeNo}`).find('.FC2').attr('fill', $(this).css('background-color'));
+            FlblColor02 = $(`#${shapeNo}`).find('.FC2').attr('fill');
+            $('#lblForFront-2 div a').css('background-color', FlblColor02);
         });
 
     });
@@ -166,6 +167,10 @@ $(function () {
         $('#lblForFront-3 div a').css('background-color', FlblColor03);
         $('#lblForFront-4 div a').css('background-color', FlblColor04);
         $('#lblForFront-5 div a').css('background-color', FlblColor05);
+        // 8/29 add 把5個frontColor選區都顯示出來
+        $('.frontColor').each((index, element) => {
+            $(element).css('display', 'block');
+        })
         // 換色功能
         $('#frontColor-1 a').click(function () {
             $(`#${designNo}`).find('.Fcollar').attr('fill', $(this).css('background-color'));
@@ -418,4 +423,15 @@ document.getElementById('uploadPicture').addEventListener('change', function (e)
     let getPictureUrl = e.target.files[0];
     let pictureURL = URL.createObjectURL(getPictureUrl);
     document.getElementById('showPicture').src = pictureURL;
+
+    document.getElementById('uploadPictureBtn').addEventListener('click', () => {
+        let getShowImgOnJersy = document.getElementsByClassName('showImgOnJersy');
+        console.log(getShowImgOnJersy);
+        // collection的結果並非真正的陣列，不能使用forEach
+        for (let i = 0; i < getShowImgOnJersy.length; i++) {
+            // console.log(getShowImgOnJersy[i]);
+            let ImgTag = getShowImgOnJersy[i];
+            ImgTag.src = pictureURL;
+        }
+    })
 });
