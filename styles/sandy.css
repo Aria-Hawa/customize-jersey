@@ -532,14 +532,29 @@ section {
     height: 100%;
     margin-left: 15px;
     color: #000E2B;
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;    animation-delay: 1s;
     opacity: 0.8;
+
 }
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0; /* 動畫開始時的透明度 */
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.8; /* 動畫結束時的透明度 */
+    }
+}
+
 
 .rectangularMenu .menu-1:hover,
 .rectangularMenu .menu-2:hover {
     opacity: 1;
     transition: 0.5s;
+    
 }
+
 
 .rectangularMenu .menu-2 .figure,
 .rectangularMenu .menu-1 .figure {
@@ -621,7 +636,21 @@ section {
     /*下面四張圖置中裁切*/
     background-size: cover;
     /*縮放到適合位置*/
+    animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 }
+@keyframes swing-in-top-fwd {
+  0% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+
 
 .projectTheme {
     background-image: url(../images/pojectResults-projectTheme.svg);
@@ -813,7 +842,7 @@ section {
     /*縮放到適合位置*/
     mix-blend-mode: overlay;
     opacity: .7;
-}
+    animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;}
 
 .bgsvc_1 {
     background-image: url(../images/productBrowsing_backgroundBasemap1.png);
@@ -823,8 +852,23 @@ section {
     background-image: url(../images/productBrowsing_backgroundBasemap2.png);
 }
 .bgsvc_3 {
-    background-image: url(../images/productBrowsing_backgroundBasemap1.png);
+    background-image: url(../images/productBrowsing_backgroundBasemap3.png);
 }
+  /**
+   * ----------------------------------------
+   * animation swing-in-right-fwd
+   * ----------------------------------------
+   */
+   @keyframes slide-in-right {
+    0% {
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 
 .productBrowsing {
     position: absolute;
@@ -841,7 +885,18 @@ section {
     justify-content: center;
     width: 100%;
     height: 30%;
+    animation: slide-in-top 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+@keyframes slide-in-top {
+    0% {
+      transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
 /* 標題 */
 .pbTitle {
@@ -902,6 +957,20 @@ section {
 }
 
 /* 款式 */
+#templates{
+    animation: slide-in-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-in-bottom {
+    0% {
+      transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
 .pbCommodity {
     padding: 40px 80px 15px 80px;
     display: flex;
@@ -921,7 +990,20 @@ section {
     height: 50px;
     top: 22.5%;
     right: 93px;
+    animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation-delay: 2s; 
 }
+@keyframes fade-in-fwd {
+    0% {
+      transform: translateZ(-80px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  
 .arrow1,
 .arrow2{
     width: 35px;
@@ -935,12 +1017,44 @@ section {
 
 .arrow1 {
     background-image: url(../images/productBrowsing_icon_1.svg);
+    animation: arrow1-hover 0.35s forwards; /* 加入動畫效果 */
+    animation-delay: 3s; /* 1秒延遲，等arrowGroup動畫結束後再開始 */
 
 }
 
 .arrow2 {
     background-image: url(../images/productBrowsing_icon_2.svg);
+    animation: arrow2-hover 0.35s forwards; /* 加入動畫效果 */
+    animation-delay: 4s; /* 2秒延遲，等arrow1動畫結束後再開始 */
 }
+@keyframes arrow1-hover {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+        background-image: url(../images/productBrowsing_icon_1-1.svg); /* 模擬滑過效果 */
+    }
+    90% {
+        opacity: 1;
+        background-image: url(../images/productBrowsing_icon_1-1.svg); /* 模擬滑過效果 */
+    }
+}
+
+@keyframes arrow2-hover {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+        background-image: url(../images/productBrowsing_icon_2-1.svg); /* 模擬滑過效果 */
+    }
+    90% {
+        opacity: 1;
+        background-image: url(../images/productBrowsing_icon_2-1.svg); /* 模擬滑過效果 */
+    }
+}
+
 
 .arrow1:hover {
     background-image: url(../images/productBrowsing_icon_1-1.svg);
