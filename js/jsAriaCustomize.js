@@ -222,6 +222,44 @@ $(function () {
     });
 
 
+    // 方向按鈕改變位置
+    let y = 180;
+    let x = 0;
+    let intervalId;
+
+    $('#textArea .UpBtn').mousedown(function () {
+        intervalId = setInterval(function () {
+            y = y - 10;
+            // 每 100 毫秒更新一次
+            $('.showTxtOnJersy').css('top', `${y}px`);
+        }, 100);
+    });
+
+    $('#textArea .DownBtn').mousedown(function () {
+        intervalId = setInterval(function () {
+            y = y + 10;
+            $('.showTxtOnJersy').css('top', `${y}px`);
+        }, 100);
+    });
+
+    $('#textArea .LeftBtn').mousedown(function () {
+        intervalId = setInterval(function () {
+            x = x - 10;
+            $('.showTxtOnJersy').css('left', `${x}px`);
+        }, 100);
+    });
+
+    $('#textArea .RightBtn').mousedown(function () {
+        intervalId = setInterval(function () {
+            x = x + 10;
+            $('.showTxtOnJersy').css('left', `${x}px`);
+        }, 100);
+    });
+
+    $(document).mouseup(function () {
+        clearInterval(intervalId);
+    });
+
 });
 
 
@@ -341,18 +379,19 @@ function displayNumber() {
 
 
 //textArea步驟動態顯示
+// 8/29 textArea改為2步驟
 let textArea1st = document.querySelector('#textArea-1st');
 let textArea2nd = document.querySelector('#textArea-2nd');
-let textArea3rd = document.querySelector('#textArea-3rd');
+// let textArea3rd = document.querySelector('#textArea-3rd');
 
 function textStepDisplayNone() {
     textArea1st = document.querySelector('#textArea-1st');
     textArea2nd = document.querySelector('#textArea-2nd');
-    textArea3rd = document.querySelector('#textArea-3rd');
+    // textArea3rd = document.querySelector('#textArea-3rd');
 
     textArea1st.style.display = 'none';
     textArea2nd.style.display = 'none';
-    textArea3rd.style.display = 'none';
+    // textArea3rd.style.display = 'none';
 }
 
 function display1stStep() {
@@ -365,18 +404,19 @@ function display2ndStep() {
     textArea2nd.style.display = 'flex';
 }
 
-function display3rdStep() {
-    textStepDisplayNone();
-    textArea3rd.style.display = 'flex';
-}
+// function display3rdStep() {
+//     textStepDisplayNone();
+//     textArea3rd.style.display = 'flex';
+// }
 
 // 讓用戶在textArea-1st 輸入的文字呈現在textArea-3rd的文字方塊內
-// !!!!!監聽可以用change!!!!!!!!!
-let getTextStyleInput = document.getElementById('textStyle');
-getTextStyleInput.addEventListener('change', function () {
-    document.getElementById('textWords').value = getTextStyleInput.value;
-});
+// 8/29 textArea改為2步驟
+// let getTextStyleInput = document.getElementById('textStyle');
+// getTextStyleInput.addEventListener('change', function () {
+//     document.getElementById('textWords').value = getTextStyleInput.value;
+// });
 // 同步顯示在球衣上
+let getTextStyleInput = document.getElementById('textStyle');
 getTextStyleInput.addEventListener('keyup', function () {
     // 用forEach顯示陣列中所有的值
     document.querySelectorAll('.showTxtOnJersy').forEach((element) => {
@@ -404,6 +444,7 @@ getTextSize.addEventListener('input', function () {
     });
 });
 
+// 輸入number顯示在球衣上
 let inputNumber = document.getElementById('inputNumber');
 inputNumber.addEventListener('keyup', function () {
     document.querySelectorAll('.showNumOnJersy').forEach((element) => {
@@ -426,7 +467,6 @@ document.getElementById('uploadPicture').addEventListener('change', function (e)
 
     document.getElementById('uploadPictureBtn').addEventListener('click', () => {
         let getShowImgOnJersy = document.getElementsByClassName('showImgOnJersy');
-        console.log(getShowImgOnJersy);
         // collection的結果並非真正的陣列，不能使用forEach
         for (let i = 0; i < getShowImgOnJersy.length; i++) {
             // console.log(getShowImgOnJersy[i]);
@@ -435,3 +475,5 @@ document.getElementById('uploadPicture').addEventListener('change', function (e)
         }
     })
 });
+
+

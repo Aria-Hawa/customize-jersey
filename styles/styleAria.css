@@ -609,7 +609,9 @@ a {
 /* #textStyleInput {
     width: 100%;
 } */
-
+#textStyleInput #textStyle {
+    margin-bottom: 16px;
+}
 
 #textStyleInput #textStyle,
 #upload #uploadPicture,
@@ -1024,6 +1026,15 @@ hr {
     object-fit: contain;
 }
 
+foreignObject {
+    /* width: fit-content; */
+}
+
+
+
+
+
+
 #preview .preOption {
     width: fit-content;
     height: fit-content;
@@ -1073,6 +1084,15 @@ hr {
 .preOption ul li a:active {
     background-color: var(--Darkorange);
 }
+
+
+
+
+
+
+
+
+
 
 /* project網頁區 */
 #projectPlace {
