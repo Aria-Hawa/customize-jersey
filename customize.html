@@ -88,56 +88,15 @@
                             <div id="textArea-1st">
                                 <div class="styleCaption">
                                     <h3>TEXT</h3>
-                                    <p>輸入球衣上的文字，例如校名/姓名等</p>
+                                    <p>輸入您想要的文字及設定樣式</p>
                                 </div>
                                 <div class="stylePreview">
                                     <form action method="post" name="textStyleInput" id="textStyleInput"
                                         title="輸入球衣上文字">
-                                        <label for="textStyle"></label>
                                         <input type="text" name="textStyle" id="textStyle" title="輸入文字欄位"
                                             placeholder="輸入文字" autocomplete>
-                                        <input type="button" name="textStyleBtn" id="textStyleBtn" title="確定按鈕"
-                                            value="確定" onclick="display2ndStep();">
                                     </form>
-                                </div>
-                            </div>
-                            <!-- 第二步驟: 選擇位子 -->
-                            <div id="textArea-2nd">
-                                <div class="styleCaption">
-                                    <h3>TEXT</h3>
-                                    <p>選擇球衣上的文字位置
-                                        <button class="customizePlaceBtn" id="backBtn"
-                                            onclick="display1stStep()">←|Back</button>
-                                    </p>
-                                </div>
-                                <div class="stylePreview" id="textPosition">
-                                    <figure>
-                                        <a href="#"><img src="./images/txtPosition-1.svg" alt="txtPosition-1"></a>
-                                        <a href="#"><img src="./images/txtPosition-2.svg" alt="txtPosition-2"></a>
-                                        <a href="#"><img src="./images/txtPosition-3.svg" alt="txtPosition-3"></a>
-                                        <a href="#"><img src="./images/txtPosition-4.svg" alt="txtPosition-4"></a>
-                                    </figure>
-                                    <div class="textAreaBtnDiv">
-                                        <button class="customizePlaceBtn" id="toTextArea-3rdBtn"
-                                            onclick="display3rdStep()">Next</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 第三步驟:  -->
-                            <div id="textArea-3rd">
-                                <div class="styleCaption textArea-3rd">
-                                    <h3>TEXT</h3>
-                                    <p>設定您想要的文字樣式
-                                        <button class="customizePlaceBtn" id="backBtn"
-                                            onclick="display2ndStep()">←|Back</button>
-                                    </p>
-                                </div>
-                                <div class="stylePreview textArea-3rd">
                                     <form action method="post" name="textStyleValue" id="textStyleValue" title="球衣上的文字">
-                                        <label for="textWords"></label>
-                                        <input type="text" name="textWords" id="textWords" title="球衣上的文字欄位" value=""
-                                            readonly>
-                                        <hr>
                                         <label for="textFonts" id="lblForTextFonts">字體
                                             <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
                                         </label>
@@ -224,11 +183,47 @@
                                         </div>
                                         <hr>
                                     </form>
-                                    <div class="textAreaBtnDiv">
-                                        <button class="customizePlaceBtn" id="textStyleValueBtn" onclick="">ok</button>
+                                    <!-- <div class="textAreaBtnDiv">
+                                        <button class="customizePlaceBtn" id="toTextArea-2ndBtn"
+                                            onclick="display2ndStep()">Next</button>
+                                    </div> -->
+
+                                    <!-- 8/29 測試方向鍵按鈕 -->
+                                    <div class="DirBtn">
+                                        <div>
+                                            <img src=" " alt="" srcset=""
+                                                style="rotate: -90deg;" class="UpBtn">
+                                        </div>
+                                        <div class="mdDiv">
+                                            <img src="" alt="" srcset=""
+                                                style="rotate: 180deg;" class="LeftBtn">
+                                            <img src="" alt="" srcset="" class="RightBtn">
+                                        </div>
+                                        <div>
+                                            <img src="" alt="" srcset="" style="rotate: 90deg;"
+                                                class="DownBtn">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- 第二步驟: 選擇位子 -->
+                            <!-- <div id="textArea-2nd">
+                                <div class="styleCaption">
+                                    <h3>TEXT</h3>
+                                    <p>選擇球衣上的文字位置
+                                        <button class="customizePlaceBtn" id="backBtn"
+                                            onclick="display1stStep()">←|Back</button>
+                                    </p>
+                                </div>
+                                <div class="stylePreview" id="textPosition">
+                                    <figure>
+                                        <a href="#"><img src="./images/txtPosition-1.svg" alt="txtPosition-1"></a>
+                                        <a href="#"><img src="./images/txtPosition-2.svg" alt="txtPosition-2"></a>
+                                        <a href="#"><img src="./images/txtPosition-3.svg" alt="txtPosition-3"></a>
+                                        <a href="#"><img src="./images/txtPosition-4.svg" alt="txtPosition-4"></a>
+                                    </figure>
+                                </div>
+                            </div> -->
                         </div>
                         <!-- color區 -->
                         <div class="area" id="colorArea">
@@ -856,8 +851,38 @@
                                         title="上傳圖片欄位">
                                     <input type="button" name="uploadPictureBtn" id="uploadPictureBtn" title="上傳按鈕"
                                         value="上傳">
-                                    <img src="" alt="" id="showPicture">
+                                    <img src="" alt="預覽圖片" id="showPicture">
                                 </form>
+                                <!-- 以下form 8/29測試加入 -->
+                                <form action method="post" name="NumStyleValue" id="NumStyleValue" title="球衣上的數字">
+                                    <label for="NumSize" id="lblForNumSize">大小
+                                        <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
+                                    </label>
+                                    <div class="NumsizeRange">
+                                        <input type="range" name="NumSize" id="chooseNumSize" title="選擇數字大小" value="5"
+                                            min="3" max="15" step="1">
+                                        <div class="sizeValueBorder">
+                                            <span id="NumSizeValue">5</span> <small>公分</small>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </form>
+                                <!-- 8/29 測試方向鍵按鈕 -->
+                                <div class="DirBtn">
+                                    <div>
+                                        <img src=" " alt="" srcset="" style="rotate: -90deg;"
+                                            class="UpBtn">
+                                    </div>
+                                    <div class="mdDiv">
+                                        <img src="" alt="" srcset="" style="rotate: 180deg;"
+                                            class="LeftBtn">
+                                        <img src="" alt="" srcset="" class="RightBtn">
+                                    </div>
+                                    <div>
+                                        <img src="" alt="" srcset="" style="rotate: 90deg;"
+                                            class="DownBtn">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- number區 -->
@@ -870,9 +895,113 @@
                                 <form action method="post" name="numberInput" id="numberInput" title="輸入球衣號碼表單">
                                     <input type="text" inputmode="numeric" name="inputNumber" id="inputNumber"
                                         title="輸入數字欄位" placeholder="輸入數字">
-                                    <input type="button" name="inputNumberBtn" id="inputNumberBtn" title="確定按鈕"
-                                        value="確定">
+                                    <!-- <input type="button" name="inputNumberBtn" id="inputNumberBtn" title="確定按鈕"
+                                        value="確定"> -->
                                 </form>
+                                <!-- 以下form 8/29測試加入 -->
+                                <form action method="post" name="NumStyleValue" id="NumStyleValue" title="球衣上的數字">
+                                    <label for="NumFonts" id="lblForNumFonts">字體
+                                        <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
+                                    </label>
+                                    <select name="NumFonts" id="chooseNumFonts" title="選擇數字字型">
+                                        <option value="Noto Sans TC" id="NotoSansTC"
+                                            style="font-family: 'Noto Sans TC', sans-serif;">Noto Sans TC</option>
+                                        <option value="標楷體" id="kaiu" style="font-family: 'kaiu', sans-serif;">標楷體
+                                        </option>
+                                        <option value="微軟正黑體-標準" id="msjh" style="font-family: 'msjh', sans-serif;">
+                                            微軟正黑體-標準</option>
+                                        <option value="ROG LyonsType" id="ROGFonts"
+                                            style="font-family: 'ROGFonts', sans-serif;">ROG LyonsType</option>
+                                    </select>
+                                    <hr>
+                                    <label for="NumColor" id="lblForNumColor">顏色
+                                        <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
+                                    </label>
+                                    <div class="chooseColor" id="chooseNumColor">
+                                        <a href="#" class="color01" style="background-color: #F1EB9C;"></a>
+                                        <a href="#" class="color02" style="background-color: #E9EC6B;"></a>
+                                        <a href="#" class="color03" style="background-color: #FEDD00;"></a>
+                                        <a href="#" class="color04" style="background-color: #FFCD00;"></a>
+                                        <a href="#" class="color05" style="background-color: #FFB81C;"></a>
+                                        <a href="#" class="color06" style="background-color: #FF8200;"></a>
+                                        <a href="#" class="color07" style="background-color: #FF8674;"></a>
+                                        <a href="#" class="color08" style="background-color: #FE5000;"></a>
+                                        <a href="#" class="color09" style="background-color: #F9423A;"></a>
+                                        <a href="#" class="color10" style="background-color: #D50032;"></a>
+                                        <a href="#" class="color11" style="background-color: #A6192E;"></a>
+                                        <a href="#" class="color12" style="background-color: #A9431E;"></a>
+                                        <a href="#" class="color13" style="background-color: #FABBCB;"></a>
+                                        <a href="#" class="color14" style="background-color: #D48BC8;"></a>
+                                        <a href="#" class="color15" style="background-color: #9678D3;"></a>
+                                        <a href="#" class="color16" style="background-color: #E31C79;"></a>
+                                        <a href="#" class="color17" style="background-color: #CE0058;"></a>
+                                        <a href="#" class="color18" style="background-color: #93328E;"></a>
+                                        <a href="#" class="color19" style="background-color: #5BC2E7;"></a>
+                                        <a href="#" class="color20" style="background-color: #0057B7;"></a>
+                                        <a href="#" class="color21" style="background-color: #004C97;"></a>
+                                        <a href="#" class="color22" style="background-color: #171C8F;"></a>
+                                        <a href="#" class="color23" style="background-color: #582C83;"></a>
+                                        <a href="#" class="color24" style="background-color: #6A3460;"></a>
+                                        <a href="#" class="color25" style="background-color: #BDD6E6;"></a>
+                                        <a href="#" class="color26" style="background-color: #8DC8E8;"></a>
+                                        <a href="#" class="color27" style="background-color: #8BB8E8;"></a>
+                                        <a href="#" class="color28" style="background-color: #01426A;"></a>
+                                        <a href="#" class="color29" style="background-color: #003865;"></a>
+                                        <a href="#" class="color30" style="background-color: #051C2C;"></a>
+                                        <a href="#" class="color31" style="background-color: #B5E3D8;"></a>
+                                        <a href="#" class="color32" style="background-color: #6ECEB2;"></a>
+                                        <a href="#" class="color33" style="background-color: #00B2A9;"></a>
+                                        <a href="#" class="color34" style="background-color: #008C96;"></a>
+                                        <a href="#" class="color35" style="background-color: #005A6F;"></a>
+                                        <a href="#" class="color36" style="background-color: #00534C;"></a>
+                                        <a href="#" class="color37" style="background-color: #E3E935;"></a>
+                                        <a href="#" class="color38" style="background-color: #78BE21;"></a>
+                                        <a href="#" class="color39" style="background-color: #6CC24A;"></a>
+                                        <a href="#" class="color40" style="background-color: #007A33;"></a>
+                                        <a href="#" class="color41" style="background-color: #009B77;"></a>
+                                        <a href="#" class="color42" style="background-color: #006747;"></a>
+                                        <a href="#" class="color43" style="background-color: #D9C89D;"></a>
+                                        <a href="#" class="color44" style="background-color: #B3A369;"></a>
+                                        <a href="#" class="color45" style="background-color: #C69214;"></a>
+                                        <a href="#" class="color46" style="background-color: #939200;"></a>
+                                        <a href="#" class="color47" style="background-color: #5C462B;"></a>
+                                        <a href="#" class="color48" style="background-color: #3D441E;"></a>
+                                        <a href="#" class="color49" style="background-color: #CBC4BC;"></a>
+                                        <a href="#" class="color50" style="background-color: #C1C6C8;"></a>
+                                        <a href="#" class="color51" style="background-color: #63666A;"></a>
+                                        <a href="#" class="color52" style="background-color: #0B2A33;"></a>
+                                        <a href="#" class="color53" style="background-color: #101820;"></a>
+                                    </div>
+                                    <hr>
+                                    <label for="NumSize" id="lblForNumSize">大小
+                                        <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
+                                    </label>
+                                    <small>(字高建議不超過10公分)</small><br>
+                                    <div class="NumsizeRange">
+                                        <input type="range" name="NumSize" id="chooseNumSize" title="選擇數字大小" value="5"
+                                            min="3" max="15" step="1">
+                                        <div class="sizeValueBorder">
+                                            <span id="NumSizeValue">5</span> <small>公分</small>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </form>
+                                <!-- 8/29 測試方向鍵按鈕 -->
+                                <div class="DirBtn">
+                                    <div>
+                                        <img src=" " alt="" srcset="" style="rotate: -90deg;"
+                                            class="UpBtn">
+                                    </div>
+                                    <div class="mdDiv">
+                                        <img src="" alt="" srcset="" style="rotate: 180deg;"
+                                            class="LeftBtn">
+                                        <img src="" alt="" srcset="" class="RightBtn">
+                                    </div>
+                                    <div>
+                                        <img src="" alt="" srcset="" style="rotate: 90deg;"
+                                            class="DownBtn">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -888,12 +1017,22 @@
             </div>
             <div id="preview">
                 <div class="preJersey">
-                    
-                    <figure>
+                    <div id="showStep">
+                        <h2>DESIGN STEP</h2>
+                        <figure>
+                            <img src="./images/step-1.svg" alt="">
+                            <img src="./images/step-2.svg" alt="">
+                            <img src="./images/step-3.svg" alt="">
+                            <img src="./images/step-4.svg" alt="">
+                            <img src="./images/step-5.svg" alt="">
+                            <img src="./images/step-6.svg" alt="">
+                        </figure>
+                    </div>
+                    <figure class="KeyArea" style="display: none;">
                         <!-- 有剪裁功能的SVG -->
                         <!-- shape的SVG -->
-                        <svg id="shape-1" style="display: none;" width="600.09" height="546.11" version="1.1"
-                            viewBox="0 0 601.23 546.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="shape-1" width="600.09" height="546.11" version="1.1" viewBox="0 0 601.23 546.1"
+                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                             <g transform="translate(-188.96 -229.88)">
 
                                 <clipPath id="S1-clip">
