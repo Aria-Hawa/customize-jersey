@@ -175,7 +175,7 @@
                                         </label>
                                         <small>(字高建議不超過10公分)</small><br>
                                         <div class="textsizeRange">
-                                            <input type="range" name="textSize" id="chooseTextSize" title="選擇文字大小"
+                                            <input type="range" name="textSize" id="chooseTextSize" class="rangeSet" title="選擇文字大小"
                                                 value="5" min="3" max="15" step="1">
                                             <div class="sizeValueBorder">
                                                 <span id="textSizeValue">5</span> <small>公分</small>
@@ -854,15 +854,15 @@
                                     <img src="" alt="預覽圖片" id="showPicture">
                                 </form>
                                 <!-- 以下form 8/29測試加入 -->
-                                <form action method="post" name="NumStyleValue" id="NumStyleValue" title="球衣上的數字">
-                                    <label for="NumSize" id="lblForNumSize">大小
+                                <form action method="post" name="PictureStyleValue" id="PictureStyleValue" title="球衣上的數字">
+                                    <label for="PictureSize" id="lblForPictureSize">大小
                                         <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
                                     </label>
-                                    <div class="NumsizeRange">
-                                        <input type="range" name="NumSize" id="chooseNumSize" title="選擇數字大小" value="5"
+                                    <div class="PicturesizeRange">
+                                        <input type="range" name="PictureSize" id="choosePictureSize" class="rangeSet" title="選擇數字大小" value="5"
                                             min="3" max="15" step="1">
                                         <div class="sizeValueBorder">
-                                            <span id="NumSizeValue">5</span> <small>公分</small>
+                                            <span id="PictureSizeValue">5</span> <small>公分</small>
                                         </div>
                                     </div>
                                     <hr>
@@ -978,7 +978,7 @@
                                     </label>
                                     <small>(字高建議不超過10公分)</small><br>
                                     <div class="NumsizeRange">
-                                        <input type="range" name="NumSize" id="chooseNumSize" title="選擇數字大小" value="5"
+                                        <input type="range" name="NumSize" id="chooseNumSize" class="rangeSet" title="選擇數字大小" value="5"
                                             min="3" max="15" step="1">
                                         <div class="sizeValueBorder">
                                             <span id="NumSizeValue">5</span> <small>公分</small>
@@ -1020,12 +1020,12 @@
                     <div id="showStep">
                         <h2>DESIGN STEP</h2>
                         <figure>
-                            <img src="./images/step-1.svg" alt="">
-                            <img src="./images/step-2.svg" alt="">
-                            <img src="./images/step-3.svg" alt="">
-                            <img src="./images/step-4.svg" alt="">
-                            <img src="./images/step-5.svg" alt="">
-                            <img src="./images/step-6.svg" alt="">
+                            <img src="./images/step-1.svg" alt="" id="step-1">
+                            <img src="./images/step-2.svg" alt="" id="step-2">
+                            <img src="./images/step-3.svg" alt="" id="step-3">
+                            <img src="./images/step-4.svg" alt="" id="step-4">
+                            <img src="./images/step-5.svg" alt="" id="step-5">
+                            <img src="./images/step-6.svg" alt="" id="step-6">
                         </figure>
                     </div>
                     <figure class="KeyArea" style="display: none;">

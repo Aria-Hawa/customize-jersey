@@ -2,6 +2,20 @@
 // 使用jQuery
 $(function () {
 
+    // 頁面載入後的初始動畫
+    $('#showStep h2').animate({ opacity: "1" }, {
+        duration: 1300,
+        complete: function () {
+            let showStepImg = $('#showStep img');
+            for (let i = 0; i < showStepImg.length; i++){
+                console.log(showStepImg[i]);
+                // showStepImg[i].animate({opacity: "1"},{
+                //     duration: 1300,
+                // })
+            }
+        },
+    });
+
     // 按下任意styleItem或shape previw區域，Design steip會隱藏
     $('.styleItem li').click(function () {
         $('#showStep').hide();
@@ -350,15 +364,20 @@ $(function () {
     })
 
     // NumberArea樣式變更
-        $('#chooseNumFonts').change(function () {
-            let chossedFont = $(this).find('option:selected').css('font-family');
-            $('.showNumOnJersy').css('font-family', chossedFont);
-        });
-    
-        $('#chooseNumColor a').click(function () {
-            $('.showNumOnJersy').css('color', $(this).css('background-color'))
-        });
+    $('#chooseNumFonts').change(function () {
+        let chossedFont = $(this).find('option:selected').css('font-family');
+        $('.showNumOnJersy').css('font-family', chossedFont);
+    });
 
+    $('#chooseNumColor a').click(function () {
+        $('.showNumOnJersy').css('color', $(this).css('background-color'))
+    });
+
+    // PictrueArea size設定
+    $('#lblForPictureSize').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
+        $('.PicturesizeRange').toggleClass('show');
+    })
 
 
 });
@@ -560,6 +579,25 @@ getNumSize.addEventListener('input', function () {
     // 同步變更球衣上的字體大小
     document.querySelectorAll('.showNumOnJersy').forEach((element) => {
         element.style.fontSize = `${(x + 10) * 7}px`;
+    });
+});
+
+// PictureSize Range設定
+let getPictureSize = document.querySelector('.PicturesizeRange');
+getPictureSize.addEventListener('input', function () {
+    let choosePictureSize = document.getElementById('choosePictureSize');
+    let PictureSizeValue = document.getElementById('PictureSizeValue');
+    var x = choosePictureSize.value;
+    // 資料型態轉換成Pictureber
+    x = Number(x);
+    // 設定range滑條的樣式
+    choosePictureSize.style.background = `linear-gradient(to right, var(--Orange) ${(x - 3) * 8.3}%,  rgba(255,255,255,.5) ${(x - 3) * 8.3}%)`;
+    // 設定spane顯示的數字隨著x變化
+    PictureSizeValue.textContent = `${x}`;
+
+    // 同步變更球衣上的字體大小
+    document.querySelectorAll('.showImgOnJersy').forEach((element) => {
+        element.style.width = `${(x + 1) * 5}%`;
     });
 });
 

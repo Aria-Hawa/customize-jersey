@@ -605,6 +605,21 @@ a {
 }
 
 /* directionBtn共用設定 */
+
+.DirBtn {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.DirBtn .mdDiv {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
 .DirBtn img {
     width: 40px;
     height: 40px;
@@ -794,7 +809,8 @@ hr {
 } */
 
 .textsizeRange,
-.NumsizeRange {
+.NumsizeRange,
+.PicturesizeRange {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -807,21 +823,19 @@ hr {
 }
 
 .textsizeRange.show,
-.NumsizeRange.show {
+.NumsizeRange.show,
+.PicturesizeRange.show {
     display: flex;
     animation: show 0.55s both;
     /* margin-top: 10px; */
 }
 
-#customizePlace #chooseTextSize,
-#customizePlace #chooseNumSize,
-#chooseTextSize::-webkit-slider-thumb,
-#chooseNumSize::-webkit-slider-thumb {
+#customizePlace .rangeSet,
+#customizePlace .rangeSet::-webkit-slider-thumb {
     appearance: none;
 }
 
-#customizePlace #chooseTextSize,
-#customizePlace #chooseNumSize {
+#customizePlace .rangeSet {
     border: none;
     /* width: 240px; */
     height: 8px;
@@ -832,8 +846,7 @@ hr {
     width: 75%;
 }
 
-#chooseTextSize::-webkit-slider-thumb,
-#chooseNumSize::-webkit-slider-thumb {
+#customizePlace .rangeSet::-webkit-slider-thumb {
     width: 10px;
     height: 25px;
     background-color: white;
@@ -852,24 +865,6 @@ hr {
 #textSizeValue {
     font-size: 18px;
 }
-
-.DirBtn {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.DirBtn .mdDiv {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.DirBtn img {
-    width: 40px;
-}
-
 
 /* customizePlace各style各自樣式區 */
 /* ColorArea樣式設定 */
@@ -1053,6 +1048,7 @@ hr {
 #preview .preJersey #showStep h2 {
     font-family: "ROGFonts", sans-serif;
     font-size: 32px;
+    opacity: 0;
 }
 
 #preview .preJersey #showStep figure {
@@ -1065,6 +1061,7 @@ hr {
 #preview .preJersey #showStep img {
     width: 20%;
     margin: 24px;
+    opacity: 0;
     /* max-width: 180px; */
 }
 
@@ -1100,12 +1097,9 @@ hr {
 }
 
 .showImgOnJersy {
-    width: 80px;
-    height: auto;
+    width: 30%;
+    object-fit: contain;
     position: relative;
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
     top: 100px;
     left: 340px;
 }
