@@ -1310,6 +1310,7 @@ li.pbShape {
     display: flex;
     background-image: url(../images/productBrowsing_love.svg);
     width: 30px;
+    opacity: .8;
     height: 25.5px;
     background-position: center;
     /*下面四張圖置中裁切*/
@@ -1318,6 +1319,12 @@ li.pbShape {
     top: 50%;
     left: 46%;
     transform: translate(-50%, -46%);
+    transition: 0.35s;
+}
+.smallBoxIcon:hover{
+    background-image: url(../images/productBrowsing_love_1.svg);
+    opacity: 0.7;
+
 }
 
 /* 商品圖片區 */
@@ -1339,6 +1346,15 @@ li.pbShape {
     background-size: cover;
     /*縮放到適合位置*/
 }
+.pbShape .pbshapeimg .pbImageShort {
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    background-position: center;
+    /*下面四張圖置中裁切*/
+    background-size: cover;
+    /*縮放到適合位置*/
+}
 
 /* 圖片(前) */
 .pbShape .pbshapeimg .A {
@@ -1346,38 +1362,100 @@ li.pbShape {
     position: absolute;
     z-index: 3;
     left: 20px;
+    bottom: 3%;
     background-position: center;
     /*下面四張圖置中裁切*/
     background-size: contain;
     background-repeat: no-repeat;
-
 }
-
 /* 圖片(後) */
 .pbShape .pbshapeimg .B {
     /* background-color: #2e0f77; */
     z-index: 2;
     right: 20px;
+    bottom: 3%;
     background-position: center;
     /*下面四張圖置中裁切*/
     background-size: contain;
     background-repeat: no-repeat;
 }
 
+.pbShape .pbshapeimg .AShort {
+    /* background-color: #770f16; */
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: 5%;
+    background-position: center;
+    /*下面四張圖置中裁切*/
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
 /* 塞圖片 */
-.pbshapeimg .svc-1 {
+
+.pbshapeimg .svcA-1 {
     background-image: url(../images/productBrowsing_pbShapeA_1.png);
 }
-
-.pbshapeimg .svc-2 {
+.pbshapeimg .svcA-2 {
     background-image: url(../images/productBrowsing_pbShapeA_2.png);
 }
-
-.pbshapeimg .svc-3 {
-    background-image: url(../images/productBrowsing_pbShapevB_1.png);
+.pbshapeimg .svcA-3 {
+    background-image: url(../images/productBrowsing_pbShapeA_3.png);
 }
-.pbshapeimg .svc-4 {
-    background-image: url(../images/productBrowsing_pbShapevB_2.png.png);
+.pbshapeimg .svcA-4 {
+    background-image: url(../images/productBrowsing_pbShapeA_4.png);
+}
+.pbshapeimg .svcA-5 {
+    background-image: url(../images/productBrowsing_pbShapeA_5.png);
+}
+.pbshapeimg .svcA-6 {
+    background-image: url(../images/productBrowsing_pbShapeA_6.png);
+}
+.pbshapeimg .svcA-7 {
+    background-image: url(../images/productBrowsing_pbShapeA_5.png);
+}
+.pbshapeimg .svcA-8 {
+    background-image: url(../images/productBrowsing_pbShapeA_6.png);
+}
+.pbshapeimg .svcB-1 {
+    background-image: url(../images/productBrowsing_pbShapeB_1.png);
+}
+.pbshapeimg .svcB-2 {
+    background-image: url(../images/productBrowsing_pbShapeB_2.png);
+}
+.pbshapeimg .svcB-3 {
+    background-image: url(../images/productBrowsing_pbShapeB_3.png);
+}
+.pbshapeimg .svcB-4 {
+    background-image: url(../images/productBrowsing_pbShapeB_4.png);
+}
+.pbshapeimg .svcB-5 {
+    background-image: url(../images/productBrowsing_pbShapeB_5.png);
+}
+.pbshapeimg .svcB-6 {
+    background-image: url(../images/productBrowsing_pbShapeB_6.png);
+}
+.pbshapeimg .svcB-7 {
+    background-image: url(../images/productBrowsing_pbShapeB_7.png);
+}
+.pbshapeimg .svcB-8 {
+    background-image: url(../images/productBrowsing_pbShapeB_8.png);
+}
+.pbshapeimg .svcC-1 {
+    background-image: url(../images/productBrowsing_pbShapeC_1.png);
+}
+.pbshapeimg .svcC-2 {
+    background-image: url(../images/productBrowsing_pbShapeC_2.png);
+}
+.pbshapeimg .svcC-3 {
+    background-image: url(../images/productBrowsing_pbShapeC_3.png);
+}
+.pbshapeimg .svcC-4 {
+    background-image: url(../images/productBrowsing_pbShapeC_4.png);
 }
 
 /* 商品文案區 */
