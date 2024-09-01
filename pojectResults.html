@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>專案成果</title>
+    <title>VSER_專案成果</title>
     <link rel="stylesheet" href="./styles/sandy.css">
     <link rel="stylesheet" href="./styles/sandy_test.css">
 </head>
@@ -37,10 +37,7 @@
         <section id="projectBanner">
             <!-- 背景藍色色塊 -->
             <div class="blueBlock"></div>
-            <!-- 裝飾小方塊 -->
-            <div class="smallSquares"></div>
-            <!-- 裝飾斜方塊 -->
-            <div class="smallincline"></div>
+            <div class="arrow" style="display: none;" onclick="changearrow();"></div>
             <!-- 長方形選單 -->
             <div class="rectangularMenu">
                 <!-- 長方形小選單 -->
@@ -77,7 +74,8 @@
             <!-- 圖文開始 -->
             <div class="contentArea">
                 <!-- 主圖 -->
-                <div class="projectTheme  smoove"></div>
+                <div class="projectTheme2  smoove"></div>
+                <div class="projectTheme  smoove" style="display: none;"></div>
                 <div class="projectTheme1  smoove" style="display: none;"></div>
                 <!-- 主圖下方文字 -->
                 <div class="projectContent">
@@ -94,7 +92,10 @@
                                 Lions </h1>
                         </div>
 
-
+                        <div class="textWatermark2" >
+                            <h1>VSER<br>
+                            Design</h1>
+                        </div>
                         <!-- 文字標題 -->
                         <div class="Title">
                             <h2>jersey<br>
@@ -102,26 +103,29 @@
                         </div>
                     </div>
                     <!-- 右邊小字處 -->
+                    <div class="pjWord2" >
+                        <p>＂文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字＂</p>
+                    </div>
                     <div class="pjWord" style="display: none;">
-                        <p>＂球衣上的閃電圖案和線條設計象徵著球隊在場上的迅捷和力量，強調積極進攻和強悍防守的風格。＂</p>
+                        <p>＂球衣上的閃電圖案和線條設計象徵著球隊在場上的迅捷和力量，強調積極進攻強悍防守的風格。＂</p>
                     </div>
                     <div class="pjWord1" style="display: none;">
-                        <p>＂文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描＂</p>
+                        <p>＂文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文＂</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projectjJersey">
+        <section id="projectjJersey"  style="display: none;">
             <!-- 背景藍色色塊 -->
             <div class="blueBlock"></div>
             <!-- 球衣款式成列 -->
-            <div id="pjBox__list" class="pjBox__list"  style="display: none;">
+            <div id="pjBox__list" class="pjBox__list" style="display: none;">
                 <div class="pjshape svc-1 smoove"></div>
                 <div class="pjshape svc-2 smoove"></div>
                 <div class="pjshape svc-3 smoove"></div>
             </div>
-            <div id="pjBox__list1" class="pjBox__list1" style="display: none;">
+            <div id="pjBox__list1" class="pjBox__list1" style="display: none;"> 
                 <div class="pjshape svc-4 smoove"></div>
                 <div class="pjshape svc-5 smoove"></div>
                 <div class="pjshape svc-6 smoove"></div>
@@ -164,29 +168,89 @@
     <!-- JQuery Smoove -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
     <script>
-        function changemenu1() {
-            // 先隱藏所有元素
-            $('.projectTheme1, .pjWord1, .pjBox__list1, .textWatermark1').hide();
-            // 顯示相關元素
-            $('.projectTheme, .pjWord, .pjBox__list, .textWatermark').fadeIn(500);
-        }
+function changearrow(){
 
-        function changemenu2() {
-            // 先隱藏所有元素
-            $('.projectTheme, .pjWord, .pjBox__list, .textWatermark').hide();
-            // 顯示相關元素
-            $('.projectTheme1, .pjWord1, .pjBox__list1, .textWatermark1').fadeIn(500);
-        }
+}
 
-        $(document).ready(function () {
-            $('#menu-1').click(function () {
-                changemenu1();
+function changemenu1() {
+        // 先将新元素显示到前面，并移除当前动画类以重置动画状态
+        $('.projectTheme1')
+            .css('z-index', 2)
+            .show()
+            .removeClass('animate') // 移除动画类以重置动画状态
+            .fadeIn(0, function() { // 立即显示以触发动画
+                $(this).addClass('animate'); // 添加动画类来启动动画
+                $('.projectTheme').css('z-index', 1).fadeOut(500); // 淡出当前元素
+            });
+        
+        // 处理相关文字和其他元素的显示和隐藏
+        $('#projectjJersey, .pjWord1, .pjBox__list1, .textWatermark1, .arrow').fadeIn(500);
+        $('.pjWord, .pjBox__list, .textWatermark, .pjWord2, .textWatermark2').hide();
+    }
+
+    function changemenu2() {
+        // 先将新元素显示到前面，并移除当前动画类以重置动画状态
+        $('.projectTheme')
+            .css('z-index', 2)
+            .show()
+            .removeClass('animate') // 移除动画类以重置动画状态
+            .fadeIn(0, function() { // 立即显示以触发动画
+                $(this).addClass('animate'); // 添加动画类来启动动画
+                $('.projectTheme1').css('z-index', 1).fadeOut(500); // 淡出当前元素
             });
 
-            $('#menu-2').click(function () {
-                changemenu2();
-            });
-        });
+        // 处理相关文字和其他元素的显示和隐藏
+        $('#projectjJersey, .pjWord, .pjBox__list, .textWatermark, .arrow').fadeIn(500);
+        $('.pjWord1, .pjBox__list1, .textWatermark1, .pjWord2, .textWatermark2').hide();
+    }
+    
+
+    $(document).ready(function () {
+    // 一开始 arrow 不显示为隐藏状态（确保在文档加载时隐藏）
+    $(".arrow").hide();    
+
+    // 初始化时检查滚动位置并设置 .arrow 的显示状态
+    $(window).scroll(function() {
+        checkArrowVisibility(); // 滚动时检查箭头的可见性
+    });
+
+    // 绑定菜单点击事件
+    $('#menu-1').click(function () {
+        changemenu1();
+        // 点击后显示 .arrow（如果页面在顶部）
+        if ($(window).scrollTop() === 0) {
+            $(".arrow").show();
+        } else {
+            $(".arrow").hide();
+        }
+    });
+
+    $('#menu-2').click(function () {
+        changemenu2();
+        // 点击后显示 .arrow（如果页面在顶部）
+        if ($(window).scrollTop() === 0) {
+            $(".arrow").show();
+        } else {
+            $(".arrow").hide();
+        }
+    });
+
+    // 滑动置顶部
+    $(".arrow").click(function() {
+        $('html, body').animate({scrollTop: 418}, 1000);
+        $(this).hide(); // 点击后隐藏 .arrow 按钮
+    });
+
+    // 定义检查箭头可见性的函数
+    function checkArrowVisibility() {
+        if ($(window).scrollTop() === 0) {
+            $(".arrow").show(); // 置顶的时显示 .arrow
+        } else {
+            $(".arrow").hide(); // 非置顶时隐藏 .arrow
+        }
+    }
+});
+    
     </script>
 </body>
 
