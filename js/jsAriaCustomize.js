@@ -4,383 +4,400 @@ $(function () {
 
     // 頁面載入後的初始動畫
     $('#showStep h2').animate({ opacity: "1" }, {
-        duration: 1300,
+        duration: 600,
         complete: function () {
-            let showStepImg = $('#showStep img');
-            for (let i = 0; i < showStepImg.length; i++){
-                console.log(showStepImg[i]);
-                // showStepImg[i].animate({opacity: "1"},{
-                //     duration: 1300,
-                // })
-            }
-        },
+            $('#step-1').animate({ opacity: '1' }, {
+                duration: 500,
+                complete: function () {
+                    $('#step-2').animate({opacity: '1'},{
+                        duration: 500,
+                        complete: function () {
+                            $('#step-3').animate({opacity: '1'},{
+                                duration: 500,
+                                complete: function () {
+                                    $('#step-4').animate({opacity: '1'},{
+                                        duration: 500,
+                                        complete: function () {$('#step-5').animate({opacity: '1'},{
+                                            duration: 500,
+                                            complete: function () {$('#step-6').animate({opacity: '1'},{
+                                                duration: 500,
+                                                complete: function () {}
+                                            })}
+                                        })}
+                                    })
+                                }
+                            })
+                        }
+                    })
+                }
+            })
+
+        }
+    })
+});
+
+// 按下任意styleItem或shape previw區域，Design steip會隱藏
+$('.styleItem li').click(function () {
+    $('#showStep').hide();
+    $('.KeyArea').show(500);
+});
+
+$('#shapeArea a').click(function () {
+    $('#showStep').hide();
+    $('.KeyArea').show(500);
+});
+
+
+
+// 按下#lblForTextFonts的.arrow 
+// 1.新增.arrow的.beClick類別
+// 2.新增#chooseTextFonts的.show類別
+$('#lblForTextFonts').click(function () {
+    $(this).find('.arrow').toggleClass('beClick');
+    $('#chooseTextFonts').toggleClass('show');
+});
+
+// 按下#lblForTextColor的.arrow
+// 1. 新增.arrow的.beClick類別
+// 2. 新增#chooseTextColor的.show類別
+$('#lblForTextColor').click(function () {
+    $(this).find('.arrow').toggleClass('beClick');
+    $('.chooseColor').toggleClass('show');
+});
+
+// 按下#lblForTextSize的.arrow
+// 1. 新增.arrow的.beClick類別
+// 2. 新增#chooseTextSize的.show類別
+$('#lblForTextSize').click(function () {
+    $(this).find('.arrow').toggleClass('beClick');
+    $('.textsizeRange').toggleClass('show');
+});
+
+// 按下#frontSide
+// 1. #backColorSpace加入.hiden類別
+// 2. #frontSideSpace加入.show類別
+$('#frontSide').click(function () {
+    $('#backColorSpace').hide();
+    $('#frontColorSpace').show();
+});
+
+// 按下#backSide
+// 1. #frontColorSpace加入.hiden類別
+// 2. #backSideSpace加入.show類別
+$('#backSide').click(function () {
+    $('#frontColorSpace').hide();
+    $('#backColorSpace').show();
+});
+
+// 按下#lblForFront-1的.arrow
+// 1. 新增.arrow的.beClick類別
+// 2. 新增#frontColor-1.chooseColor的.show類別
+$('#lblForFront-1').click(function () {
+    $(this).find('.arrow').toggleClass('beClick');
+    $('#frontColor-1.chooseColor').toggleClass('show');
+});
+
+// 按下#lblForFront-2的.arrow
+// 1. 新增.arrow的.beClick類別
+// 2. 新增#frontColor-2.chooseColor的.show類別
+$('#lblForFront-2').click(function () {
+    $(this).find('.arrow').toggleClass('beClick');
+    $('#frontColor-2.chooseColor').toggleClass('show');
+});
+
+// 按下#lblForFront-3的.arrow
+// 1. 新增.arrow的.beClick類別
+// 2. 新增#frontColor-3.chooseColor的.show類別
+$('#lblForFront-3').click(function () {
+    $(this).find('.arrow').toggleClass('beClick');
+    $('#frontColor-3.chooseColor').toggleClass('show');
+});
+
+// 按下#lblForFront-4的.arrow
+// 1. 新增.arrow的.beClick類別
+// 2. 新增#frontColor-4.chooseColor的.show類別
+$('#lblForFront-4').click(function () {
+    $(this).find('.arrow').toggleClass('beClick');
+    $('#frontColor-4.chooseColor').toggleClass('show');
+});
+
+// 按下#lblForFront-5的.arrow
+// 1. 新增.arrow的.beClick類別
+// 2. 新增#frontColor-5.chooseColor的.show類別
+$('#lblForFront-5').click(function () {
+    $(this).find('.arrow').toggleClass('beClick');
+    $('#frontColor-5.chooseColor').toggleClass('show');
+});
+
+
+// 按下#lblForBack-1的.arrow
+// 1. 新增.arrow的.beClick類別
+// 2. 新增#backColor-1.chooseColor的.show類別
+$('#lblForBack-1').click(function () {
+    $(this).find('.arrow').toggleClass('beClick');
+    $('#backColor-1.chooseColor').toggleClass('show');
+});
+
+// 按下#lblForBack-2的.arrow
+// 1. 新增.arrow的.beClick類別
+// 2. 新增#backColor-2.chooseColor的.show類別
+$('#lblForBack-2').click(function () {
+    $(this).find('.arrow').toggleClass('beClick');
+    $('#backColor-2.chooseColor').toggleClass('show');
+});
+
+// 按下#lblForBack-3的.arrow
+// 1. 新增.arrow的.beClick類別
+// 2. 新增#backColor-3.chooseColor的.show類別
+$('#lblForBack-3').click(function () {
+    $(this).find('.arrow').toggleClass('beClick');
+    $('#backColor-3.chooseColor').toggleClass('show');
+});
+
+// 按下#lblForBack-4的.arrow
+// 1. 新增.arrow的.beClick類別
+// 2. 新增#backColor-4.chooseColor的.show類別
+$('#lblForBack-4').click(function () {
+    $(this).find('.arrow').toggleClass('beClick');
+    $('#backColor-4.chooseColor').toggleClass('show');
+});
+
+// 按下shape區的衣服變更preview
+$('#shapeArea .stylePreview a').click(function () {
+    let shapeNo = $(this).find('img').attr('alt');
+    $('.preJersey svg').css('display', 'none');
+    $(`#${shapeNo}`).css('display', 'block');
+
+    // 當預覽區是shape圖案時只顯示2個color
+    let frontColorHide = $('.frontColor').filter((index, element) => {
+        return index > 1;
     });
-
-    // 按下任意styleItem或shape previw區域，Design steip會隱藏
-    $('.styleItem li').click(function () {
-        $('#showStep').hide();
-        $('.KeyArea').show(500);
+    frontColorHide.each((index, element) => {
+        $(element).css('display', 'none');
     });
-
-    $('#shapeArea a').click(function () {
-        $('#showStep').hide();
-        $('.KeyArea').show(500);
-    });
-
-
-
-    // 按下#lblForTextFonts的.arrow 
-    // 1.新增.arrow的.beClick類別
-    // 2.新增#chooseTextFonts的.show類別
-    $('#lblForTextFonts').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
-        $('#chooseTextFonts').toggleClass('show');
-    });
-
-    // 按下#lblForTextColor的.arrow
-    // 1. 新增.arrow的.beClick類別
-    // 2. 新增#chooseTextColor的.show類別
-    $('#lblForTextColor').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
-        $('.chooseColor').toggleClass('show');
-    });
-
-    // 按下#lblForTextSize的.arrow
-    // 1. 新增.arrow的.beClick類別
-    // 2. 新增#chooseTextSize的.show類別
-    $('#lblForTextSize').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
-        $('.textsizeRange').toggleClass('show');
-    });
-
-    // 按下#frontSide
-    // 1. #backColorSpace加入.hiden類別
-    // 2. #frontSideSpace加入.show類別
-    $('#frontSide').click(function () {
-        $('#backColorSpace').hide();
-        $('#frontColorSpace').show();
-    });
-
-    // 按下#backSide
-    // 1. #frontColorSpace加入.hiden類別
-    // 2. #backSideSpace加入.show類別
-    $('#backSide').click(function () {
-        $('#frontColorSpace').hide();
-        $('#backColorSpace').show();
-    });
-
-    // 按下#lblForFront-1的.arrow
-    // 1. 新增.arrow的.beClick類別
-    // 2. 新增#frontColor-1.chooseColor的.show類別
-    $('#lblForFront-1').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
-        $('#frontColor-1.chooseColor').toggleClass('show');
-    });
-
-    // 按下#lblForFront-2的.arrow
-    // 1. 新增.arrow的.beClick類別
-    // 2. 新增#frontColor-2.chooseColor的.show類別
-    $('#lblForFront-2').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
-        $('#frontColor-2.chooseColor').toggleClass('show');
-    });
-
-    // 按下#lblForFront-3的.arrow
-    // 1. 新增.arrow的.beClick類別
-    // 2. 新增#frontColor-3.chooseColor的.show類別
-    $('#lblForFront-3').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
-        $('#frontColor-3.chooseColor').toggleClass('show');
-    });
-
-    // 按下#lblForFront-4的.arrow
-    // 1. 新增.arrow的.beClick類別
-    // 2. 新增#frontColor-4.chooseColor的.show類別
-    $('#lblForFront-4').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
-        $('#frontColor-4.chooseColor').toggleClass('show');
-    });
-
-    // 按下#lblForFront-5的.arrow
-    // 1. 新增.arrow的.beClick類別
-    // 2. 新增#frontColor-5.chooseColor的.show類別
-    $('#lblForFront-5').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
-        $('#frontColor-5.chooseColor').toggleClass('show');
-    });
-
-
-    // 按下#lblForBack-1的.arrow
-    // 1. 新增.arrow的.beClick類別
-    // 2. 新增#backColor-1.chooseColor的.show類別
-    $('#lblForBack-1').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
-        $('#backColor-1.chooseColor').toggleClass('show');
-    });
-
-    // 按下#lblForBack-2的.arrow
-    // 1. 新增.arrow的.beClick類別
-    // 2. 新增#backColor-2.chooseColor的.show類別
-    $('#lblForBack-2').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
-        $('#backColor-2.chooseColor').toggleClass('show');
-    });
-
-    // 按下#lblForBack-3的.arrow
-    // 1. 新增.arrow的.beClick類別
-    // 2. 新增#backColor-3.chooseColor的.show類別
-    $('#lblForBack-3').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
-        $('#backColor-3.chooseColor').toggleClass('show');
-    });
-
-    // 按下#lblForBack-4的.arrow
-    // 1. 新增.arrow的.beClick類別
-    // 2. 新增#backColor-4.chooseColor的.show類別
-    $('#lblForBack-4').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
-        $('#backColor-4.chooseColor').toggleClass('show');
-    });
-
-    // 按下shape區的衣服變更preview
-    $('#shapeArea .stylePreview a').click(function () {
-        let shapeNo = $(this).find('img').attr('alt');
-        $('.preJersey svg').css('display', 'none');
-        $(`#${shapeNo}`).css('display', 'block');
-
-        // 當預覽區是shape圖案時只顯示2個color
-        let frontColorHide = $('.frontColor').filter((index, element) => {
-            return index > 1;
-        });
-        frontColorHide.each((index, element) => {
-            $(element).css('display', 'none');
-        });
-        // 換色
-        $('#frontColor-1 a').click(function () {
-            $(`#${shapeNo}`).find('.Fcollar').attr('fill', $(this).css('background-color'));
-            FlblColor01 = $(`#${shapeNo}`).find('.Fcollar').attr('fill');
-            $('#lblForFront-1 div a').css('background-color', FlblColor01);
-        });
-        $('#frontColor-2 a').click(function () {
-            $(`#${shapeNo}`).find('.FC2').attr('fill', $(this).css('background-color'));
-            FlblColor02 = $(`#${shapeNo}`).find('.FC2').attr('fill');
-            $('#lblForFront-2 div a').css('background-color', FlblColor02);
-        });
-
-    });
-
-
-    // 按下design區的衣服變更preview
-    $('#designArea .stylePreview a').click(function () {
-        let designNo = $(this).find('img').attr('alt');
-        $('.preJersey figure').css('background-image', 'none');
-        $('.preJersey svg').css('display', 'none');
-        $(`#${designNo}`).css('display', 'block');
-        // 找preview區域的顏色顯示在chooseColor上
-        let FlblColor01 = $(`#${designNo}`).find('.Fcollar').attr('fill');
-        let FlblColor02 = $(`#${designNo}`).find('.FC2').attr('fill');
-        let FlblColor03 = $(`#${designNo}`).find('.FC3').attr('fill');
-        let FlblColor04 = $(`#${designNo}`).find('.FC4').attr('fill');
-        let FlblColor05 = $(`#${designNo}`).find('.VSERwd').attr('fill');
+    // 換色
+    $('#frontColor-1 a').click(function () {
+        $(`#${shapeNo}`).find('.Fcollar').attr('fill', $(this).css('background-color'));
+        FlblColor01 = $(`#${shapeNo}`).find('.Fcollar').attr('fill');
         $('#lblForFront-1 div a').css('background-color', FlblColor01);
+    });
+    $('#frontColor-2 a').click(function () {
+        $(`#${shapeNo}`).find('.FC2').attr('fill', $(this).css('background-color'));
+        FlblColor02 = $(`#${shapeNo}`).find('.FC2').attr('fill');
         $('#lblForFront-2 div a').css('background-color', FlblColor02);
-        $('#lblForFront-3 div a').css('background-color', FlblColor03);
-        $('#lblForFront-4 div a').css('background-color', FlblColor04);
-        $('#lblForFront-5 div a').css('background-color', FlblColor05);
-        // 8/29 add 把5個frontColor選區都顯示出來
-        $('.frontColor').each((index, element) => {
-            $(element).css('display', 'block');
-        })
-        // 換色功能
-        $('#frontColor-1 a').click(function () {
-            $(`#${designNo}`).find('.Fcollar').attr('fill', $(this).css('background-color'));
-            FlblColor01 = $(`#${designNo}`).find('.Fcollar').attr('fill');
-            $('#lblForFront-1 div a').css('background-color', FlblColor01);
-        });
-        $('#frontColor-2 a').click(function () {
-            $(`#${designNo}`).find('.FC2').attr('fill', $(this).css('background-color'));
-            FlblColor02 = $(`#${designNo}`).find('.FC2').attr('fill');
-            $('#lblForFront-2 div a').css('background-color', FlblColor02);
-        });
-        $('#frontColor-3 a').click(function () {
-            $(`#${designNo}`).find('.FC3').attr('fill', $(this).css('background-color'));
-            FlblColor03 = $(`#${designNo}`).find('.FC3').attr('fill');
-            $('#lblForFront-3 div a').css('background-color', FlblColor03);
-        });
-        $('#frontColor-4 a').click(function () {
-            $(`#${designNo}`).find('.FC4').attr('fill', $(this).css('background-color'));
-            FlblColor04 = $(`#${designNo}`).find('.FC4').attr('fill');
-            $('#lblForFront-4 div a').css('background-color', FlblColor04);
-        });
-        $('#frontColor-5 a').click(function () {
-            $(`#${designNo}`).find('.VSERwd').attr('fill', $(this).css('background-color'));
-            FlblColor05 = $(`#${designNo}`).find('.VSERwd').attr('fill');
-            $('#lblForFront-5 div a').css('background-color', FlblColor05);
-        });
     });
-
-
-    // textPosition 位置點選變更
-    // $('#textPosition a').click(function () {
-    //     let textPositionNo = $(this).find('img').attr('alt');
-    //     // 移除txtPosition開頭的class
-    //     $('.showTxtOnJersy').removeClass(function (index, className) {
-    //         return (className.match(/(^|\s)txtPosition\S+/g) || []).join(' ');
-    //     });
-    //     $('.showTxtOnJersy').addClass(textPositionNo);
-    // });
-
-    // textFont 字型選擇變更
-    $('#chooseTextFonts').change(function () {
-        let chossedFont = $(this).find('option:selected').css('font-family');
-        $('.showTxtOnJersy').css('font-family', chossedFont);
-    });
-
-    // textColor 字體顏色選擇變更
-    $('#chooseTextColor a').click(function () {
-        $('.showTxtOnJersy').css('color', $(this).css('background-color'))
-    });
-
-
-    // TextArea方向按鈕改變位置
-    let ty = 180;
-    let tx = 0;
-    let TxtintervalId;
-    $('#textArea .UpBtn').mousedown(function () {
-        TxtintervalId = setInterval(function () {
-            ty = ty - 10;
-            // 每 100 毫秒更新一次
-            $('.showTxtOnJersy').css('top', `${ty}px`);
-        }, 100);
-    });
-    $('#textArea .DownBtn').mousedown(function () {
-        TxtintervalId = setInterval(function () {
-            ty = ty + 10;
-            $('.showTxtOnJersy').css('top', `${ty}px`);
-        }, 100);
-    });
-    $('#textArea .LeftBtn').mousedown(function () {
-        TxtintervalId = setInterval(function () {
-            tx = tx - 10;
-            $('.showTxtOnJersy').css('left', `${tx}px`);
-        }, 100);
-    });
-    $('#textArea .RightBtn').mousedown(function () {
-        TxtintervalId = setInterval(function () {
-            tx = tx + 10;
-            $('.showTxtOnJersy').css('left', `${tx}px`);
-        }, 100);
-    });
-    $(document).mousemove(function () {
-        clearInterval(TxtintervalId);
-    });
-    $(document).mouseup(function () {
-        clearInterval(TxtintervalId);
-    });
-
-    // NumArea方向按鈕改變位置
-    let Ny = 220;
-    let Nx = 10;
-    let NumintervalId;
-    $('#numberArea .UpBtn').mousedown(function () {
-        NumintervalId = setInterval(function () {
-            Ny = Ny - 10;
-            $('.showNumOnJersy').css('top', `${Ny}px`);
-        }, 100);
-    });
-    $('#numberArea .DownBtn').mousedown(function () {
-        NumintervalId = setInterval(function () {
-            Ny = Ny + 10;
-            $('.showNumOnJersy').css('top', `${Ny}px`);
-        }, 100);
-    });
-    $('#numberArea .LeftBtn').mousedown(function () {
-        NumintervalId = setInterval(function () {
-            Nx = Nx - 10;
-            $('.showNumOnJersy').css('left', `${Nx}px`);
-        }, 100);
-    });
-    $('#numberArea .RightBtn').mousedown(function () {
-        NumintervalId = setInterval(function () {
-            Nx = Nx + 10;
-            $('.showNumOnJersy').css('left', `${Nx}px`);
-        }, 100);
-    });
-    $(document).mousemove(function () {
-        clearInterval(NumintervalId);
-    });
-    $(document).mouseup(function () {
-        clearInterval(NumintervalId);
-    });
-
-    // NumArea方向按鈕改變位置
-    let Py = 100;
-    let Px = 340;
-    let PictureIntervalId;
-    $('#pictureArea .UpBtn').mousedown(function () {
-        NumintervalId = setInterval(function () {
-            Py = Py - 10;
-            $('.showImgOnJersy').css('top', `${Py}px`);
-        }, 100);
-    });
-    $('#pictureArea .DownBtn').mousedown(function () {
-        NumintervalId = setInterval(function () {
-            Py = Py + 10;
-            $('.showImgOnJersy').css('top', `${Py}px`);
-        }, 100);
-    });
-    $('#pictureArea .LeftBtn').mousedown(function () {
-        NumintervalId = setInterval(function () {
-            Px = Px - 10;
-            $('.showImgOnJersy').css('left', `${Px}px`);
-        }, 100);
-    });
-    $('#pictureArea .RightBtn').mousedown(function () {
-        NumintervalId = setInterval(function () {
-            Px = Px + 10;
-            $('.showImgOnJersy').css('left', `${Px}px`);
-        }, 100);
-    });
-    $(document).mousemove(function () {
-        clearInterval(NumintervalId);
-    });
-    $(document).mouseup(function () {
-        clearInterval(NumintervalId);
-    });
-    // 以上方向按鈕事件
-
-    // NumberArea字體樣式設定
-    $('#NumStyleValue label').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
-    });
-    $('#lblForNumFonts').click(function () {
-        $('#chooseNumFonts').toggleClass('show');
-    });
-    $('#lblForNumColor').click(function () {
-        $('.chooseColor').toggleClass('show');
-    });
-    $('#lblForNumSize').click(function () {
-        $('.NumsizeRange').toggleClass('show');
-    })
-
-    // NumberArea樣式變更
-    $('#chooseNumFonts').change(function () {
-        let chossedFont = $(this).find('option:selected').css('font-family');
-        $('.showNumOnJersy').css('font-family', chossedFont);
-    });
-
-    $('#chooseNumColor a').click(function () {
-        $('.showNumOnJersy').css('color', $(this).css('background-color'))
-    });
-
-    // PictrueArea size設定
-    $('#lblForPictureSize').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
-        $('.PicturesizeRange').toggleClass('show');
-    })
-
 
 });
+
+
+// 按下design區的衣服變更preview
+$('#designArea .stylePreview a').click(function () {
+    let designNo = $(this).find('img').attr('alt');
+    $('.preJersey figure').css('background-image', 'none');
+    $('.preJersey svg').css('display', 'none');
+    $(`#${designNo}`).css('display', 'block');
+    // 找preview區域的顏色顯示在chooseColor上
+    let FlblColor01 = $(`#${designNo}`).find('.Fcollar').attr('fill');
+    let FlblColor02 = $(`#${designNo}`).find('.FC2').attr('fill');
+    let FlblColor03 = $(`#${designNo}`).find('.FC3').attr('fill');
+    let FlblColor04 = $(`#${designNo}`).find('.FC4').attr('fill');
+    let FlblColor05 = $(`#${designNo}`).find('.VSERwd').attr('fill');
+    $('#lblForFront-1 div a').css('background-color', FlblColor01);
+    $('#lblForFront-2 div a').css('background-color', FlblColor02);
+    $('#lblForFront-3 div a').css('background-color', FlblColor03);
+    $('#lblForFront-4 div a').css('background-color', FlblColor04);
+    $('#lblForFront-5 div a').css('background-color', FlblColor05);
+    // 8/29 add 把5個frontColor選區都顯示出來
+    $('.frontColor').each((index, element) => {
+        $(element).css('display', 'block');
+    })
+    // 換色功能
+    $('#frontColor-1 a').click(function () {
+        $(`#${designNo}`).find('.Fcollar').attr('fill', $(this).css('background-color'));
+        FlblColor01 = $(`#${designNo}`).find('.Fcollar').attr('fill');
+        $('#lblForFront-1 div a').css('background-color', FlblColor01);
+    });
+    $('#frontColor-2 a').click(function () {
+        $(`#${designNo}`).find('.FC2').attr('fill', $(this).css('background-color'));
+        FlblColor02 = $(`#${designNo}`).find('.FC2').attr('fill');
+        $('#lblForFront-2 div a').css('background-color', FlblColor02);
+    });
+    $('#frontColor-3 a').click(function () {
+        $(`#${designNo}`).find('.FC3').attr('fill', $(this).css('background-color'));
+        FlblColor03 = $(`#${designNo}`).find('.FC3').attr('fill');
+        $('#lblForFront-3 div a').css('background-color', FlblColor03);
+    });
+    $('#frontColor-4 a').click(function () {
+        $(`#${designNo}`).find('.FC4').attr('fill', $(this).css('background-color'));
+        FlblColor04 = $(`#${designNo}`).find('.FC4').attr('fill');
+        $('#lblForFront-4 div a').css('background-color', FlblColor04);
+    });
+    $('#frontColor-5 a').click(function () {
+        $(`#${designNo}`).find('.VSERwd').attr('fill', $(this).css('background-color'));
+        FlblColor05 = $(`#${designNo}`).find('.VSERwd').attr('fill');
+        $('#lblForFront-5 div a').css('background-color', FlblColor05);
+    });
+});
+
+
+// textPosition 位置點選變更
+// $('#textPosition a').click(function () {
+//     let textPositionNo = $(this).find('img').attr('alt');
+//     // 移除txtPosition開頭的class
+//     $('.showTxtOnJersy').removeClass(function (index, className) {
+//         return (className.match(/(^|\s)txtPosition\S+/g) || []).join(' ');
+//     });
+//     $('.showTxtOnJersy').addClass(textPositionNo);
+// });
+
+// textFont 字型選擇變更
+$('#chooseTextFonts').change(function () {
+    let chossedFont = $(this).find('option:selected').css('font-family');
+    $('.showTxtOnJersy').css('font-family', chossedFont);
+});
+
+// textColor 字體顏色選擇變更
+$('#chooseTextColor a').click(function () {
+    $('.showTxtOnJersy').css('color', $(this).css('background-color'))
+});
+
+
+// TextArea方向按鈕改變位置
+let ty = 180;
+let tx = 0;
+let TxtintervalId;
+$('#textArea .UpBtn').mousedown(function () {
+    TxtintervalId = setInterval(function () {
+        ty = ty - 10;
+        // 每 100 毫秒更新一次
+        $('.showTxtOnJersy').css('top', `${ty}px`);
+    }, 100);
+});
+$('#textArea .DownBtn').mousedown(function () {
+    TxtintervalId = setInterval(function () {
+        ty = ty + 10;
+        $('.showTxtOnJersy').css('top', `${ty}px`);
+    }, 100);
+});
+$('#textArea .LeftBtn').mousedown(function () {
+    TxtintervalId = setInterval(function () {
+        tx = tx - 10;
+        $('.showTxtOnJersy').css('left', `${tx}px`);
+    }, 100);
+});
+$('#textArea .RightBtn').mousedown(function () {
+    TxtintervalId = setInterval(function () {
+        tx = tx + 10;
+        $('.showTxtOnJersy').css('left', `${tx}px`);
+    }, 100);
+});
+$(document).mousemove(function () {
+    clearInterval(TxtintervalId);
+});
+$(document).mouseup(function () {
+    clearInterval(TxtintervalId);
+});
+
+// NumArea方向按鈕改變位置
+let Ny = 220;
+let Nx = 10;
+let NumintervalId;
+$('#numberArea .UpBtn').mousedown(function () {
+    NumintervalId = setInterval(function () {
+        Ny = Ny - 10;
+        $('.showNumOnJersy').css('top', `${Ny}px`);
+    }, 100);
+});
+$('#numberArea .DownBtn').mousedown(function () {
+    NumintervalId = setInterval(function () {
+        Ny = Ny + 10;
+        $('.showNumOnJersy').css('top', `${Ny}px`);
+    }, 100);
+});
+$('#numberArea .LeftBtn').mousedown(function () {
+    NumintervalId = setInterval(function () {
+        Nx = Nx - 10;
+        $('.showNumOnJersy').css('left', `${Nx}px`);
+    }, 100);
+});
+$('#numberArea .RightBtn').mousedown(function () {
+    NumintervalId = setInterval(function () {
+        Nx = Nx + 10;
+        $('.showNumOnJersy').css('left', `${Nx}px`);
+    }, 100);
+});
+$(document).mousemove(function () {
+    clearInterval(NumintervalId);
+});
+$(document).mouseup(function () {
+    clearInterval(NumintervalId);
+});
+
+// NumArea方向按鈕改變位置
+let Py = 100;
+let Px = 340;
+let PictureIntervalId;
+$('#pictureArea .UpBtn').mousedown(function () {
+    NumintervalId = setInterval(function () {
+        Py = Py - 10;
+        $('.showImgOnJersy').css('top', `${Py}px`);
+    }, 100);
+});
+$('#pictureArea .DownBtn').mousedown(function () {
+    NumintervalId = setInterval(function () {
+        Py = Py + 10;
+        $('.showImgOnJersy').css('top', `${Py}px`);
+    }, 100);
+});
+$('#pictureArea .LeftBtn').mousedown(function () {
+    NumintervalId = setInterval(function () {
+        Px = Px - 10;
+        $('.showImgOnJersy').css('left', `${Px}px`);
+    }, 100);
+});
+$('#pictureArea .RightBtn').mousedown(function () {
+    NumintervalId = setInterval(function () {
+        Px = Px + 10;
+        $('.showImgOnJersy').css('left', `${Px}px`);
+    }, 100);
+});
+$(document).mousemove(function () {
+    clearInterval(NumintervalId);
+});
+$(document).mouseup(function () {
+    clearInterval(NumintervalId);
+});
+// 以上方向按鈕事件
+
+// NumberArea字體樣式設定
+$('#NumStyleValue label').click(function () {
+    $(this).find('.arrow').toggleClass('beClick');
+});
+$('#lblForNumFonts').click(function () {
+    $('#chooseNumFonts').toggleClass('show');
+});
+$('#lblForNumColor').click(function () {
+    $('.chooseColor').toggleClass('show');
+});
+$('#lblForNumSize').click(function () {
+    $('.NumsizeRange').toggleClass('show');
+})
+
+// NumberArea樣式變更
+$('#chooseNumFonts').change(function () {
+    let chossedFont = $(this).find('option:selected').css('font-family');
+    $('.showNumOnJersy').css('font-family', chossedFont);
+});
+
+$('#chooseNumColor a').click(function () {
+    $('.showNumOnJersy').css('color', $(this).css('background-color'))
+});
+
+// PictrueArea size設定
+$('#lblForPictureSize').click(function () {
+    $(this).find('.arrow').toggleClass('beClick');
+    $('.PicturesizeRange').toggleClass('show');
+})
 
 
 

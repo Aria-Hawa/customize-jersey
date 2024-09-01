@@ -51,25 +51,43 @@ $(function () {
         // 不是tbody被appen，這樣的結果是tbody裡面有tbody
         // impossible!!!是因為我有設定tfoot，所以就算tbody放在tfoot下面也不會跑版?!
         $(getTable).append(newTbody);
-        // length 是一個屬性而不是一個方法，因此不需要加上括號
-        var countTbody = $(getTable).find('tbody').length;
-        // 讓「項次」隨著新增而變更
-        $(newTbody).find('.itemNo').append(countTbody)
+        updateItemNo(getTable);
+    });
+
+    // 按下delBtn刪除tbody
+    // $('.delBtn').click(function () {});
+    // 失敗原因: 寫在addTbody外面的話，會找不到動態生成的delBtn
+    // 事件委託: 將click事件，委託給document
+    $(document).on('click', '.delBtn', function () {
+        // 在刪除之前先儲存del的table
+        let delClosestTable = $(this).closest('table');
+        // 變數存起來之後再刪除tbody
+        $(this).closest('tbody').remove();
+        updateItemNo(delClosestTable);
     });
 
 
+    // 把「項次」隨著tbody變更獨立為一個待呼叫的函示
+    function updateItemNo(thisTable) {
+        $(thisTable).find('tbody').each(function (index) {
+            $(this).find('.itemNo').text(index + 1)
+        })
+    }
+
+
+
+    // 8/31 測試popupe功能
+    // 當需要顯示彈出視窗時
+    $('#addStyle').on('click', function () {
+        $('#popup').fadeIn();
+    });
+
+    // 當需要關閉彈出視窗時
+    $('#closePopup').on('click', function () {
+        console.log('觸發成功')
+        $('#popup').fadeOut();
+    });
 
 
 });
 
-
-
-// let tableFoot = document.querySelector('.tableFoot');
-// tableFoot.addEventListener('click', function (e) {
-//     // console.log(e.target.offsetParent.offsetParent)可以取得table;
-//     let getTable = e.target.offsetParent.offsetParent;
-//     console.log(getTable);
-//     console.log(getTable.childNodes);
-//     console.log(getTable.childNodes[3]);
-    
-// })
