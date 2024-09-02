@@ -16,6 +16,7 @@
 <body>
     <!-- 以下React -->
     <div id="root"></div>
+    
 
     <script type="text/babel">
         const { useEffect } = React;
@@ -34,14 +35,21 @@
                 // 輪播動畫設定
                 let count = 0;
                 let frontCarouselImgs = ['url(../images/carousel-img-1.png)', 'url(../images/carousel-img-2.png)'];
+                let backgrondCarouselImgs = ['url(../images/carousel-img-1back.png)', 'url(../images/carousel-img-2back.png)'];
 
                 $('.frontCarousel').animate({
                     right: '0px',
                     opacity: '1'
                 }, 3000);
 
+                $('.backgroundCarousel').animate({
+                    right: '0px',
+                    opacity: '1'
+                }, 3000);
+
                 count = (count + 1) % frontCarouselImgs.length;
                 frontCarousel();
+                backgroundCarousel()
 
                 function frontCarousel() {
                     $('.frontCarousel').animate({
@@ -56,12 +64,24 @@
                     });
                 };
 
+                function backgroundCarousel() {
+                    $('.backgroundCarousel').animate({
+                        opacity: 0,
+                    }, 3000, function () {
+                        $(this).css('background-image', backgrondCarouselImgs[count]);
+                        $(this).animate({
+                            opacity: 1,
+                        }, 3000);
+                    });
+                };
+
 
 
                 setTimeout (()=>{
                     setInterval(() => {
                     count = (count + 1) % frontCarouselImgs.length;
                     frontCarousel();
+                    backgroundCarousel();
                 }, 9000);
                 },3000)
 
@@ -78,18 +98,18 @@
                     <section id="home">
                         <header></header>
                         <div className="bar">
-                            <h1><a href="#"><GetImg imgUrl="./images/logo.png" alt="VSER客製化球衣" /></a></h1>
+                            <h1><a href="./index.html"><GetImg imgUrl="./images/logo.png" alt="VSER客製化球衣" /></a></h1>
                             <div className="menuList">
                                 <nav className="menuItem">
                                     <ul>
-                                        <li><a href="#">品牌理念</a></li>
-                                        <li><a href="#">專案成果</a></li>
-                                        <li><a href="#">商品瀏覽</a></li>
-                                        <li><a href="#">訂購說明</a></li>
+                                        <li><a href="./brandConcept.html">品牌理念</a></li>
+                                        <li><a href="./pojectResults.html">專案成果</a></li>
+                                        <li><a href="./productBrowsing.html">商品瀏覽</a></li>
+                                        <li><a href="./Customization_process.html">訂購說明</a></li>
                                         <li><a href="#">會員專區</a></li>
                                     </ul>
                                 </nav>
-                                <a href="#" className="cartBtn"><GetImg imgUrl="./images/cartBtnICON.svg" alt="" /></a>
+                                <a href="./chooseProject.html" className="cartBtn"><GetImg imgUrl="./images/cartBtnICON.svg" alt="" /></a>
                             </div>
                         </div>
                         <figure className="frontCarousel"></figure>
