@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSER客製化球衣</title>
+    <link rel="stylesheet" href="./styles/styleAria.css">
+</head>
+
+<body>
+    <header id="fixedTopbar">
+        <div class="topbar">
+            <h1><a href="./index.html"><img src="./images/logo.png" alt="VSER客製化球衣"></a></h1>
+            <div class="menuList">
+                <nav class="menuItem">
+                    <ul>
+                        <li><a href="#">品牌理念</a></li>
+                        <li><a href="#">專案成果</a></li>
+                        <li><a href="#">商品瀏覽</a></li>
+                        <li><a href="#">訂購說明</a></li>
+                        <li><a href="#">會員專區</a></li>
+                    </ul>
+                </nav>
+                <div class="rightList">
+                    <a href="#" class="customizeBtn">訂製專區</a>
+                    <a href="#" class="cartBtn"><img src="./images/cartBtnICON.svg" alt="cartIcon"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="basicInformation">
+            <div class="pageTitle">
+                <h3>BASIC INFORMATION</h3>
+                <p>請填寫基本資料</p>
+            </div>
+            <form action="" method="post" name="userInfo" id="userInfo" title="基本資料填寫表單">
+                <label for="username">姓名<span></span></label>
+                <input type="text" name="username" id="username" title="姓名欄位" placeholder="必填" required autocomplete
+                    autofocus>
+                <br>
+                <label for="userphone">聯絡電話</label>
+                <input type="tel" name="userphone" id="userphone" title="聯絡電話欄位" placeholder="必填-09xxxxxxxx"
+                    pattern="09[0-9]{8}" required autocomplete>
+                <br>
+                <label for="useremail">電子信箱</label>
+                <input type="email" name="useremail" id="useremail" title="電子信箱欄位" autocomplete>
+                <br>
+                <label for="useraddress">送貨地址</label>
+                <input type="text" name="useraddress" id="useraddress" title="送貨地址欄位" placeholder="必填" required
+                    autocomplete>
+                <br>
+                <label for="userGUInumber">統一編號</label>
+                <input type="text" name="userGUInumber" id="userGUInumber" title="統一編號欄位" placeholder="" autocomplete
+                    maxlength="8">
+
+            </form>
+            <div class="bottomBtn">
+                <div class="lastBtnDiv"><a href="#" class="lastBtn">上一步</a></div>
+                <div class="nextBtnDiv"><a href="#" class="nextBtn">下一步</a></div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- 設定jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/jsAriaProject.js"></script>
+</body>
+
+</html>

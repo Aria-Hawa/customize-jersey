@@ -24,7 +24,7 @@
                 </nav>
                 <div class="rightList">
                     <a href="#" class="customizeBtn">訂製專區</a>
-                    <a href="#" class="cartBtn"><img src="./images/icon-cart.png" alt="cartIcon"></a>
+                    <a href="#" class="cartBtn"><img src="./images/cartBtnICON.svg" alt="cartIcon"></a>
                 </div>
             </div>
         </div>
@@ -60,11 +60,11 @@
                     <tbody>
                         <tr>
                             <td class="itemNo">1</td>
-                            <td><input type="text" name="" id="" title="輸入球號列表" autocomplete></td>
-                            <td><input type="text" name="" id="" title="輸入名字列表" autocomplete></td>
+                            <td><input type="text" name="" id="" title="輸入球號列表" placeholder="01" autocomplete></td>
+                            <td><input type="text" name="" id="" title="輸入名字列表" placeholder="王大明" autocomplete></td>
                             <td>
                                 <select name="" id="" title="選擇尺寸列表">
-                                    <option value="選擇尺寸"></option>
+                                    <option value="">請選擇尺寸</option>
                                     <option value="">120cm</option>
                                     <option value="">130cm</option>
                                     <option value="">140cm</option>
@@ -77,7 +77,8 @@
                                     <option value="">3L</option>
                                 </select>
                             </td>
-                            <td><input type="number" name="" id="" title="選擇數量列表" autocomplete></td>
+                            <td><input type="number" name="" id="" title="選擇數量列表" placeholder="1" min="1" autocomplete>
+                            </td>
                             <td class="delBtn">刪除</td>
                         </tr>
                     </tbody>
@@ -128,7 +129,7 @@
                         <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
                     </div>
                 </div>
-                <table>
+                <table class="">
                     <thead>
                         <tr>
                             <th>項次</th>
@@ -142,11 +143,11 @@
                     <tbody>
                         <tr>
                             <td class="itemNo">1</td>
-                            <td><input type="text" name="" id="" title="輸入球號列表" autocomplete></td>
-                            <td><input type="text" name="" id="" title="輸入名字列表" autocomplete></td>
+                            <td><input type="text" name="" id="" title="輸入球號列表" placeholder="01" autocomplete></td>
+                            <td><input type="text" name="" id="" title="輸入名字列表" placeholder="王大明" autocomplete></td>
                             <td>
                                 <select name="" id="" title="選擇尺寸列表">
-                                    <option value="選擇尺寸"></option>
+                                    <option value="">請選擇尺寸</option>
                                     <option value="">120cm</option>
                                     <option value="">130cm</option>
                                     <option value="">140cm</option>
@@ -159,7 +160,8 @@
                                     <option value="">3L</option>
                                 </select>
                             </td>
-                            <td><input type="number" name="" id="" title="選擇數量列表" autocomplete></td>
+                            <td><input type="number" name="" id="" title="選擇數量列表" placeholder="1" min="1" autocomplete>
+                            </td>
                             <td class="delBtn">刪除</td>
                         </tr>
                     </tbody>
@@ -190,10 +192,10 @@
                     <tfoot>
                         <tr>
                             <td colspan="1000">
-                                <div class="tableFoot">
+                                <a class="tableFoot">
                                     <figure class="addBtn"></figure>
                                     <p>新增件數</p>
-                                </div>
+                                </a>
                             </td>
                         </tr>
                     </tfoot>
@@ -221,12 +223,42 @@
                     </div>
                 </div>
             </div>
-            <div class="test"><a href="" class="nextBtn">下一步</a></div>
+            <div class="nextBtnDiv"><a href="./doubleCheck.html" class="nextBtn">下一步</a></div>
 
-
+            <div id="popup">
+                <div id="popup-content">
+                    <h3>YOUR DESIGN</h3>
+                    <div class="userDesign">
+                        <img src="./images/projectResults1_pjshape1.png" alt="">
+                        <div>
+                            <h3><球衣樣式名稱></h2>
+                            <p>描述:<p style="font-size: 16px;">簡約設計與經典條紋，搭配明亮色彩</p></p>
+                            <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
+                        </div>
+                    </div>
+                    <div class="userDesign">
+                        <img src="./images/projectResults_pjshape3.png" alt="">
+                        <div>
+                            <h3><球衣樣式名稱></h3>
+                            <p>描述:<p style="font-size: 16px;">簡約設計與經典條紋，搭配明亮色彩</p></p>
+                            <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
+                        </div>
+                    </div>
+                    <div class="userDesign">
+                        <img src="./images/projectResults_pjshape4.png" alt="">
+                        <div>
+                            <h3><球衣樣式名稱></h3>
+                            <p>描述:<p style="font-size: 16px;">簡約設計與經典條紋，搭配明亮色彩</p></p>
+                            <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
+                        </div>
+                    </div>
+                    <button id="closePopup">關閉</button>
+                </div>
+            </div>
 
 
         </section>
+
     </main>
 
 

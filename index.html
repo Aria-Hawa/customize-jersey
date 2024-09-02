@@ -18,6 +18,9 @@
     <div id="root"></div>
 
     <script type="text/babel">
+        const { useEffect } = React;
+
+        // 元件化Img標籤
         function GetImg(props) {
             return (<>
                 <img src={props.imgUrl} alt="" />
@@ -25,8 +28,51 @@
             </>)
         }
 
-
         function App() {
+            useEffect(() => {
+
+                // 輪播動畫設定
+                let count = 0;
+                let frontCarouselImgs = ['url(../images/carousel-img-1.png)', 'url(../images/carousel-img-2.png)'];
+
+                $('.frontCarousel').animate({
+                    right: '0px',
+                    opacity: '1'
+                }, 3000);
+
+                count = (count + 1) % frontCarouselImgs.length;
+                frontCarousel();
+
+                function frontCarousel() {
+                    $('.frontCarousel').animate({
+                        opacity: 0,
+                        right: '100px'
+                    }, 3000, function () {
+                        $(this).css('background-image', frontCarouselImgs[count]);
+                        $(this).animate({
+                            opacity: 1,
+                            right: '0px'
+                        }, 3000);
+                    });
+                };
+
+
+
+                setTimeout (()=>{
+                    setInterval(() => {
+                    count = (count + 1) % frontCarouselImgs.length;
+                    frontCarousel();
+                }, 9000);
+                },3000)
+
+
+
+
+
+
+            }, []);
+
+
             return (<>
                 <main>
                     <section id="home">
@@ -43,7 +89,7 @@
                                         <li><a href="#">會員專區</a></li>
                                     </ul>
                                 </nav>
-                                <a href="#" className="cartBtn"><GetImg imgUrl="./images/icon-cart.png" alt="" /></a>
+                                <a href="#" className="cartBtn"><GetImg imgUrl="./images/cartBtnICON.svg" alt="" /></a>
                             </div>
                         </div>
                         <figure className="frontCarousel"></figure>
@@ -68,32 +114,32 @@
                     </section>
                 </main>
                 <footer>
-        <ul className="footerList">
-            <li className="footerItem">About
-                <ul>
-                    <li>關於VSER</li>
-                </ul>
-            </li>
-            <li className="footerItem">SERVICE
-                <ul>
-                    <li>條款與細則</li>
-                    <li>隱私權政策</li>
-                    <li>客製化政策</li>
-                </ul>
-            </li>
-            <li className="footerItem">CONTACT
-                <ul>
-                    <li>新北市汐止區新台五路二段77號15樓之3</li>
-                    <li>vser.tw@gmail.com</li>
-                    <li>02-86482203</li>
-                </ul>
-            </li>
-        </ul>
-        <div>
-            <figure><GetImg imgUrl="./images/logo-2.png" alt=""/></figure>
-            <small>&copy;2024 VSER, Inc. 版權所有</small>
-        </div>
-    </footer>
+                    <ul className="footerList">
+                        <li className="footerItem">About
+                            <ul>
+                                <li>關於VSER</li>
+                            </ul>
+                        </li>
+                        <li className="footerItem">SERVICE
+                            <ul>
+                                <li>條款與細則</li>
+                                <li>隱私權政策</li>
+                                <li>客製化政策</li>
+                            </ul>
+                        </li>
+                        <li className="footerItem">CONTACT
+                            <ul>
+                                <li>新北市汐止區新台五路二段77號15樓之3</li>
+                                <li>vser.tw@gmail.com</li>
+                                <li>02-86482203</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div>
+                        <figure><GetImg imgUrl="./images/logo-2.png" alt="" /></figure>
+                        <small>&copy;2024 VSER, Inc. 版權所有</small>
+                    </div>
+                </footer>
             </>)
 
         }
@@ -103,6 +149,9 @@
             .render(<App />);
     </script>
 
+    <!-- 設定jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </body>
 
 </html>
