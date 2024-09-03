@@ -12,20 +12,24 @@
 
     <header id="fixedTopbar">
         <div class="topbar">
-            <h1><a href="#"><img src="./images/logo.png" alt="VSER客製化球衣"></a></h1>
+            <h1><a href="./index.html"><img src="./images/logo.png" alt="VSER客製化球衣"></a></h1>
             <div class="menuList">
                 <nav class="menuItem">
                     <ul>
-                        <li><a href="#">品牌理念</a></li>
-                        <li><a href="#">專案成果</a></li>
-                        <li><a href="#">商品瀏覽</a></li>
-                        <li><a href="#">訂購說明</a></li>
+                        <li><a href="./brandConcept.html">品牌理念</a></li>
+                        <li><a href="./pojectResults.html">專案成果</a></li>
+                        <li><a href="./productBrowsing.html">商品瀏覽</a></li>
+                        <li><a href="./Customization_process.html">訂購說明</a></li>
                         <li><a href="#">會員專區</a></li>
                     </ul>
                 </nav>
                 <div class="rightList">
-                    <a href="#" class="customizeBtn"></a>
-                    <a href="#" class="cartBtn"><img src="./images/icon-cart.png" alt="cartIcon"></a>
+                    <div class="dropdown">
+                        <a href="#" id="RLbtn">訂製專區</a>
+                        <a href="./priceplan.html" id="pricePlanBtn">價格方案</a>
+                        <a href="./customize.html" id="customizeBtn">球衣模擬</a>
+                    </div>
+                    <a href="#" class="cartBtn"><img src="./images/cartBtnICON.svg" alt="cartIcon"></a>
                 </div>
             </div>
         </div>
@@ -37,10 +41,13 @@
 
         <section id="pricepage">
             <div class="box_list">
-                <div class="item price-1">
-                    <div class="title2">
+                <!-- 9/4 add by Aria -->
+                <h3 class="title">PRICE PLAN</h3>
+                <div class="item" id="price-1">
+                    <!-- 9/4 delete by Aria -->
+                    <!-- <div class="title2">
                         <h3>PRICE PLAN</h3>
-                    </div>
+                    </div> -->
                     <figure><img src="./images/price1.png" alt=""></figure>
                     <a class="content" href="#">
                         <h2>BASIC
@@ -49,23 +56,25 @@
                         <figure class="arrow"><img src="./images/Vector 53.png" alt=""></figure>
                     </a>
                 </div>
-                <div class="item price-2">
-                    <div class="title">
+                <div class="item" id="price-2">
+                    <!-- 9/4 delete by Aria -->
+                    <!-- <div class="title">
                         <h3>PRICE PLAN</h3>
-                    </div>
+                    </div> -->
                     <figure><img src="./images/price2.png" alt=""></figure>
                     <a class="content" href="#">
-                        
+
                         <h2>Advanced
                             <p>更好的舒適度 - 進階款</p>
                         </h2>
                         <figure class="arrow"><img src="./images/Vector 53.png" alt=""></figure>
                     </a>
                 </div>
-                <div class="item price-3">
-                    <div class="title2">
+                <div class="item" id="price-3">
+                    <!-- 9/4 delete by Aria -->
+                    <!-- <div class="title2">
                         <h3>PRICE PLAN</h3>
-                    </div>
+                    </div> -->
                     <figure><img src="./images/price3.png" alt=""></figure>
                     <a class="content" href="#">
 
@@ -77,21 +86,6 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -156,7 +150,21 @@
     </footer>
 
 
+    <!-- 設定jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            // fixedTopbar 訂製專區下拉選單
+            $('#RLbtn').click(function () {
+                $('#pricePlanBtn').toggleClass('show');
+                $('#customizeBtn').toggleClass('show');
+                $('#RLbtn').toggleClass('show');
+            });
 
+        });
+
+    </script>
 
 
 </body>

@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VSER客製化球衣</title>
     <link rel="stylesheet" href="./styles/styleAria.css">
+    <!-- 載入React,Babel -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/babel" src="./jsx/Header.jsx"></script>
+    <script type="text/babel" src="./jsx/Footer.jsx"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
@@ -23,7 +29,11 @@
                     </ul>
                 </nav>
                 <div class="rightList">
-                    <a href="#" class="customizeBtn">訂製專區</a>
+                    <div class="dropdown">
+                        <a href="#" id="RLbtn">訂製專區</a>
+                        <a href="./priceplan.html" id="pricePlanBtn">價格方案</a>
+                        <a href="./customize.html" id="customizeBtn">球衣模擬</a>
+                    </div>
                     <a href="#" class="cartBtn"><img src="./images/cartBtnICON.svg" alt="cartIcon"></a>
                 </div>
             </div>
@@ -204,9 +214,9 @@
             <div class="pageBottom">
                 <a href="#" id="addStyle">
                     <figure></figure>
-                    <p>增加樣式</p>
+                    <p>Your Design</p>
                 </a>
-                <div class="nextBtnDiv"><a href="./doubleCheck.html" class="nextBtn">下一步</a></div>
+                <a href="./doubleCheck.html" class="nextBtn">下一步</a>
             </div>
             <div id="projectInfo">
                 <div>

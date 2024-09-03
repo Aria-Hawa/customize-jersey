@@ -1,10 +1,18 @@
 
 // 使用jQuery
 $(function () {
+    // fixedTopbar 訂製專區下拉選單
+    $('#RLbtn').click(function () {
+        $('#pricePlanBtn').toggleClass('show');
+        $('#customizeBtn').toggleClass('show');
+        $('#RLbtn').toggleClass('show');
+    });
+
+
 
     // 頁面載入後的初始動畫
     $('#showStep h2').animate({ opacity: "1" }, {
-        duration: 600,
+        duration: 700,
         complete: function () {
             $('#step-1').animate({ opacity: '1' }, {
                 duration: 500,
@@ -77,6 +85,8 @@ $('#lblForTextSize').click(function () {
 // 1. #backColorSpace加入.hiden類別
 // 2. #frontSideSpace加入.show類別
 $('#frontSide').click(function () {
+    $('#backSide').removeClass('selected');
+    $('#frontSide').addClass('selected');
     $('#backColorSpace').hide();
     $('#frontColorSpace').show();
 });
@@ -85,6 +95,8 @@ $('#frontSide').click(function () {
 // 1. #frontColorSpace加入.hiden類別
 // 2. #backSideSpace加入.show類別
 $('#backSide').click(function () {
+    $('#frontSide').removeClass('selected');
+    $('#backSide').addClass('selected');
     $('#frontColorSpace').hide();
     $('#backColorSpace').show();
 });
@@ -239,16 +251,6 @@ $('#designArea .stylePreview a').click(function () {
     });
 });
 
-
-// textPosition 位置點選變更
-// $('#textPosition a').click(function () {
-//     let textPositionNo = $(this).find('img').attr('alt');
-//     // 移除txtPosition開頭的class
-//     $('.showTxtOnJersy').removeClass(function (index, className) {
-//         return (className.match(/(^|\s)txtPosition\S+/g) || []).join(' ');
-//     });
-//     $('.showTxtOnJersy').addClass(textPositionNo);
-// });
 
 // textFont 字型選擇變更
 $('#chooseTextFonts').change(function () {
@@ -506,14 +508,6 @@ function displayNumber() {
 
 
 
-
-
-
-
-
-
-
-
 //textArea步驟動態顯示
 // 8/29 textArea改為2步驟
 let textArea1st = document.querySelector('#textArea-1st');
@@ -540,17 +534,6 @@ function display2ndStep() {
     textArea2nd.style.display = 'flex';
 }
 
-// function display3rdStep() {
-//     textStepDisplayNone();
-//     textArea3rd.style.display = 'flex';
-// }
-
-// 讓用戶在textArea-1st 輸入的文字呈現在textArea-3rd的文字方塊內
-// 8/29 textArea改為2步驟
-// let getTextStyleInput = document.getElementById('textStyle');
-// getTextStyleInput.addEventListener('change', function () {
-//     document.getElementById('textWords').value = getTextStyleInput.value;
-// });
 // 同步顯示在球衣上
 let getTextStyleInput = document.getElementById('textStyle');
 getTextStyleInput.addEventListener('keyup', function () {

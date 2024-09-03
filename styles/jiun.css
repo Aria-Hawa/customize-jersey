@@ -85,20 +85,19 @@ a {
   --Blue-Darkblue-Blue: var(--Blue) 5%, var(--Darkblue) 55%, var(--Blue) 85%;
   --Darkblue-Blue: var(--Darkblue) 38%, var(--Blue) 100%;
   --Lightblue-White: var(--Lightblue)0%, var(--White)100;
+  --Darkblue-blue: var(--Blue) 0%, var(--Darkblue) 100%;
+  --Blue-grayblue: var(--Grayblue) 0%, var(--Blue) 100%;
 }
 
 
-
+/* 以下fixedTopbar區域 Aria 9/3更新 */
 /* fixed header區 */
 #fixedTopbar {
   background-color: var(--Blue);
   width: 100%;
   height: 80px;
+  position: fixed;
   z-index: 999;
-}
-
-#fixedTopbar.aaa {
-  background-color: var(--Darkblue);
 }
 
 #fixedTopbar .topbar {
@@ -106,38 +105,11 @@ a {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 80px;
+  padding: 0px 80px;
 }
 
-#fixedTopbar .menuList .rightList {
-  display: flex;
-  align-items: center;
-}
-
-#fixedTopbar .rightList .customizeBtn {
-  margin-right: 20px;
-  width: 132px;
-  height: 44px;
-  background-image: linear-gradient(90deg, var(--Lightblue-White));
-  position: relative;
-}
-
-#fixedTopbar .rightList .customizeBtn:hover {
-  background-image: linear-gradient(350deg, var(--Lightblue-White));
-}
-
-#fixedTopbar .rightList .customizeBtn::before {
-  content: "訂製專區";
-  text-align: center;
-  line-height: 40px;
-  background-color: var(--Blue);
-  position: absolute;
-  width: 96%;
-  height: 40px;
-  left: 2px;
-  top: 50%;
-  transform: translate(0%, -50%);
-  background-position: center;
+.topbar h1 {
+  min-width: 129px;
 }
 
 .menuList {
@@ -162,8 +134,82 @@ a {
   letter-spacing: 2px;
 }
 
+#fixedTopbar .menuList .rightList {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cartBtn {
+  width: 48px;
+  height: 48px;
+}
+
+.rightList .dropdown {
+  margin-right: 20px;
+  position: absolute;
+  top: 6px;
+  right: 44px;
+}
+
+.dropdown #RLbtn {
+  position: relative;
+}
+
+.dropdown #RLbtn::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -1px;
+  right: -1px;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-image: linear-gradient(0deg, var(--Lightblue-White)) 1 round;
+  transition: all .5s ease-in-out;
+}
+
+.dropdown #RLbtn.show::after {
+  height: 300%;
+}
+
+.dropdown a {
+  width: 100px;
+  height: fit-content;
+  text-align: center;
+  padding: 8px;
+  animation: rotate 3s linear infinite;
+  font-size: 18px;
+  background-color: var(--Blue);
+}
+
+#pricePlanBtn,
+#customizeBtn {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#pricePlanBtn.show,
+#customizeBtn.show {
+  visibility: visible;
+  transition: all .8s ease-in-out;
+  opacity: 1;
+}
+
+#pricePlanBtn:hover {
+  background-image: linear-gradient(90deg, var(--Blue-grayblue));
+}
+
+#customizeBtn:hover {
+  background-image: linear-gradient(-90deg, var(--Grayblue) 0%, var(--Blue) 100%);
+}
 
 /* 內容 */
+/* 9/4 add my Aria */
+main {
+  overflow: hidden;
+}
 
 #pricepage {
   background-color: var(--Blue);
@@ -171,7 +217,8 @@ a {
   height: 100vh;
   display: flex;
   justify-content: space-between;
-
+  /* 9/3 add by Aria */
+  padding-top: 80px;
 }
 
 
@@ -179,6 +226,19 @@ a {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  /* 9/4 add by Aria */
+  position: relative;
+}
+
+/* 9/4 add by Aria */
+.title {
+  position: absolute;
+  z-index: 10;
+  font-family: "ROGFonts", sans-serif;
+  font-size: 38px;
+  top: 90px;
+  left: calc(50% - 157px);
+  letter-spacing: .2rem;
 }
 
 .box_list .item {
@@ -187,6 +247,7 @@ a {
   width: 100%;
   height: 100%;
 }
+
 
 .item figure {
   width: 100%;
@@ -201,22 +262,32 @@ a {
 
 
 .box_list .content {
-  display: inline-flex;
+  /* 9/4 change by Aria */
+  /* display: inline-flex; */
+  display: flex;
   position: absolute;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 60px;
+  /* padding: 0px 60px; */
+  padding: 0px 8%;
   bottom: 128px;
   width: 100%;
-
 }
 
-.box_list .title {
+/* 9/4 add by Aria */
+.box_list .content:hover {
+  animation: moveInfinite 1.2s ease-in-out infinite;
+}
+
+/* 9/4 delete by Aria */
+/* .box_list .title {
   display: flex;
   width: 100%;
+  width: fit-content;
   position: absolute;
   justify-content: center;
   padding: 10% 10%;
+  padding: 10% 0;
   font-family: "ROGFonts", sans-serif;
   font-size: 38px;
   letter-spacing: .2rem;
@@ -224,7 +295,7 @@ a {
 
 .box_list .title2 {
   display: none;
-}
+} */
 
 .box_list .arrow {
   display: flex;
@@ -237,15 +308,17 @@ a {
   font-size: 18px;
 }
 
-.box_list h3 {
+/* 9/4 delete by Aria */
+/* .box_list h3 {
   font-family: "ROGFonts", sans-serif;
-}
+} */
 
 .box_list p {
   letter-spacing: .2rem;
   font-size: 18px;
 }
 
+/* 9/4 add by Aria */
 
 
 
@@ -847,4 +920,28 @@ footer div small {
 
   }
 
+}
+
+/* 9/4 add by Aria */
+@keyframes moveInfinite {
+  0% {
+    transform: translateX(0px);
+  }
+
+  10% {
+    transform: translateX(0px);
+  }
+
+  20% {
+    transform: translateX(15px);
+  }
+  40% {
+    transform: translateX(-10px);
+  }
+  60% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }

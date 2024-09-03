@@ -1,5 +1,13 @@
 // 使用jQuery
 $(function () {
+    // fixedTopbar 訂製專區下拉選單
+    $('#RLbtn').click(function () {
+        $('#pricePlanBtn').toggleClass('show');
+        $('#customizeBtn').toggleClass('show');
+        $('#RLbtn').toggleClass('show');
+    });
+
+    // .tableCaption click時改變arrow即展開下表
     $(document).on('click', '.tableCaption', function () {
         // .arrow旋轉
         $(this).find('.arrow').toggleClass('beClick');
@@ -9,7 +17,6 @@ $(function () {
     });
 
     // 當table表格新增件數欄位click時
-
     $(document).on('click', '.tableFoot', function () {
         // 取得<table>和<tbody>
         let getTable = $(this).closest('table');
@@ -40,12 +47,12 @@ $(function () {
         if ($(delClosestTable).find('tbody').length == 1) {
             if (confirm(`確定要刪除<${projectName}>項目嗎?`) == true) {
                 let newUserDesign = $('#emptyUserDesign').clone();
-                $(newUserDesign).find('img').attr('src',projectImg);
+                $(newUserDesign).find('img').attr('src', projectImg);
                 $(newUserDesign).find('h3').text(projectName);
                 $(newUserDesign).find('span').text(projectPrice);
-                $(newUserDesign).attr('id','');
+                $(newUserDesign).attr('id', '');
                 $('#innerContent').find('.userDesign:last').after(newUserDesign);
-                $(newUserDesign).css('display','flex');
+                $(newUserDesign).css('display', 'flex');
                 $(this).closest('tbody').closest('.table').remove();
             } else {
                 alert(`取消刪除<${projectName}>項目`);
@@ -75,7 +82,7 @@ $(function () {
     });
 
     // popup內的userDesign click時，標記selected
-    $(document).on('click','.userDesign',function () {
+    $(document).on('click', '.userDesign', function () {
         $('.userDesign').removeClass('selected');
         $(this).addClass('selected');
     });
@@ -94,14 +101,14 @@ $(function () {
         $(newProject).find('.captionRight span').text(unitPrice);
         $(newProject).find('.captionLeft figure').css('background-image', `url(${ImgSrc})`);
         $(newProject).css('display', 'block');
-        $(newProject).attr('id','');
+        $(newProject).attr('id', '');
         $('.table:last').after(newProject);
         // 被選取的project要移除
         $('.userDesign.selected').remove();
     });
 
     // 整筆總額隨project變更
-    $(document).find('.price').each((index,price)=>{
+    $(document).find('.price').each((index, price) => {
         console.log(price.innerText);
     });
 
