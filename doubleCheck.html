@@ -15,15 +15,19 @@
             <div class="menuList">
                 <nav class="menuItem">
                     <ul>
-                        <li><a href="#">品牌理念</a></li>
-                        <li><a href="#">專案成果</a></li>
-                        <li><a href="#">商品瀏覽</a></li>
-                        <li><a href="#">訂購說明</a></li>
+                        <li><a href="./brandConcept.html">品牌理念</a></li>
+                        <li><a href="./pojectResults.html">專案成果</a></li>
+                        <li><a href="./productBrowsing.html">商品瀏覽</a></li>
+                        <li><a href="./Customization_process.html">訂購說明</a></li>
                         <li><a href="#">會員專區</a></li>
                     </ul>
                 </nav>
                 <div class="rightList">
-                    <a href="#" class="customizeBtn">訂製專區</a>
+                    <div class="dropdown">
+                        <a href="#" id="RLbtn">訂製專區</a>
+                        <a href="./priceplan.html" id="pricePlanBtn">價格方案</a>
+                        <a href="./customize.html" id="customizeBtn">球衣模擬</a>
+                    </div>
                     <a href="#" class="cartBtn"><img src="./images/cartBtnICON.svg" alt="cartIcon"></a>
                 </div>
             </div>
@@ -117,7 +121,10 @@
                     </div>
                 </div>
             </div>
-            <div class="nextBtnDiv"><a href="./basicInformation.html" class="nextBtn">下一步</a></div>
+            <div class="PDbtn">
+                <a href="./chooseProject.html" class="lastBtn">上一步</a>
+                <a href="./basicInformation.html" class="nextBtn">下一步</a>
+            </div>
         </section>
 
     </main>
@@ -126,7 +133,16 @@
     <!-- 設定jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="./js/jsAriaProject.js"></script>
+    <script>
+        $(function () {
+            // fixedTopbar 訂製專區下拉選單
+            $('#RLbtn').click(function () {
+                $('#pricePlanBtn').toggleClass('show');
+                $('#customizeBtn').toggleClass('show');
+                $('#RLbtn').toggleClass('show');
+            });
+        });
+    </script>
 </body>
 
 </html>

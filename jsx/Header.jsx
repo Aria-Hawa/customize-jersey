@@ -14,8 +14,8 @@ function Header() {
                         </ul>
                     </nav>
                     <div className="rightList">
-                        <a href="#" className="customizeBtn">訂製專區</a>
-                        <a href="#" className="cartBtn"></a>
+                        <a href="./customize.html" className="customizeBtn">訂製專區</a>
+                        <a href="./chooseProject.html" className="cartBtn"></a>
                     </div>
                 </div>
             </div>

@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VSER客製化球衣</title>
     <link rel="stylesheet" href="./styles/styleAria.css">
+    <!-- 載入React,Babel -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/babel" src="./jsx/Header.jsx"></script>
+    <script type="text/babel" src="./jsx/Footer.jsx"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
@@ -23,7 +29,11 @@
                     </ul>
                 </nav>
                 <div class="rightList">
-                    <a href="#" class="customizeBtn">訂製專區</a>
+                    <div class="dropdown">
+                        <a href="#" id="RLbtn">訂製專區</a>
+                        <a href="./priceplan.html" id="pricePlanBtn">價格方案</a>
+                        <a href="./customize.html" id="customizeBtn">球衣模擬</a>
+                    </div>
                     <a href="#" class="cartBtn"><img src="./images/cartBtnICON.svg" alt="cartIcon"></a>
                 </div>
             </div>
@@ -35,14 +45,14 @@
                 <h3>PROJECT</h3>
                 <p>請點選您的球衣樣式,並填寫尺寸、號碼、姓名（如不需要請點選無）</p>
             </div>
-            <div id="project-1" class="table">
+            <div id="project" class="table" style="display: none;">
                 <div class="tableCaption">
                     <div class="captionLeft">
                         <figure></figure>
-                        <p>球衣樣式名稱</p>
+                        <p></p>
                     </div>
                     <div class="captionRight">
-                        <p class="unitPrice">單件價格 : NT$ <span>3,690</span> </p>
+                        <p class="unitPrice">單件價格: <span class="price"></span> </p>
                         <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
                     </div>
                 </div>
@@ -118,14 +128,14 @@
                     </tfoot>
                 </table>
             </div>
-            <div id="project-2" class="table">
+            <div class="table">
                 <div class="tableCaption">
                     <div class="captionLeft">
                         <figure></figure>
-                        <p>球衣樣式名稱</p>
+                        <p>球衣樣式名稱1</p>
                     </div>
                     <div class="captionRight">
-                        <p class="unitPrice">單件價格 : NT$ <span>3,690</span> </p>
+                        <p class="unitPrice">單件價格 : NT$ <span class="price">3,690</span> </p>
                         <a href="#" class="arrow"><img src="./images/icon-arrow.svg" alt=""></a>
                     </div>
                 </div>
@@ -204,67 +214,70 @@
             <div class="pageBottom">
                 <a href="#" id="addStyle">
                     <figure></figure>
-                    <p>增加樣式</p>
+                    <p>Your Design</p>
                 </a>
-                <div id="projectInfo">
-                    <div style="margin-bottom: 16px;">
-                        <div>
-                            <img src="./images/icon-amount.svg" alt="">
-                            <p>整筆總額</p>
-                        </div>
-                        <p>NT$ 10,090</p>
-                    </div>
+                <a href="./doubleCheck.html" class="nextBtn">下一步</a>
+            </div>
+            <div id="projectInfo">
+                <div>
                     <div>
-                        <div>
-                            <img src="./images/icon-truck.svg" alt="">
-                            <p>預計交貨日期</p>
-                        </div>
-                        <p>2024年10月25~28日</p>
+                        <img src="./images/icon-amount.svg" alt="">
+                        <p>整筆總額</p>
                     </div>
+                    <span>NT$ 10,090</span>
+                </div>
+                <div>
+                    <div>
+                        <img src="./images/icon-truck.svg" alt="">
+                        <p>預計交貨日期</p>
+                    </div>
+                    <p>2024年10月25~28日</p>
                 </div>
             </div>
-            <div class="nextBtnDiv"><a href="./doubleCheck.html" class="nextBtn">下一步</a></div>
 
             <div id="popup">
                 <div id="popup-content">
-                    <h3>YOUR DESIGN</h3>
-                    <div class="userDesign">
-                        <img src="./images/projectResults1_pjshape1.png" alt="">
-                        <div>
-                            <h3>
-                                <球衣樣式名稱>
-                                    </h2>
-                                    <p>描述:
-                                    <p style="font-size: 16px;">簡約設計與經典條紋，搭配明亮色彩</p>
-                                    </p>
-                                    <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
-                        </div>
+                    <div id="popup-title">
+                        <h3>YOUR DESIGN</h3>
+                        <button id="closePopup" class="chooseProjectBtn">X</button>
                     </div>
-                    <div class="userDesign">
-                        <img src="./images/projectResults_pjshape3.png" alt="">
-                        <div>
-                            <h3>
-                                <球衣樣式名稱>
-                            </h3>
-                            <p>描述:
-                            <p style="font-size: 16px;">簡約設計與經典條紋，搭配明亮色彩</p>
-                            </p>
-                            <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
+                    <div id="innerContent">
+                        <div class="userDesign" id="emptyUserDesign" style="display: none;">
+                            <img src="" alt="">
+                            <div>
+                                <h3></h3>
+                                <p>單價: NT: $<span style="font-size: 16px;"></span></p>
+                                <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="userDesign">
-                        <img src="./images/projectResults_pjshape4.png" alt="">
-                        <div>
-                            <h3>
-                                <球衣樣式名稱>
-                            </h3>
-                            <p>描述:
-                            <p style="font-size: 16px;">簡約設計與經典條紋，搭配明亮色彩</p>
-                            </p>
-                            <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
+                        <div class="userDesign">
+                            <img src="./images/projectResults1_pjshape1.png" alt="">
+                            <div>
+                                <h3>球衣樣式名稱2</h3>
+                                <p>單價: NT: $<span style="font-size: 16px;">2,500</span></p>
+                                <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
+                            </div>
                         </div>
+                        <div class="userDesign">
+                            <img src="./images/projectResults_pjshape2.png" alt="">
+                            <div>
+                                <h3>球衣樣式名稱3</h3>
+                                <p>單價: NT: $<span style="font-size: 16px;">3,000</span>
+                                </p>
+                                <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
+                            </div>
+                        </div>
+                        <div class="userDesign">
+                            <img src="./images/projectResults_pjshape4.png" alt="">
+                            <div>
+                                <h3>球衣樣式名稱4</h3>
+                                <p>單價: NT: $<span style="font-size: 16px;">1,980</span>
+                                </p>
+                                <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
+                            </div>
+                        </div>
+                        <button id="chekBtn" class="chooseProjectBtn">確認</button>
                     </div>
-                    <button id="closePopup">關閉</button>
                 </div>
             </div>
 
