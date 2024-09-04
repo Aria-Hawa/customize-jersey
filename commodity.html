@@ -17,10 +17,10 @@
             <div class="menuList">
                 <nav class="menuItem">
                     <ul>
-                        <li><a href="#">品牌理念</a></li>
-                        <li><a href="#">專案成果</a></li>
-                        <li><a href="#">商品瀏覽</a></li>
-                        <li><a href="#">訂購說明</a></li>
+                        <li><a href="./brandConcept.html">品牌理念</a></li>
+                        <li><a href="./pojectResults.html">專案成果</a></li>
+                        <li><a href="./productBrowsing.html">商品瀏覽</a></li>
+                        <li><a href="./Customization_process.html">訂購說明</a></li>
                         <li><a href="#">會員專區</a></li>
                     </ul>
                 </nav>
@@ -34,13 +34,14 @@
 
     <section id="introduction">
         <div class="mainPicture">
-            
+            <!-- 小圖 -->
             <div class="smallPicture">
-                <div class="small svcA-1"></div>
-                <div class="small svcA-1-back"></div>
-                <div class="small svcA-2"></div>
+                <div onclick="swap1();"  class="small svcA-1"></div>
+                <div onclick="swap2();"  class="small svcA-1-back"></div>
+                <div onclick="swap3();"  class="small svcA-2"></div>
             </div>
-            <div class="bigPicture svcA-1"></div>
+            <!-- 大圖 -->
+            <div id=picL class="bigPicture svcA-1"></div>
         </div>
         <div class="productCopywriting">
             <div class="productTitle">
@@ -54,43 +55,43 @@
                     <p>尺寸</p>
                     <li class="detailsSize">
                         <ul class="sizeBox">
-                            <li class="size">120</li>
-                            <li class="size">130</li>
-                            <li class="size">140</li>
-                            <li class="size">XS</li>
+                            <li onclick="changeBorderB(this);" class="size">120</li>
+                            <li onclick="changeBorderB(this);" class="size">130</li>
+                            <li onclick="changeBorderB(this);" class="size">140</li>
+                            <li onclick="changeBorderB(this);" class="size">XS</li>
                         </ul>
                         <ul class="sizeBox">
-                            <li class="size">S</li>
-                            <li class="size">M</li>
-                            <li class="size">L</li>
-                            <li class="size">XL</li>
-                            <li class="size">2L</li>
-                            <li class="size">3L</li>
+                            <li onclick="changeBorderB(this);" class="size">S</li>
+                            <li onclick="changeBorderB(this);" class="size">M</li>
+                            <li onclick="changeBorderB(this);" class="size">L</li>
+                            <li onclick="changeBorderB(this);" class="size">XL</li>
+                            <li onclick="changeBorderB(this);" class="size">2L</li>
+                            <li onclick="changeBorderB(this);" class="size">3L</li>
                         </ul>
                     </li>
 
                 </ul>
 
-                <ul class="contentDetails">
+                <div class="contentDetails">
                     <p>顏色</p>
-                    <li class="sizeBox">
-                        <ul class="size">黃</ul>
-                        <ul class="size">紅</ul>
-                        <ul class="size">綠</ul>
-                    </li>
+                    <ul class="sizeBox">
+                        <li onclick="changeBorder(this); swap1()" class="color">綠</li>
+                        <li onclick="changeBorder(this); swap3()" class="color">藍</li>
+                        <li onclick="changeBorder(this);" class="color">綠</li>
+                    </ul>
 
-                </ul>
+                </div>
                 <div class="contentDetails">
                     <p>數量</p>
                     <!-- <label for="ender">性別:</label> -->
-        <select name="quantity" id="quantity" >
-            <option value="">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-                    
+                    <select name="quantity" id="quantity">
+                        <option value="">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
                 </div>
             </div>
             <div class="productButtom">
@@ -101,10 +102,10 @@
             <div class="productRemark">
                 <p>
                     購買須知<br>
-該商品為客製化商品，下單後不可取消。敬請於下單前確認。<br>
-待付費確認完成後，系統才會開始處理您的訂單，約7個工作天內出貨。
+                    該商品為客製化商品，下單後不可取消。敬請於下單前確認。<br>
+                    待付費確認完成後，系統才會開始處理您的訂單，約7個工作天內出貨。
                 </p>
-               
+
             </div>
         </div>
     </section>
@@ -227,6 +228,58 @@
             <small>&copy;2024 VSER, Inc. 版權所有</small>
         </div>
     </footer>
+
+    <!-- 以下為JS -->
+    <script>
+        //  小圖點選換大圖
+        let bigPicture=document.getElementById('picL');
+        function swap1(){
+            picL.className="bigPicture svcA-1";
+        }
+        function swap2(){
+            picL.className="bigPicture svcA-1-back";
+        }
+        function swap3(){
+            picL.className="bigPicture svcA-2";
+        }
+        
+
+        // 按鈕點擊變色
+        function changeBorder(selectedElement) {
+        // 先获取所有具有 "size" 类的元素
+        let colorElements = document.querySelectorAll('.color');
+
+        // 遍历所有元素，将它们的边框颜色重置为白色
+        colorElements.forEach(function(element) {
+            element.style.borderColor = '#ffffff';
+            element.style.backgroundColor = '#013B63'; 
+            element.style.color = '#ffffff'; 
+        });
+
+        // 将选中的元素的边框颜色设置为黑色
+        selectedElement.style.borderColor = '#FEB75D';
+        selectedElement.style.backgroundColor = '#FEB75D';
+        selectedElement.style.color = '#013B63';
+    }
+
+    
+    function changeBorderB(selectedElementB) {
+        // 先获取所有具有 "size" 类的元素
+        let sizeElements = document.querySelectorAll('.size');
+
+        // 遍历所有元素，将它们的边框颜色重置为白色
+        sizeElements.forEach(function(element) {
+            element.style.borderColor = '#ffffff';
+            element.style.backgroundColor = '#013B63'; 
+            element.style.color = '#ffffff'; 
+        });
+
+        // 将选中的元素的边框颜色设置为黑色
+        selectedElementB.style.borderColor = '#FEB75D';
+        selectedElementB.style.backgroundColor = '#FEB75D';
+        selectedElementB.style.color = '#013B63';
+    }
+    </script>
 </body>
 
 </html>

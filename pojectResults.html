@@ -18,10 +18,10 @@
             <div class="menuList">
                 <nav class="menuItem">
                     <ul>
-                        <li><a href="#">品牌理念</a></li>
-                        <li><a href="#">專案成果</a></li>
-                        <li><a href="#">商品瀏覽</a></li>
-                        <li><a href="#">訂購說明</a></li>
+                        <li><a href="./brandConcept.html">品牌理念</a></li>
+                        <li><a href="./pojectResults.html">專案成果</a></li>
+                        <li><a href="./productBrowsing.html">商品瀏覽</a></li>
+                        <li><a href="./Customization_process.html">訂購說明</a></li>
                         <li><a href="#">會員專區</a></li>
                     </ul>
                 </nav>
@@ -204,18 +204,11 @@ function changemenu1() {
 // 以下是.arrow JQ
 
     $(document).ready(function () {
-    // 一开始 arrow 不显示为隐藏状态（确保在文档加载时隐藏）
+    // 一開始.arrow為隱藏
     $(".arrow").hide();    
 
-    // 初始化时检查滚动位置并设置 .arrow 的显示状态
+    // 
     $(window).scroll(function() {
-
-        if ($(this).scrollTop()<0){
-            $(".arrow").stop().fadeTo('600',1);
-        }else{
-            $(".arrow").stop().fadeOut(600);
-        }
-
         checkArrowVisibility(); // 滚动时检查箭头的可见性
     });
 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- 載入React,Babel -->
+   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   
+    <title>商品頁</title>
+    <link rel="stylesheet" href="./styles/sandy.css">
+    <link rel="stylesheet" href="./styles/pbCarousel.css">
+    <!-- react -->
+    <script type="text/babel" src="./jsx/Header.jsx"></script>
+    <script type="text/babel" src="./jsx/Footer.jsx"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function App() {
+            return (<> 
+            <Header />
+            <section id="introduction">
+            </section>
+
+            <section id="otherProducts">
+            </section>
+            <Footer />
+            </>)
+        }
+        ReactDOM
+            .createRoot(document.getElementById('root'))
+            .render(<App />);
+    </script>
+
+    <!-- 以下為JS -->
+    <script>
+        //  小圖點選換大圖
+        let bigPicture=document.getElementById('picL');
+        function swap1(){
+            picL.className="bigPicture svcA-1";
+        }
+        function swap2(){
+            picL.className="bigPicture svcA-1-back";
+        }
+        function swap3(){
+            picL.className="bigPicture svcA-2";
+        }
+        
+
+        // 按鈕點擊變色
+        function changeBorder(selectedElement) {
+        // 先获取所有具有 "size" 类的元素
+        let colorElements = document.querySelectorAll('.color');
+
+        // 遍历所有元素，将它们的边框颜色重置为白色
+        colorElements.forEach(function(element) {
+            element.style.borderColor = '#ffffff';
+            element.style.backgroundColor = '#013B63'; 
+            element.style.color = '#ffffff'; 
+        });
+
+        // 将选中的元素的边框颜色设置为黑色
+        selectedElement.style.borderColor = '#FEB75D';
+        selectedElement.style.backgroundColor = '#FEB75D';
+        selectedElement.style.color = '#013B63';
+    }
+
+    
+    function changeBorderB(selectedElementB) {
+        // 先获取所有具有 "size" 类的元素
+        let sizeElements = document.querySelectorAll('.size');
+
+        // 遍历所有元素，将它们的边框颜色重置为白色
+        sizeElements.forEach(function(element) {
+            element.style.borderColor = '#ffffff';
+            element.style.backgroundColor = '#013B63'; 
+            element.style.color = '#ffffff'; 
+        });
+
+        // 将选中的元素的边框颜色设置为黑色
+        selectedElementB.style.borderColor = '#FEB75D';
+        selectedElementB.style.backgroundColor = '#FEB75D';
+        selectedElementB.style.color = '#013B63';
+    }
+    </script>
+</body>
+
+</html>
