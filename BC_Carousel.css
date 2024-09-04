@@ -32,6 +32,7 @@
   border-radius: 20px 0 20px 0;
 box-shadow:  11px 11px 24px #000E2B;
   transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+  opacity: 0;
 
   &:nth-child(1), &:nth-child(2) {
     left: 0;
@@ -48,10 +49,24 @@ box-shadow:  11px 11px 24px #000E2B;
     margin: 80px 0 0 0 ;
   }
 
-  &:nth-child(3) { left: 45%; }
-  &:nth-child(4) { left: calc(45% + (20%)); }
-  &:nth-child(5) { left: calc(45% + 2*(20%)); }
-  &:nth-child(6) { left: calc(45% + 3*(20%)); opacity: 0; }
+  &:nth-child(3) { 
+    left: 45%;
+    animation: fadeIn 0.5s 1s forwards; /* delay by 0.5s */ }
+  &:nth-child(4) { 
+    left: calc(45% + (20%));
+    animation: fadeIn 0.5s 1.5s forwards; /* delay by 0.5s */ }
+  &:nth-child(5) { 
+    left: calc(45% + 2*(20%));
+    animation: fadeIn 0.5s 2s forwards; /* delay by 0.5s */  }
+  &:nth-child(6) { 
+    left: calc(45% + 3*(20%)); 
+    animation: fadeIn 0.5s 2.5s forwards; /* delay by 0.5s */}
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 .picturesD{
   background-image: url(./images/brandConcept-background.png);

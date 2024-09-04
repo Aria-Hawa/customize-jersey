@@ -252,7 +252,6 @@ section {
     margin-right: 10px;
     -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation-delay: 0.5s;
     filter:drop-shadow(0px 0px 10px var(--Darkblue));
     
 }
@@ -294,7 +293,7 @@ section {
     color: #ffffff;
     -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation-delay: 1s;
+    animation-delay: .5s;
     line-height: 32px;
     text-shadow: 0.1em 0.1em 0.1em var(--Darkblue);
 }
@@ -936,7 +935,7 @@ animation-delay: 2s;
     width: 90%;
     height: 100%;
     z-index: 2;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .pjshape {
