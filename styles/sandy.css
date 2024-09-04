@@ -298,22 +298,6 @@ section {
     text-shadow: 0.1em 0.1em 0.1em var(--Darkblue);
 }
 
-
-
-/* 上半部 滾條 */
-#banner .roller {
-    background-image: linear-gradient(to right, var(--ToRight-Lightblue-Darkbllue));
-    width: 100%;
-    height: 6%;
-    display: flex;
-    align-items: center;
-    
-}
-
-#banner .roller p {
-    color: #ffffff;
-}
-
 /* 下半部 */
 #content {
     width: 100%;
@@ -494,18 +478,10 @@ section {
     width: fit-content;
     height: fit-content;
 
-    background-color: #000E2B;
+    background-color: var(--Orange);
     padding: 12px 40px 12px 40px;
     margin: 20px 0;
-}
-
-/* 下半部 滾條 */
-#content .roller {
-    background-image: linear-gradient(to right, var(--ToRight-Lightblue-Darkbllue));
-    width: 100%;
-    height: 37.44px;
-    display: flex;
-    align-items: center;
+    color: var(--Darkblue);
 }
 
 
