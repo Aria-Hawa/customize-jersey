@@ -65,14 +65,15 @@ a {
   --White: #ffffff;
   --Blue2: #287DA2;
 
+    /* 輔色 */
+    --Grayblue: #1e6695;
+
   /* 透明色 */
   --Lightblue_04: rgb(85, 201, 234, .4);
   --Darkblue_05: rgb(0, 14, 41, .5);
 
 
   /* 漸層色 */
-
-
   --Lightbluevar-Darkblue: var(--Lightblue)100%, var(--Darkblue)0%;
   --White-White: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .1) 30%, rgba(255, 255, 255, .4) 100%;
   --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Blue2) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
@@ -99,6 +100,10 @@ a {
   height: 80px;
   position: fixed;
   z-index: 999;
+}
+
+#fixedTopbar.processPage {
+  background-color: var(--Darkblue);
 }
 
 #fixedTopbar .topbar {
@@ -185,6 +190,10 @@ a {
   background-color: var(--Blue);
 }
 
+.processPage .dropdown a {
+  background-color: var(--Darkblue);
+}
+
 #pricePlanBtn,
 #customizeBtn {
   visibility: hidden;
@@ -202,8 +211,17 @@ a {
   background-image: linear-gradient(90deg, var(--Blue-grayblue));
 }
 
+.processPage #pricePlanBtn:hover {
+  background-image: linear-gradient(90deg, var(--Blue-Darkblue));
+}
+
 #customizeBtn:hover {
   background-image: linear-gradient(-90deg, var(--Grayblue) 0%, var(--Blue) 100%);
+}
+
+.processPage #customizeBtn:hover {
+  background-image: linear-gradient(-90deg, var(--Blue-Darkblue));
+
 }
 
 /* 內容 */
@@ -243,8 +261,7 @@ main {
 }
 
 .box_list .item {
-  /* 9/4 delete by Aria  */
-  /* position: relative; */
+  position: relative;
   display: flex;
   height: 100%;
   width: 100%;
@@ -260,22 +277,28 @@ main {
   display: none;
 } */
 
-.item figure {
+.item figure,
+.leftInfo figure {
   width: 100%;
   height: 100%;
 }
 
-.item figure img {
+.item figure img,
+.leftInfo figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 
 /* 9/4 add by Aria */
 .leftInfo {
   position: relative;
   flex: 1;
+}
 
+.leftInfo img {
+  object-fit: cover;
 }
 
 .rightInfo {
@@ -318,7 +341,7 @@ main {
 .clothe {
   position: absolute;
   left: 10%;
-  bottom: 25px;
+  bottom: 2%;
   width: 52%;
   max-width: 750px;
   height: 85vh;
@@ -357,14 +380,24 @@ main {
 
 .txtDiv {
   position: absolute;
-  bottom: 14%;
-  right: 15%;
+  bottom: 6%;
+  right: 6%;
 }
 
 .rightInfo h2 {
   font-family: "ROGFonts", sans-serif;
   font-size: 128px;
   line-height: 8.5rem;
+}
+
+@media (max-width:1440px) {
+  .txtDiv {
+    bottom: 6%;
+  }
+  .rightInfo h2 {
+    font-size: 110px;
+    line-height: 6.5rem;
+  }
 }
 
 .rightInfo h2 small {
@@ -418,20 +451,20 @@ main {
 /* 9/4 add by Aria */
 .contentBox {
   position: absolute;
-  top: 248px;
+  top: 34%;
   right: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   display: none;
-  opacity: 0;
 }
 
+
 .content.act {
-  /* opacity: 0; */
+  opacity: 0;
   position: static;
   width: 100%;
-  margin: 40px 0px;
+  margin: 4% 0px;
 }
 
 /* 9/4 add by Aria */
@@ -655,7 +688,7 @@ footer div small {
 .process__box__list {
   display: flex;
   justify-content: center;
-  margin: 50px auto;
+  margin: 4% auto;
 }
 
 .process__box__list .process_item {
@@ -1045,8 +1078,14 @@ footer div small {
 
 .Customization {
   max-width: 1280px;
-  align-items: center;
-  justify-content: center;
+  /* 9/5 delete by Aria */
+  /* align-items: center;
+  justify-content: center; */
+
+  /* 9/5 add by Aria */
+  width: 70%;
+  padding-top: 80px;
+
   margin: 0 auto;
 }
 
