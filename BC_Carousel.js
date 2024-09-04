@@ -37,3 +37,29 @@ document.addEventListener('click', activate, false);
 
 // 初次啟動自動切換
 startAutoSwitch();
+
+document.addEventListener("DOMContentLoaded", function() {
+  const btnA = document.querySelector('.btnA');
+  const btnB = document.querySelector('.btnB');
+  let toggle = true; // 用於切換狀態
+
+  // 定義函數來模擬 hover 效果
+  function simulateHover(element) {
+    element.classList.add('hover');
+    setTimeout(() => {
+      element.classList.remove('hover');
+    }, 1000); // 假設 1 秒內保持 hover 狀態
+  }
+
+  // 初次延遲 4 秒後啟動
+  setTimeout(() => {
+    setInterval(() => {
+      if (toggle) {
+        simulateHover(btnA);
+      } else {
+        simulateHover(btnB);
+      }
+      toggle = !toggle; // 切換按鈕
+    }, 4000);
+  }, 4000);
+});

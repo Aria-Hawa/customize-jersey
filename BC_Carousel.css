@@ -1,22 +1,21 @@
+.roller {
+  position: absolute;
+  z-index: 999;
+  /* bottom: 0%; */
+  height: 6%;
+  width: 100%;
+  background-color: black;
+  bottom: 0px;
+}
 
+.slider {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  margin-top: 80px;
+  overflow: hidden;
+}
 
-  .roller{
-    position: absolute;
-    z-index: 999;
-    /* bottom: 0%; */
-    height: 6%;
-    width: 100%;
-    background-color: black;
-    bottom: 0px;
-  }
-
-  .slider{
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    margin-top: 80px;
-    overflow: hidden;
-  }
 .itemImg {
   /* width: 225px;
   height: 320px; */
@@ -30,11 +29,12 @@
   background-position: center;
   background-size: cover;
   border-radius: 20px 0 20px 0;
-box-shadow:  11px 11px 24px #000E2B;
+  box-shadow: 11px 11px 24px #000E2B;
   transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
   opacity: 0;
 
-  &:nth-child(1), &:nth-child(2) {
+  &:nth-child(1),
+  &:nth-child(2) {
     left: 0;
     top: 0;
     width: 100%;
@@ -46,21 +46,31 @@ box-shadow:  11px 11px 24px #000E2B;
     overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 80px 0 0 0 ;
+    margin: 80px 0 0 0;
   }
 
-  &:nth-child(3) { 
+  &:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6){
+    animation: fadeIn 1.5s 1.25s forwards;
+  }
+  &:nth-child(3) {
     left: 45%;
-    animation: fadeIn 0.5s 1s forwards; /* delay by 0.5s */ }
-  &:nth-child(4) { 
+    /* delay by 0.5s */
+  }
+
+  &:nth-child(4) {
     left: calc(45% + (20%));
-    animation: fadeIn 0.5s 1.5s forwards; /* delay by 0.5s */ }
-  &:nth-child(5) { 
+    /* delay by 0.5s */
+  }
+
+  &:nth-child(5) {
     left: calc(45% + 2*(20%));
-    animation: fadeIn 0.5s 2s forwards; /* delay by 0.5s */  }
-  &:nth-child(6) { 
-    left: calc(45% + 3*(20%)); 
-    animation: fadeIn 0.5s 2.5s forwards; /* delay by 0.5s */}
+    /* delay by 0.5s */
+  }
+
+  &:nth-child(6) {
+    left: calc(45% + 3*(20%));
+    /* delay by 0.5s */
+  }
 }
 
 @keyframes fadeIn {
@@ -68,23 +78,32 @@ box-shadow:  11px 11px 24px #000E2B;
     opacity: 1;
   }
 }
-.picturesD{
+
+.picturesD {
   background-image: url(./images/brandConcept-background.png);
 }
-.picturesB{
+
+.picturesB {
   background-image: url(./images/brandConcept-background2.png);
 }
-.picturesC{
+
+.picturesC {
   background-image: url(./images/brandConcept-background3.png);
 }
-.picturesA{
+
+.picturesA {
   background-image: url(./images/brandConcept-background4.png);
 }
-.picturesE{
+
+.picturesE {
   background-image: url(./images/brandConcept-background5.png);
 }
 
 .arrowNav {
+  
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation-delay: 2.5s;
   position: absolute;
   bottom: 2rem;
   left: 50%;
@@ -93,36 +112,102 @@ box-shadow:  11px 11px 24px #000E2B;
   z-index: 999;
   user-select: none;
   display: flex;
-  
+
 }
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .btnA,
-.btnB{
+.btnB {
   width: 35px;
   height: 35px;
-background-position: center;
-/* background-size: contain; */
-background-repeat: no-repeat;}
+  background-position: center;
+  /* background-size: contain; */
+  background-repeat: no-repeat;
 
-.btnA{
-  background-image: url(./images/brandConcept_arrowL.svg);
-  }
-.btnB{
-background-image: url(./images/brandConcept_arrowR.svg);
+  transition: 0.35s;
 }
 
-.vserTest{
-  flex:1;
-    /* margin: 0 0 0 50; */
-    display: flex;
-    /* justify-content: center;
+.btnA {
+  background-image: url(./images/brandConcept_arrowL.svg);
+  animation: btnA-hover 0.5s forwards; /* 加入動畫效果 */
+  animation-delay: 3s; /* 1秒延遲，等arrowGroup動畫結束後再開始 */
+}
+
+.btnB {
+  background-image: url(./images/brandConcept_arrowR.svg);
+  animation: btnB-hover 0.5s forwards; /* 加入動畫效果 */
+  animation-delay: 4s; /* 1秒延遲，等arrowGroup動畫結束後再開始 */
+}
+@keyframes btnA-hover {
+  0% {
+      opacity: 0;
+  }
+  20% {
+      opacity: 1;
+      background-image: url(./images/brandConcept_arrowL-1.svg); /* 模擬滑過效果 */
+  }
+  90% {
+      opacity: 1;
+      background-image: url(./images/brandConcept_arrowL-1.svg); /* 模擬滑過效果 */
+  }
+}
+
+@keyframes btnB-hover {
+  0% {
+      opacity: 0;
+  }
+  20% {
+      opacity: 1;
+      background-image: url(./images/brandConcept_arrowR-1.svg); /* 模擬滑過效果 */
+  }
+  90% {
+      opacity: 1;
+      background-image: url(./images/brandConcept_arrowR-1.svg); /* 模擬滑過效果 */
+  }
+}
+
+.btnA:hover {
+  background-image: url(./images/brandConcept_arrowL-1.svg);
+}
+
+.btnB:hover {
+  background-image: url(./images/brandConcept_arrowR-1.svg);
+}
+
+.vserTest {
+  flex: 1;
+  /* margin: 0 0 0 50; */
+  display: flex;
+  /* justify-content: center;
     align-items: center; */
-  position:absolute;
-  z-index: 800;
+  position: absolute;
+  z-index: 15;
   flex-direction: column;
-  top:45%;
-  left:9%;
-  
-  
+  top: 45%;
+  left: 20%;
+}
+
+.vserTestbox {
+  width: 45%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
 }
 
 /* 
