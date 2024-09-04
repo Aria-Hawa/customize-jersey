@@ -233,11 +233,22 @@ function changemenu1() {
         }
     });
 
-    // 滑动置顶部
+    // // 滑动置顶部
+    // $(".arrow").click(function() {
+    //     $('html, body').animate({scrollTop: 418}, 1000);
+    //     $(this).hide(); // 点击后隐藏 .arrow 按钮
+    // });
+
     $(".arrow").click(function() {
-        $('html, body').animate({scrollTop: 418}, 1000);
-        $(this).hide(); // 点击后隐藏 .arrow 按钮
-    });
+    // 計算目標位置：頁面高度的 50%
+    var scrollPosition = $(document).height() * 0.4;
+
+    // 使用動畫將頁面滑動到計算的百分比位置
+    $('html, body').animate({scrollTop: scrollPosition}, 1000);
+
+    // 點擊後隱藏 .arrow 按鈕
+    $(this).hide();
+});
 
     // 定义检查箭头可见性的函数
     function checkArrowVisibility() {
