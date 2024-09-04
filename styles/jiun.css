@@ -321,12 +321,6 @@ main {
 /* 9/4 add by Aria */
 
 
-
-
-
-
-
-
 /* footer區 */
 footer {
   background-color: var(--Darkblue);
@@ -449,7 +443,7 @@ footer div small {
 #content {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
+  background-color: var(--Darkblue);
   display: flex;
   flex-direction: column;
 }
@@ -459,7 +453,7 @@ footer div small {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  margin-left: 72px;
+  /* margin-left: 72px; */
   align-content: flex-end;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -517,7 +511,7 @@ footer div small {
 .process__box__list {
   display: flex;
   justify-content: center;
-  margin: 50px 72px;
+  margin: 50px auto;
 }
 
 .process__box__list .process_item {
@@ -575,14 +569,11 @@ footer div small {
 @media (max-width: 820px) {
 
   #content .Introduction {
-    border: 2px solid #FC8D00;
     margin: 0;
     justify-content: space-around
   }
 
-  .englishtitle {
-    border: #55c9ea 2px solid;
-  }
+
 
   .englishtitle h2 {
     font-size: 40px;
@@ -662,7 +653,7 @@ footer div small {
 #Dimensions_content {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(90deg, var(--Blue-Darkblue));
+  background-color: var(--Darkblue);
   display: flex;
   flex-direction: column;
 }
@@ -674,7 +665,6 @@ footer div small {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-right: 72px;
   justify-content: flex-end;
   flex-wrap: wrap;
   height: 19vh;
@@ -733,9 +723,10 @@ footer div small {
 /* Dimensions圖 */
 .Dimensions__box__list {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
-  padding: 50px 72px 0px 72px;
+  margin: auto;
 
 }
 
@@ -760,7 +751,8 @@ footer div small {
 .sizetext {
   align-items: center;
   font-size: 18px;
-  margin: 40px auto
+  text-align: center;
+  margin-top: 40px;
 }
 
 .sizetext p {
@@ -811,31 +803,16 @@ footer div small {
     gap: 10px;
   }
 
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
 
 
 
 /* Precautions*/
 
-
 #Precautions_content {
   width: 100%;
   height: 100%;
-  background-color: #000E2B;
+  background-color: var(--Darkblue);
   display: flex;
   flex-direction: column;
 }
@@ -845,7 +822,7 @@ footer div small {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-left: 72px;
+  /* margin-left: 72px; */
   align-content: flex-end;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -876,7 +853,7 @@ footer div small {
   position: relative;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 50px 72px;
+  margin: 50px auto;
 }
 
 .Precautions__box__list .Precautions_item {
@@ -884,7 +861,7 @@ footer div small {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 30px;
-  width: 425px;
+  width: 410px;
   position: relative;
 }
 
@@ -898,7 +875,7 @@ footer div small {
   left: 30px;
 }
 
-.Precautions_item img {
+.Precautions_item {
   border: 1px solid #ffffff;
   border-radius: 15px;
   height: 200px;
@@ -922,6 +899,16 @@ footer div small {
 
 }
 
+.Customization {
+  max-width: 1280px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
+
+
 /* 9/4 add by Aria */
 @keyframes moveInfinite {
   0% {
@@ -935,12 +922,15 @@ footer div small {
   20% {
     transform: translateX(15px);
   }
+
   40% {
     transform: translateX(-10px);
   }
+
   60% {
     transform: translateX(5px);
   }
+
   100% {
     transform: translateX(0px);
   }
