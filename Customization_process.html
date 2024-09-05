@@ -9,12 +9,11 @@
 </head>
 
 <body>
-  <header id="fixedTopbar" class="aaa">
+  <header id="fixedTopbar" class="processPage">
     <div class="topbar">
       <h1><a href="./index.html"><img src="./images/logo.png" alt="VSER客製化球衣"></a></h1>
       <div class="menuList">
         <nav class="menuItem">
-
           <ul>
             <li><a href="./brandConcept.html">品牌理念</a></li>
             <li><a href="./pojectResults.html">專案成果</a></li>
@@ -24,8 +23,12 @@
           </ul>
         </nav>
         <div class="rightList">
-          <a href="#" class="customizeBtn"></a>
-          <a href="#" class="cartBtn"><img src="./images/icon-cart.png" alt="cartIcon"></a>
+          <div class="dropdown">
+            <a href="#" id="RLbtn">訂製專區</a>
+            <a href="./priceplan.html" id="pricePlanBtn">價格方案</a>
+            <a href="./customize.html" id="customizeBtn">球衣模擬</a>
+          </div>
+          <a href="#" class="cartBtn"><img src="./images/cartBtnICON.svg" alt="cartIcon"></a>
         </div>
       </div>
     </div>
@@ -102,35 +105,35 @@ process -->
     <!-- Dimensions -->
     <section id="Dimensions_content">
 
-    <div class="Customization">
-      <div class="Dimensions_Introduction">
+      <div class="Customization">
+        <div class="Dimensions_Introduction">
 
-        <div class="Dimensions_englishtitle">
-          <h2>Dimensions</h2>
+          <div class="Dimensions_englishtitle">
+            <h2>Dimensions</h2>
+          </div>
+          <div class="Dimensions_chinsestitle">
+            <h4>尺寸測量</h4>
+          </div>
+
         </div>
-        <div class="Dimensions_chinsestitle">
-          <h4>尺寸測量</h4>
+
+        <div class="Dimensions__box__list">
+          <article class="size-1">
+            <figure><img src="./images/Dimensions-1.png" alt=""></figure>
+          </article>
+
+          <article class="size-2">
+            <figure><img src="./images/Dimensions-3.png" alt=""></figure>
+            <figure><img src="./images/Dimensions-2.png" alt=""></figure>
+          </article>
         </div>
-
+        <div class="sizetext">
+          <p>* 尺寸表僅供參考，全部平鋪均為手工測量，
+            因測量方式或車縫關係，２公分內為誤差範圍。</p>
+          <p>* 運動褲的褲頭因有鬆緊帶的關係，
+            挑選尺寸時請以褲長為優先依據。</p>
+        </div>
       </div>
-
-      <div class="Dimensions__box__list">
-        <article class="size-1">
-          <figure><img src="./images/Dimensions-1.png" alt=""></figure>
-        </article>
-
-        <article class="size-2">
-          <figure><img src="./images/Dimensions-3.png" alt=""></figure>
-          <figure><img src="./images/Dimensions-2.png" alt=""></figure>
-        </article>
-      </div>
-      <div class="sizetext">
-        <p>* 尺寸表僅供參考，全部平鋪均為手工測量，
-          因測量方式或車縫關係，２公分內為誤差範圍。</p>
-        <p>* 運動褲的褲頭因有鬆緊帶的關係，
-          挑選尺寸時請以褲長為優先依據。</p>
-      </div>
-    </div>
 
     </section>
 
@@ -144,62 +147,62 @@ process -->
           <div class="englishtitle">
             <h2>Precautions</h2>
           </div>
-  
+
           <div class="chinsestitle">
             <h4>注意事項</h4>
           </div>
-  
+
         </div>
         <div class="Precautions__box__list">
           <article class="Precautions_item">
-  
+
             <div class="content">
               <p>球衣設計上應注意事項</p>
             </div>
           </article>
-  
+
           <article class="Precautions_item">
-  
+
             <div class="content">
               <p>尺寸更改與退換貨規定</p>
             </div>
           </article>
-  
+
           <article class="Precautions_item">
-  
+
             <div class="content">
               <p>球衣洗滌與保存</p>
             </div>
           </article>
-  
+
           <article class="Precautions_item">
-  
+
             <div class="content">
               <p>下單後的訂金與付款時程</p>
             </div>
           </article>
-  
+
           <article class="Precautions_item">
-  
+
             <div class="content">
               <p>製作時間與寄送時間</p>
             </div>
           </article>
-  
+
           <article class="Precautions_item">
-  
+
             <div class="content">
               <p>另有其他問題 請聯絡我們</p>
             </div>
           </article>
-  
+
         </div>
-        </div>
-        </div>
-  
-      
       </div>
-      </section>
+      </div>
+
+
+      </div>
+    </section>
   </main>
 
 
@@ -234,7 +237,19 @@ process -->
 
 
 
-
+  <!-- 設定jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      // fixedTopbar 訂製專區下拉選單
+      $('#RLbtn').click(function () {
+        $('#pricePlanBtn').toggleClass('show');
+        $('#customizeBtn').toggleClass('show');
+        $('#RLbtn').toggleClass('show');
+      });
+    });
+  </script>
 
 </body>
 

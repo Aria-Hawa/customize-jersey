@@ -82,7 +82,7 @@ a {
 
     /* 漸層色 */
     --White-White: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .1) 30%, rgba(255, 255, 255, .4) 100%;
-    --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Lightblue) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
+    --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, #2a9dbd 50%, var(--Blue) 75%, var(--Darkblue) 100%;
     --ToRight-White-Orange: #fff 0%, var(--Orange) 47%, var(--Darkorange) 90%;
     --ToRight-Lightblue-Darkbllue: var(--Lightblue) 5%, var(--Blue) 28%, var(--Darkblue) 61%;
     --Lightblue-White: var(--Lightblue) 0%, #fff 100%;
@@ -134,12 +134,12 @@ a {
 
 .backgroundCarousel {
     background-image: url(../images/carousel-img-1back.png);
-    /* background-image: url(../images/carousel-img-2back.png); */
     position: absolute;
     z-index: 68;
     bottom: 0;
     right: 0;
     width: 100%;
+    max-width: 900px;
     height: 96vh;
     opacity: 60%;
     background-repeat: no-repeat;
@@ -371,6 +371,7 @@ a {
 #customizeBtn:hover {
     background-image: linear-gradient(-90deg, var(--Grayblue) 0%, var(--Blue) 100%);
 }
+
 /* 以上fixedTopbar區 */
 
 
@@ -682,22 +683,37 @@ a {
     width: 100%;
 }
 
-.DirBtn img {
+.DirBtn a {
     width: 40px;
     height: 40px;
     background-color: white;
-    mask-image: url(../images/directionBtn.png);
     mask-repeat: no-repeat;
     mask-size: contain;
     mask-position: center;
 }
 
-.DirBtn img:hover {
+.UpBtn {
+    mask-image: url(../images/directionBtn-U.png);
+}
+
+.LeftBtn {
+    mask-image: url(../images/directionBtn-L.png);
+}
+
+.RightBtn {
+    mask-image: url(../images/directionBtn-R.png);
+}
+
+.DownBtn {
+    mask-image: url(../images/directionBtn-D.png);
+}
+
+.DirBtn a:hover {
     background-color: var(--Orange);
     cursor: pointer;
 }
 
-.DirBtn img:active {
+.DirBtn a:active {
     background-color: var(--Darkorange);
 }
 
@@ -1246,8 +1262,9 @@ hr {
 
 .table {
     margin: 24px 0px;
-    width: 60%;
+    width: 70%;
     text-align: center;
+    padding-right: 10%;
 }
 
 .tableCaption {
@@ -1404,11 +1421,12 @@ td {
 }
 
 .pageBottom {
-    width: 60%;
+    width: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
+    padding-right: 10%;
 }
 
 .pageBottom #addStyle {
@@ -1418,7 +1436,7 @@ td {
     justify-content: space-around;
     align-items: center;
     padding: 16px;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 15px;
     font-family: "ROGFonts", sans-serif;
     font-size: 16px;
@@ -1876,6 +1894,7 @@ td {
 
 #basicInformation #userInfo {
     width: 70%;
+    max-width: 927px;
     height: fit-content;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;

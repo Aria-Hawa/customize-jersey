@@ -65,14 +65,15 @@ a {
   --White: #ffffff;
   --Blue2: #287DA2;
 
+    /* 輔色 */
+    --Grayblue: #1e6695;
+
   /* 透明色 */
   --Lightblue_04: rgb(85, 201, 234, .4);
   --Darkblue_05: rgb(0, 14, 41, .5);
 
 
   /* 漸層色 */
-
-
   --Lightbluevar-Darkblue: var(--Lightblue)100%, var(--Darkblue)0%;
   --White-White: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .1) 30%, rgba(255, 255, 255, .4) 100%;
   --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Blue2) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
@@ -84,9 +85,10 @@ a {
   --Blue-Darkblue: #287DA2 0%, var(--Blue) 40%, var(--Darkblue) 80%;
   --Blue-Darkblue-Blue: var(--Blue) 5%, var(--Darkblue) 55%, var(--Blue) 85%;
   --Darkblue-Blue: var(--Darkblue) 38%, var(--Blue) 100%;
-  --Lightblue-White: var(--Lightblue)0%, var(--White)100;
+  --Lightblue-White: var(--Lightblue)0%, var(--White)100%;
   --Darkblue-blue: var(--Blue) 0%, var(--Darkblue) 100%;
   --Blue-grayblue: var(--Grayblue) 0%, var(--Blue) 100%;
+
 }
 
 
@@ -98,6 +100,10 @@ a {
   height: 80px;
   position: fixed;
   z-index: 999;
+}
+
+#fixedTopbar.processPage {
+  background-color: var(--Darkblue);
 }
 
 #fixedTopbar .topbar {
@@ -184,6 +190,10 @@ a {
   background-color: var(--Blue);
 }
 
+.processPage .dropdown a {
+  background-color: var(--Darkblue);
+}
+
 #pricePlanBtn,
 #customizeBtn {
   visibility: hidden;
@@ -201,8 +211,17 @@ a {
   background-image: linear-gradient(90deg, var(--Blue-grayblue));
 }
 
+.processPage #pricePlanBtn:hover {
+  background-image: linear-gradient(90deg, var(--Blue-Darkblue));
+}
+
 #customizeBtn:hover {
   background-image: linear-gradient(-90deg, var(--Grayblue) 0%, var(--Blue) 100%);
+}
+
+.processPage #customizeBtn:hover {
+  background-image: linear-gradient(-90deg, var(--Blue-Darkblue));
+
 }
 
 /* 內容 */
@@ -235,33 +254,182 @@ main {
   position: absolute;
   z-index: 10;
   font-family: "ROGFonts", sans-serif;
-  font-size: 38px;
+  font-size: 50px;
   top: 90px;
-  left: calc(50% - 157px);
+  left: calc(50% - 202px);
   letter-spacing: .2rem;
 }
 
 .box_list .item {
   position: relative;
   display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* 9/4 add by Aria */
+.item.bigsmall {
+  animation: bigsmall 1.2s ease-in-out;
+}
+
+/* #price-2,
+#price-3 {
+  display: none;
+} */
+
+.item figure,
+.leftInfo figure {
   width: 100%;
   height: 100%;
 }
 
-
-.item figure {
-  width: 100%;
-  height: 100%;
-}
-
-.item figure img {
+.item figure img,
+.leftInfo figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
+}
+
+/* 9/4 add by Aria */
+.leftInfo {
+  position: relative;
+  flex: 1;
+}
+
+.leftInfo img {
+  object-fit: cover;
+}
+
+.rightInfo {
+  position: relative;
+  width: 65%;
+}
+
+.rightInfo h4 {
+  z-index: 10;
+  width: 300px;
+  line-height: 4rem;
+  text-align: center;
+  letter-spacing: 3px;
+  /* border: 1px solid pink; */
+  font-weight: 500;
+  font-size: 24px;
+  text-indent: 3px;
 }
 
 
-.box_list .content {
+.rightInfo .leftTag {
+  position: absolute;
+  left: -50px;
+  top: 10%;
+  padding-left: 52px;
+}
+
+.leftTag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: linear-gradient(308deg, var(--Lightblue-Lightblue));
+  transform: skewX(40deg);
+}
+
+.clothe {
+  position: absolute;
+  left: 10%;
+  bottom: 2%;
+  width: 52%;
+  max-width: 750px;
+  height: 85vh;
+  object-fit: contain;
+}
+
+.rightInfo .rightTag {
+  position: absolute;
+  right: -50px;
+  bottom: 56%;
+  padding-right: 200px;
+  width: 500px;
+}
+
+.rightTag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: linear-gradient(48deg, var(--Lightblue-Lightblue));
+  transform: skewX(-40deg);
+}
+
+.short {
+  position: absolute;
+  right: 20%;
+  bottom: 0px;
+  width: 40%;
+  max-width: 588px;
+  object-fit: contain;
+  height: 65%;
+}
+
+.txtDiv {
+  position: absolute;
+  bottom: 6%;
+  right: 6%;
+}
+
+.rightInfo h2 {
+  font-family: "ROGFonts", sans-serif;
+  font-size: 128px;
+  line-height: 8.5rem;
+}
+
+@media (max-width:1440px) {
+  .txtDiv {
+    bottom: 6%;
+  }
+  .rightInfo h2 {
+    font-size: 110px;
+    line-height: 6.5rem;
+  }
+}
+
+.rightInfo h2 small {
+  font-size: 50px;
+}
+
+.textShadow {
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
+}
+
+.priceTxt {
+  text-align: end;
+}
+
+
+.content h2 {
+  letter-spacing: .2rem;
+  font-size: 18px;
+}
+
+/* 9/4 delete by Aria */
+/* .box_list h3 {
+  font-family: "ROGFonts", sans-serif;
+} */
+
+.content p {
+  letter-spacing: .2rem;
+  font-size: 18px;
+}
+
+.content {
   /* 9/4 change by Aria */
   /* display: inline-flex; */
   display: flex;
@@ -275,9 +443,36 @@ main {
 }
 
 /* 9/4 add by Aria */
-.box_list .content:hover {
+.content:hover {
   animation: moveInfinite 1.2s ease-in-out infinite;
 }
+
+
+/* 9/4 add by Aria */
+.contentBox {
+  position: absolute;
+  top: 34%;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+
+.content.act {
+  opacity: 0;
+  position: static;
+  width: 100%;
+  margin: 4% 0px;
+}
+
+/* 9/4 add by Aria */
+.content.origin {
+  /* display: none; */
+}
+
+
 
 /* 9/4 delete by Aria */
 /* .box_list .title {
@@ -302,24 +497,6 @@ main {
   width: 12px;
   height: 24px;
 }
-
-.box_list h2 {
-  letter-spacing: .2rem;
-  font-size: 18px;
-}
-
-/* 9/4 delete by Aria */
-/* .box_list h3 {
-  font-family: "ROGFonts", sans-serif;
-} */
-
-.box_list p {
-  letter-spacing: .2rem;
-  font-size: 18px;
-}
-
-/* 9/4 add by Aria */
-
 
 /* footer區 */
 footer {
@@ -511,7 +688,7 @@ footer div small {
 .process__box__list {
   display: flex;
   justify-content: center;
-  margin: 50px auto;
+  margin: 4% auto;
 }
 
 .process__box__list .process_item {
@@ -901,8 +1078,14 @@ footer div small {
 
 .Customization {
   max-width: 1280px;
-  align-items: center;
-  justify-content: center;
+  /* 9/5 delete by Aria */
+  /* align-items: center;
+  justify-content: center; */
+
+  /* 9/5 add by Aria */
+  width: 70%;
+  padding-top: 80px;
+
   margin: 0 auto;
 }
 
@@ -933,5 +1116,19 @@ footer div small {
 
   100% {
     transform: translateX(0px);
+  }
+}
+
+@keyframes bigsmall {
+  0% {
+    transform: scale(1);
+  }
+
+  35% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1.1);
   }
 }
