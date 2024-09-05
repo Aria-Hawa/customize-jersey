@@ -1844,15 +1844,14 @@ td {
 
 #paymentForm,
 #orderInfo {
-    padding: 0px 20px;
+    padding: 15px 20px;
 }
 
 #paymentForm div {
-    margin: 20px 0px;
+    padding: 15px 0px;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 20px;
-    border-bottom: 1px solid white;
+    align-items: center;
 }
 
 #paymentForm select {
@@ -1862,6 +1861,8 @@ td {
     flex-grow: 1;
     height: 2rem;
     margin-left: 20px;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 16px;
 }
 
 #paymentForm option {
@@ -1873,8 +1874,6 @@ td {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid white;
 }
 
 .eachOrder .quantity {
@@ -1885,13 +1884,18 @@ td {
     margin-right: 20px;
 }
 
+#orderInfo > div:last-child {
+    padding: 15px 0px;
+    border-top: 1px solid white;
+}
+
 
 #AllOrder .contentMoney {
     padding: 0px 20px
 }
 
 #AllOrder .contentMoney:last-child {
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 /* basicInformation網頁區 */
