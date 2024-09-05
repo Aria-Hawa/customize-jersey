@@ -114,6 +114,12 @@ a {
   padding: 0px 80px;
 }
 
+@media (max-width: 1080px){
+  #fixedTopbar .topbar {
+      padding: 0px 40px;
+  }
+}
+
 .topbar h1 {
   min-width: 129px;
 }
@@ -268,15 +274,6 @@ main {
 }
 
 /* 9/4 add by Aria */
-.item.bigsmall {
-  animation: bigsmall 1.2s ease-in-out;
-}
-
-/* #price-2,
-#price-3 {
-  display: none;
-} */
-
 .item figure,
 .leftInfo figure {
   width: 100%;
@@ -295,6 +292,7 @@ main {
 .leftInfo {
   position: relative;
   flex: 1;
+  display: none;
 }
 
 .leftInfo img {
