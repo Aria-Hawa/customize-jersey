@@ -492,9 +492,7 @@ section {
     background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
     width: 100%;
     height: 100vh;
-
 }
-
 /* 背景藍色色塊 */
 .blueBlock {
     position: absolute;
@@ -586,8 +584,6 @@ section {
       opacity: 1;
     }
   }
-  
-
 /* 長方形小選單 */
 .rectangularMenu .menu-1,
 .rectangularMenu .menu-2 {
@@ -625,7 +621,6 @@ section {
 .rectangularMenu .menu-1 .figure {
     background-image: url(../images/projectResults_rectangleThumbnail1.png);
 }
-
 @media (max-width:1024px) {
     .rectangularMenu{
         height: 20%;
@@ -745,10 +740,11 @@ section {
     height: 100%;
     /* background-color: #e11212; */
 }
-@media (max-width:1024px) {
+@media(max-witch:1024px){
     .pjTitle{
-    width:39.5%;
+        width: 37.3%;
     }
+    
 }
 
 /* 浮水印 */
@@ -868,19 +864,25 @@ section {
 .pjWord,
 .pjWord1,
 .pjWord2{
-    position: relative;
-    right: 0;
-    width: 67%;
+    position: absolute;
+    right: 80px;
+    width: 57%;
     height: 100%;
-    margin-right: 80px;
 }
+
 @media (max-width:1024px){
+    .pjWord,.pjWord1,.pjWord2{
+        width: 63.7%;
+        margin-right: 40px;
+    }
+}
+/* @media (max-width:1024px){
     .pjWord,
     .pjWord1{
         right: -27px;
         width: 57%;
     }
-}
+} */
 .pjWord2{
     -webkit-animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -896,9 +898,17 @@ animation-delay: 2s;
     position: absolute;
     color: #ffffff;
     z-index: 4;
-    bottom: 20%;
-    right: 0px;
+    top: 65%;
     letter-spacing: .08rem;
+    text-align: center; /*文字置中*/
+    width: 100%;
+}
+
+@media (max-width:1024px){
+    .pjWord p,.pjWord1 p,.pjWord2 p{
+        right: 50%;
+        transform: translate(50%);
+    }
 }
 .pbText p{
     letter-spacing: .08rem;
