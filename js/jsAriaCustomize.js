@@ -85,6 +85,11 @@ $(function () {
         $('.textsizeRange').toggleClass('show');
     });
 
+    // 按下colorItem後先讓#frontSide狀態selected
+    $('#colorItem').click(function () {
+        $('#frontSide').addClass('selected');
+    });
+
     // 按下#frontSide
     // 1. #backColorSpace加入.hiden類別
     // 2. #frontSideSpace加入.show類別
@@ -412,12 +417,18 @@ $(function () {
             return element.style.display == 'block';
         });
         if (getBlockSvg.length > 0) {
-            countSvg = countSvg + 1;
             // 使用 prop() 取得 outerHTML
             let svgData = getBlockSvg.prop('outerHTML');
             $('#popup').fadeIn();
+            $('#showSvg').html(svgData);
             $('#chekBtn').click(function () {
+                countSvg = countSvg + 1;
+                let svgName = $(this).siblings('#svgName').val()
+                let svgDescribe = $(this).siblings('#svgDescribe').val();
                 localStorage.setItem(`svgData${countSvg}`, svgData);
+                localStorage.setItem(`svgName${countSvg}`, svgName);
+                localStorage.setItem(`svgDescribe${countSvg}`, svgDescribe);
+
             });
         } else {
             alert('您尚未開始設計喔~');

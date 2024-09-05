@@ -29,7 +29,8 @@
                         <a href="./priceplan.html" id="pricePlanBtn">價格方案</a>
                         <a href="./customize.html" id="customizeBtn">球衣模擬</a>
                     </div>
-                    <a href="./chooseProject.html" class="cartBtn"><img src="./images/cartBtnICON.svg" alt="cartIcon"></a>
+                    <a href="./chooseProject.html" class="cartBtn"><img src="./images/cartBtnICON.svg"
+                            alt="cartIcon"></a>
                 </div>
             </div>
         </div>
@@ -1284,45 +1285,18 @@
             <div id="popup">
                 <div id="popup-content">
                     <div id="popup-title">
-                        <h3>YOUR DESIGN</h3>
+                        <h3>SAVE DESIGN</h3>
                         <button id="closePopup" class="chooseProjectBtn">X</button>
                     </div>
                     <div id="innerContent">
-                        <div class="userDesign" id="emptyUserDesign" style="display: none;">
-                            <img src="" alt="">
-                            <div>
-                                <h3></h3>
-                                <p>單價: NT: $<span style="font-size: 16px;"></span></p>
-                                <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
-                            </div>
-                        </div>
-                        <div class="userDesign">
-                            <img src="./images/projectResults1_pjshape1.png" alt="">
-                            <div>
-                                <h3>球衣樣式名稱2</h3>
-                                <p>單價: NT: $<span style="font-size: 16px;">2,500</span></p>
-                                <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
-                            </div>
-                        </div>
-                        <div class="userDesign">
-                            <img src="./images/projectResults_pjshape2.png" alt="">
-                            <div>
-                                <h3>球衣樣式名稱3</h3>
-                                <p>單價: NT: $<span style="font-size: 16px;">3,000</span>
-                                </p>
-                                <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
-                            </div>
-                        </div>
-                        <div class="userDesign">
-                            <img src="./images/projectResults_pjshape4.png" alt="">
-                            <div>
-                                <h3>球衣樣式名稱4</h3>
-                                <p>單價: NT: $<span style="font-size: 16px;">1,980</span>
-                                </p>
-                                <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
-                            </div>
-                        </div>
-                        <button id="chekBtn" class="chooseProjectBtn">確認</button>
+                        <figure id="showSvg"></figure>
+                        <form id="nameSvg">
+                            <label for="">命名：</label>
+                            <input type="text" title="命名球衣樣式欄位" required id="svgName">
+                            <label for="">描述：</label>
+                            <textarea name="" id="svgDescribe" title="描述樣式欄位" rows="4"  maxlength="60"></textarea>
+                            <button id="chekBtn" class="chooseProjectBtn">確認</button>
+                        </form>
                     </div>
                 </div>
             </div>
