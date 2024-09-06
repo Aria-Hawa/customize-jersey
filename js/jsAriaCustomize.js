@@ -411,7 +411,7 @@ $(function () {
     });
 
     // 按下儲存按鈕 => localStorage.setItem
-    let countSvg = 0;
+    // let countSvg = 0;
     $('#saveOption').click(function () {
         let getBlockSvg = $(document).find('.KeyArea svg').filter((index, element) => {
             return element.style.display == 'block';
@@ -422,13 +422,17 @@ $(function () {
             $('#popup').fadeIn();
             $('#showSvg').html(svgData);
             $('#chekBtn').click(function () {
-                countSvg = countSvg + 1;
-                let svgName = $(this).siblings('#svgName').val()
-                let svgDescribe = $(this).siblings('#svgDescribe').val();
-                localStorage.setItem(`svgData${countSvg}`, svgData);
-                localStorage.setItem(`svgName${countSvg}`, svgName);
-                localStorage.setItem(`svgDescribe${countSvg}`, svgDescribe);
-
+                // countSvg = countSvg + 1;
+                let svgName = $(this).siblings('#svgName').val();
+                if (svgName != '') {
+                    let svgDescribe = $(this).siblings('#svgDescribe').val();
+                    let svgObject = {
+                        img: svgData,
+                        name: svgName,
+                        Describe: svgDescribe,
+                    };  
+                    console.log(svgObject);
+                };
             });
         } else {
             alert('您尚未開始設計喔~');

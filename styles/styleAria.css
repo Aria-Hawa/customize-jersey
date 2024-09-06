@@ -1678,7 +1678,7 @@ td {
     align-items: center;
     margin-top: 58px;
     overflow: auto;
-    min-height: 100%;
+    /* min-height: 100%; */
 }
 
 #basicInformation #popup-content {
