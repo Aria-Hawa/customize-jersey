@@ -88,6 +88,7 @@ a {
     --Lightblue-White: var(--Lightblue) 0%, #fff 100%;
     --Darkblue-blue: var(--Blue) 0%, var(--Darkblue) 100%;
     --Blue-grayblue: var(--Grayblue) 0%, var(--Blue) 100%;
+    --Orange-White: var(--Orange) 0%, #fff 100%;
 }
 
 /* home區 */
@@ -225,8 +226,8 @@ a {
 }
 
 .sloganNbtn a:hover {
-    transition: .4s all cubic-bezier(0, 0, 0.05, 0.92);
-    transform: translateX(30px);
+    transition: .4s all cubic-bezier(0, 0.38, 0, 0.88);
+    transform: translateX(60px);
 }
 
 /* 以下8/20新增，測試before光條 */
@@ -288,7 +289,7 @@ a {
     padding: 0px 80px;
 }
 
-@media (max-width: 1080px){
+@media (max-width: 1080px) {
     #fixedTopbar .topbar {
         padding: 0px 40px;
     }
@@ -320,6 +321,14 @@ a {
     letter-spacing: 2px;
 }
 
+.menuItem ul li a:hover {
+    color: var(--Orange);
+}
+
+.menuItem ul li a:active {
+    color: var(--Darkorange);
+}
+
 #fixedTopbar .menuList .rightList {
     display: flex;
     align-items: center;
@@ -327,37 +336,55 @@ a {
 }
 
 .cartBtn {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/cartBtnICON.svg);
+}
+
+.cartBtn:hover {
+    transition: 0.5s;
+    background-image: url(../images/cartBtnICON_1.svg);
 }
 
 .rightList .dropdown {
     margin-right: 20px;
     position: absolute;
-    top: 6px;
+    top: 0px;
     right: 44px;
 }
 
 .dropdown #RLbtn {
     position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-indent: 1px;
 }
 
 .dropdown #RLbtn::after {
     content: '';
     position: absolute;
     z-index: -1;
-    top: -1px;
-    right: -1px;
+    top: -2px;
+    right: -2px;
     width: 100%;
     height: 100%;
     background-color: transparent;
     border: 2px solid transparent;
-    border-image: linear-gradient(0deg, var(--Lightblue-White)) 1 round;
+    border-image: linear-gradient(135deg, var(--Lightblue-White)) 1 round;
     transition: all .5s ease-in-out;
+}
+
+.dropdown #RLbtn:hover::after {
+    transition: all 0.5s;
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, var(--Orange-White)) 1 round;
 }
 
 .dropdown #RLbtn.show::after {
     height: 300%;
+    transition: all 0.5s;
+    border-image: linear-gradient(135deg, var(--Orange-White)) 1 round;
 }
 
 .dropdown a {
@@ -368,6 +395,11 @@ a {
     animation: rotate 3s linear infinite;
     font-size: 18px;
     background-color: var(--Blue);
+}
+
+.dropdown #RLbtn:hover {
+    transition: all 0.5s;
+    color: var(--Orange);
 }
 
 #pricePlanBtn,
@@ -951,6 +983,16 @@ hr {
     padding: 8px 0px;
 }
 
+.frontColor div a,
+.backColor div a {
+    background-color: #d9d9d9;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .3);
+    margin-right: 10px;
+}
+
 .chooseColor.show {
     display: flex;
     animation: show 0.55s both;
@@ -1015,6 +1057,7 @@ hr {
     width: 100%;
     height: 70%;
     object-fit: contain;
+    display: none;
 }
 
 
@@ -1249,7 +1292,7 @@ hr {
 }
 
 
-#customizePlace #popup-content  #innerContent {
+#customizePlace #popup-content #innerContent {
     width: 90%;
     height: 100%;
     display: flex;
@@ -1524,8 +1567,19 @@ td {
     justify-content: space-around;
 }
 
-.nextBtn,
-.PDbtn a {
+.nextBtn {
+    width: 120px;
+    border-radius: 10px;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0px;
+    position: relative;
+    border: 2px solid white;
+    background-color: var(--Orange);
+    color: var(--Blue);
+}
+
+.lastBtn {
     width: 120px;
     background-color: transparent;
     color: white;
@@ -1538,8 +1592,7 @@ td {
 }
 
 .pageBottom #addStyle:hover,
-.nextBtn:hover,
-.PDbtn a:hover {
+.lastBtn:hover {
     transition: all .3s;
     color: var(--Orange);
     border: 2px solid var(--Orange);
@@ -1547,14 +1600,18 @@ td {
 
 .nextBtn:hover,
 .lastBtn:hover {
-    animation: shake .5s both;
+    animation: shake .7s both;
 }
 
 .pageBottom #addStyle:active,
-.nextBtn:active,
-.PDbtn a:active {
+.lastBtn:active {
     color: var(--Darkorange);
     border: 2px solid var(--Darkorange);
+}
+
+.nextBtn:active {
+    color: var(--Blue);
+    background-color: var(--Darkorange);
 }
 
 .pageBottom #addStyle:hover figure {
@@ -1940,7 +1997,7 @@ td {
     margin-right: 20px;
 }
 
-#orderInfo > div:last-child {
+#orderInfo>div:last-child {
     padding: 15px 0px;
     border-top: 1px solid white;
 }
