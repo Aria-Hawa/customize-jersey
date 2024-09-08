@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 載入react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>VSER</title>
+    <link rel="icon" href="./favicon.ico">
+
+    <link rel="stylesheet" href="./styles/sandy.css">
+    <link rel="stylesheet" href="./styles/pbCarousel.css">
+    <script type="text/babel" src="./jsx/Header.jsx"></script>
+    <script type="text/babel" src="./jsx/Footer.jsx"></script>
+</head>
+
+<body>
+    <!-- 首頁區 -->
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState } = React;
+        // 商品元件
+        function PbShape(props) {
+            // 滑鼠滑入pbShape才會顯示pbTBtn
+            const [isHovered, setIsHovered] = useState(false);
+            return <>
+                <li className="pbShape"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}>
+                    <div className="frame"></div>
+                    <div className="smallBox">
+                        <div className="smallBoxIcon"></div>
+                    </div>
+                    <div className="pbshapeimg">
+                        <div className={props.svcA}></div>
+                        <div className={props.svcB}></div>
+                    </div>
+                    <div className="pbBescribe">
+                        <div className="pbText">
+                            <h4>{props.shape}</h4>
+                            <h5>{props.price}</h5>
+                        </div>
+                        <div className="pbText">
+                            <p>{props.introduce}</p>
+                            <h5>{props.star}</h5>
+                        </div>
+                        <div id="pb1" className="pbTBtn" style={{ display: isHovered ? 'flex' : 'none' }}>
+                            <a href="./commodity.html">詳細介紹</a>
+                        </div>
+                    </div>
+                </li>
+            </>
+        }
+
+        function App() {
+            return (<>
+                <Header />
+                <main>
+                    {/*背景大圖*/}
+                    <section id="productBrowsing">
+                        <div className="backgroundBasemap bgsvc_1"></div>
+                        <div className="backgroundBasemap bgsvc_2" style={{ display: "none" }}></div>
+                        <div className="backgroundBasemap bgsvc_3" style={{ display: "none" }}></div>
+                        <div className="productBrowsing">
+                            <div className="pbTitleMenu">
+                                <div className="pbTitle">
+                                    <h2>product</h2>
+                                </div>
+                                <div className="pbMenu">
+                                    <nav class="pbItem">
+                                        <ul>
+                                            <li><a href="#" onClick={changeJersey}>昇華球衣</a></li>
+                                            <li><a href="#" onClick={changeSweat}>排汗上衣</a></li>
+                                            <li><a href="#" onClick={changeShorts}>訓練短褲</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div className="pbCommodity">
+                                <div className="container">
+                                    <div className="carousel-wrapper">
+                                        <ul id="templates" className="templatesA">
+                                            <PbShape 
+                                            svcA="pbImage A svcA-1" svcB="pbImage B svcA-2" shape="款式AAAAA" price="$1000"
+                                            introduce="款式介紹款式介紹款式介紹" star="★★★★"/>
+                                            <PbShape 
+                                            svcA="pbImage A svcA-3" svcB="pbImage B svcA-4" shape="款式BBBBB" price="$1000"
+                                            introduce="款式介紹款式介紹款式介紹" star="★★★★★"/>
+                                            <PbShape 
+                                            svcA="pbImage A svcA-5" svcB="pbImage B svcA-6" shape="款式CCCCC" price="$1000"
+                                            introduce="款式介紹款式介紹款式介紹" star="★★★"/>
+                                            <PbShape 
+                                            svcA="pbImage A svcA-7" svcB="pbImage B svcA-8" shape="款式DDDDD" price="$1000"
+                                            introduce="款式介紹款式介紹款式介紹" star="★★★"/>
+                                            <PbShape 
+                                            svcA="pbImage A svcA-1" svcB="pbImage B svcA-2" shape="款式AAAAA" price="$1000"
+                                            introduce="款式介紹款式介紹款式介紹" star="★★★★"/>
+                                            <PbShape 
+                                            svcA="pbImage A svcA-3" svcB="pbImage B svcA-4" shape="款式BBBBB" price="$1000"
+                                            introduce="款式介紹款式介紹款式介紹" star="★★★★★"/>
+                                        </ul>
+                                        <ul id="templates" className="templatesB" style={{ display: "none" }}>
+                                            <PbShape 
+                                            svcA="pbImage A svcB-1" svcB="pbImage B svcB-2" shape="款式AAAAA" price="$1000"
+                                            introduce="款式介紹款式介紹款式介紹" star="★★★★"/>
+                                            <PbShape 
+                                            svcA="pbImage A svcB-3" svcB="pbImage B svcB-4" shape="款式BBBBB" price="$1000"
+                                            introduce="款式介紹款式介紹款式介紹" star="★★★★★"/>
+                                            <PbShape 
+                                            svcA="pbImage A svcB-5" svcB="pbImage B svcB-6" shape="款式CCCCC" price="$1000"
+                                            introduce="款式介紹款式介紹款式介紹" star="★★★"/>
+                                        </ul>
+                                        <ul id="templates" className="templatesC" style={{ display: "none" }}>
+                                            <PbShape 
+                                            svcA="pbImageShort AShort svcC-1" shape="款式AAAAA" price="$1000"
+                                            introduce="款式介紹款式介紹款式介紹" star="★★★★"/>
+                                            <PbShape 
+                                            svcA="pbImageShort AShort svcC-2" shape="款式BBBBB" price="$1000"
+                                            introduce="款式介紹款式介紹款式介紹" star="★★★★★"/>
+                                            <PbShape 
+                                            svcA="pbImageShort AShort svcC-3" shape="款式CCCCC" price="$1000"
+                                            introduce="款式介紹款式介紹款式介紹" star="★★★"/>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="arrowGroup">
+                    <div className="arrow2" id="carousel-left">
+                    </div>
+                    <div className="arrow1 showing" id="carousel-right">
+                    </div>
+                </div>
+                            </div>
+                    </section>
+                </main>
+                <Footer />
+            </>)
+
+        }
+
+        ReactDOM
+            .createRoot(document.getElementById('root'))
+            .render(<App />);
+    </script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="./js/jsSandyProductBrowsing.js"></script>
+
+</body>
+
+
+</html>
