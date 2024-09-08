@@ -34,81 +34,78 @@
     </header>
 
     <section id="introduction">
-        <div class="mainPicture">
-            <!-- 小圖 -->
-            <div class="smallPicture">
-                <div onclick="swap1();"  class="small svcA-1"></div>
-                <div onclick="swap2();"  class="small svcA-1-back"></div>
-                <div onclick="swap3();"  class="small svcA-2"></div>
+            <div class="mainPicture">
+                <!-- 小圖 -->
+                <div class="smallPicture">
+                    <div onclick="swap1();" class="small svcA-1"></div>
+                    <div onclick="swap2();" class="small svcA-1-back"></div>
+                    <div onclick="swap3();" class="small svcA-2"></div>
+                </div>
+                <!-- 大圖 -->
+                <div id=picL class="bigPicture svcA-1"></div>
             </div>
-            <!-- 大圖 -->
-            <div id=picL class="bigPicture svcA-1"></div>
-        </div>
-        <div class="productCopywriting">
-            <div class="productTitle">
-                <h2>Style A</h2>
-                <p>款式介紹款式介紹款式介紹</p>
-                <h4>NT$1000</h4>
-                <hr>
-            </div>
-            <div class="productContent">
-                <ul class="contentDetails">
-                    <p>尺寸</p>
-                    <li class="detailsSize">
-                        <ul class="sizeBox">
-                            <li onclick="changeBorderB(this);" class="size">120</li>
-                            <li onclick="changeBorderB(this);" class="size">130</li>
-                            <li onclick="changeBorderB(this);" class="size">140</li>
-                            <li onclick="changeBorderB(this);" class="size">XS</li>
-                        </ul>
-                        <ul class="sizeBox">
-                            <li onclick="changeBorderB(this);" class="size">S</li>
-                            <li onclick="changeBorderB(this);" class="size">M</li>
-                            <li onclick="changeBorderB(this);" class="size">L</li>
-                            <li onclick="changeBorderB(this);" class="size">XL</li>
-                            <li onclick="changeBorderB(this);" class="size">2L</li>
-                            <li onclick="changeBorderB(this);" class="size">3L</li>
-                        </ul>
-                    </li>
-
-                </ul>
-
-                <div class="contentDetails">
-                    <p>顏色</p>
-                    <ul class="sizeBox">
-                        <li onclick="changeBorder(this); swap1()" class="color">綠</li>
-                        <li onclick="changeBorder(this); swap3()" class="color">藍</li>
-                        <li onclick="changeBorder(this);" class="color">綠</li>
+            <div class="productCopywriting">
+                <div class="productTitle">
+                    <h2>Style A</h2>
+                    <p>款式介紹款式介紹款式介紹</p>
+                    <h4>NT$1000</h4>
+                    <hr>
+                </div>
+                <div class="productContent">
+                    <ul class="contentDetails">
+                        <p>尺寸</p>
+                        <li class="detailsSize">
+                            <ul class="sizeBox">
+                                <li onclick="changeBorderB(this);" class="size">120</li>
+                                <li onclick="changeBorderB(this);" class="size">130</li>
+                                <li onclick="changeBorderB(this);" class="size">140</li>
+                                <li onclick="changeBorderB(this);" class="size">XS</li>
+                            </ul>
+                            <ul class="sizeBox">
+                                <li onclick="changeBorderB(this);" class="size">S</li>
+                                <li onclick="changeBorderB(this);" class="size">M</li>
+                                <li onclick="changeBorderB(this);" class="size">L</li>
+                                <li onclick="changeBorderB(this);" class="size">XL</li>
+                                <li onclick="changeBorderB(this);" class="size">2L</li>
+                                <li onclick="changeBorderB(this);" class="size">3L</li>
+                            </ul>
+                        </li>
+    
                     </ul>
-
+    
+                    <div class="contentDetails">
+                        <p>顏色</p>
+                        <ul class="sizeBox">
+                            <li onclick="changeBorder(this); swap1()" class="color">綠</li>
+                            <li onclick="changeBorder(this); swap3()" class="color">藍</li>
+                            <li onclick="changeBorder(this);" class="color">綠</li>
+                        </ul>
+    
+                    </div>
+                    <div class="contentDetails">
+                        <p>數量</p>
+                        <div class="quantity">
+                            <button id="btn_1" class="quantityBtn">-</button>
+                            <span id="quantityNum">1</span>
+                            <button id="btn1" class="quantityBtn">+</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="contentDetails">
-                    <p>數量</p>
-                    <!-- <label for="ender">性別:</label> -->
-                    <select name="quantity" id="quantity">
-                        <option value="">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-
+                <div class="productButtom">
+                    <button class="buttomitem">加入購物車</button>
+                    <button class="buttomitem">直接購買</button>
+                    <hr>
+                </div>
+                <div class="productRemark">
+                    <p>
+                        購買須知<br>
+                        該商品為客製化商品，下單後不可取消。敬請於下單前確認。<br>
+                        待付費確認完成後，系統才會開始處理您的訂單，約7個工作天內出貨。
+                    </p>
+    
                 </div>
             </div>
-            <div class="productButtom">
-                <button class="buttomitem">加入購物車</button>
-                <button class="buttomitem">直接購買</button>
-                <hr>
-            </div>
-            <div class="productRemark">
-                <p>
-                    購買須知<br>
-                    該商品為客製化商品，下單後不可取消。敬請於下單前確認。<br>
-                    待付費確認完成後，系統才會開始處理您的訂單，約7個工作天內出貨。
-                </p>
-
-            </div>
-        </div>
+        
     </section>
 
     <section id="otherProducts">
@@ -233,54 +230,69 @@
     <!-- 以下為JS -->
     <script>
         //  小圖點選換大圖
-        let bigPicture=document.getElementById('picL');
-        function swap1(){
-            picL.className="bigPicture svcA-1";
+        let bigPicture = document.getElementById('picL');
+        function swap1() {
+            picL.className = "bigPicture svcA-1";
         }
-        function swap2(){
-            picL.className="bigPicture svcA-1-back";
+        function swap2() {
+            picL.className = "bigPicture svcA-1-back";
         }
-        function swap3(){
-            picL.className="bigPicture svcA-2";
+        function swap3() {
+            picL.className = "bigPicture svcA-2";
         }
-        
 
         // 按鈕點擊變色
         function changeBorder(selectedElement) {
-        // 先获取所有具有 "size" 类的元素
-        let colorElements = document.querySelectorAll('.color');
+            // 先获取所有具有 "size" 类的元素
+            let colorElements = document.querySelectorAll('.color');
 
-        // 遍历所有元素，将它们的边框颜色重置为白色
-        colorElements.forEach(function(element) {
-            element.style.borderColor = '#ffffff';
-            element.style.backgroundColor = '#013B63'; 
-            element.style.color = '#ffffff'; 
+            // 遍历所有元素，将它们的边框颜色重置为白色
+            colorElements.forEach(function (element) {
+                element.style.borderColor = '#ffffff';
+                element.style.backgroundColor = '#013B63';
+                element.style.color = '#ffffff';
+            });
+
+            // 将选中的元素的边框颜色设置为黑色
+            selectedElement.style.borderColor = '#FEB75D';
+            selectedElement.style.backgroundColor = '#FEB75D';
+            selectedElement.style.color = '#013B63';
+        }
+        function changeBorderB(selectedElementB) {
+            // 先获取所有具有 "size" 类的元素
+            let sizeElements = document.querySelectorAll('.size');
+
+            // 遍历所有元素，将它们的边框颜色重置为白色
+            sizeElements.forEach(function (element) {
+                element.style.borderColor = '#ffffff';
+                element.style.backgroundColor = '#013B63';
+                element.style.color = '#ffffff';
+            });
+
+            // 将选中的元素的边框颜色设置为黑色
+            selectedElementB.style.borderColor = '#FEB75D';
+            selectedElementB.style.backgroundColor = '#FEB75D';
+            selectedElementB.style.color = '#013B63';
+        }
+
+        // 購物車數量+-
+        // 宣告執行變數
+        let num=1
+        let btn_1=document.getElementById("btn_1");
+        let btn1=document.getElementById("btn1");
+        let quantityNum=document.getElementById("quantityNum");
+
+        btn_1.addEventListener("click",()=>{
+            if(num>1){num--;
+                quantityNum.textContent=num;};
+           
         });
 
-        // 将选中的元素的边框颜色设置为黑色
-        selectedElement.style.borderColor = '#FEB75D';
-        selectedElement.style.backgroundColor = '#FEB75D';
-        selectedElement.style.color = '#013B63';
-    }
-
-    
-    function changeBorderB(selectedElementB) {
-        // 先获取所有具有 "size" 类的元素
-        let sizeElements = document.querySelectorAll('.size');
-
-        // 遍历所有元素，将它们的边框颜色重置为白色
-        sizeElements.forEach(function(element) {
-            element.style.borderColor = '#ffffff';
-            element.style.backgroundColor = '#013B63'; 
-            element.style.color = '#ffffff'; 
+        btn1.addEventListener("click",()=>{
+            num++;
+            quantityNum.textContent=num;
         });
-
-        // 将选中的元素的边框颜色设置为黑色
-        selectedElementB.style.borderColor = '#FEB75D';
-        selectedElementB.style.backgroundColor = '#FEB75D';
-        selectedElementB.style.color = '#013B63';
-    }
-    </script>
+   </script>
 </body>
 
 </html>

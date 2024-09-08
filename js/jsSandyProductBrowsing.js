@@ -1,7 +1,6 @@
 
 
-
-
+// productBrowsing 
 // 宣告三個背景變數
 let bgsvc_1="";
 let bgsvc_2="";
@@ -73,7 +72,7 @@ function turnoffBtn(pbNum) {
 
 // 下面為換圖輪播
 function slideCarousel(direction) {
-	var templateSize = 1107 // technically 192px, but accounting for 16px margin
+	var templateSize = 369 // technically 192px, but accounting for 16px margin
 	var templates = templatesDIV
 	// create variable for width
 	var templateWidth = 0
@@ -167,3 +166,4 @@ $('#carousel-right').click(function () {
 $(document).ready(function() {
     changeJersey(); // 或 changeSweat(); 根据你的默认显示需求
 });
+

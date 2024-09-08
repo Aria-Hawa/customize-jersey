@@ -21,6 +21,11 @@ ul#templates li {
   transition: all 0.2s ease-in-out;
   transform: scale(1);
 }
+@media (max-width:1024px) {
+  ul#templates li{
+    width: 304px;
+  }
+}
 
 ul li:hover {
   cursor: pointer;
