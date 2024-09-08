@@ -40,7 +40,6 @@ $(function () {
     $(document).on('click', '.delBtn', function () {
         // 在刪除之前先儲存del的table
         let delClosestTable = $(this).closest('table');
-        let countItem = $(delClosestTable).find('tbody').length;
         let projectImg = $(delClosestTable).closest('.table').find('.captionLeft figure').css('background-image').match(/url\(["']?([^"']*)["']?\)/)[1];
         let projectName = $(delClosestTable).closest('.table').find('.captionLeft p').text();
         let projectPrice = $(delClosestTable).closest('.table').find('.price').text();

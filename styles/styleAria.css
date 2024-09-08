@@ -456,7 +456,7 @@ a {
     letter-spacing: 2px;
     font-size: 18px;
     /* 8/23 RWD測試 */
-    width: 100%;
+    width: 96%;
 }
 
 #customizePlace input::placeholder {
@@ -634,7 +634,7 @@ a {
 }
 
 .styleInfo form {
-    width: 100%;
+    width: 96%;
 }
 
 .stylePreview figure a {
@@ -847,7 +847,7 @@ hr {
 }
 
 #textStyleValue {
-    width: 100%;
+    width: 96%;
     margin-bottom: 10px;
 }
 
@@ -1242,11 +1242,69 @@ hr {
     background-color: var(--Darkorange);
 }
 
+#customizePlace #popup-content {
+    width: 50%;
+    height: 70vh;
+    padding: 0;
+}
 
 
+#customizePlace #popup-content  #innerContent {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 98px 0px 20px 0px;
+}
 
 
+#showSvg {
+    width: 45%;
+    height: 100%;
+    padding: 20px 0px;
+}
 
+#showSvg svg {
+    height: 100%;
+    width: 100%;
+}
+
+#customizePlace #nameSvg {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0px 20px;
+    font-family: "Noto Sans TC", sans-serif;
+    letter-spacing: 2px;
+}
+
+#nameSvg label {
+    width: 100%;
+}
+
+#nameSvg input {
+    border: 1px solid var(--Blue);
+    border-radius: 0;
+    color: var(--Blue);
+    font-size: 16px;
+}
+
+#nameSvg textarea {
+    width: 100%;
+    flex: 0.8;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#nameSvg .chooseProjectBtn {
+    margin: 0;
+    font-size: 18px;
+}
 
 
 
@@ -1423,9 +1481,6 @@ td {
 .tableFoot:active p {
     color: var(--Darkorange);
 }
-
-
-
 
 
 .delBtn:hover {
@@ -1623,6 +1678,7 @@ td {
     align-items: center;
     margin-top: 58px;
     overflow: auto;
+    /* min-height: 100%; */
 }
 
 #basicInformation #popup-content {
