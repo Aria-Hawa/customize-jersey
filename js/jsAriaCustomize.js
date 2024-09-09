@@ -8,8 +8,6 @@ $(function () {
         $('#RLbtn').toggleClass('show');
     });
 
-
-
     // 頁面載入後的初始動畫
     $('#showStep h2').animate({ opacity: "1" }, {
         duration: 700,
@@ -401,10 +399,10 @@ $(function () {
         $('.PicturesizeRange').toggleClass('show');
     });
 
-    // 宣告一個全域的 svgArray 陣列來儲存多次的 SVG 資料
-    let svgArray = JSON.parse(localStorage.getItem('svgArray')) || [];
 
     // 按下儲存按鈕 => localStorage.setItem
+    // 宣告一個全域的 svgArray 陣列來儲存多次的 SVG 資料
+    let svgArray = JSON.parse(localStorage.getItem('svgArray')) || [];
     $('#saveOption').click(function () {
         let getBlockSvg = $(document).find('.KeyArea svg').filter((index, element) => {
             return element.style.display == 'block';
@@ -415,18 +413,20 @@ $(function () {
             let svgData = getBlockSvg.prop('outerHTML');
             $('#popup').fadeIn();
             $('#showSvg').html(svgData);
+            let svgPrice = $('.unitPrice span').text();
+            $('#nameSvg span').text(`NT$${svgPrice}`);
 
             // 確保 `#chekBtn` 的事件綁定只會執行一次
             $('#chekBtn').off('click').on('click', function () {
                 let svgName = $('#svgName').val();
                 let svgDescribe = $('#svgDescribe').val();
-
                 if (svgName != '') {
                     // 建立 SVG 物件
                     let svgObject = {
                         name: svgName,
                         img: svgData,
                         describe: svgDescribe,
+                        price: svgPrice,
                     };
                     // 將物件推入 svgArray
                     svgArray.push(svgObject);
@@ -437,7 +437,6 @@ $(function () {
                     $('#svgDescribe').val('');
                     // 關閉彈窗
                     $('#popup').fadeOut();
-                    console.log(svgArray);
                 } else {
                     alert('請輸入 SVG 名稱');
                 }
@@ -448,9 +447,11 @@ $(function () {
     });
 
     // 當需要關閉彈出視窗時
-        $('#closePopup').on('click', function () {
-            $('#popup').fadeOut();
-        });
+    $('#closePopup').on('click', function () {
+        $('#popup').fadeOut();
+    });
+
+
 
 });
 // 以上jQuery

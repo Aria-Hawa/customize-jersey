@@ -494,9 +494,9 @@
                     });
 
 
+                    // 按下儲存按鈕 => localStorage.setItem
                     // 宣告一個全域的 svgArray 陣列來儲存多次的 SVG 資料
                     let svgArray = JSON.parse(localStorage.getItem('svgArray')) || [];
-                    // 按下儲存按鈕 => localStorage.setItem
                     $('#saveOption').click(function () {
                         let getBlockSvg = $(document).find('.KeyArea svg').filter((index, element) => {
                             return element.style.display == 'block';
@@ -506,6 +506,8 @@
                             let svgData = getBlockSvg.prop('outerHTML');
                             $('#popup').fadeIn();
                             $('#showSvg').html(svgData);
+                            let svgPrice = $('.unitPrice span').text();
+                            $('#nameSvg span').text(`NT$${svgPrice}`);
 
                             // 確保 `#chekBtn` 的事件綁定只會執行一次
                             $('#chekBtn').off('click').on('click', function () {
@@ -517,6 +519,7 @@
                                         name: svgName,
                                         img: svgData,
                                         describe: svgDescribe,
+                                        price: svgPrice,
                                     };
                                     // 將物件推入 svgArray
                                     svgArray.push(svgObject);
@@ -1190,6 +1193,7 @@
                                             <input type="text" title="命名球衣樣式欄位" required id="svgName" />
                                             <label htmlFor="">描述：</label>
                                             <textarea name="" id="svgDescribe" title="描述樣式欄位" rows="4" maxLength="60"></textarea>
+                                            <p>單件價格: <span></span></p>
                                             <button id="chekBtn" className="chooseProjectBtn">確認</button>
                                         </form>
                                     </div>

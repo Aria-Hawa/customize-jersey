@@ -8,39 +8,30 @@
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./styles/styleAria.css">
     <link rel="stylesheet" href="./styles/headNfooter.css">
-    <!-- 載入React,Babel -->
+    <!-- 載入React -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script type="text/babel" src="./jsx/Header.jsx"></script>
-    <script type="text/babel" src="./jsx/Footer.jsx"></script>
+    <!-- 載入babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="./jsx/Header.jsx"></script>
 </head>
 
 <body>
-    <header id="fixedTopbar">
-        <div class="topbar">
-            <h1><a href="./index.html"><img src="./images/logo.png" alt="VSER客製化球衣"></a></h1>
-            <div class="menuList">
-                <nav class="menuItem">
-                    <ul>
-                        <li><a href="./brandConcept.html">品牌理念</a></li>
-                        <li><a href="./pojectResults.html">專案成果</a></li>
-                        <li><a href="./productBrowsing.html">商品瀏覽</a></li>
-                        <li><a href="./Customization_process.html">訂購說明</a></li>
-                        <li><a href="#">會員專區</a></li>
-                    </ul>
-                </nav>
-                <div class="rightList">
-                    <div class="dropdown">
-                        <a href="#" id="RLbtn">訂製專區</a>
-                        <a href="./priceplan.html" id="pricePlanBtn">價格方案</a>
-                        <a href="./customize.html" id="customizeBtn">球衣模擬</a>
-                    </div>
-                    <a href="#" class="cartBtn"></a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- 以下React -->
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+        function App() {
+            return (
+                <Header />
+            );
+        }
+
+        ReactDOM
+            .createRoot(document.getElementById('root'))
+            .render(<App />);
+    </script>
+
     <main>
         <section id="projectPlace">
             <div class="pageTitle">
@@ -130,7 +121,7 @@
                     </tfoot>
                 </table>
             </div>
-            <div class="table">
+            <!-- <div class="table">
                 <div class="tableCaption">
                     <div class="captionLeft">
                         <figure></figure>
@@ -212,7 +203,7 @@
                         </tr>
                     </tfoot>
                 </table>
-            </div>
+            </div> -->
             <div class="pageBottom">
                 <a href="#" id="addStyle">
                     <figure></figure>
@@ -250,7 +241,7 @@
                             </figure>
                             <div>
                                 <h3></h3>
-                                <p>單價: NT: $<span style="font-size: 16px;"></span></p>
+                                <p>單價: <span style="font-size: 20px;"></span></p>
                                 <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
                             </div>
                         </div>
@@ -286,12 +277,11 @@
                                 <p style="font-size: 14px;">最後編輯日期: 2024/05/19</p>
                             </div>
                         </div> -->
-                        <button id="chekBtn" class="chooseProjectBtn">確認</button>
+                        <!-- <button id="chekBtn" class="chooseProjectBtn">確認</button> -->
+                        <a id="chekBtn" class="chooseProjectBtn">確認</a>
                     </div>
                 </div>
             </div>
-
-
         </section>
 
     </main>

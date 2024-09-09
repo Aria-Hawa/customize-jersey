@@ -1182,6 +1182,7 @@ hr {
     border-radius: 0;
     color: var(--Blue);
     font-size: 16px;
+    width: 100%;
 }
 
 #nameSvg textarea {
@@ -1197,6 +1198,16 @@ hr {
     font-size: 18px;
 }
 
+#nameSvg p {
+    margin: 10px 0px;
+    width: 100%;
+    text-align: end;
+}
+
+#nameSvg p span {
+    font-size: 20px;
+    font-weight: 500;
+}
 
 
 
@@ -1216,7 +1227,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 20px;
+    margin: 20px 0px;
 }
 
 #projectPlace .pageTitle {
@@ -1257,7 +1268,7 @@ hr {
 }
 
 
-.tableCaption div {
+.tableCaption > div {
     display: flex;
     align-items: center;
     height: 100%;
@@ -1269,21 +1280,13 @@ hr {
 
 .tableCaption figure {
     width: 168px;
-    height: 140px;
+    height: 126px;
     border-right: 1px solid white;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     margin-right: 21px;
 }
-
-.table .tableCaption figure {
-    background-image: url(../images/projectResults1_pjshape2.png);
-}
-
-/* #project-2 .tableCaption figure {
-    background-image: url(../images/projectResults_pjshape2.png);
-} */
 
 .table table {
     width: 100%;
@@ -1642,7 +1645,7 @@ td {
     background-color: rgba(255, 255, 255, .1);
 }
 
-#popup-content .userDesign div {
+#popup-content .userDesign > div {
     font-size: 18px;
     display: flex;
     margin-left: 18px;
@@ -1758,32 +1761,6 @@ td {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-}
-
-.captionLeft div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-}
-
-.captionLeft div a {
-    padding-bottom: 4px;
-    border-bottom: 1px solid white;
-}
-
-.captionLeft figure {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#order-1 .captionLeft figure {
-    background-image: url(../images/projectResults1_pjshape2.png);
-}
-
-#order-2 .captionLeft figure {
-    background-image: url(../images/projectResults_pjshape2.png);
 }
 
 .contentMoney {
