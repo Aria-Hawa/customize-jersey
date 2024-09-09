@@ -65,8 +65,8 @@ a {
   --White: #ffffff;
   --Blue2: #287DA2;
 
-    /* 輔色 */
-    --Grayblue: #1e6695;
+  /* 輔色 */
+  --Grayblue: #1e6695;
 
   /* 透明色 */
   --Lightblue_04: rgb(85, 201, 234, .4);
@@ -114,9 +114,9 @@ a {
   padding: 0px 80px;
 }
 
-@media (max-width: 1080px){
+@media (max-width: 1080px) {
   #fixedTopbar .topbar {
-      padding: 0px 40px;
+    padding: 0px 40px;
   }
 }
 
@@ -264,6 +264,23 @@ main {
   top: 90px;
   left: calc(50% - 202px);
   letter-spacing: .2rem;
+  /* border: 1px solid red; */
+  width: 404px;
+  height: 85px;
+}
+
+/* 9/4 add by Aria */
+.title p:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 9/4 add by Aria */
+.title p:last-child {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .box_list .item {
@@ -392,6 +409,7 @@ main {
   .txtDiv {
     bottom: 6%;
   }
+
   .rightInfo h2 {
     font-size: 110px;
     line-height: 6.5rem;

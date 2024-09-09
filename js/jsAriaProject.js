@@ -107,9 +107,26 @@ $(function () {
     });
 
     // 整筆總額隨project變更
-    $(document).find('.price').each((index, price) => {
-        console.log(price.innerText);
-    });
+    // $(document).find('.price').each((index, price) => {
+    //     console.log(price.innerText);
+    // });
+
+    // 從 localStorage 中取出 svgArray
+    let svgArray = JSON.parse(localStorage.getItem('svgArray'));
+    if (svgArray && svgArray.length > 0) {
+
+        svgArray.forEach(function(element,index,array){
+            // console.log(element.img);
+            // console.log(index);
+            // console.log(array);
+            let newUserDesign = $('#emptyUserDesign').clone();
+            $(newUserDesign).find('figure').html(element.img);
+            $('#chekBtn').before(newUserDesign);
+            $(newUserDesign).css('display','flex');
+        });
+    } else {
+        console.log('無儲存的 SVG 資料');
+    }
 
 });
 

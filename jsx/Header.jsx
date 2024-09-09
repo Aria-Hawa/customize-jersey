@@ -14,7 +14,7 @@ function Header() {
                         </ul>
                     </nav>
                     <div className="rightList">
-                        <a href="./customize.html" className="customizeBtn">訂製專區</a>
+                        <a href="./customize-React.html" className="customizeBtn">訂製專區</a>
                         <a href="./chooseProject.html" className="cartBtn"></a>
                     </div>
                 </div>

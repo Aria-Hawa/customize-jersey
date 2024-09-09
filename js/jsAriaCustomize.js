@@ -401,39 +401,56 @@ $(function () {
         $('.PicturesizeRange').toggleClass('show');
     });
 
+    // 宣告一個全域的 svgArray 陣列來儲存多次的 SVG 資料
+    let svgArray = JSON.parse(localStorage.getItem('svgArray')) || [];
+
     // 按下儲存按鈕 => localStorage.setItem
-    // let countSvg = 0;
     $('#saveOption').click(function () {
         let getBlockSvg = $(document).find('.KeyArea svg').filter((index, element) => {
             return element.style.display == 'block';
         });
+
         if (getBlockSvg.length > 0) {
             // 使用 prop() 取得 outerHTML
             let svgData = getBlockSvg.prop('outerHTML');
             $('#popup').fadeIn();
             $('#showSvg').html(svgData);
-            $('#chekBtn').click(function () {
-                // countSvg = countSvg + 1;
-                let svgName = $(this).siblings('#svgName').val();
+
+            // 確保 `#chekBtn` 的事件綁定只會執行一次
+            $('#chekBtn').off('click').on('click', function () {
+                let svgName = $('#svgName').val();
+                let svgDescribe = $('#svgDescribe').val();
+
                 if (svgName != '') {
-                    let svgDescribe = $(this).siblings('#svgDescribe').val();
+                    // 建立 SVG 物件
                     let svgObject = {
-                        img: svgData,
                         name: svgName,
-                        Describe: svgDescribe,
+                        img: svgData,
+                        describe: svgDescribe,
                     };
-                    console.log(svgObject);
-                };
+                    // 將物件推入 svgArray
+                    svgArray.push(svgObject);
+                    // 更新 localStorage
+                    localStorage.setItem('svgArray', JSON.stringify(svgArray));
+                    // 清空 input 和 textarea 欄位
+                    $('#svgName').val('');
+                    $('#svgDescribe').val('');
+                    // 關閉彈窗
+                    $('#popup').fadeOut();
+                    console.log(svgArray);
+                } else {
+                    alert('請輸入 SVG 名稱');
+                }
             });
         } else {
             alert('您尚未開始設計喔~');
-        };
+        }
+    });
 
-        // 當需要關閉彈出視窗時
+    // 當需要關閉彈出視窗時
         $('#closePopup').on('click', function () {
             $('#popup').fadeOut();
         });
-    });
 
 });
 // 以上jQuery
