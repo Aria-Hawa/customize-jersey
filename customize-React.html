@@ -7,11 +7,14 @@
     <title>VSER</title>
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./styles/styleAria.css">
+    <link rel="stylesheet" href="./styles/headNfooter.css">
     <!-- 載入React -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <!-- 載入babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="./jsx/Header.jsx"></script>
+
 </head>
 
 <body>
@@ -90,13 +93,6 @@
             useEffect(() => {
                 // 使用jQuery
                 $(function () {
-                    // fixedTopbar 訂製專區下拉選單
-                    $('#RLbtn').click(function () {
-                        $('#pricePlanBtn').toggleClass('show');
-                        $('#customizeBtn').toggleClass('show');
-                        $('#RLbtn').toggleClass('show');
-                    });
-
                     // 共用區
                     // .arrow按下後旋轉
                     $('.styleInfo label').click(function () {
@@ -576,30 +572,7 @@
 
             return (
                 <>
-                    <header id="fixedTopbar">
-                        <div className="topbar">
-                            <h1><a href="./index.html"><img src="./images/logo.png" alt="VSER客製化球衣" /></a></h1>
-                            <div className="menuList">
-                                <nav className="menuItem">
-                                    <ul>
-                                        <li><a href="./brandConcept.html">品牌理念</a></li>
-                                        <li><a href="./pojectResults.html">專案成果</a></li>
-                                        <li><a href="./productBrowsing.html">商品瀏覽</a></li>
-                                        <li><a href="./Customization_process.html">訂購說明</a></li>
-                                        <li><a href="#">會員專區</a></li>
-                                    </ul>
-                                </nav>
-                                <div className="rightList">
-                                    <div className="dropdown">
-                                        <a href="#" id="RLbtn">訂製專區</a>
-                                        <a href="./priceplan.html" id="pricePlanBtn">價格方案</a>
-                                        <a href="./customize.html" id="customizeBtn">球衣模擬</a>
-                                    </div>
-                                    <a href="./chooseProject.html" className="cartBtn"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
+                    <Header classname='customizedPage'/>
                     <main>
                         <section id="customizePlace">
                             <div id="operate">
@@ -1245,7 +1218,6 @@
     <!-- 設定jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <!-- <script src="./js/jsAriaCustomize.js"></script> -->
 </body>
 
 </html>

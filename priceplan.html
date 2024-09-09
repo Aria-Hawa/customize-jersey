@@ -6,44 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VSER</title>
     <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./styles/headNfooter.css">
     <link rel="stylesheet" href="./styles/jiun.css">
+    <!-- 載入React -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- 載入babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="./jsx/Header.jsx"></script>
 </head>
 
 <body>
+    <!-- 9/9 add by Aria -->
+    <!-- 以下React -->
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+        function App() {
+            return (
+                <Header classname='blue' />
+            );
+        }
 
-    <header id="fixedTopbar">
-        <div class="topbar">
-            <h1><a href="./index.html"><img src="./images/logo.png" alt="VSER客製化球衣"></a></h1>
-            <div class="menuList">
-                <nav class="menuItem">
-                    <ul>
-                        <li><a href="./brandConcept.html">品牌理念</a></li>
-                        <li><a href="./pojectResults.html">專案成果</a></li>
-                        <li><a href="./productBrowsing.html">商品瀏覽</a></li>
-                        <li><a href="./Customization_process.html">訂購說明</a></li>
-                        <li><a href="#">會員專區</a></li>
-                    </ul>
-                </nav>
-                <div class="rightList">
-                    <div class="dropdown">
-                        <a href="#" id="RLbtn">訂製專區</a>
-                        <a href="./priceplan.html" id="pricePlanBtn">價格方案</a>
-                        <a href="./customize.html" id="customizeBtn">球衣模擬</a>
-                    </div>
-                    <a href="./chooseProject.html" class="cartBtn"><img src="./images/cartBtnICON.svg" alt="cartIcon"></a>
-                </div>
-            </div>
-        </div>
-    </header>
+        ReactDOM
+            .createRoot(document.getElementById('root'))
+            .render(<App />);
+    </script>
+
 
 
     <!-- 內容 -->
     <main>
-
         <section id="pricepage">
             <div class="box_list">
                 <!-- 9/4 add by Aria -->
-                <h3 class="title"><p>PRICE</p><p>PLAN</p></h3>
+                <h3 class="title">
+                    <p>PRICE</p>
+                    <p>PLAN</p>
+                </h3>
                 <div class="item" id="price-1">
                     <!-- 9/4 delete by Aria -->
                     <!-- <div class="title2">

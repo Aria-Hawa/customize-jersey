@@ -1,0 +1,273 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+@font-face {
+    font-family: "ROGFonts";
+    src: url(../webfonts/ROGFonts.otf);
+}
+
+@font-face {
+    font-family: "kaiu";
+    src: url(../webfonts/kaiu.ttf);
+}
+
+@font-face {
+    font-family: "msjh";
+    src: url(../webfonts/msjh.ttc);
+}
+
+/* 重置所有標籤的樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* RWD不累加內距padding與邊框border */
+}
+
+/* 重置字體 */
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: white;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+/* 重置列表 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* max-width: 100%; */
+}
+
+/* 重置連接 */
+a {
+    /* 已知此網頁的a都"不是文字超連結"，因此先把a設定為區塊 */
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+:root {
+    /* 主色調 */
+    --Orange: #FEB75D;
+    --Darkorange: #FC8D00;
+    --Lightblue: #55C9EA;
+    --Blue: #013B63;
+    --Darkblue: #000E2B;
+
+    /* 輔色 */
+    --Grayblue: #1e6695;
+
+    /* 透明色 */
+
+    /* 漸層色 */
+    --White-White: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .1) 30%, rgba(255, 255, 255, .4) 100%;
+    --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, #2a9dbd 50%, var(--Blue) 75%, var(--Darkblue) 100%;
+    --ToRight-White-Orange: #fff 0%, var(--Orange) 47%, var(--Darkorange) 90%;
+    --ToRight-Lightblue-Darkbllue: var(--Lightblue) 5%, var(--Blue) 28%, var(--Darkblue) 61%;
+    --Lightblue-White: var(--Lightblue) 0%, #fff 100%;
+    --Darkblue-blue: var(--Blue) 0%, var(--Darkblue) 100%;
+    --Blue-grayblue: var(--Grayblue) 0%, var(--Blue) 100%;
+    --Orange-White: var(--Orange) 0%, #fff 100%;
+}
+
+
+/* fixed header區 */
+#fixedTopbar {
+    background-color: var(--Blue);
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 999;
+    border-bottom: 1px solid white;
+}
+
+#fixedTopbar .topbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 80px;
+}
+
+@media (max-width: 1080px) {
+    #fixedTopbar .topbar {
+        padding: 0px 40px;
+    }
+}
+
+.topbar h1 {
+    min-width: 129px;
+}
+
+.menuList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 92%;
+}
+
+.menuList h1 {
+    width: 129px;
+}
+
+.menuItem ul {
+    display: flex;
+}
+
+.menuItem ul li a {
+    margin-left: 40px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.menuItem ul li a:hover {
+    color: var(--Orange);
+}
+
+.menuItem ul li a:active {
+    color: var(--Darkorange);
+}
+
+#fixedTopbar .menuList .rightList {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.cartBtn {
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/cartBtnICON.svg);
+}
+
+.cartBtn:hover {
+    transition: 0.5s;
+    background-image: url(../images/cartBtnICON_1.svg);
+}
+
+.rightList .dropdown {
+    margin-right: 20px;
+    position: absolute;
+    top: 0px;
+    right: 44px;
+}
+
+.dropdown #RLbtn {
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-indent: 1px;
+}
+
+.dropdown #RLbtn::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    right: -2px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, var(--Lightblue-White)) 1 round;
+    transition: all .5s ease-in-out;
+}
+
+.dropdown #RLbtn:hover::after {
+    transition: all 0.5s;
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, var(--Orange-White)) 1 round;
+}
+
+.dropdown #RLbtn.show::after {
+    height: 300%;
+    transition: all 0.5s;
+    border-image: linear-gradient(135deg, var(--Orange-White)) 1 round;
+}
+
+.dropdown a {
+    width: 100px;
+    height: fit-content;
+    text-align: center;
+    padding: 8px;
+    animation: rotate 3s linear infinite;
+    font-size: 18px;
+    background-color: var(--Blue);
+}
+
+.dropdown #RLbtn:hover {
+    transition: all 0.5s;
+    color: var(--Orange);
+}
+
+#pricePlanBtn,
+#customizeBtn {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#pricePlanBtn.show,
+#customizeBtn.show {
+    visibility: visible;
+    transition: all .8s ease-in-out;
+    opacity: 1;
+}
+
+#pricePlanBtn:hover {
+    background-image: linear-gradient(90deg, var(--Blue-grayblue));
+}
+
+#customizeBtn:hover {
+    background-image: linear-gradient(-90deg, var(--Grayblue) 0%, var(--Blue) 100%);
+}
+
+/* 以上fixedTopbar區 */
+
+/* 各頁微調 */
+/* --Darkblue底色 */
+#fixedTopbar.blue,
+#fixedTopbar.darkblue {
+    border: none;
+}
+
+/* Customization_process頁面 */
+#fixedTopbar.darkblue {
+    background-color: var(--Darkblue);
+    border: none;
+}
+
+.darkblue .dropdown a {
+    background-color: var(--Darkblue);
+}
+
+.darkblue #pricePlanBtn:hover {
+    background-image: linear-gradient(90deg, var(--Blue-Darkblue));
+}
+
+.darkblue #customizeBtn:hover {
+    background-image: linear-gradient(-90deg, var(--Blue-Darkblue));
+
+}
