@@ -1482,36 +1482,50 @@ li.pbShape {
 .svcA-2 {
     background-image: url(../images/productBrowsing_pbShapeA_2.png);
 }
+.svcA-2-back {
+    background-image: url(../images/productBrowsing_pbShapeA_2_back.png);
+}
 
-.pbshapeimg .svcA-3 {
+.svcA-3 {
     background-image: url(../images/productBrowsing_pbShapeA_3.png);
 }
+.svcA-3-back {
+    background-image: url(../images/productBrowsing_pbShapeA_3_back.png);
+}
 
-.pbshapeimg .svcA-4 {
+.svcA-4 {
     background-image: url(../images/productBrowsing_pbShapeA_4.png);
 }
+.svcA-4-back {
+    background-image: url(../images/productBrowsing_pbShapeA_4_back.png);
+}
 
-.pbshapeimg .svcA-5 {
+.svcA-5 {
+    background-image: url(../images/productBrowsing_pbShapeA_5.png);
+}
+.svcA-5-back {
+    background-image: url(../images/productBrowsing_pbShapeA_5_back.png);
+}
+.svcA-6 {
+    background-image: url(../images/productBrowsing_pbShapeA_6.png);
+}
+.svcA-6-back {
+    background-image: url(../images/productBrowsing_pbShapeA_6_back.png);
+}
+
+.svcA-7 {
     background-image: url(../images/productBrowsing_pbShapeA_5.png);
 }
 
-.pbshapeimg .svcA-6 {
+.svcA-8 {
     background-image: url(../images/productBrowsing_pbShapeA_6.png);
 }
 
-.pbshapeimg .svcA-7 {
-    background-image: url(../images/productBrowsing_pbShapeA_5.png);
-}
-
-.pbshapeimg .svcA-8 {
-    background-image: url(../images/productBrowsing_pbShapeA_6.png);
-}
-
-.pbshapeimg .svcB-1 {
+.svcB-1 {
     background-image: url(../images/productBrowsing_pbShapeB_1.png);
 }
 
-.pbshapeimg .svcB-2 {
+.svcB-2 {
     background-image: url(../images/productBrowsing_pbShapeB_2.png);
 }
 
@@ -1631,15 +1645,15 @@ li.pbShape {
 
 .mainPicture {
     width: 50%;
-    height: 470px;
+    height: 440px;
     /* background-color: #2eb02a; */
     margin: 0 40px 0 0;
     display: flex;
 }
 
 .mainPicture .bigPicture {
-    width: 70%;
-    height: 470px;
+    width: 80%;
+    height: 440px;
     background-color: rgba(255, 255, 255, .1);
     background-position: center;
     background-size: contain;
@@ -1647,8 +1661,8 @@ li.pbShape {
 }
 
 .smallPicture {
-    width: 30%;
-    height: 470px;
+    width: 20%;
+    height: 440px;
     /* background-color: #55c9ea; */
     margin: 0 15px 0 0;
     display: flex;
@@ -1664,6 +1678,8 @@ li.pbShape {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+
 
 .smallPicture .small:last-child {
     margin-bottom: 0;
@@ -1712,11 +1728,22 @@ li.pbShape {
     color: #fff;
     text-align: center;
 }
+.detailsText{
+    display: flex;
+    align-items:center;
+}
+.detailsText p{
+    margin: 0 10px 0 0 ;
+}
+.detailsText small{
+    border-bottom:1px solid #FFFFFF;
+    padding-bottom:0.75px;
+}
 
 #quantity {
     margin: 15px 0 0 0;
     width: 115px;
-    height: 30px;
+    height: 50px;
     text-align: center;
     border: 1px solid #FFFFFF;
     background-color: var(--Blue);
@@ -1744,14 +1771,34 @@ li.pbShape {
 .quantity{
     margin: 15px 0 0 0 ;
     width: 180px;
-    height: 30px;
-    border: 1px solid #FFFFFF;
+    height: 50px;
+    /* border: 1px solid #FFFFFF; */
     display: flex;
     justify-content:space-between;
     align-items: center;
 }
+#btn_1{
+    background-image: url(../images/commodity_arrow_reduce.svg);
+}
+#btn1{
+    background-image: url(../images/commodity_arrow_add.svg);
+}
+#btn_1,
+#btn1{
+    background-color: transparent;
+    cursor: pointer; 
+}
+
+#quantityNum{
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .quantityBtn{
-    height: 30px;
+    height: 50px;
     width: 50px;
     border: 1px solid transparent;
 }
@@ -1759,16 +1806,18 @@ li.pbShape {
     margin: 30px 0 30px 0;
     width: 100%;
     height: 100%;
+    
 }
 
 
 .buttomitem {
     margin: 0 15px 40px 0;
     width: 180px;
-    height: 60px;
+    height: 50px;
     border-radius: 5px;
     color: var(--Blue);
     border: 1px solid transparent;
+    cursor: pointer; 
 }
 
 /* 文字區 */
@@ -1832,7 +1881,7 @@ h5 {
     color: #FFFFFF;
     text-align: right;
     line-height: 1;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .productTitle p {

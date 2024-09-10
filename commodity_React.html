@@ -22,9 +22,85 @@
     <div id="root"></div>
     <script type="text/babel">
         function App() {
+            const [num, setNum] = React.useState(1);
+            const decreaseQuantity = () => {
+                if (num > 1) {
+                    setNum(num - 1);
+                }
+            };
+
+            const increaseQuantity = () => {
+                setNum(num + 1);
+            };
             return (<>
                 <Header />
                 <section id="introduction">
+                    <div className="mainPicture">
+                        <div class="smallPicture">
+                            <div className="small"></div>
+                            <div className="small"></div>
+                            <div className="small"></div>
+                            <div className="small"></div>
+                        </div>
+                        <div id="picL" className="bigPicture"></div>
+                    </div>
+                    <div className="productCopywriting">
+                        <div className="productTitle">
+                            <h2 id="productName"></h2>
+                            <p id="productIntroduction"></p>
+                            <h4 id="productPrice"></h4>
+                            <hr />
+                        </div>
+                        <div className="productContent">
+                            <ul className="contentDetails">
+                                <p>尺寸</p>
+                                <li className="detailsSize">
+                                    <ul className="sizeBox">
+                                        <li onClick={() => changeBorderB(event.target)} className="size">120</li>
+                                        <li onClick={() => changeBorderB(event.target)} className="size">130</li>
+                                        <li onClick={() => changeBorderB(event.target)} className="size">140</li>
+                                        <li onClick={() => changeBorderB(event.target)} className="size">XS</li>
+                                    </ul>
+                                    <ul class="sizeBox">
+                                        <li onClick={() => changeBorderB(event.target)} className="size">S</li>
+                                        <li onClick={() => changeBorderB(event.target)} className="size">M</li>
+                                        <li onClick={() => changeBorderB(event.target)} className="size">L</li>
+                                        <li onClick={() => changeBorderB(event.target)} className="size">XL</li>
+                                        <li onClick={() => changeBorderB(event.target)} className="size">2L</li>
+                                        <li onClick={() => changeBorderB(event.target)} className="size">3L</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div className="contentDetails">
+                                <p>顏色</p>
+                                <ul className="sizeBox">
+                                    <li id="productColor1" onClick={() => changeBorder(event.target)} className="color"></li>
+                                    <li id="productColor2" onClick={() => changeBorder(event.target)} className="color"></li>
+                                    <li id="productColor3" onClick={() => changeBorder(event.target)} className="color"></li>
+                                </ul>
+                            </div>
+                            <div className="contentDetails">
+                                <p>數量</p>
+                                <div className="quantity">
+                                    <button id="btn_1" className="quantityBtn" onClick={decreaseQuantity}>-</button>
+                                    <span id="quantityNum">{num}</span>
+                                    <button id="btn1" className="quantityBtn" onClick={increaseQuantity}>+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="productButtom">
+                    <button className="buttomitem">加入購物車</button>
+                    <button id="buyNowBtn" className="buttomitem">直接購買</button>
+                    <hr/>
+                </div>
+                <div class="productRemark">
+                    <p>
+                        購買須知<br/>
+                        該商品為客製化商品，下單後不可取消。敬請於下單前確認。<br/>
+                        待付費確認完成後，系統才會開始處理您的訂單，約7個工作天內出貨。
+                    </p>
+                </div>
+                    </div>
                 </section>
 
                 <section id="otherProducts">
@@ -36,58 +112,8 @@
             .createRoot(document.getElementById('root'))
             .render(<App />);
     </script>
-
-    <!-- 以下為JS -->
-    <script>
-        //  小圖點選換大圖
-        let bigPicture = document.getElementById('picL');
-        function swap1() {
-            picL.className = "bigPicture svcA-1";
-        }
-        function swap2() {
-            picL.className = "bigPicture svcA-1-back";
-        }
-        function swap3() {
-            picL.className = "bigPicture svcA-2";
-        }
-
-
-        // 按鈕點擊變色
-        function changeBorder(selectedElement) {
-            // 先获取所有具有 "size" 类的元素
-            let colorElements = document.querySelectorAll('.color');
-
-            // 遍历所有元素，将它们的边框颜色重置为白色
-            colorElements.forEach(function (element) {
-                element.style.borderColor = '#ffffff';
-                element.style.backgroundColor = '#013B63';
-                element.style.color = '#ffffff';
-            });
-
-            // 将选中的元素的边框颜色设置为黑色
-            selectedElement.style.borderColor = '#FEB75D';
-            selectedElement.style.backgroundColor = '#FEB75D';
-            selectedElement.style.color = '#013B63';
-        }
-
-
-        function changeBorderB(selectedElementB) {
-            // 先获取所有具有 "size" 类的元素
-            let sizeElements = document.querySelectorAll('.size');
-
-            // 遍历所有元素，将它们的边框颜色重置为白色
-            sizeElements.forEach(function (element) {
-                element.style.borderColor = '#ffffff';
-                element.style.backgroundColor = '#013B63';
-                element.style.color = '#ffffff';
-            });
-
-            // 将选中的元素的边框颜色设置为黑色
-            selectedElementB.style.borderColor = '#FEB75D';
-            selectedElementB.style.backgroundColor = '#FEB75D';
-            selectedElementB.style.color = '#013B63';
-        }
-    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="./js/jsSandyCommodity.js"></script>
 </body>
 
 </html>

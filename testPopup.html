@@ -54,7 +54,7 @@
     <!-- 設定jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="./js/jsAriaProject.js"></script>
+    <!-- <script src="./js/jsAriaProject.js"></script> -->
 
     <script>
         $(document).ready(function () {
@@ -62,6 +62,11 @@
             $('#showPopup').on('click', function () {
                 $('#popup').fadeIn();
             });
+
+            // 視窗3秒自動關閉
+            setTimeout(function () {
+                $('#popup').fadeOut();
+            }, 3000); // 5000 毫秒 = 5 秒
 
             // 當需要關閉彈出視窗時
             $('#closePopup').on('click', function () {
