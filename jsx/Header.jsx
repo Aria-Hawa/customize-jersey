@@ -27,7 +27,7 @@ function Header({ classname }) {
                         <div className="dropdown">
                             <a href="#" id="RLbtn">訂製專區</a>
                             <a href="./priceplan.html" id="pricePlanBtn">價格方案</a>
-                            <a href="./customize.html" id="customizeBtn">球衣模擬</a>
+                            <a href="./customize-React.html" id="customizeBtn">球衣模擬</a>
                         </div>
                         <a href="./chooseProject.html" className="cartBtn"></a>
                     </div>

@@ -1,171 +1,182 @@
-  
   /* 尺寸表視窗 */
   /* 覆蓋整個螢幕的背景 */
-   #showPopup{
+  #showPopup {
     width: fit-content;
-    cursor: pointer; 
-   }
-    .popup {
-      display: none;
-      /* 初始隱藏 */
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      /* 半透明的黑色背景 */
-      z-index: 1000;
-      /* 確保在最上層 */
-    }
+    cursor: pointer;
+  }
 
-    /* 彈出視窗內容 */
-    .popup-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      /* 將內容居中 */
-      background-color: #fff;
-      padding: 60px 40px 40px 40px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-      border-radius: 8px;
-      width: 600px;
-      
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  .popup {
+    display: none;
+    /* 初始隱藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 半透明的黑色背景 */
+    z-index: 1000;
+    /* 確保在最上層 */
+  }
 
-    .sizeTitle {
-      width: 100%;
-      background-color: #013B63;
-      letter-spacing: 0.08rem;
-      color: #fff;
-      height: 30px;
-      text-align: left;
-      display: flex;
-      align-items: center;
-      margin: 0 0 15px 0;
-    }
-    
-    .sizeTitle p {
-      padding: 0 0 0 20px;
-      line-height: 1;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      table-layout: fixed;
-      margin: 0 0 15px 0;
-      text-align: center;
+  /* 彈出視窗內容 */
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 將內容居中 */
+    background-color: #fff;
+    padding: 60px 40px 40px 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    width: 600px;
 
-    }
-    .tr1 {
-      height: 30px;
-      background-color: 	#808080;
-      color: #fff;
-      border: .75px solid FFFFFF;
-    }
-    .tr2 {
-      height: 40px;
-    }
-    .tr2 th{
-      background-color: 	#DCDCDC;
-    }
-    th{
-      width: 100px;
-    }
-    table,
-    th,
-    td {
-      border: .75px solid black;
-      /* 给表格、表头和表格单元格添加边框 */
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    th,td{      
+  .sizeTitle {
+    width: 100%;
+    background-color: #013B63;
+    letter-spacing: 0.08rem;
+    color: #fff;
+    height: 30px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin: 0 0 15px 0;
+  }
+
+  .sizeTitle p {
+    padding: 0 0 0 20px;
+    line-height: 1;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 0 0 15px 0;
+    text-align: center;
+
+  }
+
+  .tr1 {
+    height: 30px;
+    background-color: #808080;
+    color: #fff;
+    border: .75px solid FFFFFF;
+  }
+
+  .tr2 {
+    height: 40px;
+  }
+
+  .tr2 th {
+    background-color: #DCDCDC;
+  }
+
+  th {
+    width: 100px;
+  }
+
+  table,
+  th,
+  td {
+    border: .75px solid black;
+    /* 给表格、表头和表格单元格添加边框 */
+  }
+
+  th,
+  td {
     font-weight: 400;
-    font-size: 14px;}
+    font-size: 14px;
+  }
 
-    .sizeTitle small{
-      width: 100%;
-      text-align: left;
-    }
+  .sizeTitle small {
+    width: 100%;
+    text-align: left;
+  }
 
-    #closePopup{
-      position: absolute;
-      background-color: transparent;
-      top: 15px;
-      right: 15px;
-      width: 35px;
-      height: 35px ;
-      border: 1px solid transparent;
-      background-image:url(../images/commodity_arrow.svg) ;
-      background-position: center;
+  #closePopup {
+    position: absolute;
+    background-color: transparent;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid transparent;
+    background-image: url(../images/commodity_arrow.svg);
+    background-position: center;
     /*下面四張圖置中裁切*/
     background-size: contain;
     background-repeat: no-repeat;
-    cursor: pointer; 
-    }
-    small{
-      width: 100%;
-    }
-    .smalltext{
-      width: 100%;
-      display: flex;
-    }
-    .smalltext div{
-      margin: 0 10px 0 0;
-    }
+    cursor: pointer;
+  }
 
-    /* 成功加入購物車視窗 */
-     /* 覆蓋整個螢幕的背景 */
-     .shoppingSuccess,
-     .collectionWindow,
-     .failWindow {
-      display: none;
-      /* 初始隱藏 */
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      /* 確保在最上層 */
-    }
+  small {
+    width: 100%;
+  }
 
-    /* 彈出視窗內容 */
-    .success-content,
-    .collection-content,
-    .fail-content {
-      position: absolute;
-      right: 2%;
-      /* 將內容居中 */
-      background-color: #fff;
-      padding: 20px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-      border-radius: 8px;
-      width: 270px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: 	#404040;
+  .smalltext {
+    width: 100%;
+    display: flex;
+  }
 
-    }
-    .success-content,
-    .fail-content{
-      top: 70%;
-    }
+  .smalltext div {
+    margin: 0 10px 0 0;
+  }
 
-    .collection-content{
-      top: 17%;
-      mix-blend-mode:none;
-      z-index: 100;
-    }
+  /* 成功加入購物車視窗 */
+  /* 覆蓋整個螢幕的背景 */
+  .shoppingSuccess,
+  .collectionWindow,
+  .failWindow {
+    display: none;
+    /* 初始隱藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 確保在最上層 */
+  }
 
-    .arrowSuccess,
-    .arrowfail {
-      width: 45px;
-      height: 45px;
-      margin-right: 8px;
-    }
+  /* 彈出視窗內容 */
+  .success-content,
+  .collection-content,
+  .fail-content {
+    position: absolute;
+    right: 2%;
+    /* 將內容居中 */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    width: 270px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #404040;
+  }
+
+  .success-content,
+  .fail-content {
+    top: 70%;
+  }
+
+  .collection-content {
+    top: 17%;
+    mix-blend-mode: none;
+    z-index: 100;
+  }
+
+  .arrowSuccess,
+  .arrowfail {
+    width: 45px;
+    height: 45px;
+    margin-right: 8px;
+  }

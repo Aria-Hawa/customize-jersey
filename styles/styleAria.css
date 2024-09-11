@@ -1258,8 +1258,14 @@ hr {
 
 .table .tableCaption:hover {
     cursor: pointer;
+    /* border: 2px solid white; */
+    border: 4px solid transparent;
+    background-image: linear-gradient(var(--Blue), var(--Blue)), linear-gradient(-45deg, var(--Lightblue-White));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-repeat: no-repeat;
     border: 2px solid white;
-    animation: borderRun 2.3s ease-in-out;
+    animation: borderRun 2s ease-in-out;
 }
 
 .table .tableCaption.show {
@@ -1268,7 +1274,7 @@ hr {
 }
 
 
-.tableCaption > div {
+.tableCaption>div {
     display: flex;
     align-items: center;
     height: 100%;
@@ -1419,27 +1425,24 @@ td {
 }
 
 .nextBtn {
-    width: 120px;
-    border-radius: 10px;
+    width: 180px;
+    border-radius: 5px;
     font-size: 24px;
     text-align: center;
     padding: 10px 0px;
-    position: relative;
-    border: 2px solid white;
-    background-color: var(--Orange);
+    background-color: white;
     color: var(--Blue);
 }
 
 .lastBtn {
-    width: 120px;
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-    border-radius: 10px;
+    width: 180px;
+    border-radius: 5px;
     font-size: 24px;
     text-align: center;
     padding: 10px 0px;
-    position: relative;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
 }
 
 .pageBottom #addStyle:hover,
@@ -1449,9 +1452,10 @@ td {
     border: 2px solid var(--Orange);
 }
 
-.nextBtn:hover,
-.lastBtn:hover {
-    animation: shake .7s both;
+.nextBtn:hover {
+    /* animation: shake .7s both; */
+    transition: all .3s;
+    background-color: var(--Orange);
 }
 
 .pageBottom #addStyle:active,
@@ -1645,7 +1649,7 @@ td {
     background-color: rgba(255, 255, 255, .1);
 }
 
-#popup-content .userDesign > div {
+#popup-content .userDesign>div {
     font-size: 18px;
     display: flex;
     margin-left: 18px;
@@ -1996,6 +2000,33 @@ footer div small {
 
     100% {
         transform: translateX(5px);
+    }
+}
+
+@keyframes borderRun {
+    0% {
+        background-size: 100%, 0% 5%;
+        background-position: center, 0px 146px;
+        background-image: linear-gradient(var(--Darkblue), var(--Darkblue)), linear-gradient(-45deg, var(--Lightblue-White));
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        background-repeat: no-repeat;
+        background-size: 100%, 0% 2px;
+        background-position: center, 0px 148px;
+        border: 2px solid transparent;
+    }
+
+    60% {
+        background-image: linear-gradient(var(--Darkblue), var(--Darkblue)), linear-gradient(-45deg, var(--Lightblue-White));
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        background-repeat: no-repeat;
+        background-size: 100%, 100% 80%;
+        background-position: center, 0px 148px;
+    }
+
+    100% {
+        background-color: var(--Darkblue);
     }
 }
 
