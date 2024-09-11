@@ -120,7 +120,9 @@
 
     /* 成功加入購物車視窗 */
      /* 覆蓋整個螢幕的背景 */
-     .shoppingSuccess {
+     .shoppingSuccess,
+     .collectionWindow,
+     .failWindow {
       display: none;
       /* 初始隱藏 */
       position: fixed;
@@ -132,9 +134,10 @@
     }
 
     /* 彈出視窗內容 */
-    .success-content {
+    .success-content,
+    .collection-content,
+    .fail-content {
       position: absolute;
-      top: 70%;
       right: 2%;
       /* 將內容居中 */
       background-color: #fff;
@@ -146,9 +149,22 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      color: 	#404040;
+
+    }
+    .success-content,
+    .fail-content{
+      top: 70%;
     }
 
-    .arrowSuccess {
+    .collection-content{
+      top: 17%;
+      mix-blend-mode:none;
+      z-index: 100;
+    }
+
+    .arrowSuccess,
+    .arrowfail {
       width: 45px;
       height: 45px;
       margin-right: 8px;

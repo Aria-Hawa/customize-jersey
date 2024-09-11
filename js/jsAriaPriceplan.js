@@ -13,10 +13,30 @@ $(function () {
         let thisContent = $(this).closest('.item');
         let contentImg = $(thisContent).find('.infoImg').attr('src');
         // 位移PRICE PLAN標題
-        $('.title').css({
-            'left': 'calc(50% - 202px - 33%)',
-            'transition': 'all .9s ease-in-out'
-        });
+        if (window.matchMedia("(max-width: 1024px)").matches) {
+            $('.title').css({
+                'left': 'calc(40% - 40%)',
+                'transition': 'all .9s ease-in-out'
+            });
+            $('.title').find('p:first').css({
+                'opacity': '1',
+                'left': '5%',
+                'transition': 'all .9s ease-in-out'
+            });
+            $('.title').find('p:last').css({
+                'opacity': '1',
+                'top': '60%',
+                'right': '17%',
+                'transition': 'all .9s ease-in-out'
+            });
+        } else {
+            $('.title').css({
+                'left': 'calc(50% - 202px - 33%)',
+                'transition': 'all .9s ease-in-out'
+            });
+        }
+
+        // console.log($('.title').innerHTML());
         // 三個item透明->displayNone
         $('.item').addClass('hide');
         $('.item.hide').animate({ opacity: "0" }, 800, function () {
@@ -70,7 +90,7 @@ $(function () {
             $('.priceTxt').html(priceTxt);
         };
 
-        $(document).on('click','.content.act',function () {
+        $(document).on('click', '.content.act', function () {
             let contentId = $(this).attr('id');
             if (contentId == 'act1') {
                 $('.leftInfo').find('.infoImg').attr('src', './images/price1.png');

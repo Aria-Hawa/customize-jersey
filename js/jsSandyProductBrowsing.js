@@ -176,3 +176,15 @@ $(document).ready(function(){
         window.location.href = './commodity_text.html'; // 跳轉到內頁
     });
 });
+
+$(document).ready(function () {
+	// 當需要顯示彈出視窗時
+	$('#collection').on('click', function () {
+	  $('#collectionWindow').fadeIn();
+
+	  //  視窗3秒自動關閉
+	  setTimeout(function () {
+		$('#collectionWindow').fadeOut();
+	  }, 3000);
+	});
+  });

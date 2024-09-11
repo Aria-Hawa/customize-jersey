@@ -40,16 +40,16 @@ $(function () {
     $(document).on('click', '.delBtn', function () {
         // 在刪除之前先儲存del的table
         let delClosestTable = $(this).closest('table');
-        let projectImg = $(delClosestTable).closest('.table').find('.captionLeft figure').css('background-image').match(/url\(["']?([^"']*)["']?\)/)[1];
+        let projectImg = $(delClosestTable).closest('.table').find('svg').prop('outerHTML');
         let projectName = $(delClosestTable).closest('.table').find('.captionLeft p').text();
-        let projectPrice = $(delClosestTable).closest('.table').find('.price').text();
+        let projectPrice = $(delClosestTable).closest('.table').find('span').text();
         if ($(delClosestTable).find('tbody').length == 1) {
             if (confirm(`確定要刪除<${projectName}>項目嗎?`) == true) {
                 let newUserDesign = $('#emptyUserDesign').clone();
-                $(newUserDesign).find('img').attr('src', projectImg);
+                $(newUserDesign).attr('id', '');
+                $(newUserDesign).find('figure').append(projectImg);
                 $(newUserDesign).find('h3').text(projectName);
                 $(newUserDesign).find('span').text(projectPrice);
-                $(newUserDesign).attr('id', '');
                 $('#innerContent').find('.userDesign:last').after(newUserDesign);
                 $(newUserDesign).css('display', 'flex');
                 $(this).closest('tbody').closest('.table').remove();
@@ -86,30 +86,82 @@ $(function () {
         $(this).addClass('selected');
     });
 
-    // 按下確認鍵後
-    $('#chekBtn').click(function () {
-        // 取得projectname
-        let projectName = $('.userDesign.selected').find('h3').text();
-        // 取得img路徑
-        let ImgSrc = $('.userDesign.selected').find('img').attr('src');
-        // 取得單價
-        let unitPrice = $('.userDesign.selected').find('span').text();
-        // clone .table
-        let newProject = $('#project').clone();
-        $(newProject).find('.captionLeft p').text(projectName);
-        $(newProject).find('.captionRight span').text(unitPrice);
-        $(newProject).find('.captionLeft figure').css('background-image', `url(${ImgSrc})`);
-        $(newProject).css('display', 'block');
-        $(newProject).attr('id', '');
-        $('.table:last').after(newProject);
-        // 被選取的project要移除
-        $('.userDesign.selected').remove();
-    });
+    // 從 localStorage 中取出 svgArray
+    let svgArray = JSON.parse(localStorage.getItem('svgArray'));
+    if (svgArray && svgArray.length > 0) {
+        svgArray.forEach(function (element, index, array) {
+            let newUserDesign = $('#emptyUserDesign').clone();
+            $(newUserDesign).attr('id', '');
+            $(newUserDesign).find('figure').html(element.img);
+            $(newUserDesign).find('h3').text(element.name);
+            $(newUserDesign).find('span').text(`NT$${element.price}`);
+            $('#chekBtn').before(newUserDesign);
+            $(newUserDesign).css('display', 'flex');
+        });
+
+        // 按下確認鍵後
+        $('#chekBtn').click(function () {
+            if ($('.userDesign.selected').length > 0) {
+                // 取得projectname
+                let projectName = $('.userDesign.selected').find('h3').text();
+                // 取得SVG
+                let svgImg = $('.userDesign.selected').find('svg').prop('outerHTML');
+                // 取得單價
+                let unitPrice = $('.userDesign.selected').find('span').text();
+                // clone .table
+                let newProject = $('#project').clone();
+                $(newProject).attr('id', '');
+                $(newProject).find('.captionLeft p').text(projectName);
+                $(newProject).find('.captionRight span').text(unitPrice);
+                $(newProject).find('.captionLeft figure').append(svgImg);
+                $(newProject).css('display', 'block');
+                $(newProject).attr('id', '');
+                $('.table:last').after(newProject);
+                // 被選取的project要移除
+                $('.userDesign.selected').remove();
+            };
+        });
+
+
+    } else {
+        $('#chekBtn').before('<h4>並無儲存的設計樣式</h4>');
+        $(document).find('#innerContent h4').css('margin', '20px 0px');
+        $(document).find('#chekBtn').text('開始第一個設計').attr('href', './customize-React.html');
+        $('#popup-content').css('height', '40vh');
+    };
+
+
+
+
+
+    // // 按下確認鍵後
+    // $('#chekBtn').click(function () {
+    //     // 取得projectname
+    //     let projectName = $('.userDesign.selected').find('h3').text();
+    //     // // 取得img路徑
+    //     // let ImgSrc = $('.userDesign.selected').find('img').attr('src');
+    //     // 取得SVG
+    //     let ImgSrc = $('.userDesign.selected').find('img').attr('src');
+    //     // 取得單價
+    //     let unitPrice = $('.userDesign.selected').find('span').text();
+    //     // clone .table
+    //     let newProject = $('#project').clone();
+    //     $(newProject).find('.captionLeft p').text(projectName);
+    //     $(newProject).find('.captionRight span').text(unitPrice);
+    //     $(newProject).find('.captionLeft figure').css('background-image', `url(${ImgSrc})`);
+    //     $(newProject).css('display', 'block');
+    //     $(newProject).attr('id', '');
+    //     $('.table:last').after(newProject);
+    //     // 被選取的project要移除
+    //     $('.userDesign.selected').remove();
+    // });
 
     // 整筆總額隨project變更
-    $(document).find('.price').each((index, price) => {
-        console.log(price.innerText);
-    });
+    // $(document).find('.price').each((index, price) => {
+    //     console.log(price.innerText);
+    // });
+
+
 
 });
 

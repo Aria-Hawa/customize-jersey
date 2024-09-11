@@ -8,6 +8,9 @@
 </style>
 <g>
 	<ellipse class="st0" cx="22.5" cy="22.5" rx="20.9" ry="20.9"/>
-	<polyline class="st1" points="10.4,21 19.5,30 34.6,15 	"/>
+</g>
+<g>
+	<line class="st1" x1="31.6" y1="14.4" x2="13.4" y2="32.6"/>
+	<line class="st1" x1="31.6" y1="32.6" x2="13.4" y2="14.4"/>
 </g>
 </svg>

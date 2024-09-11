@@ -1,6 +1,16 @@
-function Header() {
+function Header({ classname }) {
+    useEffect(() => {
+        $(function () {
+            // fixedTopbar 訂製專區下拉選單
+            $('#RLbtn').click(function () {
+                $('#pricePlanBtn').toggleClass('show');
+                $('#customizeBtn').toggleClass('show');
+                $('#RLbtn').toggleClass('show');
+            });
+        });
+    }, [])
     return (
-        <header id="fixedTopbar">
+        <header id="fixedTopbar" className={classname}>
             <div className="topbar">
                 <h1><a href="./index.html"><img src="./images/logo.png" alt="VSER客製化球衣" /></a></h1>
                 <div className="menuList">
@@ -14,7 +24,11 @@ function Header() {
                         </ul>
                     </nav>
                     <div className="rightList">
-                        <a href="./customize.html" className="customizeBtn">訂製專區</a>
+                        <div className="dropdown">
+                            <a href="#" id="RLbtn">訂製專區</a>
+                            <a href="./priceplan.html" id="pricePlanBtn">價格方案</a>
+                            <a href="./customize.html" id="customizeBtn">球衣模擬</a>
+                        </div>
                         <a href="./chooseProject.html" className="cartBtn"></a>
                     </div>
                 </div>

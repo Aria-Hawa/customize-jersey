@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VSER</title>
     <link rel="icon" href="./favicon.ico">
-
+    <link rel="stylesheet" href="./styles/sandy_popup.css">
     <link rel="stylesheet" href="./styles/sandy.css">
     <link rel="stylesheet" href="./styles/pbCarousel.css">
 </head>
@@ -67,7 +67,7 @@
                                     <div class="frame"></div>
                                     <!-- 小方框 -->
                                     <div class="smallBox">
-                                        <div class="smallBoxIcon"></div>
+                                        <div id="collection" class="smallBoxIcon"></div>
                                     </div>
                                     <!-- 商品圖片區 -->
                                     <div class="pbshapeimg">
@@ -165,8 +165,8 @@
                                             <p>款式介紹款式介紹款式介紹</p>
                                             <h5>★★★★★</h5>
                                         </div>
-                                        <div id="pb4" class="pbTBtn" style="display: none;">
-                                            <a href="./commodity.html">詳細介紹</a>
+                                        <div id="pb4" class="pbTBtn"   data-product="D" style="display: none;">
+                                            詳細介紹
                                         </div>
                                     </div>
                                 </li>
@@ -192,8 +192,8 @@
                                             <p>款式介紹款式介紹款式介紹</p>
                                             <h5>★★★★★</h5>
                                         </div>
-                                        <div id="pb5" class="pbTBtn" style="display: none;">
-                                            <a href="./commodity.html">詳細介紹</a>
+                                        <div id="pb5" class="pbTBtn"   data-product="A" style="display: none;">
+                                            詳細介紹
                                         </div>
                                     </div>
                                 </li>
@@ -219,8 +219,8 @@
                                             <p>款式介紹款式介紹款式介紹</p>
                                             <h5>★★★★★</h5>
                                         </div>
-                                        <div id="pb6" class="pbTBtn" style="display: none;">
-                                            <a href="./commodity.html">詳細介紹</a>
+                                        <div id="pb6" class="pbTBtn"   data-product="B" style="display: none;">
+                                            詳細介紹
                                         </div>
                                     </div>
                                 </li>
@@ -558,8 +558,19 @@
                     </div>
                 </div>
             </div>
+
+
+          
         </section>
+
     </main>
+                        <!-- 彈出視窗 -->
+                        <div id="collectionWindow" class="collectionWindow">
+                            <div class="collection-content">
+                              <img class="arrowSuccess" src="./images/commodity_arrow_love.svg" alt="">
+                              <p>商品已成功加入收藏</p>
+                            </div>
+                          </div>
     <!-- 頁尾曲 -->
     <footer>
         <ul class="footerList">

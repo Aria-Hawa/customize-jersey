@@ -19,9 +19,21 @@
     </div>
   </div>
 
+  <p id="collection">加入購物車</p>
+
+  <!-- 彈出視窗 -->
+  <div id="failWindow" class="failWindow">
+    <div class="fail-content">
+      <img class="arrowfail" src="./images/commodity_arrow_fail.svg" alt="">
+      <p>請選擇尺寸與顏色</p>
+    </div>
+  </div>
+
+
+
   <style>
     /* 覆蓋整個螢幕的背景 */
-    .shoppingSuccess {
+    .collectionWindow {
       display: none;
       /* 初始隱藏 */
       position: fixed;
@@ -33,7 +45,7 @@
     }
 
     /* 彈出視窗內容 */
-    .success-content {
+    .collection-content {
       position: absolute;
       top: 70%;
       right: 0%;
@@ -62,14 +74,26 @@
   <!-- <script src="./js/jsAriaProject.js"></script> -->
 
   <script>
+    // $(document).ready(function () {
+    //   // 當需要顯示彈出視窗時
+    //   $('#shoppingCart').on('click', function () {
+    //     $('#shoppingSuccess').fadeIn();
+
+    //     //  視窗3秒自動關閉
+    //     setTimeout(function () {
+    //       $('#shoppingSuccess').fadeOut();
+    //     }, 3000);
+    //   });
+    // });
+
     $(document).ready(function () {
       // 當需要顯示彈出視窗時
-      $('#shoppingCart').on('click', function () {
-        $('#shoppingSuccess').fadeIn();
+      $('#collection').on('click', function () {
+        $('#collectionWindow').fadeIn();
 
         //  視窗3秒自動關閉
         setTimeout(function () {
-          $('#shoppingSuccess').fadeOut();
+          $('#collectionWindow').fadeOut();
         }, 3000);
       });
     });

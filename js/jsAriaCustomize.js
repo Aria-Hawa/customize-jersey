@@ -8,8 +8,6 @@ $(function () {
         $('#RLbtn').toggleClass('show');
     });
 
-
-
     // 頁面載入後的初始動畫
     $('#showStep h2').animate({ opacity: "1" }, {
         duration: 700,
@@ -43,12 +41,11 @@ $(function () {
                     });
                 }
             });
-
         }
     });
 
 
-    // 按下任意styleItem或shape previw區域，Design steip會隱藏
+    // 按下任意styleItem或shape previw區域，Design step會隱藏
     $('.styleItem li').click(function () {
         $('#showStep').hide();
         $('.KeyArea').show(500);
@@ -59,13 +56,16 @@ $(function () {
         $('.KeyArea').show(500);
     });
 
-
+    // 共用區
+    // .arrow按下後旋轉
+    $('.styleInfo label').click(function () {
+        $(this).find('.arrow').toggleClass('beClick');
+    });
 
     // 按下#lblForTextFonts的.arrow 
     // 1.新增.arrow的.beClick類別
     // 2.新增#chooseTextFonts的.show類別
     $('#lblForTextFonts').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
         $('#chooseTextFonts').toggleClass('show');
     });
 
@@ -73,7 +73,6 @@ $(function () {
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#chooseTextColor的.show類別
     $('#lblForTextColor').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
         $('.chooseColor').toggleClass('show');
     });
 
@@ -81,12 +80,12 @@ $(function () {
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#chooseTextSize的.show類別
     $('#lblForTextSize').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
         $('.textsizeRange').toggleClass('show');
     });
 
     // 按下colorItem後先讓#frontSide狀態selected
     $('#colorItem').click(function () {
+        $('#backSide').removeClass('selected');
         $('#frontSide').addClass('selected');
     });
 
@@ -114,7 +113,6 @@ $(function () {
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#frontColor-1.chooseColor的.show類別
     $('#lblForFront-1').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
         $('#frontColor-1.chooseColor').toggleClass('show');
     });
 
@@ -122,7 +120,6 @@ $(function () {
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#frontColor-2.chooseColor的.show類別
     $('#lblForFront-2').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
         $('#frontColor-2.chooseColor').toggleClass('show');
     });
 
@@ -130,7 +127,6 @@ $(function () {
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#frontColor-3.chooseColor的.show類別
     $('#lblForFront-3').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
         $('#frontColor-3.chooseColor').toggleClass('show');
     });
 
@@ -138,7 +134,6 @@ $(function () {
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#frontColor-4.chooseColor的.show類別
     $('#lblForFront-4').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
         $('#frontColor-4.chooseColor').toggleClass('show');
     });
 
@@ -146,7 +141,6 @@ $(function () {
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#frontColor-5.chooseColor的.show類別
     $('#lblForFront-5').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
         $('#frontColor-5.chooseColor').toggleClass('show');
     });
 
@@ -155,7 +149,6 @@ $(function () {
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#backColor-1.chooseColor的.show類別
     $('#lblForBack-1').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
         $('#backColor-1.chooseColor').toggleClass('show');
     });
 
@@ -163,7 +156,6 @@ $(function () {
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#backColor-2.chooseColor的.show類別
     $('#lblForBack-2').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
         $('#backColor-2.chooseColor').toggleClass('show');
     });
 
@@ -171,7 +163,6 @@ $(function () {
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#backColor-3.chooseColor的.show類別
     $('#lblForBack-3').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
         $('#backColor-3.chooseColor').toggleClass('show');
     });
 
@@ -179,7 +170,6 @@ $(function () {
     // 1. 新增.arrow的.beClick類別
     // 2. 新增#backColor-4.chooseColor的.show類別
     $('#lblForBack-4').click(function () {
-        $(this).find('.arrow').toggleClass('beClick');
         $('#backColor-4.chooseColor').toggleClass('show');
     });
 
@@ -272,7 +262,6 @@ $(function () {
         $('.showTxtOnJersy').css('color', $(this).css('background-color'));
     });
 
-
     // TextArea方向按鈕改變位置
     let ty = 180;
     let tx = 0;
@@ -344,7 +333,7 @@ $(function () {
         clearInterval(NumintervalId);
     });
 
-    // NumArea方向按鈕改變位置
+    // PictureArea方向按鈕改變位置
     let Py = 100;
     let Px = 340;
     let PictureIntervalId;
@@ -410,39 +399,59 @@ $(function () {
         $('.PicturesizeRange').toggleClass('show');
     });
 
+
     // 按下儲存按鈕 => localStorage.setItem
-    // let countSvg = 0;
+    // 宣告一個全域的 svgArray 陣列來儲存多次的 SVG 資料
+    let svgArray = JSON.parse(localStorage.getItem('svgArray')) || [];
     $('#saveOption').click(function () {
         let getBlockSvg = $(document).find('.KeyArea svg').filter((index, element) => {
             return element.style.display == 'block';
         });
+
         if (getBlockSvg.length > 0) {
             // 使用 prop() 取得 outerHTML
             let svgData = getBlockSvg.prop('outerHTML');
             $('#popup').fadeIn();
             $('#showSvg').html(svgData);
-            $('#chekBtn').click(function () {
-                // countSvg = countSvg + 1;
-                let svgName = $(this).siblings('#svgName').val();
+            let svgPrice = $('.unitPrice span').text();
+            $('#nameSvg span').text(`NT$${svgPrice}`);
+
+            // 確保 `#chekBtn` 的事件綁定只會執行一次
+            $('#chekBtn').off('click').on('click', function () {
+                let svgName = $('#svgName').val();
+                let svgDescribe = $('#svgDescribe').val();
                 if (svgName != '') {
-                    let svgDescribe = $(this).siblings('#svgDescribe').val();
+                    // 建立 SVG 物件
                     let svgObject = {
-                        img: svgData,
                         name: svgName,
-                        Describe: svgDescribe,
-                    };  
-                    console.log(svgObject);
-                };
+                        img: svgData,
+                        describe: svgDescribe,
+                        price: svgPrice,
+                    };
+                    // 將物件推入 svgArray
+                    svgArray.push(svgObject);
+                    // 更新 localStorage
+                    localStorage.setItem('svgArray', JSON.stringify(svgArray));
+                    // 清空 input 和 textarea 欄位
+                    $('#svgName').val('');
+                    $('#svgDescribe').val('');
+                    // 關閉彈窗
+                    $('#popup').fadeOut();
+                } else {
+                    alert('請輸入 SVG 名稱');
+                }
             });
         } else {
             alert('您尚未開始設計喔~');
-        };
-
-        // 當需要關閉彈出視窗時
-        $('#closePopup').on('click', function () {
-            $('#popup').fadeOut();
-        });
+        }
     });
+
+    // 當需要關閉彈出視窗時
+    $('#closePopup').on('click', function () {
+        $('#popup').fadeOut();
+    });
+
+
 
 });
 // 以上jQuery
@@ -552,33 +561,7 @@ function displayNumber() {
 
 
 
-//textArea步驟動態顯示
-// 8/29 textArea改為2步驟
-let textArea1st = document.querySelector('#textArea-1st');
-let textArea2nd = document.querySelector('#textArea-2nd');
-// let textArea3rd = document.querySelector('#textArea-3rd');
-
-function textStepDisplayNone() {
-    textArea1st = document.querySelector('#textArea-1st');
-    textArea2nd = document.querySelector('#textArea-2nd');
-    // textArea3rd = document.querySelector('#textArea-3rd');
-
-    textArea1st.style.display = 'none';
-    textArea2nd.style.display = 'none';
-    // textArea3rd.style.display = 'none';
-}
-
-function display1stStep() {
-    textStepDisplayNone();
-    textArea1st.style.display = 'flex';
-}
-
-function display2ndStep() {
-    textStepDisplayNone();
-    textArea2nd.style.display = 'flex';
-}
-
-// 同步顯示在球衣上
+//textArea顯示在球衣上
 let getTextStyleInput = document.getElementById('textStyle');
 getTextStyleInput.addEventListener('keyup', function () {
     // 用forEach顯示陣列中所有的值

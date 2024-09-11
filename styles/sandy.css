@@ -1514,11 +1514,19 @@ li.pbShape {
 }
 
 .svcA-7 {
-    background-image: url(../images/productBrowsing_pbShapeA_5.png);
+    background-image: url(../images/productBrowsing_pbShapeA_7.png);
+}
+
+.svcA-7-back {
+    background-image: url(../images/productBrowsing_pbShapeA_7_back.png);
 }
 
 .svcA-8 {
-    background-image: url(../images/productBrowsing_pbShapeA_6.png);
+    background-image: url(../images/productBrowsing_pbShapeA_8.png);
+}
+
+.svcA-8-back {
+    background-image: url(../images/productBrowsing_pbShapeA_8_back.png);
 }
 
 .svcB-1 {
@@ -1645,12 +1653,15 @@ li.pbShape {
 
 .mainPicture {
     width: 50%;
-    height: 440px;
+    height: 100%;
     /* background-color: #2eb02a; */
     margin: 0 40px 0 0;
     display: flex;
+    flex-direction: column;
 }
-
+.pictureArea{
+    display: flex;
+}
 .mainPicture .bigPicture {
     width: 80%;
     height: 440px;
@@ -1686,10 +1697,31 @@ li.pbShape {
     /* 移除最後一個 .small 元素的 margin-bottom */
 }
 
+.reminderText{
+    margin-top: 15px;
+    background-color: rgb(255, 255, 255,.1);
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+.reminderText small{
+    width: fit-content;
+}
+
+
 .productCopywriting {
     width: 50%;
     height: 100%;
     /* border: 1px solid #FFFFFF; */
+}
+.productBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 30px 0;
 }
 
 .productContent {
@@ -1701,6 +1733,7 @@ li.pbShape {
 
 .productRemark {
     color: #FFFFFF;
+    font-size: 13.4px;
 }
 
 .contentDetails {
@@ -1721,27 +1754,41 @@ li.pbShape {
 
 .contentDetails .size,
 .contentDetails .color {
-    width: 50px;
     height: 30px;
     border: 1px solid #ffffff;
     margin: 15px 15px 0 0;
     color: #fff;
     text-align: center;
 }
+.contentDetails .color{
+    width: 115px;
+
+}
+.contentDetails .size{
+    width: 50px;
+}
+
 .detailsText{
     display: flex;
     align-items:center;
 }
+.noteBox{
+    margin: 0 0 15px 0;
+}
 .detailsText p{
     margin: 0 10px 0 0 ;
 }
-.detailsText small{
+.detailsText small,
+.noteTitle{
     border-bottom:1px solid #FFFFFF;
-    padding-bottom:0.75px;
+    width:fit-content ;
+}
+.productRemark .notetext{
+    line-height: 1.5;
+    margin: 5px 0 0 0 ;
 }
 
 #quantity {
-    margin: 15px 0 0 0;
     width: 115px;
     height: 50px;
     text-align: center;
@@ -1766,15 +1813,22 @@ li.pbShape {
     display: flex;
     margin: 40px 0 30px 0;
     color: #FFFFFF;
+    flex-direction: column
+}
+.recommend{
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 .quantity{
-    margin: 15px 0 0 0 ;
+    /* margin: 15px 0 0 0 ; */
     width: 180px;
     height: 50px;
     /* border: 1px solid #FFFFFF; */
     display: flex;
-    justify-content:space-between;
+    justify-content:space-evenly;
+    margin: none;
     align-items: center;
 }
 #btn_1{
@@ -1818,6 +1872,9 @@ li.pbShape {
     color: var(--Blue);
     border: 1px solid transparent;
     cursor: pointer; 
+}
+.buttomitem:hover{
+    background-color: #FEB75D;
 }
 
 /* 文字區 */
@@ -1878,15 +1935,14 @@ h5 {
 }
 
 .productTitle h4 {
-    color: #FFFFFF;
+    color:#FFFFFF;
     text-align: right;
     line-height: 1;
-    margin-bottom: 10px;
+    font-weight: 500;
 }
 
 .productTitle p {
     color: #FFFFFF;
-    margin: 10px 0 10px 0px;
 
 }
 

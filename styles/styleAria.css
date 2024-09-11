@@ -88,6 +88,7 @@ a {
     --Lightblue-White: var(--Lightblue) 0%, #fff 100%;
     --Darkblue-blue: var(--Blue) 0%, var(--Darkblue) 100%;
     --Blue-grayblue: var(--Grayblue) 0%, var(--Blue) 100%;
+    --Orange-White: var(--Orange) 0%, #fff 100%;
 }
 
 /* home區 */
@@ -225,8 +226,8 @@ a {
 }
 
 .sloganNbtn a:hover {
-    transition: .4s all cubic-bezier(0, 0, 0.05, 0.92);
-    transform: translateX(30px);
+    transition: .4s all cubic-bezier(0, 0.38, 0, 0.88);
+    transform: translateX(60px);
 }
 
 /* 以下8/20新增，測試before光條 */
@@ -270,128 +271,7 @@ a {
 
 
 /* customize網頁區 */
-/* fixed header區 */
-#fixedTopbar {
-    background-color: var(--Blue);
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    z-index: 999;
-    border-bottom: 1px solid white;
-}
 
-#fixedTopbar .topbar {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0px 80px;
-}
-
-@media (max-width: 1080px){
-    #fixedTopbar .topbar {
-        padding: 0px 40px;
-    }
-}
-
-.topbar h1 {
-    min-width: 129px;
-}
-
-.menuList {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 92%;
-}
-
-.menuList h1 {
-    width: 129px;
-}
-
-.menuItem ul {
-    display: flex;
-}
-
-.menuItem ul li a {
-    margin-left: 40px;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 2px;
-}
-
-#fixedTopbar .menuList .rightList {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.cartBtn {
-    width: 48px;
-    height: 48px;
-}
-
-.rightList .dropdown {
-    margin-right: 20px;
-    position: absolute;
-    top: 6px;
-    right: 44px;
-}
-
-.dropdown #RLbtn {
-    position: relative;
-}
-
-.dropdown #RLbtn::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: -1px;
-    right: -1px;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border: 2px solid transparent;
-    border-image: linear-gradient(0deg, var(--Lightblue-White)) 1 round;
-    transition: all .5s ease-in-out;
-}
-
-.dropdown #RLbtn.show::after {
-    height: 300%;
-}
-
-.dropdown a {
-    width: 100px;
-    height: fit-content;
-    text-align: center;
-    padding: 8px;
-    animation: rotate 3s linear infinite;
-    font-size: 18px;
-    background-color: var(--Blue);
-}
-
-#pricePlanBtn,
-#customizeBtn {
-    visibility: hidden;
-    opacity: 0;
-}
-
-#pricePlanBtn.show,
-#customizeBtn.show {
-    visibility: visible;
-    transition: all .8s ease-in-out;
-    opacity: 1;
-}
-
-#pricePlanBtn:hover {
-    background-image: linear-gradient(90deg, var(--Blue-grayblue));
-}
-
-#customizeBtn:hover {
-    background-image: linear-gradient(-90deg, var(--Grayblue) 0%, var(--Blue) 100%);
-}
-
-/* 以上fixedTopbar區 */
 
 
 
@@ -951,6 +831,16 @@ hr {
     padding: 8px 0px;
 }
 
+.frontColor div a,
+.backColor div a {
+    background-color: #d9d9d9;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .3);
+    margin-right: 10px;
+}
+
 .chooseColor.show {
     display: flex;
     animation: show 0.55s both;
@@ -1015,6 +905,7 @@ hr {
     width: 100%;
     height: 70%;
     object-fit: contain;
+    display: none;
 }
 
 
@@ -1249,7 +1140,7 @@ hr {
 }
 
 
-#customizePlace #popup-content  #innerContent {
+#customizePlace #popup-content #innerContent {
     width: 90%;
     height: 100%;
     display: flex;
@@ -1291,6 +1182,7 @@ hr {
     border-radius: 0;
     color: var(--Blue);
     font-size: 16px;
+    width: 100%;
 }
 
 #nameSvg textarea {
@@ -1306,6 +1198,16 @@ hr {
     font-size: 18px;
 }
 
+#nameSvg p {
+    margin: 10px 0px;
+    width: 100%;
+    text-align: end;
+}
+
+#nameSvg p span {
+    font-size: 20px;
+    font-weight: 500;
+}
 
 
 
@@ -1325,7 +1227,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 20px;
+    margin: 20px 0px;
 }
 
 #projectPlace .pageTitle {
@@ -1366,7 +1268,7 @@ hr {
 }
 
 
-.tableCaption div {
+.tableCaption > div {
     display: flex;
     align-items: center;
     height: 100%;
@@ -1378,21 +1280,13 @@ hr {
 
 .tableCaption figure {
     width: 168px;
-    height: 140px;
+    height: 126px;
     border-right: 1px solid white;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     margin-right: 21px;
 }
-
-.table .tableCaption figure {
-    background-image: url(../images/projectResults1_pjshape2.png);
-}
-
-/* #project-2 .tableCaption figure {
-    background-image: url(../images/projectResults_pjshape2.png);
-} */
 
 .table table {
     width: 100%;
@@ -1524,8 +1418,19 @@ td {
     justify-content: space-around;
 }
 
-.nextBtn,
-.PDbtn a {
+.nextBtn {
+    width: 120px;
+    border-radius: 10px;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0px;
+    position: relative;
+    border: 2px solid white;
+    background-color: var(--Orange);
+    color: var(--Blue);
+}
+
+.lastBtn {
     width: 120px;
     background-color: transparent;
     color: white;
@@ -1538,8 +1443,7 @@ td {
 }
 
 .pageBottom #addStyle:hover,
-.nextBtn:hover,
-.PDbtn a:hover {
+.lastBtn:hover {
     transition: all .3s;
     color: var(--Orange);
     border: 2px solid var(--Orange);
@@ -1547,14 +1451,18 @@ td {
 
 .nextBtn:hover,
 .lastBtn:hover {
-    animation: shake .5s both;
+    animation: shake .7s both;
 }
 
 .pageBottom #addStyle:active,
-.nextBtn:active,
-.PDbtn a:active {
+.lastBtn:active {
     color: var(--Darkorange);
     border: 2px solid var(--Darkorange);
+}
+
+.nextBtn:active {
+    color: var(--Blue);
+    background-color: var(--Darkorange);
 }
 
 .pageBottom #addStyle:hover figure {
@@ -1725,12 +1633,19 @@ td {
 }
 
 #popup-content .userDesign img {
-    width: 180px;
+    width: 100%;
     padding: 0px 20px;
     background-color: rgba(255, 255, 255, .1);
 }
 
-#popup-content .userDesign div {
+#popup-content .userDesign figure {
+    height: 180px;
+    width: auto;
+    padding: 10px 0px;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+#popup-content .userDesign > div {
     font-size: 18px;
     display: flex;
     margin-left: 18px;
@@ -1848,32 +1763,6 @@ td {
     align-items: flex-end;
 }
 
-.captionLeft div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-}
-
-.captionLeft div a {
-    padding-bottom: 4px;
-    border-bottom: 1px solid white;
-}
-
-.captionLeft figure {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#order-1 .captionLeft figure {
-    background-image: url(../images/projectResults1_pjshape2.png);
-}
-
-#order-2 .captionLeft figure {
-    background-image: url(../images/projectResults_pjshape2.png);
-}
-
 .contentMoney {
     flex-grow: 1;
     text-align: end;
@@ -1940,7 +1829,7 @@ td {
     margin-right: 20px;
 }
 
-#orderInfo > div:last-child {
+#orderInfo>div:last-child {
     padding: 15px 0px;
     border-top: 1px solid white;
 }
