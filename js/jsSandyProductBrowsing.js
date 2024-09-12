@@ -2,9 +2,9 @@
 
 // productBrowsing 
 // 宣告三個背景變數
-let bgsvc_1="";
-let bgsvc_2="";
-let bgsvc_3="";
+let bgsvc_1 = "";
+let bgsvc_2 = "";
+let bgsvc_3 = "";
 // 宣告三個換圖輪播變數
 let templatesA = '';
 let templatesB = '';
@@ -154,37 +154,43 @@ function slideCarousel(direction) {
 
 };
 
-$('#carousel-left').click(function () {
-	slideCarousel("left");
-});
+$(document).ready(function () {
+	$('#carousel-left').click(function () {
+		slideCarousel("left");
+	});
 
-$('#carousel-right').click(function () {
-	slideCarousel("right");
+	$('#carousel-right').click(function () {
+		slideCarousel("right");
+	});
+
+	changeJersey();
 });
 
 // 在这里添加初始化代码
-$(document).ready(function() {
-    changeJersey(); // 或 changeSweat(); 根据你的默认显示需求
+$(document).ready(function () {
+	changeJersey(); // 或 changeSweat(); 根据你的默认显示需求
 });
 
 // 點選商品=>商品內頁
-$(document).ready(function(){
-    $('.pbTBtn').click(function(e){
-        e.preventDefault();
-        const productId = $(this).data('product'); // 獲取點擊商品的 data-product 屬性
-        localStorage.setItem('selectedProduct', productId); // 將商品資訊保存到 localStorage
-        window.location.href = './commodity_text.html'; // 跳轉到內頁
-    });
+$(document).ready(function () {
+	$('.pbTBtn').click(function (e) {
+		e.preventDefault();
+		const productId = $(this).data('product'); // 獲取點擊商品的 data-product 屬性
+		localStorage.setItem('selectedProduct', productId); // 將商品資訊保存到 localStorage
+		window.location.href = './commodity_text.html'; // 跳轉到內頁
+	});
 });
 
 $(document).ready(function () {
 	// 當需要顯示彈出視窗時
 	$('#collection').on('click', function () {
-	  $('#collectionWindow').fadeIn();
+		$('#collectionWindow').fadeIn();
 
-	  //  視窗3秒自動關閉
-	  setTimeout(function () {
-		$('#collectionWindow').fadeOut();
-	  }, 3000);
+		//  視窗3秒自動關閉
+		setTimeout(function () {
+			$('#collectionWindow').fadeOut();
+		}, 3000);
 	});
-  });
+});
+
+
