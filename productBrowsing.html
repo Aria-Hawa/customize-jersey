@@ -10,11 +10,10 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <title>VSER-React</title>
     <link rel="icon" href="./favicon.ico">
-    <link rel="stylesheet" href="./styles/headNfooter.css">
+        <link rel="stylesheet" href="./styles/headNfooter.css">
     <link rel="stylesheet" href="./styles/sandy_popup.css">
     <link rel="stylesheet" href="./styles/sandy.css">
     <link rel="stylesheet" href="./styles/pbCarousel.css">
-
     <script type="text/babel" src="./jsx/Header.jsx"></script>
     <script type="text/babel" src="./jsx/Footer.jsx"></script>
     <script type="text/babel" src="./jsx/PbShape.jsx"></script>
@@ -36,7 +35,7 @@
                     onMouseLeave={() => setIsHovered(false)}>
                     <div className="frame"></div>
                     <div className="smallBox">
-                        <div id="collection" className="smallBoxIcon"></div>
+                    <div className="smallBoxIcon collection"></div>
                     </div>
                     <div className="pbshapeimg">
                         <div className={props.svcA}></div>
@@ -182,13 +181,13 @@
                         </div>
                     </section>
                 </main>
+                <Footer />
                 <div id="collectionWindow" className="collectionWindow">
                     <div className="collection-content">
                         <img className="arrowSuccess" src="./images/commodity_arrow_love.svg" alt="" />
                         <p>商品已成功加入收藏</p>
                     </div>
                 </div>
-                <Footer />
             </>)
 
         }

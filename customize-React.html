@@ -8,6 +8,8 @@
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./styles/styleAria.css">
     <link rel="stylesheet" href="./styles/headNfooter.css">
+    <link rel="stylesheet" href="./styles/sandy_popup.css">
+
     <!-- 載入React -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -512,12 +514,14 @@
                                     $('#svgDescribe').val('');
                                     // 關閉彈窗
                                     $('#popup').fadeOut();
-                                } else {
-                                    alert('請輸入 SVG 名稱');
                                 }
                             });
                         } else {
-                            alert('您尚未開始設計喔~');
+                            $('#errMsg').find('p').text('請先開始設計樣式');
+                            $('#errMsg').fadeIn();
+                            setTimeout(function () {
+                                $('#errMsg').fadeOut();
+                            }, 2000);
                         }
                     });
                     // 當需要關閉彈出視窗時
@@ -538,22 +542,32 @@
                             $('#showSvg').html(orderSvg);
                             let orderPrice = $('.unitPrice span').text();
                             $('#nameSvg span').text(`NT$${orderPrice}`);
-                            if (svgName != '') {
+
+                            $('#chekBtn').off('click').on('click', function () {
                                 let orderName = $('#svgName').val();
-                                let orderDescribe = $('#svgDescribe').val();
-                                let orderIt = {
-                                    name: orderName,
-                                    img: orderSvg,
-                                    describe: orderDescribe,
-                                    price: orderPrice,
-                                };
-                                
-
-                            }
-
+                                console.log(orderName);
+                                if (orderName != '') {
+                                    let orderDescribe = $('#svgDescribe').val();
+                                    let orderIt = {
+                                        name: orderName,
+                                        img: orderSvg,
+                                        describe: orderDescribe,
+                                        price: orderPrice,
+                                    };
+                                    localStorage.setItem('orderItObj', JSON.stringify(orderIt));
+                                    $('#svgName').val('');
+                                    $('#svgDescribe').val('');
+                                    $('#popup').fadeOut();
+                                    $('#chekBtn').attr('href','./chooseProject.html');
+                                }
+                            });
 
                         } else {
-                            alert('您尚未開始設計喔~');
+                            $('#errMsg').find('p').text('請先開始設計樣式');
+                            $('#errMsg').fadeIn();
+                            setTimeout(function () {
+                                $('#errMsg').fadeOut();
+                            }, 2000);
                         }
                     });
 
@@ -1198,7 +1212,7 @@
                                 <div id="popup-content">
                                     <div id="popup-title">
                                         <h3>SAVE DESIGN</h3>
-                                        <a href="" id="closePopup" className="chooseProjectBtn">x</a>
+                                        <a href="" id="closePopup" className="chooseProjectBtn"></a>
                                     </div>
                                     <div id="innerContent">
                                         <figure id="showSvg"></figure>
@@ -1208,9 +1222,16 @@
                                             <label htmlFor="">描述：</label>
                                             <textarea name="" id="svgDescribe" title="描述樣式欄位" rows="4" maxLength="60"></textarea>
                                             <p>單件價格: <span></span></p>
-                                            <button id="chekBtn" className="chooseProjectBtn">確認</button>
+                                            <a id="chekBtn" className="chooseProjectBtn">確認</a>
                                         </form>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div id="errMsg" className="failWindow">
+                                <div className="fail-content">
+                                    <img className="arrowfail" src="./images/commodity_arrow_fail.svg" alt="" />
+                                    <p>請選擇尺寸與顏色</p>
                                 </div>
                             </div>
 
