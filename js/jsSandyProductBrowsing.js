@@ -182,8 +182,9 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-	// 當需要顯示彈出視窗時
-	$('#collection').on('click', function () {
+
+	// 使用事件委託，將事件處理器綁定到已存在的父級元素
+	$('body').on('click', '.collection', function () {
 		$('#collectionWindow').fadeIn();
 
 		//  視窗3秒自動關閉
@@ -191,6 +192,16 @@ $(document).ready(function () {
 			$('#collectionWindow').fadeOut();
 		}, 3000);
 	});
+
+	// 當需要顯示彈出視窗時
+	// $('.collection').on('click', function () {
+	// 	$('#collectionWindow').fadeIn();
+
+	// 	//  視窗3秒自動關閉
+	// 	setTimeout(function () {
+	// 		$('#collectionWindow').fadeOut();
+	// 	}, 3000);
+	// });
 });
 
 
