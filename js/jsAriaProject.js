@@ -112,21 +112,26 @@ $(function () {
                 $('.table:last').after(newProject);
                 // 被選取的project要移除
                 $('.userDesign.selected').remove();
-            };
+            }
+
         });
     } else {
         $('#chekBtn').before('<h4>並無儲存的設計樣式</h4>');
         $(document).find('#innerContent h4').css('margin', '20px 0px');
         $(document).find('#chekBtn').text('開始第一個設計').attr('href', './customize-React.html');
-        $('#popup-content').css('height', '40vh');
+        $('#popup-content').css('height', '30vh');
     };
+
 
     // 從localStorage取出 orderItObject
     let orderItObject = JSON.parse(localStorage.getItem('orderItObj'));
-    console.log(orderItObject);
-    if (orderItObject != ''){
-        $('#project').clone().attr('id','');
-        $('#project').css('display','block').after('#project');
+    if (orderItObject != '') {
+        let newordProject = $('#project').clone();
+        newordProject.find('.captionLeft figure').append(orderItObject.img);
+        newordProject.find('.captionLeft p').text(orderItObject.name);
+        newordProject.find('.unitPrice').text(`單件價格: NT$ ${orderItObject.price}`);
+        newordProject.attr('id', '').css('display', 'block');
+        $('#project').after(newordProject);
     }
 
 
