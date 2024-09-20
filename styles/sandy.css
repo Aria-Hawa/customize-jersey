@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
 
 /* 套用字體 */
 @font-face {
@@ -83,133 +83,6 @@ a {
     --Darkblue-Blue: var(--Darkblue) 38%, var(--Blue) 100%;
     --Lightblue-White: #fff 0%, var(--Lightblue) 100%;
     --Orange-White: var(--Orange) 0%, #fff 100%;
-}
-
-
-/* 頁首區 */
-header {
-    background-color: var(--Darkblue);
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    /*頁首釘選*/
-    z-index: 999;
-}
-
-.topbar {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    padding: 0 80px;
-}
-
-.menuList {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 92%;
-}
-
-.menuList h1 {
-    width: 129px;
-}
-
-.menuItem ul {
-    display: flex;
-}
-
-
-.menuItem ul li a {
-    padding-bottom: 3px;
-    margin-left: 40px;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-.menuItem ul li a:hover {
-    color: var(--Orange);
-    transition: 0.5s;
-}
-
-
-section {
-
-    height: 100vh;
-}
-
-/* customize網頁區 */
-/* fixed header區 */
-#fixedTopbar {
-    background-color: var(--Darkblue);
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    z-index: 999;
-}
-
-#fixedTopbar .topbar {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 80px;
-}
-
-#fixedTopbar .menuList .rightList {
-    display: flex;
-    align-items: center;
-}
-
-#fixedTopbar .rightList .customizeBtn {
-    margin-right: 30px;
-    width: 120px;
-    height: fit-content;
-    text-align: center;
-    padding: 8px;
-    border: 2px solid transparent;
-    border-image: linear-gradient(135deg, var(--Lightblue-White)) 1 round;
-    position: relative;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-#fixedTopbar .rightList .customizeBtn:hover {
-    color: var(--Orange);
-    transition: 0.5s;
-    border: 2px solid transparent;
-    border-image: linear-gradient(135deg, var(--Orange-White)) 1 round;
-}
-
-#fixedTopbar .rightList a {
-    width: 40px;
-    height: 40px;
-}
-
-#fixedTopbar .rightList .cartBtn {
-    background-image: url(../images/cartBtnICON.svg);
-}
-
-#fixedTopbar .rightList .cartBtn:hover {
-    transition: 0.5s;
-    background-image: url(../images/cartBtnICON_1.svg);
-}
-
-
-@keyframes rotate {
-    0% {
-        border-image: linear-gradient(0deg, var(--Lightblue-White)) 1 round;
-    }
-
-    50% {
-        border-image: linear-gradient(180deg, var(--Lightblue-White)) 1 round;
-    }
-
-    100% {
-        border-image: linear-gradient(360deg, var(--Lightblue-White)) 1 round;
-    }
 }
 
 /* 品牌理念 */
@@ -923,8 +796,11 @@ section {
     width: 100%;
 }
 
-.pbText p {
+.pbText p,
+.productCopywriting p,
+.productContent {
     letter-spacing: .08rem;
+    font-size: 16px;
 }
 
 /* 下半部 */
@@ -1335,14 +1211,17 @@ li.pbShape {
     align-items: center;
     mix-blend-mode: normal;
     opacity: normal;
+    transition: 0.35s;
+    letter-spacing: 0.08rem;
+
 }
 
 .pbShape .pbBescribe .pbTBtn:hover {
     border: 2px solid var(--Orange);
-}
-
-.pbShape .pbBescribe .pbTBtn:hover a {
-    color: var(--Orange);
+    background-color: var(--Orange);
+    color: var(--Darkblue);
+    font-weight: 500;
+    
 }
 
 
@@ -1780,10 +1659,12 @@ li.pbShape {
 }
 .detailsText small,
 .noteTitle{
+    letter-spacing: 0.05rem;
     border-bottom:1px solid #FFFFFF;
     width:fit-content ;
 }
 .productRemark .notetext{
+    letter-spacing: 0.05rem;
     line-height: 1.5;
     margin: 5px 0 0 0 ;
 }
@@ -1860,9 +1741,11 @@ li.pbShape {
     margin: 30px 0 30px 0;
     width: 100%;
     height: 100%;
-    
+    font-size: 22px;
 }
-
+.productButtom button{
+    font-size:16px;
+}
 
 .buttomitem {
     margin: 0 15px 40px 0;
@@ -1875,6 +1758,10 @@ li.pbShape {
 }
 .buttomitem:hover{
     background-color: #FEB75D;
+}
+#introduction small,
+.detailsText small{
+    letter-spacing: 0.05rem;
 }
 
 /* 文字區 */

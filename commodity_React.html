@@ -13,6 +13,8 @@
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./styles/sandy.css">
     <link rel="stylesheet" href="./styles/pbCarousel.css">
+    <link rel="stylesheet" href="./styles/headNfooter.css">
+
     <!-- react -->
     <script type="text/babel" src="./jsx/Header.jsx"></script>
     <script type="text/babel" src="./jsx/Footer.jsx"></script>
@@ -21,6 +23,8 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
+         const { useState, useEffect, useRef } = React;
+
         function App() {
             const [num, setNum] = React.useState(1);
             const decreaseQuantity = () => {
@@ -28,12 +32,11 @@
                     setNum(num - 1);
                 }
             };
-
             const increaseQuantity = () => {
                 setNum(num + 1);
             };
             return (<>
-                <Header />
+                <Header classname='darkblue' />
                 <section id="introduction">
                     <div className="mainPicture">
                         <div class="smallPicture">
@@ -82,24 +85,24 @@
                             <div className="contentDetails">
                                 <p>數量</p>
                                 <div className="quantity">
-                                    <button id="btn_1" className="quantityBtn" onClick={decreaseQuantity}>-</button>
+                                    <button id="btn_1" className="quantityBtn" onClick={decreaseQuantity}></button>
                                     <span id="quantityNum">{num}</span>
-                                    <button id="btn1" className="quantityBtn" onClick={increaseQuantity}>+</button>
+                                    <button id="btn1" className="quantityBtn" onClick={increaseQuantity}></button>
                                 </div>
                             </div>
                         </div>
                         <div className="productButtom">
-                    <button className="buttomitem">加入購物車</button>
-                    <button id="buyNowBtn" className="buttomitem">直接購買</button>
-                    <hr/>
-                </div>
-                <div class="productRemark">
-                    <p>
-                        購買須知<br/>
-                        該商品為客製化商品，下單後不可取消。敬請於下單前確認。<br/>
-                        待付費確認完成後，系統才會開始處理您的訂單，約7個工作天內出貨。
-                    </p>
-                </div>
+                            <button className="buttomitem">加入購物車</button>
+                            <button id="buyNowBtn" className="buttomitem">直接購買</button>
+                            <hr />
+                        </div>
+                        <div class="productRemark">
+                            <p>
+                                購買須知<br />
+                                該商品為客製化商品，下單後不可取消。敬請於下單前確認。<br />
+                                待付費確認完成後，系統才會開始處理您的訂單，約7個工作天內出貨。
+                            </p>
+                        </div>
                     </div>
                 </section>
 

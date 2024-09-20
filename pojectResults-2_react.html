@@ -14,8 +14,10 @@
 
     <link rel="stylesheet" href="./styles/sandy.css">
     <link rel="stylesheet" href="./styles/sandy_test.css">
+    <link rel="stylesheet" href="./styles/headNfooter.css">
     <script type="text/babel" src="./jsx/Header.jsx"></script>
     <script type="text/babel" src="./jsx/Footer.jsx"></script>
+    
 
 </head>
 
@@ -25,7 +27,7 @@
     <!-- 以下react開始 -->
     <div id="root"></div>
     <script type="text/babel">
-
+      const { useState, useEffect, useRef } = React;
         // 長方形按鈕
         function Button(props) {
             return <>
@@ -68,11 +70,13 @@
             </>
         }
         function App() {
+            useEffect(() => {})
             return (<>
-                <Header />
+            <Header classname='darkblue' />
                 <main>
                     <section id="projectBanner">
                         <div className="blueBlock"></div>
+                        <div className="arrow" style={{ display: "none" }} onClick={changearrow}></div>
                         <div className="smallSquares"></div>
                         <div className="smallincline"></div>
                         <div className="rectangularMenu">
