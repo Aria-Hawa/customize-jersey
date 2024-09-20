@@ -113,7 +113,6 @@ $(function () {
                 // 被選取的project要移除
                 $('.userDesign.selected').remove();
             }
-
         });
     } else {
         $('#chekBtn').before('<h4>並無儲存的設計樣式</h4>');
