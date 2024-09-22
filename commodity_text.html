@@ -12,27 +12,27 @@
     <link rel="stylesheet" href="./styles/headNfooter.css">
 
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
- <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
- <!-- 載入babel -->
- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
- <script type="text/babel" src="./jsx/Header.jsx"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- 載入babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="./jsx/Header.jsx"></script>
 </head>
 
 <body>
-  <!-- 9/9 add by Aria -->
-  <!-- 以下React -->
-  <div id="root"></div>
-  <script type="text/babel">
-    const { useState, useEffect, useRef } = React;
-    function App() {
-      return (
-        <Header classname='darkblue' />
-      );
-    }
-    ReactDOM
-      .createRoot(document.getElementById('root'))
-      .render(<App />);
-  </script>
+    <!-- 9/9 add by Aria -->
+    <!-- 以下React -->
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+        function App() {
+            return (
+                <Header classname='darkblue' />
+            );
+        }
+        ReactDOM
+            .createRoot(document.getElementById('root'))
+            .render(<App />);
+    </script>
 
 
     <section id="introduction">
@@ -105,8 +105,12 @@
                 </div>
             </div>
             <div class="productButtom">
-                <button id="shoppingCart" class="buttomitem"><p>加入購物車</p></button>
-                <button id="buyNowBtn" class="buttomitem"><p>直接購買</p></button>
+                <button id="shoppingCart" class="buttomitem">
+                    <p>加入購物車</p>
+                </button>
+                <button id="buyNowBtn" class="buttomitem">
+                    <p>直接購買</p>
+                </button>
                 <hr>
             </div>
             <div class="productRemark">
