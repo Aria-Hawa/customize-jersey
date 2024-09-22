@@ -4,253 +4,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 載入React,Babel -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <title>VSER</title>
     <link rel="icon" href="./favicon.ico">
-    
+
     <link rel="stylesheet" href="./styles/sandy.css">
     <link rel="stylesheet" href="./styles/sandy_test.css">
     <link rel="stylesheet" href="./styles/headNfooter.css">
+    <script type="text/babel" src="./jsx/Header.jsx"></script>
+    <script type="text/babel" src="./jsx/Footer.jsx"></script>
 
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
- <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
- <!-- 載入babel -->
- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
- <script type="text/babel" src="./jsx/Header.jsx"></script>
+
 </head>
 
 <!-- 頁首區 -->
 
 <body>
-       <!-- 9/9 add by Aria -->
-  <!-- 以下React -->
-  <div id="root"></div>
-  <script type="text/babel">
-    const { useState, useEffect, useRef } = React;
-    function App() {
-      return (
-        <Header classname='darkblue' />
-      );
-    }
-    ReactDOM
-      .createRoot(document.getElementById('root'))
-      .render(<App />);
-  </script>
-    <main>
-        <section id="projectBanner">
-            <!-- 背景藍色色塊 -->
-            <div class="blueBlock"></div>
-            <div class="arrow" style="display: none;" onclick="changearrow();"></div>
-            <!-- 長方形選單 -->
-            <div class="rectangularMenu">
-                <!-- 長方形小選單 -->
-                <div id="menu-1" class="menu-1" onclick="changemenu1();">
-                    <div class="figure"></div>
-                    <div class="word">
-                        <h4>Storm <br>
-                            Knights <br>
-                            Football<br>
-                            Club</h4>
-                            <!-- 註解 -->
-                        <p>企業甲組聯賽</p>
-                        <span class='line-1'></span>
-                        <span class='line-2'></span>
-                        <span class='line-3'></span>
-                        <span class='line-4'></span>
+    <!-- 以下react開始 -->
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+        // 長方形按鈕
+        function Button(props) {
+            return <>
+                <div id={props.menu} className={props.menu} onClick={props.onClick}>
+                    <div className="figure"></div>
+                    <div className="word">
+                        <h4>{props.teamName}</h4>
+                        <p>{props.alliance}</p>
+                        <span className='line-1'></span>
+                        <span className='line-2'></span>
+                        <span className='line-3'></span>
+                        <span className='line-4'></span>
                     </div>
                 </div>
-                <div id="menu-2" class="menu-2" onclick="changemenu2();">
-                    <div class="figure"></div>
-                    <div class="word">
-                        <h4>Thunder<br>
-                            Lions <br>
-                            Football <br>
-                            Club</h4>
-                        <p>企業甲組聯賽</p>
-                        <span class='line-1'></span>
-                        <span class='line-2'></span>
-                        <span class='line-3'></span>
-                        <span class='line-4'></span>
-                    </div>
+            </>
+        }
+        // 浮水印文字
+        function WaterMark(props) {
+            return <>
+                <div className={props.textWatermark}
+                    style={props.style}>
+                    <h1>{props.teamName}</h1>
                 </div>
-            </div>
-            <!-- 圖文開始 -->
-            <div class="contentArea">
-                <!-- 主圖 -->
-                <div class="projectTheme2  smoove"></div>
-                <div class="projectTheme  smoove" style="display: none;"></div>
-                <div class="projectTheme1  smoove" style="display: none;"></div>
-                <!-- 主圖下方文字 -->
-                <div class="projectContent">
-                    <!-- 左邊標題處 -->
-                    <div class="pjTitle">
-                        <!-- 文字浮水印 -->
-                        <div class="textWatermark"  style="display: none;">
-                            <h1>Storm<br>
-                                Knights </h1>
-                        </div>
-
-                        <div class="textWatermark1" style="display: none;">
-                            <h1>Thunder<br>
-                                Lions </h1>
-                        </div>
-
-                        <div class="textWatermark2" >
-                            <h1>VSER<br>
-                            Design</h1>
-                        </div>
-                        <!-- 文字標題 -->
-                        <div class="Title">
-                            <h2>jersey<br>
-                                design</h2>
-                        </div>
-                    </div>
-                    <!-- 右邊小字處 -->
-                    <div class="pjWord2" >
-                        <p>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文</p>
-                    </div>
-                    <div class="pjWord" style="display: none;">
-                        <p>球衣上的閃電圖案和線條設計象徵著球隊在場上的迅捷和力量，強調積極進攻強悍防守的風格</p>
-                    </div>
-                    <div class="pjWord1" style="display: none;">
-                        <p>文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文</p>
-                    </div>
+            </>
+        }
+        // 專案文案
+        function Copywriting(props) {
+            return <>
+                <div className={props.pjWord}
+                    style={props.style}>
+                    <p>{props.word}</p>
                 </div>
-            </div>
-        </section>
-
-        <section id="projectjJersey"  style="display: none;">
-            <!-- 背景藍色色塊 -->
-            <div class="blueBlock"></div>
-            <!-- 球衣款式成列 -->
-            <div id="pjBox__list" class="pjBox__list" style="display: none;">
-                <div class="pjshape svc-1 smoove"></div>
-                <div class="pjshape svc-2 smoove"></div>
-                <div class="pjshape svc-3 smoove"></div>
-            </div>
-            <div id="pjBox__list1" class="pjBox__list1" style="display: none;"> 
-                <div class="pjshape svc-4 smoove"></div>
-                <div class="pjshape svc-5 smoove"></div>
-                <div class="pjshape svc-6 smoove"></div>
-            </div>
-
-        </section>
-    </main>
-    <!-- 頁尾曲 -->
-    <footer>
-        <ul class="footerList">
-            <li class="footerItem">About
-                <ul>
-                    <li>關於VSER</li>
-                </ul>
-            </li>
-            <li class="footerItem">SERVICE
-                <ul>
-                    <li>條款與細則</li>
-                    <li>隱私權政策</li>
-                    <li>客製化政策</li>
-                </ul>
-            </li>
-            <li class="footerItem">CONTACT
-                <ul>
-                    <li>新北市汐止區新台五路二段77號15樓之3</li>
-                    <li>vser.tw@gmail.com</li>
-                    <li>02-86482203</li>
-                </ul>
-            </li>
-        </ul>
-        <div>
-            <figure><img src="./images/logo-2.png" alt=""></figure>
-            <small>&copy;2024 VSER, Inc. 版權所有</small>
-        </div>
-    </footer>
-
-    <!-- 互動區 -->
-    <!-- JQuery官方CDN -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <!-- JQuery Smoove -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
-    <script>
-
-
-// 長方形按鈕JQ
-function changemenu1() {
-        $('.projectTheme') // .projectTheme1(主圖)
-            .css('z-index', 2) // 將新元素顯示在最前面
-            .show(); //點開顯示
-        $('.projectTheme1')
-        .css('z-index', 1) 
-    
-            
-        // 淡入物件(0.5s)
-        $('#projectjJersey, .pjWord1, .pjBox__list1, .textWatermark1, .arrow').fadeIn(500);
-        // 隱藏物件
-        $('.pjWord, .pjBox__list, .textWatermark, .pjWord2, .textWatermark2').hide();
-    }
-
-function changemenu2() {
-        $('.projectTheme1')
-            .css('z-index', 2)
-            .show();
-            $('.projectTheme')
-            .css('z-index', 1) 
-        $('#projectjJersey, .pjWord, .pjBox__list, .textWatermark, .arrow').fadeIn(500);
-        $('.pjWord1, .pjBox__list1, .textWatermark1, .pjWord2, .textWatermark2').hide();
-    }
-    
-
-// 以下是.arrow JQ
-    $(document).ready(function () {
-        let arrow_flag=false;
-    // 一開始.arrow不顯示
-    // $(".arrow").hide();
-        
-    $(window).scroll(function() {
-        checkArrowVisibility(); 
-    });
-    // 點擊#menu
-    $('#menu-1').click(function () {
-        arrow_flag=true;
-        changemenu1();
-        // 如果頁面置頂時 .arrow才顯示反之則隱藏
-        if ($(window).scrollTop() === 0) {
-            $(".arrow").show();
-        } else {
-            $(".arrow").hide();
+            </>
         }
-    });
-    $('#menu-2').click(function () {
-        arrow_flag=true;
-        changemenu2();
-        if ($(window).scrollTop() === 0) {
-            $(".arrow").show();
-        } else {
-            $(".arrow").hide();
-        }
-    });
 
-    // 點擊.arrow 頁面自動滑到指定位置顯示3個球衣照
-    $(".arrow").click(function() {
-    var scrollPosition = $(document).height() * 0.4;  // 要用百分比才符合RWD 不然1920無法全部顯示3個球衣照
-    // 使用動畫將頁面滑動到計算的百分比位置
-    $('html, body').animate({scrollTop: scrollPosition}, 1000);
-    // 點擊後隱藏 .arrow 按鈕
-    $(this).hide();
-});
-
-    // 檢查頁面是否置頂 如置頂不顯示.arrow
-    function checkArrowVisibility() {
-        if ($(window).scrollTop() === 0) {
-            $(".arrow").hide(); // 顯示 .arrow
-        } else {
-            if(arrow_flag==true){
-                $(".arrow").hide();
-            }
-             // 隱藏 .arrow
+        // 照片元件
+        function Img(props) {
+            return <>
+                <div className={`pjshape ${props.figure}`}></div>
+            </>
         }
-    }
-});
-    
-</script>
+        function App() {
+            useEffect(() => {
+                $(document).ready(function () {
+                    let arrow_flag = false;
+                    // 一開始.arrow不顯示
+                    // $(".arrow").hide();
+
+                    $(window).scroll(function () {
+                        checkArrowVisibility();
+                    });
+                    // 點擊#menu
+                    $('#menu-1').click(function () {
+                        arrow_flag = true;
+                        changemenu1();
+                        // 如果頁面置頂時 .arrow才顯示反之則隱藏
+                        if ($(window).scrollTop() === 0) {
+                            $(".arrow").show();
+                        } else {
+                            $(".arrow").hide();
+                        }
+                    });
+                    $('#menu-2').click(function () {
+                        arrow_flag = true;
+                        changemenu2();
+                        if ($(window).scrollTop() === 0) {
+                            $(".arrow").show();
+                        } else {
+                            $(".arrow").hide();
+                        }
+                    });
+
+                    // 點擊.arrow 頁面自動滑到指定位置顯示3個球衣照
+                    $(".arrow").click(function () {
+                        var scrollPosition = $(document).height() * 0.4;  // 要用百分比才符合RWD 不然1920無法全部顯示3個球衣照
+                        // 使用動畫將頁面滑動到計算的百分比位置
+                        $('html, body').animate({ scrollTop: scrollPosition }, 1000);
+                        // 點擊後隱藏 .arrow 按鈕
+                        $(this).hide();
+                    });
+
+                    // 檢查頁面是否置頂 如置頂不顯示.arrow
+                    function checkArrowVisibility() {
+                        if ($(window).scrollTop() === 0) {
+                            $(".arrow").hide(); // 顯示 .arrow
+                        } else {
+                            if (arrow_flag == true) {
+                                $(".arrow").hide();
+                            }
+                            // 隱藏 .arrow
+                        }
+                    }
+                });
+            })
+            return (<>
+                <Header classname='darkblue' />
+                <main>
+                    <section id="projectBanner">
+                        <div className="blueBlock"></div>
+                        <div className="arrow" style={{ display: "none" }} ></div>
+                        <div className="smallSquares"></div>
+                        <div className="smallincline"></div>
+                        <div className="rectangularMenu">
+                            <Button menu="menu-1" onClick={changemenu1} teamName="Storm
+                            Knights
+                            Football
+                            Club"
+                                alliance="企業甲組聯賽" />
+                            <Button menu="menu-2" onClick={changemenu2} teamName="Thunder
+                                    Lions 
+                                    Football
+                                    Club"
+                                alliance="企業甲組聯賽" />
+                        </div>
+                        <div className="contentArea">
+                            <div className="projectTheme2"></div>
+                            {/* resct裡的css {{display:"none"}}*/}
+                            <div className="projectTheme  smoove" style={{ display: "none" }}></div>
+                            <div className="projectTheme1  smoove" style={{ display: "none" }}></div>
+                            <div className="projectContent">
+
+                                <div className="pjTitle">
+                                    <WaterMark
+                                        textWatermark="textWatermark2"
+                                        teamName="VSER
+                                        Design"
+                                    />
+                                    <WaterMark
+                                        textWatermark="textWatermark"
+                                        teamName="Storm
+                                        Knights"
+                                        style={{ display: "none" }}
+                                    />
+                                    <WaterMark
+                                        textWatermark="textWatermark1"
+                                        teamName="Thunder
+                                        Lions"
+                                        style={{ display: "none" }}
+                                    />
+
+                                    <div className="Title">
+                                        <h2>jersey<br />
+                                            design</h2>
+                                    </div>
+                                </div>
+                                <Copywriting pjWord="pjWord2"
+                                    word="VSER專為企業甲組聯賽精心設計專屬球衣，詮釋團隊在競技場上的精神與拼搏風采。" />
+                                <Copywriting pjWord="pjWord"
+                                    style={{ display: "none" }}
+                                    word="球衣上的閃電圖案和線條設計象徵著球隊在場上的迅捷力量，強調積極進攻強悍防守的風格。" />
+                                <Copywriting pjWord="pjWord1"
+                                    style={{ display: "none" }}
+                                    word="設計採用強烈的幾何線條構成，中央的'M'字形標誌宛如展翅的雙翼，象徵著勇往直前的精神。" />
+                            </div>
+                        </div>
+                    </section>
+                    <section id="projectjJersey" style={{ display: "none" }}>
+                        <div className="blueBlock"></div>
+                        <div id="pjBox__list" className="pjBox__list" style={{ display: "none" }}>
+                            <Img figure="svc-1" />
+                            <Img figure="svc-2" />
+                            <Img figure="svc-3" />
+                        </div>
+                        <div id="pjBox__list1" className="pjBox__list1" style={{ display: "none" }}>
+                            <Img figure="svc-4" />
+                            <Img figure="svc-5" />
+                            <Img figure="svc-6" />
+                        </div>
+                    </section>
+                </main>
+                <Footer />
+            </>)
+        }
+        ReactDOM
+            .createRoot(document.getElementById('root'))
+            .render(<App />);
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="./js/jsSandyPojectResults.js"></script>
 </body>
 
 </html>

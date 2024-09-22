@@ -72,6 +72,28 @@
                     });
 
                     changeJersey();
+
+        // 通用事件處理函數
+        function saveProductInfo(id) {
+            const productElement = $(`#${id}`).closest('.pbBescribe');
+            const shape = productElement.find('h4').text(); // 獲取 shape 的文字內容
+            const price = productElement.find('h5').first().text(); // 獲取 price 的文字內容
+            const introduce = productElement.find('p').text(); // 獲取 introduce 的文字內容
+            const star = productElement.find('h5').last().text(); // 獲取 star 的文字內容
+            
+            // 將文字內容保存到 localStorage
+            localStorage.setItem('shape', shape);
+            localStorage.setItem('price', price);
+            localStorage.setItem('introduce', introduce);
+            localStorage.setItem('star', star);
+        }
+
+        // 為每個按鈕添加點擊事件
+        $('#pb1, #pb2, #pb3, #pb4').click(function () {
+            saveProductInfo(this.id); // 使用通用函數保存信息
+        });
+
+
                     // 詳細介紹Btn
                     $('.pbTBtn').click(function (e) {
                         e.preventDefault();
@@ -119,54 +141,63 @@
                                     <div className="carousel-wrapper">
                                         <ul id="templates" className="templatesA">
                                             <PbShape
-                                                svcA="pbImage A svcA-1" svcB="pbImage B svcA-2" shape="款式AAAAA" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★★" pbNum="pb1" dataNum="A" />
+                                                svcA="pbImage A svcA-1" svcB="pbImage B svcA-2" shape="疾風烈影" price="NT$700"
+                                                introduce="動感十足的斜線設計，如同快速掠過的風影，象徵著迅捷與靈活。" star="★★★★" pbNum="pb1" dataNum="A" />
                                             <PbShape
-                                                svcA="pbImage A svcA-3" svcB="pbImage B svcA-4" shape="款式BBBBB" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★★★" pbNum="pb2" dataNum="B" />
+                                                svcA="pbImage A svcA-3" svcB="pbImage B svcA-4" shape="雷霆迅刃" price="NT$700"
+                                                introduce="流暢的線條與鋒利的幾何圖形相結合，宛如切割空氣的鋒刃，展現出無畏與突破的精神。" star="★★★★★" pbNum="pb2" dataNum="B" />
                                             <PbShape
-                                                svcA="pbImage A svcA-5" svcB="pbImage B svcA-6" shape="款式CCCCC" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★" pbNum="pb3" dataNum="C" />
+                                                svcA="pbImage A svcA-5" svcB="pbImage B svcA-6" shape="極速流星" price="NT$650"
+                                                introduce="鋒利的線條組成星辰般的圖案，如同流星般高速且精確，象徵著高效與穩定。" star="★★★" pbNum="pb3" dataNum="C" />
                                             <PbShape
-                                                svcA="pbImage A svcA-7" svcB="pbImage B svcA-8" shape="款式DDDDD" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★" pbNum="pb4" dataNum="D" />
+                                                svcA="pbImage A svcA-7" svcB="pbImage B svcA-8" shape="熾烈電光" price="NT$650"
+                                                introduce="動態感十足的線條搭配科技感的設計，如同閃電般的爆發力與無限能量。" star="★★★" pbNum="pb4" dataNum="D" />
                                             <PbShape
-                                                svcA="pbImage A svcA-1" svcB="pbImage B svcA-2" shape="款式AAAAA" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★★" pbNum="pb5" dataNum="A" />
+                                                svcA="pbImage A svcA-1" svcB="pbImage B svcA-2" shape="疾風烈影" price="NT$700"
+                                                introduce="動感十足的斜線設計，如同快速掠過的風影，象徵著迅捷與靈活。" star="★★★★" pbNum="pb5" dataNum="A" />
                                             <PbShape
-                                                svcA="pbImage A svcA-3" svcB="pbImage B svcA-4" shape="款式BBBBB" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★★★" pbNum="pb6" dataNum="B" />
+                                                svcA="pbImage A svcA-3" svcB="pbImage B svcA-4" shape="雷霆迅刃" price="NT$700"
+                                                introduce="流暢的線條與鋒利的幾何圖形相結合，宛如切割空氣的鋒刃，展現出無畏與突破的精神。" star="★★★★★" pbNum="pb6" dataNum="B" />
                                         </ul>
                                         <ul id="templates" className="templatesB" style={{ display: "none" }}>
                                             <PbShape
-                                                svcA="pbImage A svcB-1" svcB="pbImage B svcB-2" shape="款式AAAAA" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★★" />
+                                                svcA="pbImage A svcB-1" svcB="pbImage B svcB-2" shape="全棉圓領T" price="NT$400"
+                                                introduce="舒適全棉材質，透氣吸汗，日常穿搭首選。" star="★★★★" pbNum="pb7" dataNum="AA" />
                                             <PbShape
-                                                svcA="pbImage A svcB-3" svcB="pbImage B svcB-4" shape="款式BBBBB" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★★★" />
+                                                svcA="pbImage A svcB-3" svcB="pbImage B svcB-4" shape="重磅全棉圓領T" price="NT$400"
+                                                introduce="厚實耐穿，重磅全棉質感，極致舒適體驗。" star="★★★★★" />
                                             <PbShape
-                                                svcA="pbImage A svcB-5" svcB="pbImage B svcB-6" shape="款式CCCCC" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★" />
+                                                svcA="pbImage A svcB-5" svcB="pbImage B svcB-6" shape="圓領排汗運動T" price="NT$450"
+                                                introduce="輕盈透氣，快速排汗，運動訓練必備良品。" star="★★★" />
                                                 <PbShape
-                                                svcA="pbImage A svcB-1" svcB="pbImage B svcB-2" shape="款式AAAAA" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★★" />
+                                                svcA="pbImage A svcB-1" svcB="pbImage B svcB-2" shape="全棉圓領T" price="NT$400"
+                                                introduce="舒適全棉材質，透氣吸汗，日常穿搭首選。" star="★★★★" />
                                             <PbShape
-                                                svcA="pbImage A svcB-3" svcB="pbImage B svcB-4" shape="款式BBBBB" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★★★" />
+                                                svcA="pbImage A svcB-3" svcB="pbImage B svcB-4" shape="重磅全棉圓領T" price="NT$400"
+                                                introduce="厚實耐穿，重磅全棉質感，極致舒適體驗。" star="★★★★★" />
                                             <PbShape
-                                                svcA="pbImage A svcB-5" svcB="pbImage B svcB-6" shape="款式CCCCC" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★" />
+                                                svcA="pbImage A svcB-5" svcB="pbImage B svcB-6" shape="圓領排汗運動T" price="NT$450"
+                                                introduce="輕盈透氣，快速排汗，運動訓練必備良品。" star="★★★" />
                                         </ul>
                                         <ul id="templates" className="templatesC" style={{ display: "none" }}>
                                             <PbShape
-                                                svcA="pbImageShort AShort svcC-1" shape="款式AAAAA" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★★" />
+                                                svcA="pbImageShort AShort svcC-1" shape="休閒彈性短褲" price="NT$350"
+                                                introduce="高彈舒適，靈活自在，休閒運動兩相宜。" star="★★★★" />
                                             <PbShape
-                                                svcA="pbImageShort AShort svcC-2" shape="款式BBBBB" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★★★" />
+                                                svcA="pbImageShort AShort svcC-2" shape="機能運動短褲" price="NT$320"
+                                                introduce="輕便速乾，口袋防潑水設計，提升運動性能。" star="★★★★★" />
                                             <PbShape
-                                                svcA="pbImageShort AShort svcC-3" shape="款式CCCCC" price="$1000"
-                                                introduce="款式介紹款式介紹款式介紹" star="★★★" />
+                                                svcA="pbImageShort AShort svcC-3" shape="口袋訓練短褲" price="NT$350"
+                                                introduce="多功能口袋設計，輕鬆收納，訓練日常皆適用。" star="★★★" />
+                                                <PbShape
+                                                svcA="pbImageShort AShort svcC-1" shape="休閒彈性短褲" price="NT$350"
+                                                introduce="高彈舒適，靈活自在，休閒運動兩相宜。" star="★★★★" />
+                                            <PbShape
+                                                svcA="pbImageShort AShort svcC-2" shape="機能運動短褲" price="NT$320"
+                                                introduce="輕便速乾，口袋防潑水設計，提升運動性能。" star="★★★★★" />
+                                            <PbShape
+                                                svcA="pbImageShort AShort svcC-3" shape="口袋訓練短褲" price="NT$350"
+                                                introduce="多功能口袋設計，輕鬆收納，訓練日常皆適用。" star="★★★" />
                                                 
                                         </ul>
                                     </div>

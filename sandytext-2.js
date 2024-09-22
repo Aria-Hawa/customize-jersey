@@ -1,39 +1,40 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // 從 localStorage 獲取商品 ID
-    const selectedProduct = localStorage.getItem('selectedProduct');
+document.addEventListener('DOMContentLoaded', () => {
+    const products = document.querySelectorAll('.product');
+    const page1 = document.getElementById('page1');
+    const page2 = document.getElementById('page2');
+    const productInfo = document.getElementById('product-info');
+    const otherProducts = document.getElementById('other-products');
+    const backButton = document.getElementById('back');
 
-    // 定義商品資料
-    const products = {
-        A: {
-            title: '商品 A',
-            image: './images/productA.jpg',
-            description: '這是商品 A 的描述內容'
-        },
-        B: {
-            title: '商品 B',
-            image: './images/productB.jpg',
-            description: '這是商品 B 的描述內容'
-        },
-        C: {
-            title: '商品 C',
-            image: './images/productC.jpg',
-            description: '這是商品 C 的描述內容'
-        },
-        D: {
-            title: '商品 D',
-            image: './images/productD.jpg',
-            description: '這是商品 D 的描述內容'
-        }
-    };
+    products.forEach(product => {
+        product.addEventListener('click', () => {
+            const selectedProduct = product.getAttribute('data-product');
+            showProductDetails(selectedProduct);
+        });
+    });
 
-    if (selectedProduct && products[selectedProduct]) {
-        // 根據 selectedProduct 更新頁面中的商品資訊
-        const product = products[selectedProduct];
-        document.getElementById('productTitle').innerText = product.title;
-        document.getElementById('productImage').src = product.image;
-        document.getElementById('productDescription').innerText = product.description;
-    } else {
-        // 如果沒有找到商品資訊，顯示錯誤訊息
-        document.getElementById('productInfo').innerText = '未選擇任何商品';
+    backButton.addEventListener('click', () => {
+        page2.classList.add('hidden');
+        page1.classList.remove('hidden');
+    });
+
+    function showProductDetails(selectedProduct) {
+        // 切換頁面顯示
+        page1.classList.add('hidden');
+        page2.classList.remove('hidden');
+
+        // 顯示被選中商品的介紹
+        productInfo.textContent = `商品${selectedProduct}的詳細介紹`;
+
+        // 顯示其他商品
+        otherProducts.innerHTML = ''; // 清空先前顯示的商品
+        products.forEach(product => {
+            const productName = product.getAttribute('data-product');
+            if (productName !== selectedProduct) {
+                const otherProductDiv = document.createElement('div');
+                otherProductDiv.textContent = `商品${productName}`;
+                otherProducts.appendChild(otherProductDiv);
+            }
+        });
     }
 });
