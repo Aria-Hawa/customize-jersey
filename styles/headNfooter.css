@@ -29,7 +29,7 @@ body {
     font-family: "Noto Sans TC", sans-serif;
     font-size: 100%;
     line-height: 1.5;
-    /* color: white; */
+    color: white;
 }
 
 /* 重置標題 */
@@ -74,21 +74,35 @@ a {
     --Lightblue: #55C9EA;
     --Blue: #013B63;
     --Darkblue: #000E2B;
+    --White: #ffffff;
+    --Blue2: #287DA2;
+
+
 
     /* 輔色 */
     --Grayblue: #1e6695;
 
     /* 透明色 */
+    --Lightblue_04: rgb(85, 201, 234, .4);
+    --Darkblue_05: rgb(0, 14, 41, .5);
 
     /* 漸層色 */
     --White-White: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .1) 30%, rgba(255, 255, 255, .4) 100%;
-    --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, #2a9dbd 50%, var(--Blue) 75%, var(--Darkblue) 100%;
     --ToRight-White-Orange: #fff 0%, var(--Orange) 47%, var(--Darkorange) 90%;
     --ToRight-Lightblue-Darkbllue: var(--Lightblue) 5%, var(--Blue) 28%, var(--Darkblue) 61%;
     --Lightblue-White: var(--Lightblue) 0%, #fff 100%;
     --Darkblue-blue: var(--Blue) 0%, var(--Darkblue) 100%;
     --Blue-grayblue: var(--Grayblue) 0%, var(--Blue) 100%;
     --Orange-White: var(--Orange) 0%, #fff 100%;
+    --Lightbluevar-Darkblue: var(--Lightblue)100%, var(--Darkblue)0%;
+    --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Blue2) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
+    --Lightblue-Lightblue: rgba(85, 201, 234, .5), 50%, rgba(85, 201, 234, .0) 95%;
+    --Orange-Darkblue: var(--Orange) 0%, rgba(0, 14, 43, .0) 80%;
+    --Orange-Lightblue-Orange: var(--Orange) 0%, var(--Lightblue_04) 50%, var(--Orange) 100%;
+    --Blue-Darkblue: #287DA2 0%, var(--Blue) 40%, var(--Darkblue) 80%;
+    --Blue-Darkblue-Blue: var(--Blue) 5%, var(--Darkblue) 55%, var(--Blue) 85%;
+    --Darkblue-Blue: var(--Darkblue) 38%, var(--Blue) 100%;
+
 }
 
 
@@ -238,12 +252,12 @@ a {
 
 #pricePlanBtn:hover {
     background-image: linear-gradient(90deg, var(--Blue-grayblue));
-    color:var(--Orange) ;
+    color: var(--Orange);
 }
 
 #customizeBtn:hover {
     background-image: linear-gradient(-90deg, var(--Grayblue) 0%, var(--Blue) 100%);
-    color:var(--Orange) ;
+    color: var(--Orange);
 }
 
 /* 以上fixedTopbar區 */
