@@ -296,6 +296,12 @@ footer {
   z-index: 999; */
 }
 
+.pricePlaneFooter {
+  background-color: var(--Blue);
+  border: 1px solid white;
+}
+
+
 .footerList {
   display: flex;
 
