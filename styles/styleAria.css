@@ -1,4 +1,3 @@
-
 :root {
     /* 漸層色 */
     /* --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, #2a9dbd 50%, var(--Blue) 75%, var(--Darkblue) 100%; */
@@ -1816,7 +1815,7 @@ td {
 
 
 /* footer區 */
-footer {
+.homePage {
     background-color: var(--Darkblue);
     color: white;
     display: flex;
@@ -1826,6 +1825,18 @@ footer {
     width: 100%;
     height: 170px;
 
+}
+
+footer {
+    background-color: var(--Blue);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px;
+    width: 100%;
+    height: 170px;
+    border-top: 1px solid white;
 }
 
 .footerList {
