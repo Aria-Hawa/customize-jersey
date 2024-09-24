@@ -121,7 +121,6 @@ $(function () {
         $('#popup-content').css('height', '30vh');
     };
 
-
     // 從localStorage取出 orderItObject
     let orderItObject = JSON.parse(localStorage.getItem('orderItObj'));
     if (orderItObject != '') {
@@ -132,6 +131,36 @@ $(function () {
         newordProject.attr('id', '').css('display', 'block');
         $('#project').after(newordProject);
     }
+
+    // click下一步儲存要下單的明細
+    let dcOrderArray = [];
+    $('.nextBtn').click(function () {
+        let getTable = $('.table').filter((index, element) => {
+            return element.style.display == 'block';
+        });
+        if (getTable.length > 0) {
+            // 使用prop()取得outerHtml
+            // let dcOrderImg = $(getTable).find('figure svg').prop('outerHTML');
+            // let dcOrderName = $(getTable).find('.captionLeft p').text();
+            // let dcOrderObj = {
+            //     name: dcOrderName,
+            //     img: dcOrderImg,
+            // };
+            // push到陣列裡
+            // dcOrderArray.push(dcOrderObj);
+            let dcOrderName = '';
+            getTable.each((element) => {
+                // let dcOrderImg = $(getTable).find('figure svg').prop('outerHTML');
+                dcOrderName = $(getTable).find('.captionLeft p').text();
+                // let dcOrderObj = {
+                //     name: dcOrderName,
+                //     img: dcOrderImg,
+                // };
+                console.log(dcOrderName);
+            });
+            console.log(getTable);
+        };
+    });
 
 
 
