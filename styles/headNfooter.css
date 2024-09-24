@@ -189,6 +189,7 @@ a {
     font-weight: 400;
     letter-spacing: 1px;
     text-indent: 1px;
+    letter-spacing: 2px;
 }
 
 .dropdown #RLbtn::after {
@@ -243,6 +244,7 @@ a {
     visibility: visible;
     transition: all .35s ease-in-out;
     opacity: 1;
+    letter-spacing: 2px;
 }
 
 #pricePlanBtn:hover {
