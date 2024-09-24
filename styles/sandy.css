@@ -687,12 +687,14 @@
     -webkit-animation: fade-in-fwd .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: fade-in-fwd .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
-.pjWord2{
+
+.pjWord2 {
     -webkit-animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation-delay: 2s;
 
 }
+
 .pjWord p,
 .pjWord1 p,
 .pjWord2 p {
@@ -712,9 +714,12 @@
     letter-spacing: .08rem;
     font-size: 16px;
 }
-.pbText p{overflow: hidden;
+
+.pbText p {
+    overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;}
+    white-space: nowrap;
+}
 
 /* 下半部 */
 #projectjJersey {
@@ -1134,7 +1139,7 @@ li.pbShape {
     background-color: var(--Orange);
     color: var(--Darkblue);
     font-weight: 500;
-    
+
 }
 
 
@@ -1274,6 +1279,7 @@ li.pbShape {
 .svcA-2 {
     background-image: url(../images/productBrowsing_pbShapeA_2.png);
 }
+
 .svcA-2-back {
     background-image: url(../images/productBrowsing_pbShapeA_2_back.png);
 }
@@ -1281,6 +1287,7 @@ li.pbShape {
 .svcA-3 {
     background-image: url(../images/productBrowsing_pbShapeA_3.png);
 }
+
 .svcA-3-back {
     background-image: url(../images/productBrowsing_pbShapeA_3_back.png);
 }
@@ -1288,6 +1295,7 @@ li.pbShape {
 .svcA-4 {
     background-image: url(../images/productBrowsing_pbShapeA_4.png);
 }
+
 .svcA-4-back {
     background-image: url(../images/productBrowsing_pbShapeA_4_back.png);
 }
@@ -1295,12 +1303,15 @@ li.pbShape {
 .svcA-5 {
     background-image: url(../images/productBrowsing_pbShapeA_5.png);
 }
+
 .svcA-5-back {
     background-image: url(../images/productBrowsing_pbShapeA_5_back.png);
 }
+
 .svcA-6 {
     background-image: url(../images/productBrowsing_pbShapeA_6.png);
 }
+
 .svcA-6-back {
     background-image: url(../images/productBrowsing_pbShapeA_6_back.png);
 }
@@ -1441,8 +1452,9 @@ li.pbShape {
         white-space: nowrap;
         width: 155px
     }
+
     .arrowGroup {
-        right:40px
+        right: 40px
     }
 
 }
@@ -1465,9 +1477,11 @@ li.pbShape {
     display: flex;
     flex-direction: column;
 }
-.pictureArea{
+
+.pictureArea {
     display: flex;
 }
+
 .mainPicture .bigPicture {
     width: 80%;
     height: 440px;
@@ -1503,9 +1517,9 @@ li.pbShape {
     /* 移除最後一個 .small 元素的 margin-bottom */
 }
 
-.reminderText{
+.reminderText {
     margin-top: 15px;
-    background-color: rgb(255, 255, 255,.1);
+    background-color: rgb(255, 255, 255, .1);
     width: 100%;
     height: 35px;
     display: flex;
@@ -1513,7 +1527,8 @@ li.pbShape {
     align-items: center;
     color: #FFFFFF;
 }
-.reminderText small{
+
+.reminderText small {
     width: fit-content;
 }
 
@@ -1523,7 +1538,8 @@ li.pbShape {
     height: 100%;
     /* border: 1px solid #FFFFFF; */
 }
-.productBox{
+
+.productBox {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -1566,34 +1582,40 @@ li.pbShape {
     color: #fff;
     text-align: center;
 }
-.contentDetails .color{
+
+.contentDetails .color {
     width: 115px;
 
 }
-.contentDetails .size{
+
+.contentDetails .size {
     width: 50px;
 }
 
-.detailsText{
+.detailsText {
     display: flex;
-    align-items:center;
+    align-items: center;
 }
-.noteBox{
+
+.noteBox {
     margin: 0 0 15px 0;
 }
-.detailsText p{
-    margin: 0 10px 0 0 ;
+
+.detailsText p {
+    margin: 0 10px 0 0;
 }
+
 .detailsText small,
-.noteTitle{
+.noteTitle {
     letter-spacing: 0.05rem;
-    border-bottom:1px solid #FFFFFF;
-    width:fit-content ;
+    border-bottom: 1px solid #FFFFFF;
+    width: fit-content;
 }
-.productRemark .notetext{
+
+.productRemark .notetext {
     letter-spacing: 0.05rem;
     line-height: 1.5;
-    margin: 5px 0 0 0 ;
+    margin: 5px 0 0 0;
 }
 
 #quantity {
@@ -1614,13 +1636,14 @@ li.pbShape {
     height: 100%;
     background-color: var(--Blue);
     padding: 30px 80px 60px 80px;
-
+    overflow: hidden;
 }
 
 @media (min-width:1920px) {
     #introduction {
         padding: 120px 15% 0 15%;
     }
+
     #otherProducts {
         padding: 30px 15% 60px 15%;
     }
@@ -1632,35 +1655,39 @@ li.pbShape {
     color: #FFFFFF;
     flex-direction: column
 }
-.recommend{
+
+.recommend {
     display: flex;
     width: 100%;
     height: 100%;
 }
 
-.quantity{
+.quantity {
     /* margin: 15px 0 0 0 ; */
     width: 180px;
     height: 50px;
     /* border: 1px solid #FFFFFF; */
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     margin: none;
     align-items: center;
 }
-#btn_1{
+
+#btn_1 {
     background-image: url(../images/commodity_arrow_reduce.svg);
 }
-#btn1{
+
+#btn1 {
     background-image: url(../images/commodity_arrow_add.svg);
 }
+
 #btn_1,
-#btn1{
+#btn1 {
     background-color: transparent;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-#quantityNum{
+#quantityNum {
     width: 50px;
     height: 50px;
     border: 1px solid;
@@ -1668,19 +1695,22 @@ li.pbShape {
     justify-content: center;
     align-items: center;
 }
-.quantityBtn{
+
+.quantityBtn {
     height: 50px;
     width: 50px;
     border: 1px solid transparent;
 }
+
 .productButtom {
     margin: 30px 0 30px 0;
     width: 100%;
     height: 100%;
     font-size: 22px;
 }
-.productButtom button{
-    font-size:16px;
+
+.productButtom button {
+    font-size: 16px;
 }
 
 .buttomitem {
@@ -1690,13 +1720,15 @@ li.pbShape {
     border-radius: 5px;
     color: var(--Blue);
     border: 1px solid transparent;
-    cursor: pointer; 
+    cursor: pointer;
 }
-.buttomitem:hover{
+
+.buttomitem:hover {
     background-color: #FEB75D;
 }
+
 #introduction small,
-.detailsText small{
+.detailsText small {
     letter-spacing: 0.05rem;
 }
 
@@ -1758,7 +1790,7 @@ h5 {
 }
 
 .productTitle h4 {
-    color:#FFFFFF;
+    color: #FFFFFF;
     text-align: right;
     line-height: 1;
     font-weight: 500;
@@ -1815,4 +1847,3 @@ footer div img {
 footer div small {
     padding-top: 12px;
 }
-

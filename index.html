@@ -18,7 +18,7 @@
 <body>
     <!-- 以下React -->
     <div id="root"></div>
-    
+
 
     <script type="text/babel">
         const { useEffect } = React;
@@ -77,17 +77,21 @@
                     });
                 };
 
-
-
-                setTimeout (()=>{
+                setTimeout(() => {
                     setInterval(() => {
-                    count = (count + 1) % frontCarouselImgs.length;
-                    frontCarousel();
-                    backgroundCarousel();
-                }, 9000);
-                },3000)
+                        count = (count + 1) % frontCarouselImgs.length;
+                        frontCarousel();
+                        backgroundCarousel();
+                    }, 9000);
+                }, 3000)
 
-
+                // 漢堡按鈕三變X
+                $('.hamburger').click(function () {
+                    // 在.hamburger類別裡面 加入/刪除類別is-active
+                    $(this).toggleClass('is-active');
+                    $('.navigation').toggle(350);
+                    $('.navbar').toggleClass('fillColor');
+                })
 
 
 
@@ -98,7 +102,35 @@
             return (<>
                 <main>
                     <section id="home">
-                        <header></header>
+                        <header>
+                            {/* 三條槓漢堡按鈕 */}
+                            <div className="navbar">
+                                <div className="navbarBtn">
+                                    <button className="hamburger">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
+                                {/* 選單列 */}
+                                <nav className="navigation">
+                                    <ul>
+                                        <li><a href="./brandConcept.html">品牌理念</a></li>
+                                        <li><a href="./pojectResults.html">專案成果</a></li>
+                                        <li><a href="./productBrowsing.html">商品瀏覽</a></li>
+                                        <li><a href="./Customization_process.html">訂購說明</a></li>
+                                        <li><a href="#">會員專區</a></li>
+                                    </ul>
+
+                                    <ul className="bottomIcon inNavbar">
+                                        <li><a href=""><GetImg imgUrl="./images/icon-fb.png" alt="" /></a></li>
+                                        <li><a href=""><GetImg imgUrl="./images/icon-ig.png" alt="" /></a></li>
+                                        <li><a href=""><GetImg imgUrl="./images/icon-line.png" alt="" /></a></li>
+                                    </ul>
+
+                                </nav>
+                            </div>
+                        </header>
                         <div className="bar">
                             <h1><a href="./index.html"><GetImg imgUrl="./images/logo.png" alt="VSER客製化球衣" /></a></h1>
                             <div className="menuList">
@@ -135,7 +167,7 @@
                         </nav>
                     </section>
                 </main>
-                <footer>
+                <footer className='homePage'>
                     <ul className="footerList">
                         <li className="footerItem">About
                             <ul>
@@ -158,7 +190,7 @@
                         </li>
                     </ul>
                     <div>
-                        <figure><GetImg imgUrl="./images/logo-2.png" alt="" /></figure>
+                        <figure><GetImg imgUrl="./images/logo-2.svg" alt="" /></figure>
                         <small>&copy;2024 VSER, Inc. 版權所有</small>
                     </div>
                 </footer>

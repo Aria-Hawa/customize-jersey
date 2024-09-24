@@ -11,29 +11,29 @@
     <link rel="stylesheet" href="./styles/headNfooter.css">
     <link rel="stylesheet" href="./styles/sandy.css">
 
- <!-- 載入React -->
- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
- <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
- <!-- 載入babel -->
- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
- <script type="text/babel" src="./jsx/Header.jsx"></script>
+    <!-- 載入React -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- 載入babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="https://aria-hawa.github.io/customizeJersey/jsx/Header.jsx"></script>
 </head>
 
 <body>
-     <!-- 9/9 add by Aria -->
-  <!-- 以下React -->
-  <div id="root"></div>
-  <script type="text/babel">
-    const { useState, useEffect, useRef } = React;
-    function App() {
-      return (
-        <Header classname='darkblue' />
-      );
-    }
-    ReactDOM
-      .createRoot(document.getElementById('root'))
-      .render(<App />);
-  </script>
+    <!-- 9/9 add by Aria -->
+    <!-- 以下React -->
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+        function App() {
+            return (
+                <Header classname='darkblue' />
+            );
+        }
+        ReactDOM
+            .createRoot(document.getElementById('root'))
+            .render(<App />);
+    </script>
     <main>
         <section id="banner">
             <div class='vserTestbox'>
@@ -128,14 +128,19 @@
                             </p>
                         </div>
                     </div>
-<div class="buttonBOX">
-    <button class="BC_button">
-    <a href="./customize.html"><p>設計專屬球衣</p></a>
-  </button>
-  <button class="BC_button">
-    <a href="./productBrowsing.html"><p>多樣設計款式</p></a>
-  </button></div>
-                    
+                    <div class="buttonBOX">
+                        <button class="BC_button">
+                            <a href="./customize.html">
+                                <p>設計專屬球衣</p>
+                            </a>
+                        </button>
+                        <button class="BC_button">
+                            <a href="./productBrowsing.html">
+                                <p>多樣設計款式</p>
+                            </a>
+                        </button>
+                    </div>
+
 
                     <!-- <div class="button">
                         <a href="#">設計專屬球衣</a>
@@ -175,7 +180,7 @@
             </li>
         </ul>
         <div>
-            <figure><img src="./images/logo-2.png" alt=""></figure>
+            <figure><img src="./images/logo-2.svg" alt=""/></figure>
             <small>&copy;2024 VSER, Inc. 版權所有</small>
         </div>
     </footer>
