@@ -947,7 +947,7 @@
 }
 
 /* 款式 */
-#templates {
+.carousel-wrapper #templates {
     animation: slide-in-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
@@ -1012,56 +1012,15 @@
 
 .arrow1 {
     background-image: url(../images/productBrowsing_icon_1.svg);
-    animation: arrow1-hover 0.35s forwards;
-    /* 加入動畫效果 */
-    animation-delay: 3s;
-    /* 1秒延遲，等arrowGroup動畫結束後再開始 */
+
 
 }
 
 .arrow2 {
     background-image: url(../images/productBrowsing_icon_2.svg);
-    animation: arrow2-hover 0.35s forwards;
-    /* 加入動畫效果 */
-    animation-delay: 4s;
-    /* 2秒延遲，等arrow1動畫結束後再開始 */
+
 }
 
-@keyframes arrow1-hover {
-    0% {
-        opacity: 0;
-    }
-
-    20% {
-        opacity: 1;
-        background-image: url(../images/productBrowsing_icon_1-1.svg);
-        /* 模擬滑過效果 */
-    }
-
-    90% {
-        opacity: 1;
-        background-image: url(../images/productBrowsing_icon_1-1.svg);
-        /* 模擬滑過效果 */
-    }
-}
-
-@keyframes arrow2-hover {
-    0% {
-        opacity: 0;
-    }
-
-    20% {
-        opacity: 1;
-        background-image: url(../images/productBrowsing_icon_2-1.svg);
-        /* 模擬滑過效果 */
-    }
-
-    90% {
-        opacity: 1;
-        background-image: url(../images/productBrowsing_icon_2-1.svg);
-        /* 模擬滑過效果 */
-    }
-}
 
 
 .arrow1:hover {
