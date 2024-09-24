@@ -286,3 +286,141 @@ a {
 footer div img {
     width: 217px;
 }
+
+/* 塞圖片 */
+
+.svcA-1 {
+    background-image: url(../images/productBrowsing_pbShapeA_1.png);
+}
+
+.svcA-1-back {
+    background-image: url(../images/productBrowsing_pbShapeA_1_back.png);
+}
+
+.svcA-2 {
+    background-image: url(../images/productBrowsing_pbShapeA_2.png);
+}
+
+.svcA-2-back {
+    background-image: url(../images/productBrowsing_pbShapeA_2_back.png);
+}
+
+.svcA-3 {
+    background-image: url(../images/productBrowsing_pbShapeA_3.png);
+}
+
+.svcA-3-back {
+    background-image: url(../images/productBrowsing_pbShapeA_3_back.png);
+}
+
+.svcA-4 {
+    background-image: url(../images/productBrowsing_pbShapeA_4.png);
+}
+
+.svcA-4-back {
+    background-image: url(../images/productBrowsing_pbShapeA_4_back.png);
+}
+
+.svcA-5 {
+    background-image: url(../images/productBrowsing_pbShapeA_5.png);
+}
+
+.svcA-5-back {
+    background-image: url(../images/productBrowsing_pbShapeA_5_back.png);
+}
+
+.svcA-6 {
+    background-image: url(../images/productBrowsing_pbShapeA_6.png);
+}
+
+.svcA-6-back {
+    background-image: url(../images/productBrowsing_pbShapeA_6_back.png);
+}
+
+.svcA-7 {
+    background-image: url(../images/productBrowsing_pbShapeA_7.png);
+}
+
+.svcA-7-back {
+    background-image: url(../images/productBrowsing_pbShapeA_7_back.png);
+}
+
+.svcA-8 {
+    background-image: url(../images/productBrowsing_pbShapeA_8.png);
+}
+
+.svcA-8-back {
+    background-image: url(../images/productBrowsing_pbShapeA_8_back.png);
+}
+
+.svcB-1-1 {
+    background-image: url(../images/productBrowsing_pbShapeB_1.png);
+}
+
+.svcB-1-2 {
+    background-image: url(../images/productBrowsing_pbShapeB_2.png);
+}
+
+.svcB-1-3 {
+    background-image: url(../images/productBrowsing_pbShapeB_1-1.png);
+}
+
+.svcB-1-4 {
+    background-image: url(../images/productBrowsing_pbShapeB_2-2.png);
+}
+
+.svcB-2-1 {
+    background-image: url(../images/productBrowsing_pbShapeB_3.png);
+}
+
+.svcB-2-2 {
+    background-image: url(../images/productBrowsing_pbShapeB_4.png);
+}
+
+.svcB-2-3 {
+    background-image: url(../images/productBrowsing_pbShapeB_3-1.png);
+}
+
+.svcB-2-4 {
+    background-image: url(../images/productBrowsing_pbShapeB_4-1.png);
+}
+
+.svcB-3-1 {
+    background-image: url(../images/productBrowsing_pbShapeB_5.png);
+}
+
+.svcB-3-2 {
+    background-image: url(../images/productBrowsing_pbShapeB_6.png);
+}
+
+.svcB-3-3 {
+    background-image: url(../images/productBrowsing_pbShapeB_5-1.png);
+}
+
+.svcB-3-4 {
+    background-image: url(../images/productBrowsing_pbShapeB_6-1.png);
+}
+
+.svcC-1 {
+    background-image: url(../images/productBrowsing_pbShapeC_1.png);
+}
+
+.svcC-1-2 {
+    background-image: url(../images/productBrowsing_pbShapeC_1_1.png);
+}
+
+.svcC-2 {
+    background-image: url(../images/productBrowsing_pbShapeC_2.png);
+}
+
+.svcC-2-1 {
+    background-image: url(../images/productBrowsing_pbShapeC_2_1.png);
+}
+
+.svcC-3 {
+    background-image: url(../images/productBrowsing_pbShapeC_3.png);
+}
+
+.svcC-3-1 {
+    background-image: url(../images/productBrowsing_pbShapeC_3_1.png);
+}

@@ -133,34 +133,27 @@ $(function () {
     }
 
     // click下一步儲存要下單的明細
-    // let dcOrderArray = [];
-    // $('.nextBtn').click(function () {
-    //     let getTable = $('.table').filter((index, element) => {
-    //         return element.style.display == 'block';
-    //     });
-    //     if (getTable.length > 0) {
-    //         // 使用prop()取得outerHtml
-    //         // let dcOrderImg = $(getTable).find('figure svg').prop('outerHTML');
-    //         // let dcOrderName = $(getTable).find('.captionLeft p').text();
-    //         // let dcOrderObj = {
-    //         //     name: dcOrderName,
-    //         //     img: dcOrderImg,
-    //         // };
-    //         // push到陣列裡
-    //         // dcOrderArray.push(dcOrderObj);
-    //         let dcOrderName = '';
-    //         getTable.each((element) => {
-    //             // let dcOrderImg = $(getTable).find('figure svg').prop('outerHTML');
-    //             dcOrderName = $(getTable).find('.captionLeft p').text();
-    //             // let dcOrderObj = {
-    //             //     name: dcOrderName,
-    //             //     img: dcOrderImg,
-    //             // };
-    //             console.log(dcOrderName);
-    //         });
-    //         console.log(getTable);
-    //     };
-    // });
+    let dcOrderArray = [];
+    $('.nextBtn').click(function () {
+        let getTable = $('.table').filter((index, element) => {
+            return element.style.display == 'block';
+        });
+        if (getTable.length > 0) {
+            getTable.each((index, element) => {
+                // let dcOrderImg = $(getTable).find('figure svg').prop('outerHTML');
+                // let dcOrderName = $(getTable).find('.captionLeft p').text();
+                let dcOrderImg = $(element).find('figure svg').prop('outerHTML');
+                let dcOrderName = $(element).find('.captionLeft p').text();
+                let dcOrderObj = {
+                    name: dcOrderName,
+                    img: dcOrderImg,
+                };
+                // push到陣列裡
+                dcOrderArray.push(dcOrderObj);
+                localStorage.setItem('dcOrder', JSON.stringify(dcOrderArray));
+            });
+        };
+    });
 
 
 
