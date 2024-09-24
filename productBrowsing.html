@@ -73,7 +73,7 @@
 
                     changeJersey();
 
-        // 後續改成用localStorage抓取
+        // 後續改成用localStorage
         function saveProductInfo(id) {
             const productElement = $(`#${id}`).closest('.pbBescribe');
             const shape = productElement.find('h4').text(); // 獲取 shape 的文字內容
@@ -89,10 +89,10 @@
         }
 
         // 為每個按鈕添加點擊事件
-        $('#pb1, #pb2, #pb3, #pb4').click(function () {
+        $('#pb1, #pb2, #pb3, #pb4,#pb5,#pb6,#pb7,#pb8,#pb9,#pb10,#pb11,#pb12,#pb13,#pb14,#pb15,#pb16,#pb17,#pb18').click(function () {
             saveProductInfo(this.id); // 使用通用函數保存信息
         });
-
+       
 
                     // 詳細介紹Btn
                     $('.pbTBtn').click(function (e) {
@@ -142,62 +142,62 @@
                                         <ul id="templates" className="templatesA">
                                             <PbShape
                                                 svcA="pbImage A svcA-1" svcB="pbImage B svcA-2" shape="疾風烈影" price="NT$700"
-                                                introduce="動感十足的斜線設計，如同快速掠過的風影，象徵著迅捷與靈活。" star="★★★★" pbNum="pb1" dataNum="A" />
+                                                introduce="動感十足的斜線設計，如同快速掠過的風影，象徵著迅捷與靈活。" star="★★★★" pbNum="pb1" dataNum="A1" />
                                             <PbShape
                                                 svcA="pbImage A svcA-3" svcB="pbImage B svcA-4" shape="雷霆迅刃" price="NT$700"
-                                                introduce="流暢的線條與鋒利的幾何圖形相結合，宛如切割空氣的鋒刃，展現出無畏與突破的精神。" star="★★★★★" pbNum="pb2" dataNum="B" />
+                                                introduce="流暢的線條與鋒利的幾何圖形相結合，宛如切割空氣的鋒刃，展現出無畏與突破的精神。" star="★★★★★" pbNum="pb2" dataNum="A2" />
                                             <PbShape
                                                 svcA="pbImage A svcA-5" svcB="pbImage B svcA-6" shape="極速流星" price="NT$650"
-                                                introduce="鋒利的線條組成星辰般的圖案，如同流星般高速且精確，象徵著高效與穩定。" star="★★★" pbNum="pb3" dataNum="C" />
+                                                introduce="鋒利的線條組成星辰般的圖案，如同流星般高速且精確，象徵著高效與穩定。" star="★★★" pbNum="pb3" dataNum="A3" />
                                             <PbShape
                                                 svcA="pbImage A svcA-7" svcB="pbImage B svcA-8" shape="熾烈電光" price="NT$650"
-                                                introduce="動態感十足的線條搭配科技感的設計，如同閃電般的爆發力與無限能量。" star="★★★" pbNum="pb4" dataNum="D" />
+                                                introduce="動態感十足的線條搭配科技感的設計，如同閃電般的爆發力與無限能量。" star="★★★" pbNum="pb4" dataNum="A4" />
                                             <PbShape
                                                 svcA="pbImage A svcA-1" svcB="pbImage B svcA-2" shape="疾風烈影" price="NT$700"
-                                                introduce="動感十足的斜線設計，如同快速掠過的風影，象徵著迅捷與靈活。" star="★★★★" pbNum="pb5" dataNum="A" />
+                                                introduce="動感十足的斜線設計，如同快速掠過的風影，象徵著迅捷與靈活。" star="★★★★" pbNum="pb5" dataNum="A1" />
                                             <PbShape
                                                 svcA="pbImage A svcA-3" svcB="pbImage B svcA-4" shape="雷霆迅刃" price="NT$700"
-                                                introduce="流暢的線條與鋒利的幾何圖形相結合，宛如切割空氣的鋒刃，展現出無畏與突破的精神。" star="★★★★★" pbNum="pb6" dataNum="B" />
+                                                introduce="流暢的線條與鋒利的幾何圖形相結合，宛如切割空氣的鋒刃，展現出無畏與突破的精神。" star="★★★★★" pbNum="pb6" dataNum="A2" />
                                         </ul>
                                         <ul id="templates" className="templatesB" style={{ display: "none" }}>
                                             <PbShape
-                                                svcA="pbImage A svcB-1" svcB="pbImage B svcB-2" shape="全棉圓領T" price="NT$400"
-                                                introduce="舒適全棉材質，透氣吸汗，日常穿搭首選。" star="★★★★" pbNum="pb7" dataNum="AA" />
+                                                svcA="pbImage A svcB-1-1" svcB="pbImage B svcB-1-2" shape="全棉圓領T" price="NT$400"
+                                                introduce="舒適全棉材質，透氣吸汗，日常穿搭首選。" star="★★★★" pbNum="pb7" dataNum="B1" />
                                             <PbShape
-                                                svcA="pbImage A svcB-3" svcB="pbImage B svcB-4" shape="重磅全棉圓領T" price="NT$400"
-                                                introduce="厚實耐穿，重磅全棉質感，極致舒適體驗。" star="★★★★★" />
+                                                svcA="pbImage A svcB-2-1" svcB="pbImage B svcB-2-2" shape="重磅全棉圓領T" price="NT$400"
+                                                introduce="厚實耐穿，重磅全棉質感，極致舒適體驗。" star="★★★★★" pbNum="pb8" dataNum="B2"/>
                                             <PbShape
-                                                svcA="pbImage A svcB-5" svcB="pbImage B svcB-6" shape="圓領排汗運動T" price="NT$450"
-                                                introduce="輕盈透氣，快速排汗，運動訓練必備良品。" star="★★★" />
+                                                svcA="pbImage A svcB-3-1" svcB="pbImage B svcB-3-2" shape="圓領排汗運動T" price="NT$450"
+                                                introduce="輕盈透氣，快速排汗，運動訓練必備良品。" star="★★★" pbNum="pb9" dataNum="B3"/>
                                                 <PbShape
-                                                svcA="pbImage A svcB-1" svcB="pbImage B svcB-2" shape="全棉圓領T" price="NT$400"
-                                                introduce="舒適全棉材質，透氣吸汗，日常穿搭首選。" star="★★★★" />
+                                                svcA="pbImage A  svcB-1-1" svcB="pbImage B svcB-1-2" shape="全棉圓領T" price="NT$400"
+                                                introduce="舒適全棉材質，透氣吸汗，日常穿搭首選。" star="★★★★" pbNum="pb10" dataNum="B1" />
                                             <PbShape
-                                                svcA="pbImage A svcB-3" svcB="pbImage B svcB-4" shape="重磅全棉圓領T" price="NT$400"
-                                                introduce="厚實耐穿，重磅全棉質感，極致舒適體驗。" star="★★★★★" />
+                                                svcA="pbImage A svcB-2-1" svcB="pbImage B svcB-2-2" shape="重磅全棉圓領T" price="NT$400"
+                                                introduce="厚實耐穿，重磅全棉質感，極致舒適體驗。" star="★★★★★" pbNum="pb11" dataNum="B2"/>
                                             <PbShape
                                                 svcA="pbImage A svcB-5" svcB="pbImage B svcB-6" shape="圓領排汗運動T" price="NT$450"
-                                                introduce="輕盈透氣，快速排汗，運動訓練必備良品。" star="★★★" />
+                                                introduce="輕盈透氣，快速排汗，運動訓練必備良品。" star="★★★" pbNum="pb12" dataNum="B3"/>
                                         </ul>
                                         <ul id="templates" className="templatesC" style={{ display: "none" }}>
                                             <PbShape
                                                 svcA="pbImageShort AShort svcC-1" shape="休閒彈性短褲" price="NT$350"
-                                                introduce="高彈舒適，靈活自在，休閒運動兩相宜。" star="★★★★" />
+                                                introduce="高彈舒適，靈活自在，休閒運動兩相宜。" star="★★★★" pbNum="pb13" dataNum="C1"/>
                                             <PbShape
                                                 svcA="pbImageShort AShort svcC-2" shape="機能運動短褲" price="NT$320"
-                                                introduce="輕便速乾，口袋防潑水設計，提升運動性能。" star="★★★★★" />
+                                                introduce="輕便速乾，口袋防潑水設計，提升運動性能。" star="★★★★★" pbNum="pb14" dataNum="C2"/>
                                             <PbShape
                                                 svcA="pbImageShort AShort svcC-3" shape="口袋訓練短褲" price="NT$350"
-                                                introduce="多功能口袋設計，輕鬆收納，訓練日常皆適用。" star="★★★" />
+                                                introduce="多功能口袋設計，輕鬆收納，訓練日常皆適用。" star="★★★"  pbNum="pb15" dataNum="C3"/>
                                                 <PbShape
                                                 svcA="pbImageShort AShort svcC-1" shape="休閒彈性短褲" price="NT$350"
-                                                introduce="高彈舒適，靈活自在，休閒運動兩相宜。" star="★★★★" />
+                                                introduce="高彈舒適，靈活自在，休閒運動兩相宜。" star="★★★★"   pbNum="pb16" dataNum="C1"/>
                                             <PbShape
                                                 svcA="pbImageShort AShort svcC-2" shape="機能運動短褲" price="NT$320"
-                                                introduce="輕便速乾，口袋防潑水設計，提升運動性能。" star="★★★★★" />
+                                                introduce="輕便速乾，口袋防潑水設計，提升運動性能。" star="★★★★★"    pbNum="pb17" dataNum="C2" />
                                             <PbShape
                                                 svcA="pbImageShort AShort svcC-3" shape="口袋訓練短褲" price="NT$350"
-                                                introduce="多功能口袋設計，輕鬆收納，訓練日常皆適用。" star="★★★" />
+                                                introduce="多功能口袋設計，輕鬆收納，訓練日常皆適用。" star="★★★"    pbNum="pb18" dataNum="C3" />
                                                 
                                         </ul>
                                     </div>
