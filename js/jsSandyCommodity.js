@@ -113,10 +113,10 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('productColor3').innerText = product.Color3;
 
         // 定義顏色的陣列
-        const colors = ['Color4', 'Color3'];
+        const color = ['Color4', 'Color3'];
 
         // 迴圈遍歷每個顏色屬性
-        colors.forEach(color => {
+        color.forEach(color => {
             const element = document.getElementById(`product${color}`);
             if (product[color] === "display:none") {
                 element.style.display = 'none';
