@@ -144,41 +144,10 @@
 
 .btnA {
   background-image: url(../images/brandConcept_arrowL.svg);
-  animation: btnA-hover 0.5s forwards; /* 加入動畫效果 */
-  animation-delay: 3s; /* 1秒延遲，等arrowGroup動畫結束後再開始 */
 }
 
 .btnB {
   background-image: url(../images/brandConcept_arrowR.svg);
-  animation: btnB-hover 0.5s forwards; /* 加入動畫效果 */
-  animation-delay: 4s; /* 1秒延遲，等arrowGroup動畫結束後再開始 */
-}
-@keyframes btnA-hover {
-  0% {
-      opacity: 0;
-  }
-  20% {
-      opacity: 1;
-      background-image: url(../images/brandConcept_arrowL-1.svg); /* 模擬滑過效果 */
-  }
-  90% {
-      opacity: 1;
-      background-image: url(../images/brandConcept_arrowL-1.svg); /* 模擬滑過效果 */
-  }
-}
-
-@keyframes btnB-hover {
-  0% {
-      opacity: 0;
-  }
-  20% {
-      opacity: 1;
-      background-image: url(../images/brandConcept_arrowR-1.svg); /* 模擬滑過效果 */
-  }
-  90% {
-      opacity: 1;
-      background-image: url(../images/brandConcept_arrowR-1.svg); /* 模擬滑過效果 */
-  }
 }
 
 .btnA:hover {
