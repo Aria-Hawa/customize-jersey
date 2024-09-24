@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (picLClassName) {
         // 拆分 className 並取最後一個值
         const classList = picLClassName.split(' ');
+        console.log(classList.length);
         const lastClass = classList[classList.length - 1]; // 取得最後一個 class 值
 
         // 將最後一個 class 值新增到 <figure> 標籤中

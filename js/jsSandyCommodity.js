@@ -1,58 +1,103 @@
+// 讀取上一頁商品資訊
+// 從localStorage抓取
 document.addEventListener('DOMContentLoaded', function () {
+    // 從 localStorage 取得 shape 的值
+    const shapeValue = localStorage.getItem('shape');
+    const priceValue = localStorage.getItem('price');
+    const IntroductionValue = localStorage.getItem('introduce');
+
+    // 檢查 shape 是否存在且有值
+    if (shapeValue) {
+        // 將 shapeValue 設定為 #productName 的文字
+        document.getElementById('productName').textContent = shapeValue;
+    }
+    if (priceValue) {
+        // 將 shapeValue 設定為 #productName 的文字
+        document.getElementById('productPrice').textContent = priceValue;
+    }
+    if (IntroductionValue) {
+        // 將 shapeValue 設定為 #productName 的文字
+        document.getElementById('productIntroduction').textContent = IntroductionValue;
+    }
+
+    const productNameNEW = document.querySelector("#productName")
     const selectedProduct = localStorage.getItem('selectedProduct');
     const products = {
-        A: {
-            Name: '疾風烈影',
-            Introduction: '動感十足的斜線設計，如同快速掠過的風影。',
-            Price: 'NT$700',
+        A1: {
             Color1: "綠黃",
             Color2: "丈青橘",
             Color3: "淺藍粉",
             Color4: "display:none"
         },
-        B: {
-            Name: '雷霆迅刃',
-            Introduction: '流暢線條與鋒利圖形相結合，宛如切割空氣的鋒刃。',
-            Price: 'NT$700',
+        A2: {
             Color1: "髒橘黃",
             Color2: "暗紅黃",
             Color3: "亮紫黃",
             Color4: "display:none"
         },
-        C: {
-            Name: '極速流星',
-            Introduction: '鋒利的線條組成星辰般的圖案，如同流星般高速且精確。',
-            Price: 'NT$650',
+        A3: {
             Color1: "丈青橘",
             Color2: "暗紫橘",
             Color3: "深綠黃",
             Color4: "display:none"
         },
-        D: {
-            Name: '熾烈電光',
-            Introduction: '動態感的線條搭配科技感，如閃電般的爆發力與能量。',
-            Price: 'NT$650',
+        A4: {
             Color1: "全身紅",
             Color2: "純黑粉",
             Color3: "深綠黃",
             Color4: "display:none"
         },
-        AA: {
-            Name: 'Style A',
-            Introduction: '款式AAAAAAAAAAAAAA',
-            Price: 'NT$300',
-            Color1: "橘",
-            Color2: "黑",
-            Color3: "橘",
-            Color4: "黑",
+        B1: {
+            Color1: "活力橘",
+            Color2: "爵士黑",
+            Color3: "海軍藍",
+            Color4: "森林綠",
+        },
+        B2: {
+            Color1: "戀愛粉",
+            Color2: "亮橘黃",
+            Color3: "神秘紫",
+            Color4: "螢光綠",
+        },
+        B3: {
+            Color1: "蘋果紅",
+            Color2: "薄荷藍",
+            Color3: "神秘灰",
+            Color4: "青草綠",
+        },
+        C1: {
+            Color1: "丈青藍",
+            Color2: "神秘黑",
+            Color3: "display:none",
+            Color4: "display:none",
+        },
+        C2: {
+            Color1: "深墨綠",
+            Color2: "海軍藍",
+            Color3: "display:none",
+            Color4: "display:none",
+        },
+        C3: {
+            Color1: "焦糖棕",
+            Color2: "神秘黑",
+            Color3: "display:none",
+            Color4: "display:none",
         }
     };
+
     const productClasses = {
-        A: ['svcA-1', 'svcA-1-back', 'svcA-2', 'svcA-2-back'],
-        B: ['svcA-3', 'svcA-3-back', 'svcA-4', 'svcA-4-back'],
-        C: ['svcA-5', 'svcA-5-back', 'svcA-6', 'svcA-6-back'],
-        D: ['svcA-7', 'svcA-7-back', 'svcA-8', 'svcA-8-back'],
+        A1: ['svcA-1', 'svcA-2', 'svcA-2-back', 'svcA-1-back'],
+        A2: ['svcA-3', 'svcA-4', 'svcA-4-back', 'svcA-3-back'],
+        A3: ['svcA-5', 'svcA-6', 'svcA-6-back', 'svcA-5-back'],
+        A4: ['svcA-7', 'svcA-8', 'svcA-8-back', 'svcA-7-back'],
+        B1: ['svcB-1-1', 'svcB-1-2', 'svcB-1-3', 'svcB-1-4'],
+        B2: ['svcB-2-1', 'svcB-2-2', 'svcB-2-3', 'svcB-2-4'],
+        B3: ['svcB-3-1', 'svcB-3-2', 'svcB-3-3', 'svcB-3-4'],
+        C1: ['svcC-1', 'svcC-1-2'],
+        C2: ['svcC-2', 'svcC-2-1'],
+        C3: ['svcC-3', 'svcC-3-1'],
     };
+
 
     // 檢查 localStorage 中是否有之前儲存的 picL className，並恢復
     const savedClassName = localStorage.getItem('picLClassName');
@@ -63,22 +108,32 @@ document.addEventListener('DOMContentLoaded', function () {
     if (selectedProduct && products[selectedProduct]) {
         // 根據 selectedProduct 更新頁面中的商品資訊
         const product = products[selectedProduct];
-        document.getElementById('productName').innerText = product.Name;
-        document.getElementById('productIntroduction').innerText = product.Introduction;
-        document.getElementById('productPrice').innerText = product.Price;
         document.getElementById('productColor1').innerText = product.Color1;
         document.getElementById('productColor2').innerText = product.Color2;
         document.getElementById('productColor3').innerText = product.Color3;
 
+        // 定義顏色的陣列
+        const colors = ['Color4', 'Color3'];
 
-        if (product.Color4 === "display:none") {
-            // 更改 CSS
-            document.getElementById('productColor4').style.display = 'none';
-        } else {
-            // 更改 HTML
-            document.getElementById('productColor4').innerText = product.Color4;
-            document.getElementById('productColor4').style.display = 'block'; // 確保顯示
-        }
+        // 迴圈遍歷每個顏色屬性
+        colors.forEach(color => {
+            const element = document.getElementById(`product${color}`);
+            if (product[color] === "display:none") {
+                element.style.display = 'none';
+            } else {
+                element.innerText = product[color];
+                element.style.display = 'block'; // 確保顯示
+            }
+        });
+        // if (product.Color4 === "display:none") {
+        //     // 更改 CSS
+        //     document.getElementById('productColor4').style.display = 'none';
+        // } else {
+        //     // 更改 HTML
+        //     document.getElementById('productColor4').innerText = product.Color4;
+        //     document.getElementById('productColor4').style.display = 'block'; // 確保顯示
+        // }
+
 
         // 將商品名稱儲存到 localStorage
         localStorage.setItem('selectedProductName', productName.innerText);
@@ -119,9 +174,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         document.getElementById('productColor2').addEventListener('click', function () {
             changeBorder(this);
-            swap3(); // 切换大图
+            swap2(); // 切换大图
         });
         document.getElementById('productColor3').addEventListener('click', function () {
+            changeBorder(this);
+            swap3(); // 切换大图
+        });
+        document.getElementById('productColor4').addEventListener('click', function () {
             changeBorder(this);
             swap4(); // 切换大图
         });
@@ -256,7 +315,7 @@ $(document).ready(function () {
     $('#buyNowBtn').on('click', function () {
         // 检查是否同时选择了颜色和尺寸
         if (borderSelected && borderBSelected) {
-            window.location.href = './chooseProjectSandy.html';
+            window.location.href = './doubleCheck.html';
         } else {
             // 提示用户需要选择颜色和尺寸
             $('#failWindow').fadeIn();

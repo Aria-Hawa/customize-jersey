@@ -61,7 +61,6 @@ function getDiv(curNum) {
 }
 function showBtn(pbNum) {
 	getDiv(pbNum);
-
 	pbTBtnDiv.style.display = "flex";
 
 }
@@ -81,7 +80,7 @@ function slideCarousel(direction) {
 		templateWidth += $(this).outerWidth(true);
 	});
 	// the amount we want to scroll the templates
-	var paginationSize = (templateSize * 1)
+	var paginationSize = templates.parent().width();
 
 	// for sliding right
 	if (direction == "right") {
@@ -121,12 +120,12 @@ function slideCarousel(direction) {
 	if (direction == "left") {
 
 		var currentTemplatePos = parseInt(templates.css('left'))
-		var newTemplatePos = currentTemplatePos + (templateSize * 1)
+		var newTemplatePos = currentTemplatePos + templates.parent().width();
 
 		// if left arrow is visible
 		if ($('#carousel-left').hasClass('showing')) {
 			// if the template "page" is close to zero state
-			if (currentTemplatePos > -(templateSize * 1)) {
+			if (currentTemplatePos > -templates.parent().width()) {
 				// set it to zero state
 				templates.css("left", 0 + "px");
 			} else {
@@ -171,16 +170,6 @@ $(document).ready(function () {
 	changeJersey(); // 或 changeSweat(); 根据你的默认显示需求
 });
 
-// 點選商品=>商品內頁
-// $(document).ready(function () {
-// 	$('.pbTBtn').click(function (e) {
-// 		e.preventDefault();
-// 		const productId = $(this).data('product'); // 獲取點擊商品的 data-product 屬性
-// 		localStorage.setItem('selectedProduct', productId); // 將商品資訊保存到 localStorage
-// 		window.location.href = './commodity_text.html'; // 跳轉到內頁
-// 	});
-// });
-
 $(document).ready(function () {
 
 	// 使用事件委託，將事件處理器綁定到已存在的父級元素
@@ -193,15 +182,6 @@ $(document).ready(function () {
 		}, 3000);
 	});
 
-	// 當需要顯示彈出視窗時
-	// $('.collection').on('click', function () {
-	// 	$('#collectionWindow').fadeIn();
-
-	// 	//  視窗3秒自動關閉
-	// 	setTimeout(function () {
-	// 		$('#collectionWindow').fadeOut();
-	// 	}, 3000);
-	// });
 });
 
 
