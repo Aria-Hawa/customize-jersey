@@ -757,29 +757,6 @@
     animation-delay: 0.5s;
 }
 
-.svc-1 {
-    background-image: url(../images/projectResults_pjshape2.png);
-}
-
-.svc-2 {
-    background-image: url(../images/projectResults_pjshape4.png);
-}
-
-.svc-3 {
-    background-image: url(../images/projectResults_pjshape3.png);
-}
-
-.svc-4 {
-    background-image: url(../images/projectResults1_pjshape1.png);
-}
-
-.svc-5 {
-    background-image: url(../images/projectResults1_pjshape2.png);
-}
-
-.svc-6 {
-    background-image: url(../images/projectResults1_pjshape3.png);
-}
 
 @media (max-width:1024px) {
 

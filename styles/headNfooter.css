@@ -167,6 +167,8 @@ a {
     width: 40px;
     height: 40px;
     background-image: url(../images/cartBtnICON.svg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .cartBtn:hover {

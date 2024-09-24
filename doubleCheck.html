@@ -43,7 +43,7 @@
             </div>
             <div id="content">
                 <div id="order" class="inContentDiv">
-                    <div id="order-1" class="orderContent">
+                    <div id="checkOrder" class="orderContent" style="display: none;">
                         <div class="tableCaption">
                             <div class="captionLeft">
                                 <figure></figure>
@@ -54,10 +54,10 @@
                             </div>
                             <div class="captionRight">
                                 <p>共2件</p>
-                                <p class="unitPrice">單價 : NT$ <span>750</span> </p>
+                                <p class="unitPrice">單價 :  <span>NT$750</span> </p>
                             </div>
                         </div>
-                        <div class="contentMoney">總價: <span>NT$ 1500</span></div>
+                        <div class="contentMoney">總價: <span>NT$ 7,380</span></div>
                     </div>
                     <div id="order-2" class="orderContent">
                         <div class="tableCaption">
@@ -70,10 +70,10 @@
                             </div>
                             <div class="captionRight">
                                 <p>共1件</p>
-                                <p class="unitPrice">單價 : NT$ <span>750</span> </p>
+                                <p class="unitPrice">單價 : NT$ <span>1,000</span> </p>
                             </div>
                         </div>
-                        <div class="contentMoney">總價: <span>NT$750</span></div>
+                        <div class="contentMoney">總價: <span>NT$ 1,000</span></div>
                     </div>
                 </div>
                 <div id="payment" class="inContentDiv">
@@ -161,9 +161,35 @@
     <!-- 設定jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="./js/jsSandyProject.js"></script>
+        <!-- <script src="./js/jsSandyProject.js"></script> -->
     <script>
         $(function () {
+            // 從客製化來的local
+            let ckOrder = JSON.parse(localStorage.getItem('dcOrder'));
+            ckOrder.forEach(element => {
+                let newCheckOrder = $('#checkOrder').clone();
+                newCheckOrder.attr('id','').css('display','block');
+                newCheckOrder.find('.captionLeft figure').append(element.img);
+                newCheckOrder.find('.captionLeft div p').text(element.name);
+                $('#checkOrder').after(newCheckOrder);
+            });
+
+            // 從商品瀏覽下單來的local
+            let pbName = localStorage.getItem('shape');
+            // 根據空白分隔.split(' ')
+            let pbImg = localStorage.getItem('picLClassName').split(' ');
+            let pbPrice = localStorage.getItem('price');
+            let newCheckOrder = $('#checkOrder').clone();
+            newCheckOrder.attr('id','').css('display','block');
+            newCheckOrder.find('.captionLeft figure').addClass(pbImg[1]);
+            newCheckOrder.find('.captionLeft div p').text(pbName);
+            newCheckOrder.find('.unitPrice span').text(pbPrice);
+            // 抓去price中數字的部分
+            pbPriceNum = Number(pbPrice.replace(/\D/g, ''));
+            newCheckOrder.find('.contentMoney span').text(pbPriceNum*2);
+
+            $('#checkOrder').after(newCheckOrder);
+
             // fixedTopbar 訂製專區下拉選單
             $('#RLbtn').click(function () {
                 $('#pricePlanBtn').toggleClass('show');
