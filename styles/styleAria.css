@@ -4,6 +4,11 @@
 }
 
 /* home區 */
+/* 漢堡選單RWD */
+.navbar {
+    display: none;
+}
+
 #home {
     height: 100vh;
     width: 100%;
@@ -1824,7 +1829,7 @@ td {
     padding: 0px 80px;
     width: 100%;
     height: 170px;
-
+    border: none;
 }
 
 footer {
@@ -2029,20 +2034,30 @@ footer div small {
         display: none;
     }
 
+    #home header {
+        background-color: transparent;
+    }
+
     .navbar {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* margin: 20px; */
-        /* width: 40%; */
+        transition: .35s background-color ease;
+    }
+
+    .navbar.fillColor {
+        background-color: var(--Darkblue);
+    }
+
+    .navbar .navbarBtn {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: end;
+        padding-right: 40px;
     }
 
     .navbar .hamburger {
-        margin-top: 24px;
-    }
-
-    .hamburger {
-        margin-bottom: 10px;
         background-color: transparent;
         border: none;
     }
@@ -2071,25 +2086,47 @@ footer div small {
 
     .navigation {
         width: 100%;
-        background-color: var(--Darkblue);
+        height: calc(100vh - 77px);
         padding-bottom: 20px;
-        display: none;/
+        display: none;
+        position: relative;
     }
-
 
     .navigation ul {
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .bottomIcon.inNavbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        bottom: 80px;
+    }
+
+    .bottomIcon.inNavbar li {
+        width: 48px;
+        height: 48px;
+        padding: 4px;
+        margin: 0px 8px;
     }
 
     .navigation ul li {
-        width: 34px;
+        width: 50%;
+        text-align: center;
+        padding: 30px 0px;
     }
 
     .homeInfo {
         left: calc(50% - 34%);
         top: 18%;
         width: 68%;
+        z-index: 65;
     }
 
     .sloganNbtn {
@@ -2106,4 +2143,53 @@ footer div small {
         margin-top: 25px;
     }
 
+    .backgroundLogo {
+        width: 100%;
+        z-index: 50;
+    }
+
+    .frontCarousel {
+        bottom: 0;
+        z-index: 60;
+    }
+
+    .bottomIcon {
+        display: none;
+    }
+
+    /* footer */
+    .homePage {
+        padding: 20px;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .homePage .footerList {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .homePage .footerList .footerItem {
+        font-weight: 600;
+        margin: 10px 0px;
+        text-align: center;
+    }
+
+    .homePage .footerList .footerItem ul {
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .homePage .footerList .footerItem li:first-child {
+        padding-top: 8px;
+    }
+
+    .homePage div figure {
+        width: 150px;
+    }
+
+    .homePage div figure img {
+        width: 100%;
+    }
 }

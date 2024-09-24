@@ -77,8 +77,6 @@
                     });
                 };
 
-
-
                 setTimeout(() => {
                     setInterval(() => {
                         count = (count + 1) % frontCarouselImgs.length;
@@ -92,6 +90,7 @@
                     // 在.hamburger類別裡面 加入/刪除類別is-active
                     $(this).toggleClass('is-active');
                     $('.navigation').toggle(350);
+                    $('.navbar').toggleClass('fillColor');
                 })
 
 
@@ -106,11 +105,13 @@
                         <header>
                             {/* 三條槓漢堡按鈕 */}
                             <div className="navbar">
-                                <button className="hamburger">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
+                                <div className="navbarBtn">
+                                    <button className="hamburger">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
                                 {/* 選單列 */}
                                 <nav className="navigation">
                                     <ul>
@@ -120,6 +121,13 @@
                                         <li><a href="./Customization_process.html">訂購說明</a></li>
                                         <li><a href="#">會員專區</a></li>
                                     </ul>
+
+                                    <ul className="bottomIcon inNavbar">
+                                        <li><a href=""><GetImg imgUrl="./images/icon-fb.png" alt="" /></a></li>
+                                        <li><a href=""><GetImg imgUrl="./images/icon-ig.png" alt="" /></a></li>
+                                        <li><a href=""><GetImg imgUrl="./images/icon-line.png" alt="" /></a></li>
+                                    </ul>
+
                                 </nav>
                             </div>
                         </header>
