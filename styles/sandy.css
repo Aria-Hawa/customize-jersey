@@ -1,3 +1,66 @@
+/* 所有文字區統整大小 */
+
+h1 {
+    font-family: ROGFonts, sans-serif;
+    font-size: 5vw;
+    letter-spacing: .2rem;
+    line-height: 5vw;
+
+}
+
+h2 {
+    font-family: ROGFonts, sans-serif;
+    color: #ffffff;
+    font-size: 3.5vw;
+    letter-spacing: .2rem;
+    line-height: 4vw;
+}
+
+h3 {
+    font-family: ROGFonts, sans-serif;
+    color: #ffffff;
+    font-size: 2.35vw;
+    letter-spacing: .2rem;
+    line-height: 2.5vw;
+}
+
+h4 {
+    font-family: ROGFonts, sans-serif;
+    color: #ffffff;
+    font-size: 1.5vw;
+    letter-spacing: .1rem;
+    line-height: 1.5vw;
+}
+h5 {
+    font-size: 1vw;
+    letter-spacing: .08rem;
+    color: #ffffff;
+
+}
+
+p {
+    font-family: ROGFonts, sans-serif;
+    color: #ffffff;
+    font-size: 1.25vw;
+    letter-spacing: 0.08rem;
+}
+
+a {
+    font-family: ROGFonts, sans-serif;
+    font-size: 1.25vw;
+    letter-spacing: 0.08rem;
+}
+
+.BC_button p {
+    color: var(--Darkblue);
+}
+body{
+    font-size: 1.25vw;
+}
+
+
+
+
 /* 品牌理念 */
 
 /* 上半部 */
@@ -70,14 +133,9 @@
 
 .sloganNbtn h3 {
     margin: 15px;
-    font-family: ROGFonts, sans-serif;
-    font-size: 30px;
-    letter-spacing: .2rem;
-    color: #ffffff;
     -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation-delay: .5s;
-    line-height: 32px;
     text-shadow: 0.1em 0.1em 0.1em var(--Darkblue);
 }
 
@@ -94,7 +152,7 @@
 #content .title {
     position: relative;
     width: 900px;
-    height: 180px;
+    height: 13vw;
     /* background-color: #FC8D00; */
     left: 50%;
     transform: translate(-50%, 0);
@@ -108,7 +166,6 @@
     height: fit-content;
     width: max-content;
     z-index: 990;
-
 }
 
 .IntroductionArea {
@@ -134,10 +191,6 @@
     color: #ffffff;
 }
 
-.IntroductionArea .box__list .item .content p {
-    letter-spacing: 0.08rem;
-}
-
 .item img {
     border: solid 2px transparent;
     border-radius: 0 20px 0 0;
@@ -154,7 +207,6 @@
     text-align: center;
 }
 
-
 .jerseyIntroduction {
     position: relative;
     margin-top: 50px;
@@ -165,8 +217,8 @@
 
 .copyWriting {
     position: absolute;
-    width: 400px;
-    height: 170px;
+    width: 29vw;
+    height: 12.5vw;
     right: 0;
     margin-top: 40px;
 }
@@ -193,21 +245,24 @@
 .bevel {
     background: linear-gradient(120deg, transparent 25px, var(--Orange-Darkblue) 0)top right;
     width: fit-content;
+    position: absolute;
+}
 
+.bevel h4 {
+    white-space: nowrap;
+    padding: 5px 40px 7px 50px;
 }
 
 .title .bevel {
-    position: absolute;
-    left: 570px;
-    top: 110px;
-
+    right: 8%;
+    top: 66%;
 }
 
 .title-2 .bevel {
-    position: absolute;
-    left: 152px;
-    top: 110px;
+    right: -4%;
+    bottom: 12%
 }
+
 
 .jerseyIntroduction .content {
     display: flex;
@@ -216,27 +271,23 @@
     margin: 140px 80px 0 0;
     width: 320px;
     height: fit-content;
-    /* right: 80px;
-    top:137px;
-    z-index: 889; */
 }
 
 .jerseyIntroduction .content p {
-    letter-spacing: 0.08rem;
-    color: #ffffff;
     background-image: linear-gradient(to right, var(--White-White));
-    padding: 105px 35px 40px 35px;
+    padding: 90px 35px 40px 35px;
     line-height: 30px
 }
 
+
 .bigPicture {
-    /* position: absolute; */
     left: 0;
     width: 140%;
-    /* height: 100%; */
     z-index: 888;
-    max-height: 600px;
+    max-height: 850px;
 }
+
+
 
 .bigPicture img {
     width: 100%;
@@ -256,7 +307,6 @@
     z-index: 990;
     right: 26%;
     top: 64%;
-
     display: flex;
     flex-direction: column;
 
@@ -268,16 +318,75 @@
     padding: 12px 40px 12px 40px;
     /* margin: 20px 0; */
     color: var(--Darkblue);
-    letter-spacing: 0.08rem;
-    font-size: 16px;
+}
+
+
+@media (min-width:1920px) {
+    .bigPicture {
+        width: 110%;
+    }
+
+    .title .bevel {
+        right: -12%;
+    }
+
+    .bevel h4 {
+        padding: 10px 50px 10px 60px;
+    }
+
+    .title-2 .bevel {
+        right: 4%;
+    }
+
+    .jerseyIntroduction .content p {
+        padding: 180px 30px 40px 40px;
+        line-height: 50px;
+    }
+
+    .jerseyIntroduction .buttonBOX {
+        right: 21%;
+        top: 66%;
+    }
 }
 
 @media (max-width:1024px) {
     .jerseyIntroduction .content {
         margin: 140px 40px 0 0;
-        border-bottom: none;
     }
 
+    .title .bevel {
+        right: 15%;
+    }
+
+    .title-2 .bevel {
+        right: -10%;
+        bottom: 10%;
+    }
+    .jerseyIntroduction .content p{
+        padding: 48px 35px 20px 40px
+    }
+    
+}
+
+@media (width < 821px){
+    
+    .vserTestbox{
+        width: 100%;
+        padding:0;
+        justify-content: center
+    }
+    .vserTest{
+        width: 50%;
+        top: auto;
+        right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .brandName{
+        width: 100%;
+        margin-right:auto;
+    }
 }
 
 
@@ -434,18 +543,6 @@
     background-image: url(../images/projectResults_rectangleThumbnail1.png);
 }
 
-@media (max-width:1024px) {
-    .rectangularMenu {
-        height: 20%;
-        width: 62%;
-        right: 40px;
-    }
-
-    .rectangularMenu .menu-2 .figure,
-    .rectangularMenu .menu-1 .figure {
-        width: 35%;
-    }
-}
 
 
 
@@ -458,17 +555,11 @@
     justify-content: center;
 }
 
-@media (max-width:1024px) {
-    .rectangularMenu .word {
-        width: 65%;
-    }
-}
+
+
+
 
 .rectangularMenu .word h4 {
-    font-family: ROGFonts, sans-serif;
-    font-size: 21px;
-    letter-spacing: .1rem;
-    line-height: 22px;
     padding: 0px 0 0 14px;
 }
 
@@ -476,11 +567,11 @@
 .rectangularMenu .word p {
     position: static;
     letter-spacing: normal;
-    font-size: 16px;
     font-weight: 550;
     right: 20px;
     padding: 7px 14px 0 0;
     text-align: right;
+    color: var(--Darkblue);
 }
 
 /* 圖文開始 */
@@ -576,10 +667,7 @@
 .textWatermark1 h1,
 .textWatermark2 h1 {
     font-family: ROGFonts, sans-serif;
-    font-size: 66px;
-    letter-spacing: .2rem;
     color: transparent;
-    line-height: 59px;
     -webkit-text-stroke: 1px rgb(255, 255, 255, 0.2);
     -webkit-animation: fade-in-fwd .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: fade-in-fwd .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -640,41 +728,10 @@
 .pjTitle .Title h2,
 .pbTitle h2 {
     font-family: ROGFonts, sans-serif;
-    font-size: 45px;
-    letter-spacing: .2rem;
-    line-height: 50px;
-    color: #ffffff;
     -webkit-animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation-delay: 0.5s;
 }
-
-
-
-/* @-webkit-keyframes fade-in-fwd {
-        0% {
-          -webkit-transform: translateZ(-80px);
-                  transform: translateZ(-80px);
-          opacity: 0;
-        }
-        100% {
-          -webkit-transform: translateZ(0);
-                  transform: translateZ(0);
-          opacity: 1;
-        }
-      }
-      @keyframes fade-in-fwd {
-        0% {
-          -webkit-transform: translateZ(-80px);
-                  transform: translateZ(-80px);
-          opacity: 0;
-        }
-        100% {
-          -webkit-transform: translateZ(0);
-                  transform: translateZ(0);
-          opacity: 1;
-        }
-      } */
 
 /* 右邊小字處 */
 .pjWord,
@@ -699,20 +756,11 @@
 .pjWord1 p,
 .pjWord2 p {
     position: absolute;
-    color: #ffffff;
     z-index: 4;
     top: 65%;
-    letter-spacing: .08rem;
     text-align: center;
     /*文字置中*/
     width: 100%;
-}
-
-.pbText p,
-.productCopywriting p,
-.productContent {
-    letter-spacing: .08rem;
-    font-size: 16px;
 }
 
 .pbText p {
@@ -742,22 +790,27 @@
     justify-content: space-around;
 }
 
-.svc-1{
+.svc-1 {
     background-image: url(../images/projectResults_pjshape2.png);
 }
-.svc-2{
+
+.svc-2 {
     background-image: url(../images/projectResults_pjshape3.png);
 }
-.svc-3{
+
+.svc-3 {
     background-image: url(../images/projectResults_pjshape4.png);
 }
-.svc-4{
+
+.svc-4 {
     background-image: url(../images/projectResults1_pjshape1.png);
 }
-.svc-5{
+
+.svc-5 {
     background-image: url(../images/projectResults1_pjshape2.png);
 }
-.svc-6{
+
+.svc-6 {
     background-image: url(../images/projectResults1_pjshape3.png);
 }
 
@@ -797,6 +850,25 @@
     #projectjJersey {
         height: 49vh;
     }
+    .rectangularMenu {
+        height: 20%;
+        width: 62%;
+        right: 40px;
+    }
+}
+
+
+
+@media (min-width:1920px) {
+    .pjTitle .Title{
+        top: 0%;
+        transform: translate(0, 0%);
+    }
+    .textWatermark,
+.textWatermark1,
+.textWatermark2{
+    top: 32%
+}
 }
 
 /* 商品瀏覽 */
@@ -935,8 +1007,6 @@
 .pbItem a {
     display: block;
     transform: skew(30deg);
-    letter-spacing: 0.08rem;
-
 }
 
 .pbItem ul li a:hover {
@@ -1088,7 +1158,8 @@ li.pbShape {
     opacity: normal;
     transition: 0.35s;
     letter-spacing: 0.08rem;
-
+    font-size: 1.25vw;
+    padding: 0 0 2px 0;
 }
 
 .pbShape .pbBescribe .pbTBtn:hover {
@@ -1296,9 +1367,11 @@ li.pbShape {
 .svcB-1-2 {
     background-image: url(../images/productBrowsing_pbShapeB_2.png);
 }
+
 .svcB-1-3 {
     background-image: url(../images/productBrowsing_pbShapeB_1-1.png);
 }
+
 .svcB-1-4 {
     background-image: url(../images/productBrowsing_pbShapeB_2-2.png);
 }
@@ -1310,9 +1383,11 @@ li.pbShape {
 .svcB-2-2 {
     background-image: url(../images/productBrowsing_pbShapeB_4.png);
 }
+
 .svcB-2-3 {
     background-image: url(../images/productBrowsing_pbShapeB_3-1.png);
 }
+
 .svcB-2-4 {
     background-image: url(../images/productBrowsing_pbShapeB_4-1.png);
 }
@@ -1324,9 +1399,11 @@ li.pbShape {
 .svcB-3-2 {
     background-image: url(../images/productBrowsing_pbShapeB_6.png);
 }
+
 .svcB-3-3 {
     background-image: url(../images/productBrowsing_pbShapeB_5-1.png);
 }
+
 .svcB-3-4 {
     background-image: url(../images/productBrowsing_pbShapeB_6-1.png);
 }
@@ -1334,6 +1411,7 @@ li.pbShape {
 .svcC-1 {
     background-image: url(../images/productBrowsing_pbShapeC_1.png);
 }
+
 .svcC-1-2 {
     background-image: url(../images/productBrowsing_pbShapeC_1_1.png);
 }
@@ -1341,6 +1419,7 @@ li.pbShape {
 .svcC-2 {
     background-image: url(../images/productBrowsing_pbShapeC_2.png);
 }
+
 .svcC-2-1 {
     background-image: url(../images/productBrowsing_pbShapeC_2_1.png);
 }
@@ -1348,6 +1427,7 @@ li.pbShape {
 .svcC-3 {
     background-image: url(../images/productBrowsing_pbShapeC_3.png);
 }
+
 .svcC-3-1 {
     background-image: url(../images/productBrowsing_pbShapeC_3_1.png);
 }
@@ -1415,6 +1495,8 @@ li.pbShape {
     }
 
 }
+
+
 
 /* 商品內頁 */
 #introduction {
@@ -1507,13 +1589,12 @@ li.pbShape {
     width: 100%;
     height: 100%;
     margin: 30px 0 0 0;
+    font-size: 1.25vw;
+    letter-spacing: 0.08rem;
 
 }
 
-.productRemark {
-    color: #FFFFFF;
-    font-size: 13.4px;
-}
+
 
 .contentDetails {
     margin: 20px 0 0 0;
@@ -1533,20 +1614,20 @@ li.pbShape {
 
 .contentDetails .size,
 .contentDetails .color {
-    height: 30px;
+    height: 2.25vw;
     border: 1px solid #ffffff;
-    margin: 15px 15px 0 0;
+    margin: 1vw 1vw 0 0;
     color: #fff;
     text-align: center;
 }
 
 .contentDetails .color {
-    width: 115px;
+    width: 10vw;
 
 }
 
 .contentDetails .size {
-    width: 50px;
+    width: 4.5vw;
 }
 
 .detailsText {
@@ -1571,8 +1652,10 @@ li.pbShape {
 
 .productRemark .notetext {
     letter-spacing: 0.05rem;
-    line-height: 1.5;
+    line-height: 1.5vw;
     margin: 5px 0 0 0;
+    color: #FFFFFF;
+    font-size: 1vw;
 }
 
 #quantity {
@@ -1607,9 +1690,10 @@ li.pbShape {
 }
 
 @media (max-width:1024px) {
-    #introduction{
+    #introduction {
         padding: 120px 40px 0 40px;
     }
+
     #otherProducts {
         padding: 30px 40px 60px 40px;
     }
@@ -1630,8 +1714,8 @@ li.pbShape {
 
 .quantity {
     /* margin: 15px 0 0 0 ; */
-    width: 180px;
-    height: 50px;
+    width: 21vw;
+    height: 6vw;
     /* border: 1px solid #FFFFFF; */
     display: flex;
     justify-content: space-evenly;
@@ -1654,8 +1738,8 @@ li.pbShape {
 }
 
 #quantityNum {
-    width: 50px;
-    height: 50px;
+    width: 5vw;
+    height: 5vw;
     border: 1px solid;
     display: flex;
     justify-content: center;
@@ -1663,8 +1747,8 @@ li.pbShape {
 }
 
 .quantityBtn {
-    height: 50px;
-    width: 50px;
+    height: 4vw;
+    width: 4vw;
     border: 1px solid transparent;
 }
 
@@ -1675,16 +1759,20 @@ li.pbShape {
     font-size: 22px;
 }
 
+.productButtom p{
+    color: var(--Blue);
+}
+
 .productButtom button {
-    font-size: 16px;
+    font-size: 1.25vw;
 }
 
 .buttomitem {
-    margin: 0 15px 40px 0;
-    width: 180px;
-    height: 50px;
+    margin: 0 1vw 40px 0;
+    width: 15.25vw;
+    height: 4vw;
     border-radius: 5px;
-    color: var(--Blue);
+    
     border: 1px solid transparent;
     cursor: pointer;
 }
@@ -1696,72 +1784,35 @@ li.pbShape {
 #introduction small,
 .detailsText small {
     letter-spacing: 0.05rem;
+    font-size: 1vw;
 }
 
 /* 文字區 */
-.titleBig h2,
-.productTitle h2 {
-    font-family: ROGFonts, sans-serif;
-    font-size: 45px;
-    letter-spacing: .2rem;
-    color: #ffffff;
-}
-.productTitle h2 {
-    font-family: sans-serif;
-}
+
 
 .titleBig h2 {
     width: fit-content;
-    padding-top: 40px;
-    padding-bottom: 30px;
-    line-height: 60px
-}
-
-.productTitle h2 {
-    line-height: 1
+    padding: 40px 0 30px 0;
 }
 
 .textTitle h3 {
-    font-family: ROGFonts, sans-serif;
-    font-size: 30px;
-    letter-spacing: .2rem;
+    line-height: 3.5vw;
     padding-top: 10px;
     padding-left: 30px;
-    /* padding-bottom: 30px; */
-    color: #ffffff;
     /* background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue)); */
 }
 
-h4 {
-    font-size: 20px;
-    letter-spacing: .12rem;
-    color: #ffffff;
-    /* background-image: linear-gradient(to right, var(--Orange-Darkblue)); */
 
-}
 
-h5 {
-    font-size: 12px;
-    letter-spacing: .08rem;
-    color: #ffffff;
 
-}
-
-.bevel h4 {
-    padding-left: 50px;
-    padding-top: 5px;
-    padding-right: 40px;
-    padding-bottom: 5px;
-}
 
 .word h4 {
+    font-family: ROGFonts, sans-serif;
     color: var(--Darkblue);
 }
 
 .productTitle h4 {
-    color: #FFFFFF;
     text-align: right;
-    line-height: 1;
     font-weight: 500;
 }
 

@@ -184,6 +184,16 @@
   position: absolute;
   z-index: 5;
 }
+@media (width < 821px){
+  .itemImg{
+    width:30%;
+    height: 22%;
+    &:nth-child(3) { left: 10%; top:78% }
+    &:nth-child(4) { left: calc(10% + (33%)); top:78% }
+    &:nth-child(5) { left: calc(10% + 2*(33%)); top:78% }
+    &:nth-child(6) { left: calc(10% + 3*(33%)); top:78% }
+  }
+}
 
 /* 
 @media (width > 650px) and (width < 900px) {

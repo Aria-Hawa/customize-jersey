@@ -33,6 +33,10 @@ ul li:hover {
 }
 .carousel-wrapper {
   overflow: hidden;
-
+}
+@media (min-width:1920px) {
+  ul#templates li{
+      height: 380px
+  }
 
 }
