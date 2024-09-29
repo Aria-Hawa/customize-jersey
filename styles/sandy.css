@@ -527,7 +527,7 @@
 
 
 .projectTheme {
-    background-image: url(../images/pojectResults-projectTheme.svg);
+    background-image: url(../images/pojectResults-projectTheme-01.png);
 }
 
 .projectTheme1 {
@@ -1701,10 +1701,13 @@ li.pbShape {
 /* 文字區 */
 .titleBig h2,
 .productTitle h2 {
-    font-family: sans-serif;
+    font-family: ROGFonts, sans-serif;
     font-size: 45px;
     letter-spacing: .2rem;
     color: #ffffff;
+}
+.productTitle h2 {
+    font-family: sans-serif;
 }
 
 .titleBig h2 {
