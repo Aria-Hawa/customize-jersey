@@ -332,6 +332,13 @@ body{
     /* margin: 20px 0; */
     color: var(--Darkblue);
 }
+.textTitle h3 {
+    line-height: 3.5vw;
+    padding-top: 10px;
+    padding-left: 30px;
+    /* background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue)); */
+}
+
 
 
 @media (min-width:1920px) {
@@ -426,21 +433,83 @@ body{
         flex-direction: column;
         align-items: center;
         margin:0;
+
+    
     }
     .IntroductionArea .box__list .item {
         width: 50%;
         position: relative;
+
         margin: 0 10px 30px;
     }
+
     .item .content{
         position: absolute;
     right: 50%;
     transform: translateX(50%);
-    bottom: 0%
+    bottom: 6%;
     }
     .item .content p{
         font-size: 20px;
         white-space:nowrap;
+    }
+    .textTitle br {
+        display: none;
+      }
+      .copyWriting{
+        width: 520px;
+        height: 122px;
+      }
+      .textTitle h3{
+        line-height: 1.4;
+        padding-top: 21px;
+      }
+      .title-2 .bevel {
+        right: 9%;
+        bottom: 48%;
+    }
+    .jerseyIntroduction {
+        margin-top: 40px;
+        overflow:visible;
+    }
+    .jerseyIntroduction .content {
+        position: absolute;
+        z-index: 999;
+        bottom: 0%;
+        margin:0;
+        width: 520px;
+        height: 112px;
+        background-image: linear-gradient(to left, var(--Orange-Darkblue-2));
+        justify-content: center;
+        align-items: center;
+        border-bottom:none;
+        border-right:none;
+        box-shadow: 0px -11px 24px #000E2B;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .jerseyIntroduction .content p {
+        padding: 0 30px 0 30px;
+        background-image:none;
+        font-size: 20px;
+    }
+    .bigPicture{
+        width: 100%;
+        height: 60vh;
+    }
+    .copyWriting{
+        margin-top: 0px;
+        top: -7%;
+    }
+    .jerseyIntroduction .buttonBOX {
+        flex-direction: row;
+        right: 50%;
+        transform: translateX(50%);
+        top: 71%;
+    }
+    .BC_button p{
+        font-size: 20px;
+        white-space: nowrap;
     }
 }
 
@@ -1850,12 +1919,6 @@ li.pbShape {
     padding: 40px 0 30px 0;
 }
 
-.textTitle h3 {
-    line-height: 3.5vw;
-    padding-top: 10px;
-    padding-left: 30px;
-    /* background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue)); */
-}
 
 
 
