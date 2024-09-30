@@ -17,6 +17,8 @@
     <!-- 載入babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel" src="https://aria-hawa.github.io/customizeJersey/jsx/Header.jsx"></script>
+    <script type="text/babel" src="https://aria-hawa.github.io/customizeJersey/jsx/Hamburger.jsx"></script>
+
 </head>
 
 <body>
@@ -27,7 +29,9 @@
         const { useState, useEffect, useRef } = React;
         function App() {
             return (
+                <>
                 <Header classname='darkblue' />
+                </>
             );
         }
         ReactDOM

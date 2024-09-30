@@ -58,6 +58,19 @@ body{
     font-size: 1.25vw;
 }
 
+@media (max-width:1024px){
+    h2{
+        font-size:45px;
+        line-height: 1.1;
+    }
+    h3{
+        font-size:30px;
+        line-height: 1.2;
+    }
+    h4{
+        font-size: 20px;
+    }
+}
 
 
 
@@ -368,7 +381,7 @@ body{
     
 }
 
-@media (width < 821px){
+@media (width < 1025px) and (height > 769px){
     
     .vserTestbox{
         width: 100%;
@@ -386,6 +399,48 @@ body{
     .brandName{
         width: 100%;
         margin-right:auto;
+    }
+    .sloganNbtn{
+        text-align: center;
+    }
+    #content .title .titleBig{
+        width: 100%;
+    }
+    #content .title{
+        width: 520px;
+        height: 260px;
+    }
+    .bevel{
+    background: linear-gradient(112deg, transparent 25px, var(--Orange-Darkblue) 0) top right;
+    }
+    .title .bevel{
+        right: -5%;
+     width: 197px;
+     top: 33%;;
+    }
+    .bevel h4{
+    white-space: normal;
+    line-height: 1.4;
+    }
+    .IntroductionArea .box__list{
+        flex-direction: column;
+        align-items: center;
+        margin:0;
+    }
+    .IntroductionArea .box__list .item {
+        width: 50%;
+        position: relative;
+        margin: 0 10px 30px;
+    }
+    .item .content{
+        position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 0%
+    }
+    .item .content p{
+        font-size: 20px;
+        white-space:nowrap;
     }
 }
 
