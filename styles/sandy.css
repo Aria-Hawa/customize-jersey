@@ -483,13 +483,16 @@ body {
         bottom: 6%;
     }
 
-    .item:nth-child(1) .content,
-    .item:nth-child(3) .content {
-        left: 10%;
+    .item:nth-child(1) .content{
+        left: 20%;
     }
 
     .item:nth-child(2) .content {
-        right: 10%;
+        right: 20%;
+    }
+    .item:nth-child(3) .content {
+        right: 50%;
+        transform:translateX(50%);
     }
 
     .item .content p {
