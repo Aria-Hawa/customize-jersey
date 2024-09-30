@@ -260,6 +260,20 @@ a {
 
 /* 以上fixedTopbar區 */
 
+@media (width < 1025px) and (height > 769px){
+    .menuItem ul li a {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    .dropdown #RLbtn,.dropdown a{
+        font-size: 18px;
+    }
+    .dropdown a{
+        width: 12vw;
+    }
+
+}
+
 /* 各頁微調 */
 /* --Darkblue底色 */
 #fixedTopbar.blue,
