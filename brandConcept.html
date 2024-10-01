@@ -18,6 +18,8 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- <script type="text/babel" src="https://aria-hawa.github.io/customizeJersey/jsx/Header.jsx"></script> -->
     <script type="text/babel" src="./jsx/Header.jsx"></script>
+    <script type="text/babel" src="https://aria-hawa.github.io/customizeJersey/jsx/Hamburger.jsx"></script>
+
 </head>
 
 <body>
@@ -28,7 +30,9 @@
         const { useState, useEffect, useRef } = React;
         function App() {
             return (
+                <>
                 <Header classname='darkblue' />
+                </>
             );
         }
         ReactDOM
@@ -182,7 +186,7 @@
         // 多個元素共用樣式可以寫在JS區
         // 淡出淡入
         $(".smoove").smoove({
-            offset: "20%",
+            offset: "10%",
         }
         );
         $('.smoove-z').smoove({

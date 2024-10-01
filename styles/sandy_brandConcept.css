@@ -184,10 +184,11 @@
   position: absolute;
   z-index: 5;
 }
-@media (width < 821px){
+@media (width < 1025px) and (height > 769px){
   .itemImg{
     width:30%;
     height: 22%;
+    margin: 0;
     &:nth-child(3) { left: 10%; top:78% }
     &:nth-child(4) { left: calc(10% + (33%)); top:78% }
     &:nth-child(5) { left: calc(10% + 2*(33%)); top:78% }

@@ -31,6 +31,7 @@ h4 {
     letter-spacing: .1rem;
     line-height: 1.5vw;
 }
+
 h5 {
     font-size: 1vw;
     letter-spacing: .08rem;
@@ -54,10 +55,29 @@ a {
 .BC_button p {
     color: var(--Darkblue);
 }
-body{
+
+body {
     font-size: 1.25vw;
 }
 
+@media (max-width:1024px) {
+    h2 {
+        font-size: 45px;
+        line-height: 1.1;
+    }
+
+    h3 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+    p{
+        font-size: 18px;
+    }
+}
 
 
 
@@ -320,6 +340,14 @@ body{
     color: var(--Darkblue);
 }
 
+.textTitle h3 {
+    line-height: 3.5vw;
+    padding-top: 10px;
+    padding-left: 30px;
+    /* background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue)); */
+}
+
+
 
 @media (min-width:1920px) {
     .bigPicture {
@@ -362,20 +390,22 @@ body{
         right: -10%;
         bottom: 10%;
     }
-    .jerseyIntroduction .content p{
+
+    .jerseyIntroduction .content p {
         padding: 48px 35px 20px 40px
     }
-    
+
 }
 
-@media (width < 821px){
-    
-    .vserTestbox{
+@media (width < 1025px) and (height > 769px) {
+
+    .vserTestbox {
         width: 100%;
-        padding:0;
+        padding: 0;
         justify-content: center
     }
-    .vserTest{
+
+    .vserTest {
         width: 50%;
         top: auto;
         right: auto;
@@ -383,15 +413,168 @@ body{
         flex-direction: column;
         align-items: center;
     }
-    .brandName{
+
+    .brandName {
         width: 100%;
-        margin-right:auto;
+        margin-right: auto;
+    }
+
+    .sloganNbtn {
+        text-align: center;
+    }
+
+    #content .title .titleBig {
+        width: 100%;
+    }
+
+    #content .title {
+        width: 707px;
+        height: 230px;
+    }
+
+    .bevel {
+        background: linear-gradient(112deg, transparent 25px, var(--Orange-Darkblue) 0) top right;
+    }
+
+    .title .bevel {
+        right: -5%;
+
+        top: 56%;
+    }
+
+    .bevel h4 {
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .IntroductionArea .box__list {
+        /* flex-direction: column;
+        align-items: center; */
+        margin: 0;
+        position: relative;
+        height: 50vh;
+        justify-content: flex-start;
+
+    }
+
+    .IntroductionArea .box__list .item {
+        width: 50%;
+        max-width: 700px;
+        position: absolute;
+        margin: 0 10px 30px;
+    }
+
+    .IntroductionArea .box__list .item:nth-child(1) {
+        left: 60px;
+        top: 0%;
+    }
+
+    .IntroductionArea .box__list .item:nth-child(2) {
+        right: 60px;
+        top: 30%;
+    }
+
+    .IntroductionArea .box__list .item:nth-child(3) {
+        left: 60px;
+        top: 50%;
+    }
+
+    .item .content {
+        position: absolute;
+        /* right: 50%;
+    transform: translateX(50%); */
+        bottom: 6%;
+    }
+
+    .item:nth-child(1) .content{
+        left: 20%;
+    }
+
+    .item:nth-child(2) .content {
+        right: 20%;
+    }
+    .item:nth-child(3) .content {
+        right: 50%;
+        transform:translateX(50%);
+    }
+
+    .item .content p {
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    .textTitle br {
+        display: none;
+    }
+
+    .copyWriting {
+        width: 520px;
+        height: 122px;
+    }
+
+    .textTitle h3 {
+        line-height: 1.4;
+        padding-top: 21px;
+    }
+
+    .title-2 .bevel {
+        right: 9%;
+        bottom: 48%;
+    }
+
+    .jerseyIntroduction {
+        margin-top: 40px;
+        overflow: visible;
+    }
+
+    .jerseyIntroduction .content {
+        position: absolute;
+        z-index: 999;
+        bottom: 0%;
+        margin: 0;
+        width: 520px;
+        height: 112px;
+        background-image: linear-gradient(to left, var(--Orange-Darkblue-2));
+        justify-content: center;
+        align-items: center;
+        border-bottom: none;
+        border-right: none;
+        box-shadow: 0px -11px 24px #000E2B;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .jerseyIntroduction .content p {
+        padding: 0 30px 0 30px;
+        background-image: none;
+        font-size: 18px;
+    }
+
+    .bigPicture {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .copyWriting {
+        margin-top: 0px;
+        top: -7%;
+    }
+
+    .jerseyIntroduction .buttonBOX {
+        flex-direction: row;
+        right: 50%;
+        transform: translateX(50%);
+        top: 69%;
+    }
+
+    .BC_button p {
+        font-size: 18px;
+        white-space: nowrap;
     }
 }
 
 
 /* 專案成果 */
-
 /* 上半部 */
 #projectBanner {
     position: relative;
@@ -543,9 +726,6 @@ body{
     background-image: url(../images/projectResults_rectangleThumbnail1.png);
 }
 
-
-
-
 .rectangularMenu .word {
     width: 50%;
     height: 100%;
@@ -555,14 +735,9 @@ body{
     justify-content: center;
 }
 
-
-
-
-
 .rectangularMenu .word h4 {
     padding: 0px 0 0 14px;
 }
-
 
 .rectangularMenu .word p {
     position: static;
@@ -600,7 +775,6 @@ body{
     animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 }
 
-
 @keyframes swing-in-top-fwd {
     0% {
         transform: rotateX(-100deg);
@@ -614,7 +788,6 @@ body{
         opacity: 1;
     }
 }
-
 
 
 .projectTheme {
@@ -681,7 +854,6 @@ body{
     animation-delay: 1s;
 
 }
-
 
 /* 文字標題 */
 .pjTitle .Title {
@@ -850,6 +1022,7 @@ body{
     #projectjJersey {
         height: 49vh;
     }
+
     .rectangularMenu {
         height: 20%;
         width: 62%;
@@ -860,16 +1033,108 @@ body{
 
 
 @media (min-width:1920px) {
-    .pjTitle .Title{
+    .pjTitle .Title {
         top: 0%;
         transform: translate(0, 0%);
     }
+
     .textWatermark,
-.textWatermark1,
-.textWatermark2{
-    top: 32%
+    .textWatermark1,
+    .textWatermark2 {
+        top: 32%
+    }
 }
+@media (width < 1025px) and (height > 769px) {
+    #projectBanner{
+        overflow: hidden;
+    }
+    .blueBlock {
+        display: none;
+    }
+    .projectContent {
+        height: 40%;
+        justify-content: center
+    }
+    .pjTitle .Title{
+        top: 6%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .pjTitle .Title::before{
+        left: 96%;
+    }
+    .pjTitle .Title::after {
+        left: -5%;
+    }
+    .pjTitle .Title br{
+        display: none;
+    }
+    .textWatermark, .textWatermark1, .textWatermark2 {
+        top:0;
+        z-index: 999;
+        right: 50%;
+        transform: translateX(50%);
+        white-space: nowrap;
+        left: auto;
+    }
+    .textWatermark h1, .textWatermark1 h1, .textWatermark2 h1{
+        font-size: 100px;
+    } 
+    .pjTitle{
+        width: 100%;
+        position: absolute;
+    }
+
+    .rectangularMenu .menu-1, .rectangularMenu .menu-2{
+        margin-left:0px;
+        margin: 0 0 15px;
+    }
+    .rectangularMenu {
+        right: auto;
+        width: 100%;
+        flex-direction: column;
+        padding: 0 10%;
+        top: 69%;
+        height: 26%;
+    }
+    .rectangularMenu .menu-2 .figure, .rectangularMenu .menu-1 .figure {
+        width: 30%;
+    }
+    .rectangularMenu .word {
+        width: 70%;
+    }
+    .pjWord, .pjWord1, .pjWord2 {
+        right: auto;
+        width: 100%;
+    }
+    .pjWord p, .pjWord1 p, .pjWord2 p{
+        top:88%;
+    }
+
+    #projectjJersey {
+        height: 41vh;
+    }
+    .pjshape{
+        position: absolute;
+        width: 44%;
+    }
+    .pjshape:nth-child(1){
+        left: 35px;
+    }
+    .pjshape:nth-child(2){
+        z-index: 999;
+    }
+    .pjshape:nth-child(3){
+        right: 35px;
+    }
+    .rectangularMenu .word h4 {
+        width: 50%;
+    line-height: 2.5vw;
+    }
+    
 }
+
+
 
 /* 商品瀏覽 */
 #productBrowsing {
@@ -1759,7 +2024,7 @@ li.pbShape {
     font-size: 22px;
 }
 
-.productButtom p{
+.productButtom p {
     color: var(--Blue);
 }
 
@@ -1772,7 +2037,7 @@ li.pbShape {
     width: 15.25vw;
     height: 4vw;
     border-radius: 5px;
-    
+
     border: 1px solid transparent;
     cursor: pointer;
 }
@@ -1794,17 +2059,6 @@ li.pbShape {
     width: fit-content;
     padding: 40px 0 30px 0;
 }
-
-.textTitle h3 {
-    line-height: 3.5vw;
-    padding-top: 10px;
-    padding-left: 30px;
-    /* background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue)); */
-}
-
-
-
-
 
 .word h4 {
     font-family: ROGFonts, sans-serif;

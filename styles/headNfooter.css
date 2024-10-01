@@ -81,6 +81,7 @@ a {
 
     /* 漸層色 */
     --White-White: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .1) 30%, rgba(255, 255, 255, .4) 100%;
+    --White-White-2: rgba(255, 255, 255, .4) 0%, rgba(255, 255, 255, .4) 100%;
     --ToRight-White-Orange: #fff 0%, var(--Orange) 47%, var(--Darkorange) 90%;
     --ToRight-Lightblue-Darkbllue: var(--Lightblue) 5%, var(--Blue) 28%, var(--Darkblue) 61%;
     --Lightblue-White: var(--Lightblue) 0%, #fff 100%;
@@ -91,6 +92,7 @@ a {
     --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Blue2) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
     --Lightblue-Lightblue: rgba(85, 201, 234, .5), 50%, rgba(85, 201, 234, .0) 95%;
     --Orange-Darkblue: var(--Orange) 0%, rgba(0, 14, 43, .0) 80%;
+    --Orange-Darkblue-2: var(--Orange) 0%, var(--Darkblue) 80%;
     --Orange-Lightblue-Orange: var(--Orange) 0%, var(--Lightblue_04) 50%, var(--Orange) 100%;
     --Blue-Darkblue: #287DA2 0%, var(--Blue) 40%, var(--Darkblue) 80%;
     --Blue-Darkblue-Blue: var(--Blue) 5%, var(--Darkblue) 55%, var(--Blue) 85%;
@@ -261,6 +263,20 @@ a {
 }
 
 /* 以上fixedTopbar區 */
+
+@media (width < 1025px) and (height > 769px){
+    .menuItem ul li a {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    .dropdown #RLbtn,.dropdown a{
+        font-size: 18px;
+    }
+    .dropdown a{
+        width: 12vw;
+    }
+
+}
 
 /* 各頁微調 */
 /* --Darkblue底色 */
