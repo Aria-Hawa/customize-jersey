@@ -1148,7 +1148,9 @@ body {
     .pjWord1,
     .pjWord2 {
         right: auto;
-        width: 100%;
+        width: 75%;
+
+
     }
 
     .pjWord p,
@@ -1158,7 +1160,7 @@ body {
     }
 
     #projectjJersey {
-        height: 41vh;
+        height: 43vh;
     }
 
     .pjshape {
@@ -1253,6 +1255,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 1620px;
+    
 }
 
 .pbTitleMenu {
@@ -1819,6 +1822,7 @@ li.pbShape {
     }
     .productBrowsing{
         padding: 0px 0 0 0;
+        margin: 0 0 40px 0;
     }
 
     .backgroundBasemap {
