@@ -1811,6 +1811,11 @@ li.pbShape {
 @media (width < 1025px) and (height > 769px) {
     #productBrowsing {
         padding-top: 0px;
+        justify-content: center;
+    flex-direction: column;
+    }
+    .productBrowsing{
+        padding: 0px 0 0 0;
     }
 
     .backgroundBasemap {
@@ -1818,7 +1823,10 @@ li.pbShape {
     }
 
     .pbCommodity {
-        padding: 40px 60px 0px 60px;
+        padding: 20px 60px 0px 60px;
+        height: 69vh;
+        overflow: auto;
+        top: 40px;
     }
 
     .pbShape .pbshapeimg .pbImage {
