@@ -564,7 +564,7 @@ body {
         flex-direction: row;
         right: 50%;
         transform: translateX(50%);
-        top: 71%;
+        top: 69%;
     }
 
     .BC_button p {
@@ -1052,7 +1052,7 @@ body {
         display: none;
     }
     .projectContent {
-        height: 38%;
+        height: 40%;
         justify-content: center
     }
     .pjTitle .Title{
@@ -1110,10 +1110,7 @@ body {
     .pjWord p, .pjWord1 p, .pjWord2 p{
         top:88%;
     }
-    .pjBox__list, .pjBox__list1{
-        /* flex-direction: column;
-    align-items: center; */
-    }
+
     #projectjJersey {
         height: 41vh;
     }
@@ -1124,9 +1121,17 @@ body {
     .pjshape:nth-child(1){
         left: 35px;
     }
+    .pjshape:nth-child(2){
+        z-index: 999;
+    }
     .pjshape:nth-child(3){
         right: 35px;
     }
+    .rectangularMenu .word h4 {
+        width: 50%;
+    line-height: 2.5vw;
+    }
+    
 }
 
 
