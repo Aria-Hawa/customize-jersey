@@ -1817,9 +1817,9 @@ li.pbShape {
         height: 100vh;
     }
 
-    /* .pbCommodity {
+    .pbCommodity {
         padding: 40px 60px 0px 60px;
-    } */
+    }
 
     .pbShape .pbshapeimg .pbImage {
         width: 70%;
