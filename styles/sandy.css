@@ -2286,9 +2286,9 @@ li.pbShape {
 #otherProducts .word{
     width: 80%;
 }
-#otherProducts li.pbShape:nth-child(3){
+/* #otherProducts li.pbShape:nth-child(3){
     display: none;
-}
+} */
 .quantity {
     width: 340px;
     height: 80px;
