@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VSER</title>
     <link rel="icon" href="./favicon.ico">
-    <link rel="stylesheet" href="./styles/headNfooter.css">
     <link rel="stylesheet" href="./styles/styleAria.css">
+    <link rel="stylesheet" href="./styles/headNfooter.css">
+    <!-- 載入React -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- 載入babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- <script type="text/babel" src="https://aria-hawa.github.io/customizeJersey/jsx/Header.jsx"></script> -->
+    <script type="text/babel" src="./jsx/Header.jsx"></script>
 </head>
 
 <body>
-    <header id="fixedTopbar">
+    <!-- <header id="fixedTopbar">
         <div class="topbar">
             <h1><a href="./index.html"><img src="./images/logo.png" alt="VSER客製化球衣"></a></h1>
             <div class="menuList">
@@ -34,7 +41,20 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
+    <!-- 以下React -->
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+        function App() {
+            return (
+                <Header classname='customizedPage' />
+            );
+        }
+        ReactDOM
+            .createRoot(document.getElementById('root'))
+            .render(<App />);
+    </script>
     <main>
         <section id="basicInformation">
             <div class="pageTitle">
@@ -105,7 +125,7 @@
             </li>
         </ul>
         <div>
-            <figure><img src="./images/logo-2.svg" alt="" style="width: 217px"/></figure>
+            <figure><img src="./images/logo-2.svg" alt=""/></figure>
             <small>&copy;2024 VSER, Inc. 版權所有</small>
         </div>
     </footer>

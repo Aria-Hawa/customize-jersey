@@ -7,32 +7,72 @@ function Header({ classname }) {
                 $('#customizeBtn').toggleClass('show');
                 $('#RLbtn').toggleClass('show');
             });
+
+            // 漢堡按鈕三變X
+            $('.hamburger').click(function () {
+                // 在.hamburger類別裡面 加入/刪除類別is-active
+                $(this).toggleClass('is-active');
+                $('.navigation').toggle(350);
+                $('.navbar').toggleClass('fillColor');
+            })
         });
     }, [])
     return (
-        <header id="fixedTopbar" className={classname}>
-            <div className="topbar">
-                <h1><a href="./index.html"><img src="./images/logo.png" alt="VSER客製化球衣" /></a></h1>
-                <div className="menuList">
-                    <nav className="menuItem">
-                        <ul>
-                            <li><a href="./brandConcept.html">品牌理念</a></li>
-                            <li><a href="./pojectResults.html">專案成果</a></li>
-                            <li><a href="./productBrowsing.html">商品瀏覽</a></li>
-                            <li><a href="./Customization_process.html">訂購說明</a></li>
-                            <li><a href="#">會員專區</a></li>
-                        </ul>
-                    </nav>
-                    <div className="rightList">
-                        <div className="dropdown">
-                            <a href="#" id="RLbtn">訂製專區</a>
-                            <a href="./priceplan.html" id="pricePlanBtn">價格方案</a>
-                            <a href="./customize-React.html" id="customizeBtn">球衣模擬</a>
+        <>
+            <header id="fixedTopbar" className={classname}>
+                <div className="topbar">
+                    <h1><a href="./index.html"><img src="./images/logo.png" alt="VSER客製化球衣" /></a></h1>
+                    <div className="menuList">
+                        <nav className="menuItem">
+                            <ul>
+                                <li><a href="./brandConcept.html">品牌理念</a></li>
+                                <li><a href="./pojectResults.html">專案成果</a></li>
+                                <li><a href="./productBrowsing.html">商品瀏覽</a></li>
+                                <li><a href="./Customization_process.html">訂購說明</a></li>
+                                <li><a href="#">會員專區</a></li>
+                            </ul>
+                        </nav>
+                        <div className="rightList">
+                            <div className="dropdown">
+                                <a href="#" id="RLbtn">訂製專區</a>
+                                <a href="./priceplan.html" id="pricePlanBtn">價格方案</a>
+                                <a href="./customize-React.html" id="customizeBtn">球衣模擬</a>
+                            </div>
+                            <a href="./chooseProject.html" className="cartBtn"></a>
                         </div>
-                        <a href="./chooseProject.html" className="cartBtn"></a>
                     </div>
                 </div>
-            </div>
-        </header>
+                <div id="burger">
+                    {/* 三條槓漢堡按鈕 */}
+                    <div className="navbar">
+                        <div className="navbarBtn">
+                            <button className="hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        {/* 選單列 */}
+                        <nav className="navigation">
+                            <ul>
+                                <li><a href="./brandConcept.html">品牌理念</a></li>
+                                <li><a href="./pojectResults.html">專案成果</a></li>
+                                <li><a href="./productBrowsing.html">商品瀏覽</a></li>
+                                <li><a href="./Customization_process.html">訂購說明</a></li>
+                                <li><a href="#">會員專區</a></li>
+                            </ul>
+
+                            <ul className="bottomIcon inNavbar">
+                                <li><a href=""><img src="./images/icon-fb.png" alt="" /></a></li>
+                                <li><a href=""><img src="./images/icon-ig.png" alt="" /></a></li>
+                                <li><a href=""><img src="./images/icon-line.png" alt="" /></a></li>
+                            </ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </header>
+
+        </>
     );
 }
