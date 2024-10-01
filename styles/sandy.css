@@ -572,12 +572,15 @@ body {
         flex-direction: row;
         right: 50%;
         transform: translateX(50%);
-        top: 69%;
+        top: 66%;
     }
 
     .BC_button p {
         font-size: 18px;
         white-space: nowrap;
+    }
+    .arrowNav{
+        display: none;
     }
 }
 
@@ -1176,7 +1179,7 @@ body {
     }
 
     .rectangularMenu .word h4 {
-        width: 50%;
+        width: 60%;
         line-height: 2.5vw;
     }
 
@@ -1823,8 +1826,8 @@ li.pbShape {
     }
 
     .pbCommodity {
-        padding: 20px 60px 0px 60px;
-        height: 69vh;
+        padding: 0px 60px 0px 60px;
+        height: 712px;
         overflow: auto;
         top: 40px;
     }
