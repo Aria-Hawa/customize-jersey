@@ -84,6 +84,15 @@ body {
     }
 }
 
+@media (max-width: 575px){
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 25px;
+    }
+}
+
 
 
 /* 品牌理念 */
@@ -346,6 +355,12 @@ body {
     color: var(--Darkblue);
 }
 
+.titleBig h2 {
+    width: fit-content;
+    padding: 40px 0 30px 0;
+    font-family: 'ROGFONTS';
+}
+
 .textTitle h3 {
     line-height: 3.5vw;
     padding-top: 10px;
@@ -581,6 +596,50 @@ body {
     }
     .arrowNav{
         display: none;
+    }
+}
+
+@media (max-width: 575px){
+    #content .title{
+        height: 200px;
+    }
+    .itemImg {
+        height: 20%;
+    }
+    #content .title .titleBig {
+        width: 259px;
+        text-align: left;
+    }
+    .title .bevel {
+        right: 22%;
+        top: 52%;
+        transform: none;
+    }
+    .titleBig h2{
+        padding: 0 0 0 0 ;
+    }
+    .bevel{
+        width: 197px;
+    }
+    .IntroductionArea .box__list .item {
+        position: relative;
+    }
+    .IntroductionArea .box__list{
+        flex-direction: column;
+        align-items: center;
+    }
+    .IntroductionArea .box__list .item{
+        width: 70%;
+    }
+    .IntroductionArea .box__list {
+        height: 68%;
+    }
+    .IntroductionArea .box__list .item:nth-child(1),
+    .IntroductionArea .box__list .item:nth-child(3){
+        left:0px;
+    }
+    .IntroductionArea .box__list .item:nth-child(2){
+        right: 0px;
     }
 }
 
@@ -2256,11 +2315,7 @@ li.pbShape {
 /* 文字區 */
 
 
-.titleBig h2 {
-    width: fit-content;
-    padding: 40px 0 30px 0;
-    font-family: 'ROGFONTS';
-}
+
 
 .word h4 {
     font-family: ROGFonts, sans-serif;
