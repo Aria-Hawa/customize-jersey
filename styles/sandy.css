@@ -74,7 +74,12 @@ body {
     h4 {
         font-size: 20px;
     }
-    p{
+
+    h5 {
+        font-size: 16px;
+    }
+
+    p {
         font-size: 18px;
     }
 }
@@ -157,6 +162,7 @@ body {
     animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation-delay: .5s;
     text-shadow: 0.1em 0.1em 0.1em var(--Darkblue);
+    font-family: 'ROGFONTS';
 }
 
 /* 下半部 */
@@ -344,6 +350,7 @@ body {
     line-height: 3.5vw;
     padding-top: 10px;
     padding-left: 30px;
+    font-family: 'ROGFONTS';
     /* background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue)); */
 }
 
@@ -486,16 +493,17 @@ body {
         bottom: 6%;
     }
 
-    .item:nth-child(1) .content{
+    .item:nth-child(1) .content {
         left: 20%;
     }
 
     .item:nth-child(2) .content {
         right: 20%;
     }
+
     .item:nth-child(3) .content {
         right: 50%;
-        transform:translateX(50%);
+        transform: translateX(50%);
     }
 
     .item .content p {
@@ -1044,51 +1052,77 @@ body {
         top: 32%
     }
 }
+
 @media (width < 1025px) and (height > 769px) {
-    #projectBanner{
+    .contentArea {
+        padding-top: 0px;
+    }
+
+    .projectTheme1,
+    .projectTheme2,
+    .projectTheme {
+        top: 0px;
+    }
+
+    #projectBanner {
         overflow: hidden;
     }
+
     .blueBlock {
         display: none;
     }
+
     .projectContent {
         height: 40%;
         justify-content: center
     }
-    .pjTitle .Title{
+
+    .pjTitle .Title {
         top: 6%;
         right: 50%;
         transform: translateX(50%);
     }
-    .pjTitle .Title::before{
+
+    .pjTitle .Title::before {
         left: 96%;
     }
+
     .pjTitle .Title::after {
         left: -5%;
     }
-    .pjTitle .Title br{
+
+    .pjTitle .Title br {
         display: none;
     }
-    .textWatermark, .textWatermark1, .textWatermark2 {
-        top:0;
+
+    .textWatermark,
+    .textWatermark1,
+    .textWatermark2 {
+        top: 0;
         z-index: 999;
         right: 50%;
         transform: translateX(50%);
         white-space: nowrap;
         left: auto;
     }
-    .textWatermark h1, .textWatermark1 h1, .textWatermark2 h1{
+
+    .textWatermark h1,
+    .textWatermark1 h1,
+    .textWatermark2 h1 {
         font-size: 100px;
-    } 
-    .pjTitle{
+    }
+
+    .pjTitle {
         width: 100%;
         position: absolute;
     }
 
-    .rectangularMenu .menu-1, .rectangularMenu .menu-2{
-        margin-left:0px;
+    .rectangularMenu .menu-1,
+    .rectangularMenu .menu-2 {
+        margin-left: 0px;
         margin: 0 0 15px;
     }
+
     .rectangularMenu {
         right: auto;
         width: 100%;
@@ -1097,41 +1131,55 @@ body {
         top: 69%;
         height: 26%;
     }
-    .rectangularMenu .menu-2 .figure, .rectangularMenu .menu-1 .figure {
+
+    .rectangularMenu .menu-2 .figure,
+    .rectangularMenu .menu-1 .figure {
         width: 30%;
     }
+
     .rectangularMenu .word {
         width: 70%;
     }
-    .pjWord, .pjWord1, .pjWord2 {
+
+    .pjWord,
+    .pjWord1,
+    .pjWord2 {
         right: auto;
         width: 100%;
     }
-    .pjWord p, .pjWord1 p, .pjWord2 p{
-        top:88%;
+
+    .pjWord p,
+    .pjWord1 p,
+    .pjWord2 p {
+        top: 88%;
     }
 
     #projectjJersey {
         height: 41vh;
     }
-    .pjshape{
+
+    .pjshape {
         position: absolute;
         width: 44%;
     }
-    .pjshape:nth-child(1){
+
+    .pjshape:nth-child(1) {
         left: 35px;
     }
-    .pjshape:nth-child(2){
+
+    .pjshape:nth-child(2) {
         z-index: 999;
     }
-    .pjshape:nth-child(3){
+
+    .pjshape:nth-child(3) {
         right: 35px;
     }
+
     .rectangularMenu .word h4 {
         width: 50%;
-    line-height: 2.5vw;
+        line-height: 2.5vw;
     }
-    
+
 }
 
 
@@ -1761,6 +1809,57 @@ li.pbShape {
 
 }
 
+@media (width < 1025px) and (height > 769px) {
+    #productBrowsing {
+        padding-top: 0px;
+    }
+
+    .backgroundBasemap {
+        height: 100vh;
+    }
+
+    .pbCommodity {
+        padding: 40px 60px 0px 60px;
+    }
+
+    .pbShape .pbshapeimg .pbImage {
+        width: 70%;
+    }
+
+    .pbShape .pbshapeimg .A {
+        left: 10px;
+    }
+
+    .pbShape .pbshapeimg .B {
+        display: block;
+        right: 10px;
+    }
+
+    li.pbShape {
+        margin: 0 10px 30px 10px;
+    }
+
+    .pbTitle,
+    .pbMenu {
+        padding-left: 70px;
+    }
+
+    .arrowGroup {
+        display: none;
+    }
+
+    .pbShape .pbBescribe .pbTBtn {
+        font-size: 18px;
+    }
+
+    .pbText p {
+        width: 250px;
+    }
+
+    .pbShape .pbBescribe {
+        padding: 10px 30px 0px 30px;
+    }
+}
 
 
 /* 商品內頁 */
@@ -2052,12 +2151,101 @@ li.pbShape {
     font-size: 1vw;
 }
 
+@media (width < 1025px) and (height > 769px) {
+    #introduction {
+        padding: 80px 0px 0 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainPicture {
+        width: 60%;
+        margin: 0px;
+    }
+
+    .productCopywriting {
+        width: 80%;
+        padding: 30px 0 0 0;
+    }
+
+    .contentDetails .size {
+        width: 100px;
+        padding: 5px;
+    }
+    .contentDetails .size, .contentDetails .color {
+        height: 40px;
+        margin: 20px 20px 0 0;
+    }
+    .sizeBox{
+        flex-wrap: wrap;
+    }
+    .contentDetails .color {
+        width: 100px;
+        padding: 5px;
+    }
+    .productContent{
+        font-size: 18px;
+    }
+    .buttomitem {
+        margin: 0 10px 40px 10px;
+        width: 200px;
+        height: 80px;
+    }
+    .productButtom{
+        display: flex;
+    justify-content: center;
+    border-bottom: 1.5px solid;
+    margin: 60px 0 30px 0;
+}
+.productButtom hr{
+    display: none;
+}
+.productRemark br{
+    display: none;
+}
+#otherProducts {
+    padding: 30px 00px 40px 0px;
+    align-items: center
+}
+#otherProducts hr{
+    width: 80%;
+}
+#otherProducts .word{
+    width: 80%;
+}
+#otherProducts li.pbShape:nth-child(3){
+    display: none;
+}
+.quantity {
+    width: 340px;
+    height: 80px;
+}
+#quantityNum {
+    width: 100px;
+    height: 80px;}
+
+    .quantityBtn {
+        height: 60px;
+        width: 60px;}
+
+        
+.productRemark .notetext{
+    font-size: 16px;
+    line-height: 1.5;
+}
+#introduction small, .detailsText small{
+    font-size: 16px;
+}
+
+}
+
 /* 文字區 */
 
 
 .titleBig h2 {
     width: fit-content;
     padding: 40px 0 30px 0;
+    font-family: 'ROGFONTS';
 }
 
 .word h4 {

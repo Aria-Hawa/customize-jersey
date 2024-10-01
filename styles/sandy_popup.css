@@ -176,3 +176,8 @@
       height: 45px;
       margin-right: 8px;
     }
+    @media (width < 1025px) and (height > 769px) {
+      .success-content, .collection-content, .fail-content{
+        width: 300px;
+      }
+    }
