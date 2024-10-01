@@ -42,7 +42,6 @@ ul li:hover {
 @media (width < 1025px) and (height > 769px){
   ul#templates{
     flex-wrap: wrap;
-    width: 80%;
   }
   ul#templates li{
     margin-right: 10px;
