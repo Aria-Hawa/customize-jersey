@@ -641,6 +641,9 @@ body {
     .IntroductionArea .box__list .item:nth-child(2){
         right: 0px;
     }
+    .textTitle br{
+        display: flex;
+    }
 }
 
 
