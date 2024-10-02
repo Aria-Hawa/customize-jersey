@@ -1,3 +1,4 @@
+
 const slider = document.querySelector('.slider');
 let autoSwitchInterval;
 
