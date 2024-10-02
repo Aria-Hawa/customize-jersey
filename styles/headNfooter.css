@@ -267,7 +267,7 @@ a {
 
 /* 以上fixedTopbar區 */
 
-@media (width < 1025px) and (height > 769px){
+@media (max-width: 640px),  (width < 1025px) and (height > 769px){
     .menuItem ul li a {
         font-size: 18px;
         margin-left: 20px;
@@ -278,7 +278,6 @@ a {
     .dropdown a{
         width: 12vw;
     }
-
 }
 
 /* 各頁微調 */
@@ -312,7 +311,7 @@ footer div img {
 }
 
 /* 10/1 sandy更改平板以下為漢堡選單 */
-@media (width < 1025px) and (height > 769px) {
+@media (max-width: 640px),  (width < 1025px) and (height > 769px) {
 
     /* header */
     #fixedTopbar {
