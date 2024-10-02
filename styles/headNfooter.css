@@ -19,6 +19,7 @@
 
 /* 重置字體 */
 body {
+    height: 100%;
     font-family: "Noto Sans TC", sans-serif;
     font-size: 100%;
     line-height: 1.5;
