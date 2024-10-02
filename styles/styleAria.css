@@ -158,7 +158,7 @@
     animation: lightRun 1.5s cubic-bezier(0.26, 0.02, 0.09, 0.99) infinite;
 }
 
-#home  .bottomIcon {
+.bottomIcon {
     background-image: linear-gradient(to right, var(--ToRight-Lightblue-Darkbllue));
     display: flex;
     align-items: center;
@@ -169,13 +169,13 @@
     bottom: 0;
 }
 
-#home  .bottomIcon ul {
+.bottomIcon ul {
     display: flex;
     width: 100%;
     padding-left: 80px;
 }
 
-#home  .bottomIcon ul li {
+.bottomIcon ul li {
     padding-right: 40px;
 }
 
@@ -1999,21 +1999,21 @@ footer div small {
         display: none;
     }
 
-    #home  .bottomIcon {
+    .bottomIcon {
         background-image: none;
         background-color: var(--Darkblue);
     }
 
-    #home  .bottomIcon ul {
+    .bottomIcon ul {
         justify-content: center;
         padding-left: 0px;
     }
 
-    #home  .bottomIcon ul li {
+    .bottomIcon ul li {
         padding-right: 80px;
     }
 
-    #home  .bottomIcon ul li:last-child {
+    .bottomIcon ul li:last-child {
         padding-right: 0px;
     }
 }
@@ -2036,7 +2036,8 @@ footer div small {
 
 
 /* index區 */
-@media (max-width:640px) {
+@media (max-width:640px)and (height > 0px),
+(width < 1025px) and (height > 769px)  {
     #home .bar {
         display: none;
     }
@@ -2106,7 +2107,7 @@ footer div small {
         justify-content: start;
     }
 
-    #home  .bottomIcon.inNavbar {
+    .bottomIcon.inNavbar {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -2116,7 +2117,7 @@ footer div small {
         bottom: 80px;
     }
 
-    #home  .bottomIcon.inNavbar li {
+    .bottomIcon.inNavbar li {
         width: 48px;
         height: 48px;
         padding: 4px;
@@ -2160,7 +2161,7 @@ footer div small {
         z-index: 60;
     }
 
-    #home  .bottomIcon {
+    .bottomIcon {
         display: none;
     }
 
