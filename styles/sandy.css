@@ -60,7 +60,7 @@ body {
     font-size: 1.25vw;
 }
 
-@media (max-width:1024px) {
+@media (max-width:640px), (max-width:1024px) {
     h2 {
         font-size: 45px;
         line-height: 1.1;
@@ -419,7 +419,7 @@ body {
 
 }
 
-@media (width < 1025px) and (height > 769px) {
+@media (max-width:640px), (width < 1025px) and (height > 769px) {
 
     .vserTestbox {
         width: 100%;
