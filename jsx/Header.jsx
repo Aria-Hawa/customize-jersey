@@ -9,12 +9,34 @@ function Header({ classname }) {
             });
 
             // 漢堡按鈕三變X
-            $('.hamburger').click(function () {
-                // 在.hamburger類別裡面 加入/刪除類別is-active
-                $(this).toggleClass('is-active');
-                $('.navigation').toggle(350);
-                $('.navbar').toggleClass('fillColor');
-            })
+            // $('.hamburger').click(function () {
+            //     // 在.hamburger類別裡面 加入/刪除類別is-active
+            //     $(this).toggleClass('is-active');
+            //     $('.navigation').toggle(350);
+            //     $('.navbar').toggleClass('fillColor');
+            // })
+
+            $(function () {
+                // 漢堡按鈕三變X
+                $('.hamburger').click(function () {
+                    // 在.hamburger類別裡面 加入/刪除類別is-active
+                    $(this).toggleClass('is-active');
+                    
+                    // 檢查.navigation是否已顯示
+                    if ($('.navigation').css('display') === 'none') {
+                        // 顯示 navigation 並設置 display: flex
+                        $('.navigation').css('display', 'flex').hide().fadeIn(350);
+                    } else {
+                        // 隱藏 navigation
+                        $('.navigation').fadeOut(350, function() {
+                            $(this).css('display', 'none');
+                        });
+                    }
+            
+                    // 切換 navbar 的背景顏色
+                    $('.navbar').toggleClass('fillColor');
+                });
+            });
         });
     }, [])
     return (
@@ -62,13 +84,13 @@ function Header({ classname }) {
                                 <li><a href="./priceplan.html">價格方案</a></li>
                                 <li><a href="./customize-React.html">球衣模擬</a></li>
                             </ul>
-
                             <ul className="bottomIcon inNavbar">
                                 <li><a href=""><img src="./images/icon-fb.png" alt="" /></a></li>
                                 <li><a href=""><img src="./images/icon-ig.png" alt="" /></a></li>
                                 <li><a href=""><img src="./images/icon-line.png" alt="" /></a></li>
                             </ul>
-
+                            <div className="HLogo"><a href="./index.html"><img src="./images/logo.png" alt="VSER客製化球衣" /></a></div>
+                            
                         </nav>
                     </div>
                 </div>

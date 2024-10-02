@@ -314,6 +314,17 @@ footer div img {
 /* 10/1 sandy更改平板以下為漢堡選單 */
 @media (max-width: 640px),  (width < 1025px) and (height > 769px) {
 
+    .HLogo{
+        width: 100%;
+        margin: 30px 0 110px 0;
+    }
+    .HLogo img{
+        width: 200px;
+    }
+    .HLogo a{
+        display: flex;
+        justify-content: center;
+    }
     /* header */
     #fixedTopbar {
         border: none;
@@ -384,6 +395,8 @@ footer div img {
         padding-bottom: 20px;
         display: none;
         position: relative;
+        flex-direction: column; /* 垂直排列 */
+    justify-content: center; /* 垂直置中 */
     }
 
     .navigation ul {
@@ -399,8 +412,7 @@ footer div img {
         justify-content: center;
         width: 100%;
         height: 80px;
-        position: absolute;
-        bottom: 80px;
+
     }
 
     .bottomIcon.inNavbar li {
