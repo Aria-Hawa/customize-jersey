@@ -2493,6 +2493,64 @@ li.pbShape {
     }
 
 }
+@media (max-width:640px) and (height > 0px){
+    #introduction{
+        padding: 60px 0 0 0 ;
+    }
+    .mainPicture {
+        width: 70%;
+    }
+    .smallPicture{
+        height: 300px;
+    }
+    .mainPicture .bigPicture{
+        height: 300px;
+    }
+    .productCopywriting {
+        width: 100%;
+        padding: 30px 10% 0 10%;
+    }
+    .contentDetails .size,
+    .contentDetails .color {
+        width: 130px;}
+    .contentDetails .size ,.contentDetails .color{
+        margin: 20px 10px 0 10px;
+    }
+    .sizeBox{
+        justify-content: center;}
+        .buttomitem {
+            height: 60px;
+        }
+        .contentDetails p {
+            padding: 0 0 0 15px;
+        }
+        .quantity {
+            width: 100%;
+            justify-content: center
+}
+.quantityBtn{
+    margin: 0 5px;
+}
+.productButtom {
+    margin: 30px 0;
+}
+#otherProducts {
+    padding: 30px 10% 40px 10%;}
+    #otherProducts hr {
+        width: 100%;
+    }
+    #otherProducts .word {
+        width: 100%;
+    }
+    
+#otherProducts .word{
+    margin: 30px 0 20px 0;
+}
+.reminderText {
+    padding: 6px 10px;
+    height: 100%;
+}
+}
 
 /* 文字區 */
 

@@ -181,3 +181,20 @@
         width: 300px;
       }
     }
+    @media (max-width:640px)and (height > 0px){
+      .popup-content{
+        width: 80%;
+      }
+      th {
+        width: 40px;
+    }
+    .smalltext {
+      flex-direction: column;
+  }
+  .success-content, .collection-content, .fail-content{
+    width: 80%;
+    top: 50%;
+    transform: translate(50%, 50%);
+    right: 50%;
+  }
+    }

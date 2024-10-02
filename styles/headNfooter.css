@@ -435,6 +435,7 @@ footer div img {
         text-align: center;
         padding: 30px 0px;
     }
+    
 
     /* footer */
     footer {
@@ -479,6 +480,9 @@ footer div img {
     }
     .HLogo{
         margin: 15px 0 95px 0;
+    }
+    .navbar .navbarBtn{
+        padding-right: 0px;
     }
 }
 
