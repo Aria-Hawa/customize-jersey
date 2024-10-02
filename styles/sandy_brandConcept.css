@@ -184,7 +184,7 @@
   position: absolute;
   z-index: 5;
 }
-@media (max-width:640px), (width < 1025px) and (height > 769px){
+@media (max-width:640px) and (height > 0px), (width < 1025px) and (height > 769px){
   .itemImg{
     width:30%;
     height: 22%;

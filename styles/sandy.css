@@ -60,7 +60,7 @@ body {
     font-size: 1.25vw;
 }
 
-@media (max-width:640px), (max-width:1024px) {
+@media (max-width:640px) and (height > 0px), (width < 1025px) and (height > 769px) {
     h2 {
         font-size: 45px;
         line-height: 1.1;
@@ -419,7 +419,7 @@ body {
 
 }
 
-@media (max-width:640px), (width < 1025px) and (height > 769px) {
+@media (max-width:640px)and (height > 0px), (width < 1025px) and (height > 769px) {
 
     .vserTestbox {
         width: 100%;
@@ -599,7 +599,7 @@ body {
     }
 }
 
-@media (max-width:640px){
+@media (max-width:640px) and (height > 0px){
     #content .title{
         height: 200px;
         width: 100%;
@@ -1144,7 +1144,7 @@ body {
     }
 }
 
-@media (width < 1025px) and (height > 769px) {
+@media (max-width:640px)and (height > 0px), (width < 1025px) and (height > 769px) {
     .contentArea {
         padding-top: 0px;
     }
