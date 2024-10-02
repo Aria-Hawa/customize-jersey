@@ -18,17 +18,8 @@
 }
 
 /* 重置字體 */
-
-
-/* 手機版測試 */
-:root {
-    --doc-height: 100%;
-  }
-  html,body {
-    padding: 0;
-    margin: 0;
-    height: 100vh; /* fallback for Js load */
-    height: var(--doc-height);
+body {
+    height: 100%;
     font-family: "Noto Sans TC", sans-serif;
     font-size: 100%;
     line-height: 1.5;
@@ -427,7 +418,7 @@ footer div img {
 
     /* footer */
     footer {
-        height: 100%;
+        height: auto; /* 使用自適應高度 */
         padding: 20px 0px;
         flex-direction: column;
     }
