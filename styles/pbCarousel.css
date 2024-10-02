@@ -48,4 +48,9 @@ ul li:hover {
   }
 
 }
+@media (max-width:640px) and (height > 0px){
+  ul#templates li {
+    margin: 0 0 30px 0;
+  }
+}
 
