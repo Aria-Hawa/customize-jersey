@@ -24,6 +24,11 @@ body {
     font-size: 100%;
     line-height: 1.5;
     color: white;
+    /* 在平板上,不會受到上下網址與工具列影響 */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 /* 重置標題 */
