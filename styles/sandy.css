@@ -1299,7 +1299,7 @@ body {
 
 @media (max-width:640px) and (height > 0px) {
 #projectBanner{
-height: 120vh;}
+height: 116vh;}
     .projectContent {
         height: 50%;
     }
@@ -1351,6 +1351,20 @@ height: 120vh;}
     }
         .pjWord p, .pjWord1 p, .pjWord2 p{
         top:79%}
+            #projectjJersey {
+        height: 30vh;
+    }
+    .pjshape {
+    width: 49%;}
+    .pjshape:nth-child(1) {
+        left: 2%;
+    }
+    .pjshape:nth-child(3) {
+        right: 2%;
+    }
+    .pjBox__list, .pjBox__list1 {
+    top:-8%}
+    
 
 
 }
