@@ -1192,7 +1192,7 @@ body {
     }
 
     .pjTitle .Title {
-        top: 6%;
+        top: 2%;
         right: 50%;
         transform: translateX(50%);
     }
@@ -1298,10 +1298,9 @@ body {
 }
 
 @media (max-width:640px) and (height > 0px) {
-#projectBanner{
-height: 116vh;}
+
     .projectContent {
-        height: 50%;
+        height: 58%;
     }
 
     .textWatermark,
@@ -1319,20 +1318,25 @@ height: 116vh;}
     }
 
     .rectangularMenu {
-        top: 59%;
+        top: 50%;
         height: 30%;
     }
 
     .pjTitle .Title {
         padding-right: 0px;
+        top: 4%;
     }
 
     .pjTitle .Title::before {
         bottom: 92%;
+        height: 10px;
+    width: 20px;
     }
 
     .pjTitle .Title::after {
         bottom: -34%;
+        width: 10px;
+        height: 20px;
     }
 
     .rectangularMenu .word {
@@ -1350,7 +1354,7 @@ height: 116vh;}
         width: 40%;
     }
         .pjWord p, .pjWord1 p, .pjWord2 p{
-        top:79%}
+        top:75%}
             #projectjJersey {
         height: 30vh;
     }
