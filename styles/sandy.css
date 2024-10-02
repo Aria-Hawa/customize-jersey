@@ -1187,7 +1187,7 @@ body {
     }
 
     .projectContent {
-        height: 40%;
+        height: 42%;
         justify-content: center
     }
 
@@ -1242,7 +1242,7 @@ body {
         width: 100%;
         flex-direction: column;
         padding: 0 10%;
-        top: 69%;
+        top: 67%;
         height: 26%;
     }
 
@@ -1267,7 +1267,7 @@ body {
     .pjWord p,
     .pjWord1 p,
     .pjWord2 p {
-        top: 88%;
+        top: 84%;
     }
 
     #projectjJersey {
