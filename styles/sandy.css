@@ -60,7 +60,8 @@ body {
     font-size: 1.25vw;
 }
 
-@media (max-width:640px) and (height > 0px), (width < 1025px) and (height > 769px) {
+@media (max-width:640px) and (height > 0px),
+(width < 1025px) and (height > 769px) {
     h2 {
         font-size: 45px;
         line-height: 1.1;
@@ -84,11 +85,12 @@ body {
     }
 }
 
-@media (max-width: 640px){
-    h2{
+@media (max-width: 640px) {
+    h2 {
         font-size: 30px;
     }
-    h3{
+
+    h3 {
         font-size: 25px;
     }
 }
@@ -419,7 +421,8 @@ body {
 
 }
 
-@media (max-width:640px)and (height > 0px), (width < 1025px) and (height > 769px) {
+@media (max-width:640px)and (height > 0px),
+(width < 1025px) and (height > 769px) {
 
     .vserTestbox {
         width: 100%;
@@ -594,80 +597,99 @@ body {
         font-size: 18px;
         white-space: nowrap;
     }
-    .arrowNav{
+
+    .arrowNav {
         display: none;
     }
 }
 
-@media (max-width:640px) and (height > 0px){
-    #content .title{
+@media (max-width:640px) and (height > 0px) {
+    #content .title {
         height: 200px;
         width: 100%;
     }
+
     .itemImg {
         height: 20%;
     }
+
     #content .title .titleBig {
         width: 259px;
         text-align: left;
     }
+
     .title .bevel {
         right: 0%;
         top: 52%;
         transform: none;
     }
-    .titleBig h2{
-        padding: 0 0 0 0 ;
+
+    .titleBig h2 {
+        padding: 0 0 0 0;
     }
-    .bevel{
+
+    .bevel {
         width: 197px;
     }
+
     .IntroductionArea .box__list .item {
         position: relative;
     }
-    .IntroductionArea .box__list{
+
+    .IntroductionArea .box__list {
         flex-direction: column;
         align-items: center;
     }
-    .IntroductionArea .box__list .item{
+
+    .IntroductionArea .box__list .item {
         width: 70%;
     }
+
     .IntroductionArea .box__list {
         height: 68%;
     }
+
     .IntroductionArea .box__list .item:nth-child(1),
-    .IntroductionArea .box__list .item:nth-child(3){
-        left:0px;
+    .IntroductionArea .box__list .item:nth-child(3) {
+        left: 0px;
     }
-    .IntroductionArea .box__list .item:nth-child(2){
+
+    .IntroductionArea .box__list .item:nth-child(2) {
         right: 0px;
     }
-    .textTitle br{
+
+    .textTitle br {
         display: flex;
     }
-    .copyWriting{
+
+    .copyWriting {
         right: auto;
         height: 114px;
         width: 290px;
     }
-    .textTitle h3{
+
+    .textTitle h3 {
         padding-top: 4px;
     }
+
     .title-2 .bevel {
         width: fit-content;
         right: -80px;
         bottom: -8px;
     }
+
     .jerseyIntroduction .content {
         position: static;
         transform: none;
         width: 100%;
     }
-    .Test{
+
+    .Test {
         flex-direction: column;
-        
+
     }
-    .jerseyIntroduction a{
+
+    .jerseyIntroduction a {
         padding: 8px 20px 8px 20px;
     }
 }
@@ -1144,7 +1166,8 @@ body {
     }
 }
 
-@media (max-width:640px)and (height > 0px), (width < 1025px) and (height > 769px) {
+@media (max-width:640px)and (height > 0px),
+(width < 1025px) and (height > 769px) {
     .contentArea {
         padding-top: 0px;
     }
@@ -1272,6 +1295,63 @@ body {
         width: 60%;
         line-height: 2.5vw;
     }
+}
+
+@media (max-width:640px) and (height > 0px) {
+#projectBanner{
+height: 120vh;}
+    .projectContent {
+        height: 50%;
+    }
+
+    .textWatermark,
+    .textWatermark1,
+    .textWatermark2 {
+        white-space: normal;
+        top: -17%;
+    }
+
+    .textWatermark h1,
+    .textWatermark1 h1,
+    .textWatermark2 h1 {
+        font-size: 70px;
+        line-height: .9;
+    }
+
+    .rectangularMenu {
+        top: 59%;
+        height: 30%;
+    }
+
+    .pjTitle .Title {
+        padding-right: 0px;
+    }
+
+    .pjTitle .Title::before {
+        bottom: 92%;
+    }
+
+    .pjTitle .Title::after {
+        bottom: -34%;
+    }
+
+    .rectangularMenu .word {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: stretch;
+        padding: 10px 0 10px 0;
+        width: 60%;
+    }
+
+    .rectangularMenu .word h4 {
+        line-height: 1;
+    }
+        .rectangularMenu .menu-2 .figure, .rectangularMenu .menu-1 .figure{
+        width: 40%;
+    }
+        .pjWord p, .pjWord1 p, .pjWord2 p{
+        top:79%}
+
 
 }
 
@@ -1343,7 +1423,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 1620px;
-    
+
 }
 
 .pbTitleMenu {
@@ -1906,9 +1986,10 @@ li.pbShape {
     #productBrowsing {
         padding-top: 0px;
         justify-content: center;
-    flex-direction: column;
+        flex-direction: column;
     }
-    .productBrowsing{
+
+    .productBrowsing {
         padding: 0px 0 0 0;
         margin: 0 0 40px 0;
     }
@@ -2274,70 +2355,89 @@ li.pbShape {
         width: 100px;
         padding: 5px;
     }
-    .contentDetails .size, .contentDetails .color {
+
+    .contentDetails .size,
+    .contentDetails .color {
         height: 40px;
         margin: 20px 20px 0 0;
     }
-    .sizeBox{
+
+    .sizeBox {
         flex-wrap: wrap;
     }
+
     .contentDetails .color {
         width: 100px;
         padding: 5px;
     }
-    .productContent{
+
+    .productContent {
         font-size: 18px;
     }
+
     .buttomitem {
         margin: 0 10px 40px 10px;
         width: 200px;
         height: 80px;
     }
-    .productButtom{
+
+    .productButtom {
         display: flex;
-    justify-content: center;
-    border-bottom: 1px solid;
-    margin: 60px 0 30px 0;
-}
-.productButtom hr{
-    display: none;
-}
-.productRemark br{
-    display: none;
-}
-#otherProducts {
-    padding: 30px 00px 40px 0px;
-    align-items: center
-}
-#otherProducts hr{
-    width: 80%;
-}
-#otherProducts .word{
-    width: 80%;
-}
-#otherProducts li.pbShape:nth-child(3){
-    display: none;
-}
-.quantity {
-    width: 340px;
-    height: 80px;
-}
-#quantityNum {
-    width: 100px;
-    height: 80px;}
+        justify-content: center;
+        border-bottom: 1px solid;
+        margin: 60px 0 30px 0;
+    }
+
+    .productButtom hr {
+        display: none;
+    }
+
+    .productRemark br {
+        display: none;
+    }
+
+    #otherProducts {
+        padding: 30px 00px 40px 0px;
+        align-items: center
+    }
+
+    #otherProducts hr {
+        width: 80%;
+    }
+
+    #otherProducts .word {
+        width: 80%;
+    }
+
+    #otherProducts li.pbShape:nth-child(3) {
+        display: none;
+    }
+
+    .quantity {
+        width: 340px;
+        height: 80px;
+    }
+
+    #quantityNum {
+        width: 100px;
+        height: 80px;
+    }
 
     .quantityBtn {
         height: 60px;
-        width: 60px;}
+        width: 60px;
+    }
 
-        
-.productRemark .notetext{
-    font-size: 16px;
-    line-height: 1.5;
-}
-#introduction small, .detailsText small{
-    font-size: 16px;
-}
+
+    .productRemark .notetext {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    #introduction small,
+    .detailsText small {
+        font-size: 16px;
+    }
 
 }
 
