@@ -433,6 +433,8 @@ footer div img {
         height: auto; /* 使用自適應高度 */
         padding: 20px 0px;
         flex-direction: column;
+        background-color: var(--Darkblue);
+        border-top:none;
     }
 
     .footerList {

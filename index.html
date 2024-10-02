@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VSER</title>
     <link rel="icon" href="./favicon.ico">
-    <link rel="stylesheet" href="./styles/headNfooter.css">
+
     <!-- 載入React,Babel -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- 自己的style -->
     <link rel="stylesheet" href="./styles/styleAria.css">
+    <link rel="stylesheet" href="./styles/headNfooter.css">
+    <!-- 導覽列需統一 headNfooter全重最重 -->
+    <script type="text/babel" src="https://aria-hawa.github.io/customizeJersey/jsx/Header.jsx"></script>
+    <script type="text/babel" src="https://aria-hawa.github.io/customizeJersey/jsx/Footer.jsx"></script>
 </head>
 
 <body>
@@ -84,65 +88,15 @@
                         backgroundCarousel();
                     }, 9000);
                 }, 3000)
-
-                // 漢堡按鈕三變X
-                $('.hamburger').click(function () {
-                    // 在.hamburger類別裡面 加入/刪除類別is-active
-                    $(this).toggleClass('is-active');
-                    $('.navigation').toggle(350);
-                    $('.navbar').toggleClass('fillColor');
-                })
-                
             }, []);
 
 
-            return (<>
+            return (
+                <>
+                {/*sandy Header/Footer改成元件，刪除上方漢堡選單*/}
+            <Header classname='darkblue'/>
                 <main>
                     <section id="home">
-                        <header>
-                            {/* 三條槓漢堡按鈕 */}
-                            <div className="navbar">
-                                <div className="navbarBtn">
-                                    <button className="hamburger">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </button>
-                                </div>
-                                {/* 選單列 */}
-                                <nav className="navigation">
-                                    <ul>
-                                        <li><a href="./brandConcept.html">品牌理念</a></li>
-                                        <li><a href="./pojectResults.html">專案成果</a></li>
-                                        <li><a href="./productBrowsing.html">商品瀏覽</a></li>
-                                        <li><a href="./Customization_process.html">訂購說明</a></li>
-                                        <li><a href="#">會員專區</a></li>
-                                    </ul>
-
-                                    <ul className="bottomIcon inNavbar">
-                                        <li><a href=""><GetImg imgUrl="./images/icon-fb.png" alt="" /></a></li>
-                                        <li><a href=""><GetImg imgUrl="./images/icon-ig.png" alt="" /></a></li>
-                                        <li><a href=""><GetImg imgUrl="./images/icon-line.png" alt="" /></a></li>
-                                    </ul>
-
-                                </nav>
-                            </div>
-                        </header>
-                        <div className="bar">
-                            <h1><a href="./index.html"><GetImg imgUrl="./images/logo.png" alt="VSER客製化球衣" /></a></h1>
-                            <div className="menuList">
-                                <nav className="menuItem">
-                                    <ul>
-                                        <li><a href="./brandConcept.html">品牌理念</a></li>
-                                        <li><a href="./pojectResults.html">專案成果</a></li>
-                                        <li><a href="./productBrowsing.html">商品瀏覽</a></li>
-                                        <li><a href="./Customization_process.html">訂購說明</a></li>
-                                        <li><a href="#">會員專區</a></li>
-                                    </ul>
-                                </nav>
-                                <a href="./chooseProject.html" className="cartBtn"></a>
-                            </div>
-                        </div>
                         <figure className="frontCarousel"></figure>
                         <figure className="backgroundCarousel"></figure>
                         <figure className="backgroundLogo"></figure>
@@ -164,33 +118,7 @@
                         </nav>
                     </section>
                 </main>
-                <footer className='homePage'>
-                    <ul className="footerList">
-                        <li className="footerItem">About
-                            <ul>
-                                <li>關於VSER</li>
-                            </ul>
-                        </li>
-                        <li className="footerItem">SERVICE
-                            <ul>
-                                <li>條款與細則</li>
-                                <li>隱私權政策</li>
-                                <li>客製化政策</li>
-                            </ul>
-                        </li>
-                        <li className="footerItem">CONTACT
-                            <ul>
-                                <li>新北市汐止區新台五路二段77號15樓之3</li>
-                                <li>vser.tw@gmail.com</li>
-                                <li>02-86482203</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div>
-                        <figure><GetImg imgUrl="./images/logo-2.svg" alt="" /></figure>
-                        <small>&copy;2024 VSER, Inc. 版權所有</small>
-                    </div>
-                </footer>
+                <Footer />
             </>)
 
         }

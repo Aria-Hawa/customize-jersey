@@ -158,7 +158,7 @@
     animation: lightRun 1.5s cubic-bezier(0.26, 0.02, 0.09, 0.99) infinite;
 }
 
-.bottomIcon {
+#home  .bottomIcon {
     background-image: linear-gradient(to right, var(--ToRight-Lightblue-Darkbllue));
     display: flex;
     align-items: center;
@@ -169,13 +169,13 @@
     bottom: 0;
 }
 
-.bottomIcon ul {
+#home  .bottomIcon ul {
     display: flex;
     width: 100%;
     padding-left: 80px;
 }
 
-.bottomIcon ul li {
+#home  .bottomIcon ul li {
     padding-right: 40px;
 }
 
@@ -1999,21 +1999,21 @@ footer div small {
         display: none;
     }
 
-    .bottomIcon {
+    #home  .bottomIcon {
         background-image: none;
         background-color: var(--Darkblue);
     }
 
-    .bottomIcon ul {
+    #home  .bottomIcon ul {
         justify-content: center;
         padding-left: 0px;
     }
 
-    .bottomIcon ul li {
+    #home  .bottomIcon ul li {
         padding-right: 80px;
     }
 
-    .bottomIcon ul li:last-child {
+    #home  .bottomIcon ul li:last-child {
         padding-right: 0px;
     }
 }
@@ -2106,7 +2106,7 @@ footer div small {
         justify-content: start;
     }
 
-    .bottomIcon.inNavbar {
+    #home  .bottomIcon.inNavbar {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -2116,7 +2116,7 @@ footer div small {
         bottom: 80px;
     }
 
-    .bottomIcon.inNavbar li {
+    #home  .bottomIcon.inNavbar li {
         width: 48px;
         height: 48px;
         padding: 4px;
@@ -2160,7 +2160,7 @@ footer div small {
         z-index: 60;
     }
 
-    .bottomIcon {
+    #home  .bottomIcon {
         display: none;
     }
 
