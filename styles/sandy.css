@@ -599,7 +599,7 @@ body {
     }
 }
 
-@media (max-width: 640px){
+@media (max-width:640px){
     #content .title{
         height: 200px;
     }
