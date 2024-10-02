@@ -701,7 +701,7 @@ body {
     position: relative;
     background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
     width: 100%;
-    height: 100vh;
+    height: 120vh;
 }
 
 /* 背景藍色色塊 */
@@ -1354,7 +1354,7 @@ body {
         width: 40%;
     }
         .pjWord p, .pjWord1 p, .pjWord2 p{
-        top:75%}
+        top:77%}
             #projectjJersey {
         height: 30vh;
     }

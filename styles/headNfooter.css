@@ -365,6 +365,8 @@ footer div img {
     .navbar .hamburger {
         background-color: transparent;
         border: none;
+        width: 60px;
+        height:60px ;
     }
 
     .hamburger span {
@@ -469,6 +471,14 @@ footer div img {
 
     footer div figure img {
         width: 100%;
+    }
+}
+@media (max-width:640px)and (height > 0px){
+    .navigation ul li {
+        padding: 15px 0px;
+    }
+    .HLogo{
+        margin: 15px 0 95px 0;
     }
 }
 
