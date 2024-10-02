@@ -602,6 +602,7 @@ body {
 @media (max-width:640px){
     #content .title{
         height: 200px;
+        width: 100%;
     }
     .itemImg {
         height: 20%;
@@ -611,7 +612,7 @@ body {
         text-align: left;
     }
     .title .bevel {
-        right: 22%;
+        right: 0%;
         top: 52%;
         transform: none;
     }
@@ -643,6 +644,31 @@ body {
     }
     .textTitle br{
         display: flex;
+    }
+    .copyWriting{
+        right: auto;
+        height: 114px;
+        width: 290px;
+    }
+    .textTitle h3{
+        padding-top: 4px;
+    }
+    .title-2 .bevel {
+        width: fit-content;
+        right: -80px;
+        bottom: -8px;
+    }
+    .jerseyIntroduction .content {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+    .Test{
+        flex-direction: column;
+        
+    }
+    .jerseyIntroduction a{
+        padding: 8px 20px 8px 20px;
     }
 }
 
