@@ -59,8 +59,10 @@ function Header({ classname }) {
                                 <li><a href="./pojectResults.html">專案成果</a></li>
                                 <li><a href="./productBrowsing.html">商品瀏覽</a></li>
                                 <li><a href="./Customization_process.html">訂購說明</a></li>
-                                <li><a href="#">會員專區</a></li>
+                                <li><a href=".priceplan.html">價格方案</a></li>
+                                <li><a href=".customize-React.html">球衣模擬</a></li>
                             </ul>
+                            
 
                             <ul className="bottomIcon inNavbar">
                                 <li><a href=""><img src="./images/icon-fb.png" alt="" /></a></li>
