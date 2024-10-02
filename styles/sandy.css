@@ -2352,7 +2352,7 @@ li.pbShape {
     font-size: 1vw;
 }
 
-@media (width < 1025px) and (height > 769px) {
+@media (max-width:640px) and (height > 0px) , (width < 1025px) and (height > 769px) {
     #introduction {
         padding: 80px 0px 0 0px;
         flex-direction: column;
