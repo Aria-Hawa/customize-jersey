@@ -2271,13 +2271,13 @@ footer div small {
         letter-spacing: 0.2rem;
     }
     .sloganNbtn h3{
-        font-size: 25px;
+        font-size: 18px;
     }
 }
 @media (max-width:640px)and (height > 0px){
     .brandName {
         width: auto;
-        padding-top: 20%;
+        padding-top: 30%;
     }
     
     .sloganNbtn {
