@@ -2219,6 +2219,7 @@ footer div small {
 (width < 1025px) and (height > 769px) {
     .frontCarousel{
         width: 100%;
+        height: -webkit-fill-available;
     }
     .homeInfo{
         width: 100%;

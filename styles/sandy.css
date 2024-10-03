@@ -597,7 +597,9 @@ body {
         font-size: 18px;
         white-space: nowrap;
     }
-
+    .Test{
+        overflow: hidden;
+    }
     .arrowNav {
         display: none;
     }
