@@ -2237,9 +2237,12 @@ footer div small {
         margin-top: 0px;
         padding-top: 2%;
         text-align: center;
+        height: 100%;
+        width: 80%;
     }
     .brandName{
         width: auto;
+        padding-top: 30%;
         
     }
     .brandName h1{
@@ -2255,6 +2258,20 @@ footer div small {
         font-family: ROGFonts, sans-serif;
         text-shadow: 0.1em 0.1em 0.1em var(--Darkblue);
         letter-spacing: 0.3rem;
+    }
+    .homeInfo {
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+    .brandName h1{
+        font-size: 18vw;
+        letter-spacing: 0.2rem;
+    }
+    .sloganNbtn h3{
+        font-size: 25px;
     }
 }
 
