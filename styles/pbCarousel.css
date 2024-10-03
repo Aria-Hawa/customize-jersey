@@ -39,7 +39,7 @@ ul li:hover {
       height: 380px
   }
 }
-@media (min-width:1024px){
+@media (width<1025px){
   .container {
     width: 1091px;
 }

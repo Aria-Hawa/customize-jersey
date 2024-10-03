@@ -722,7 +722,7 @@ body {
     position: relative;
     background-image: linear-gradient(to right, var(--ToRight-Blue-Darkblue));
     width: 100%;
-    height: 120vh;
+    height: 100vh;
 }
 
 /* 背景藍色色塊 */
@@ -2034,7 +2034,7 @@ li.pbShape {
         right: 40px
     }
 }
-@media (min-width:1024px) {
+@media (width<1025px) {
     .pbCommodity{
         overflow: auto;
     }
@@ -2373,7 +2373,7 @@ li.pbShape {
         padding: 30px 40px 60px 40px;
     }
 }
-@media (min-width: 1024px){
+@media (width<1025px){
     .contentDetails .size,
     .contentDetails .color{
         width: 100px;
