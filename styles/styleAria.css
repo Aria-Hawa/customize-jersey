@@ -2257,7 +2257,7 @@ footer div small {
         line-height: 1.1;
         font-family: ROGFonts, sans-serif;
         text-shadow: 0.1em 0.1em 0.1em var(--Darkblue);
-        letter-spacing: 0.3rem;
+        letter-spacing: 0.2rem;
     }
     .homeInfo {
         height: 100%;
@@ -2272,6 +2272,17 @@ footer div small {
     }
     .sloganNbtn h3{
         font-size: 25px;
+    }
+}
+@media (max-width:640px)and (height > 0px){
+    .brandName {
+        width: auto;
+        padding-top: 30%;
+    }
+    .sloganNbtn {
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 0 20% 0;
     }
 }
 
