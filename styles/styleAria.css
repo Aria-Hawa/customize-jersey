@@ -2283,7 +2283,8 @@ footer div small {
     .sloganNbtn {
         display: flex;
         justify-content: space-between;
-        padding: 2% 0 20% 0;
+        padding: 2% 0 15% 0;
+        width: 93%;
     }
     .brandName h1 ,
     .sloganNbtn h3 {
@@ -2291,6 +2292,9 @@ footer div small {
     }
     .backgroundLogo{
         left: 10%;
+    }
+    .sloganNbtn br{
+        display: none;
     }
 }
 
