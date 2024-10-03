@@ -98,12 +98,23 @@
 
 .sloganNbtn {
     display: flex;
-    padding-top: 5%;
+    padding-top: 2%;
     width: 100%;
 }
 
 .brandName {
     width: 80%;
+}
+.brandName h1{
+    font-size: 8vw;
+    font-family: ROGFonts, sans-serif;
+    line-height: 1;
+}
+.sloganNbtn h3 {
+    font-size:  2vw;;
+    line-height: 1.1;
+    font-family: ROGFonts, sans-serif;
+    letter-spacing: .2rem;
 }
 
 .sloganNbtn figure {
@@ -2211,5 +2222,37 @@ footer div small {
     }
     .homeInfo{
         top:68%;
+        align-items: center;
+    }
+    .backgroundLogo {
+        background-size: contain;
+        width: 200%;
+        left: -10%;
+        transform: translateX(-50%);
+        top: -10%;
+    }
+    .sloganNbtn{
+        margin-top: 0px;
+        padding-top: 2%;
+        text-align: center;
+    }
+    .brandName{
+        width: auto;
+        
+    }
+    .brandName h1{
+        font-size: 15vw;
+        font-family: ROGFonts, sans-serif;
+        line-height: 1;
+        text-shadow: 0.03em 0.03em 0.1em var(--Darkblue)
+        
+    }
+    .sloganNbtn h3 {
+        font-size: 40px;
+        line-height: 1.1;
+        font-family: ROGFonts, sans-serif;
+        text-shadow: 0.1em 0.1em 0.1em var(--Darkblue);
+        letter-spacing: 0.3rem;
     }
 }
+
