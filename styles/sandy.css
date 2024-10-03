@@ -2333,6 +2333,27 @@ li.pbShape {
     overflow: hidden;
 }
 
+.buttomitem {
+    margin: 0 1vw 40px 0;
+    width: 15.25vw;
+    height: 4vw;
+    border-radius: 5px;
+
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.quantity {
+    /* margin: 15px 0 0 0 ; */
+    width: 21vw;
+    height: 6vw;
+    /* border: 1px solid #FFFFFF; */
+    display: flex;
+    justify-content: space-evenly;
+    margin: none;
+    align-items: center;
+}
+
+
 @media (min-width:1920px) {
     #introduction {
         padding: 120px 15% 0 15%;
@@ -2352,6 +2373,25 @@ li.pbShape {
         padding: 30px 40px 60px 40px;
     }
 }
+@media (min-width: 1024px){
+    .contentDetails .size,
+    .contentDetails .color{
+        width: 100px;
+        height: 40px;
+        margin: 20px 20px 0 0;
+        padding: 8px;
+    }
+    .sizeBox{
+        flex-wrap: wrap;
+    }
+    .buttomitem{
+        width: 220px;
+        height: 60px;
+    }
+    .quantity {
+        width: 220px;
+    }
+}
 
 #otherProducts .word {
     display: flex;
@@ -2366,16 +2406,6 @@ li.pbShape {
     height: 100%;
 }
 
-.quantity {
-    /* margin: 15px 0 0 0 ; */
-    width: 21vw;
-    height: 6vw;
-    /* border: 1px solid #FFFFFF; */
-    display: flex;
-    justify-content: space-evenly;
-    margin: none;
-    align-items: center;
-}
 
 #btn_1 {
     background-image: url(../images/commodity_arrow_reduce.svg);
@@ -2421,15 +2451,6 @@ li.pbShape {
     font-size: 1.25vw;
 }
 
-.buttomitem {
-    margin: 0 1vw 40px 0;
-    width: 15.25vw;
-    height: 4vw;
-    border-radius: 5px;
-
-    border: 1px solid transparent;
-    cursor: pointer;
-}
 
 .buttomitem:hover {
     background-color: #FEB75D;
