@@ -190,6 +190,8 @@
 }
 
 
+
+
 /* customize網頁區 */
 
 
@@ -2200,5 +2202,14 @@ footer div small {
 
     .homePage div figure img {
         width: 100%;
+    }
+}
+@media (max-width:640px)and (height > 0px),
+(width < 1025px) and (height > 769px) {
+    .frontCarousel{
+        width: 100%;
+    }
+    .homeInfo{
+        top:68%;
     }
 }
