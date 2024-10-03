@@ -137,7 +137,15 @@
                     $('.styleItem a').click(function () {
                         let styleName = $(this).attr('class');
                         $(`.area`).css('display', 'none');
+                        if ($('.styleInfo').css('display') == 'none') {
+                            $('.styleInfo').css('display', 'flex');
+                        }
                         $(`#${styleName}`).fadeIn().css('display', 'flex');
+                    });
+
+                    // RWD新增的關閉按鈕，用來關閉styleInfo
+                    $('#closeStyleInfo').click(function () {
+                        $('.styleInfo').css('display', 'none');
                     });
 
                     // textArea區域各功能click後顯示styleInfo
@@ -637,6 +645,8 @@
                                         <li><a href="#" id="numberItem" className="numberArea"></a></li>
                                     </ul>
                                     <div className="styleInfo">
+                                        {/* RWD用的關閉按鈕 */}
+                                        <p id="closeStyleInfo">關閉</p>
                                         {/* shape區 */}
                                         <div className="area" id="shapeArea">
                                             <div className="styleCaption">

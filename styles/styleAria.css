@@ -105,13 +105,16 @@
 .brandName {
     width: 80%;
 }
-.brandName h1{
+
+.brandName h1 {
     font-size: 8vw;
     font-family: ROGFonts, sans-serif;
     line-height: 1;
 }
+
 .sloganNbtn h3 {
-    font-size:  2vw;;
+    font-size: 2vw;
+    ;
     line-height: 1.1;
     font-family: ROGFonts, sans-serif;
     letter-spacing: .2rem;
@@ -195,7 +198,7 @@
         flex-direction: column;
     }
 
-    .sloganNbtn a {  
+    .sloganNbtn a {
         margin-top: 20px;
     }
 }
@@ -401,6 +404,12 @@
     border-left: 1px solid white;
     height: 100%;
     width: 100%;
+}
+
+
+/* RWD用的關閉按鈕 */
+#closeStyleInfo {
+    display: none;
 }
 
 .styleInfo .area {
@@ -1984,14 +1993,6 @@ footer div small {
 
 
 
-
-
-
-
-
-
-
-
 /* home區 */
 @media (max-width:820px) {
     .frontCarousel {
@@ -2031,7 +2032,6 @@ footer div small {
     }
 }
 
-
 /* footer區 */
 @media (max-width:820px) {
     footer {
@@ -2047,10 +2047,11 @@ footer div small {
     }
 }
 
-
 /* index區 */
 @media (max-width:640px)and (height > 0px),
-(width < 1025px) and (height > 769px)  {
+(width < 1025px) and (height > 769px) {
+
+    /* header */
     #home .bar {
         display: none;
     }
@@ -2215,17 +2216,20 @@ footer div small {
         width: 100%;
     }
 }
+
 @media (max-width:640px)and (height > 0px),
 (width < 1025px) and (height > 769px) {
-    .frontCarousel{
+    .frontCarousel {
         width: 100%;
     }
-    .homeInfo{
+
+    .homeInfo {
         width: 100%;
-        top:85%;
+        top: 85%;
         align-items: center;
         left: 0%;
     }
+
     .backgroundLogo {
         background-size: contain;
         width: 200%;
@@ -2233,25 +2237,28 @@ footer div small {
         transform: translateX(-50%);
         top: -10%;
     }
-    .sloganNbtn{
+
+    .sloganNbtn {
         margin-top: 0px;
         padding-top: 2%;
         text-align: center;
         height: 100%;
         width: 80%;
     }
-    .brandName{
+
+    .brandName {
         width: auto;
         padding-top: 80%;
-        
+
     }
-    .brandName h1{
+
+    .brandName h1 {
         font-size: 15vw;
         font-family: ROGFonts, sans-serif;
         line-height: 1;
         text-shadow: 0.03em 0.03em 0.1em var(--Darkblue)
-        
     }
+
     .sloganNbtn h3 {
         font-size: 40px;
         line-height: 1.1;
@@ -2259,6 +2266,7 @@ footer div small {
         text-shadow: 0.1em 0.1em 0.1em var(--Darkblue);
         letter-spacing: 0.2rem;
     }
+
     .homeInfo {
         height: 100%;
         top: 0;
@@ -2266,38 +2274,166 @@ footer div small {
         display: flex;
         align-items: center;
     }
-    .brandName h1{
+
+    .brandName h1 {
         font-size: 16vw;
         letter-spacing: 0.2rem;
     }
-    .sloganNbtn h3{
+
+    .sloganNbtn h3 {
         font-size: 40px;
     }
 }
-@media (max-width:640px)and (height > 0px){
+
+@media (max-width:640px)and (height > 0px) {
     .brandName {
         width: auto;
         padding-top: 30%;
     }
-    
+
     .sloganNbtn {
         display: flex;
         justify-content: space-between;
         padding: 2% 0 15% 0;
         width: 93%;
     }
-    .brandName h1 ,
+
+    .brandName h1,
     .sloganNbtn h3 {
         text-shadow: none;
     }
-    .sloganNbtn h3{
+
+    .sloganNbtn h3 {
         font-size: 18px;
     }
-    .backgroundLogo{
+
+    .backgroundLogo {
         left: -10;
     }
-    .sloganNbtn br{
+
+    .sloganNbtn br {
         display: none;
     }
 }
 
+/* cusomize區 */
+@media (max-width:800px) {
+    #customizePlace {
+        flex-direction: column-reverse;
+    }
+
+    .styleInfo .stylePreview::-webkit-scrollbar,
+    .chooseColor::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* preview即時預覽區 */
+    #customizePlace #preview {
+        flex: 1;
+        height: 80vh;
+    }
+
+    #preview .preJersey {
+        height: 100%;
+        padding: 0px;
+    }
+
+    #preview .preJersey #showStep {
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 500px;
+        max-height: none;
+    }
+
+    #preview .preJersey #showStep figure {
+        width: 100%;
+        max-width: 300px;
+        justify-content: space-evenly;
+    }
+
+    #preview .preJersey #showStep img {
+        width: 100px;
+        margin: 20px;
+    }
+
+    #preview .preOption {
+        width: 100%;
+        height: 78px;
+        display: flex;
+        align-items: center;
+    }
+
+    #preview .preOption ul {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .preOption ul li a {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* 客製化選單區域 */
+    #customizePlace #operate {
+        min-width: 100%;
+    }
+
+    #operate .style {
+        position: relative;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .style .styleItem {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 120px;
+        border-top: 1px solid white;
+        margin-top: 20px;
+    }
+
+    .style .styleItem li {
+        width: 14%;
+        max-width: 78px;
+        min-width: 64px;
+    }
+
+    .style .styleInfo {
+        position: absolute;
+        z-index: 1;
+        background-color: var(--Blue);
+        height: 236px;
+        /* bottom: -236px; */
+        bottom: 0px;
+        display: none;
+        border: 1px solid red;
+    }
+
+    #closeStyleInfo {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .styleInfo .styleCaption h3 {
+        font-size: 18px;
+    }
+
+    .styleInfo .styleCaption p {
+        font-size: 16px;
+    }
+
+    .styleInfo .stylePreview figure {
+        flex-wrap: nowrap;
+    }
+
+    #operate .productInfo {
+        margin-top: 20px;
+        display: none;
+    }
+}
