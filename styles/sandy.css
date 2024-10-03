@@ -2034,6 +2034,14 @@ li.pbShape {
         right: 40px
     }
 }
+@media (min-width:1024px) {
+    .pbCommodity{
+        overflow: auto;
+    }
+    .arrowGroup {
+        display: none;
+    }
+}
 
 @media (max-width:640px) and (height > 0px),
 (width < 1025px) and (height > 769px) {

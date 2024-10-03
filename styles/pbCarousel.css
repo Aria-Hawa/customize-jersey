@@ -43,6 +43,9 @@ ul li:hover {
   .container {
     width: 1091px;
 }
+.carousel-wrapper {
+  overflow: auto;
+}
 }
 @media (max-width:640px) and (height > 0px) ,(width < 1025px) and (height > 769px){
   ul#templates{
