@@ -2222,7 +2222,7 @@ footer div small {
     }
     .homeInfo{
         width: 100%;
-        top:68%;
+        top:85%;
         align-items: center;
         left: 0%;
     }
@@ -2271,7 +2271,7 @@ footer div small {
         letter-spacing: 0.2rem;
     }
     .sloganNbtn h3{
-        font-size: 18px;
+        font-size: 45px;
     }
 }
 @media (max-width:640px)and (height > 0px){
@@ -2290,8 +2290,11 @@ footer div small {
     .sloganNbtn h3 {
         text-shadow: none;
     }
+    .sloganNbtn h3{
+        font-size: 18px;
+    }
     .backgroundLogo{
-        left: 10%;
+        left: -10;
     }
     .sloganNbtn br{
         display: none;

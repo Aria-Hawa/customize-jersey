@@ -61,7 +61,8 @@ a {
     font-family: "Noto Sans TC", sans-serif;
 }
 @media (max-width:640px) and (height > 0px), (width < 1025px) and (height > 769px) {
-    a{font-size: 18px;}
+    a{font-size: 18px;
+        letter-spacing: 0.08rem;}
 }
 
 :root {
