@@ -39,7 +39,7 @@ ul li:hover {
       height: 380px
   }
 }
-@media (width<1025px){
+@media (width<1025px)and (hover: none) and (pointer: coarse) {
   .container {
     width: 1091px;
 }
