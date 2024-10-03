@@ -1201,6 +1201,7 @@ body {
 
     #projectBanner {
         overflow: hidden;
+        height: 110vh;
     }
 
     .blueBlock {
