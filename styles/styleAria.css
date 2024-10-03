@@ -2277,12 +2277,20 @@ footer div small {
 @media (max-width:640px)and (height > 0px){
     .brandName {
         width: auto;
-        padding-top: 30%;
+        padding-top: 20%;
     }
+    
     .sloganNbtn {
         display: flex;
         justify-content: space-between;
         padding: 2% 0 20% 0;
+    }
+    .brandName h1 ,
+    .sloganNbtn h3 {
+        text-shadow: none;
+    }
+    .backgroundLogo{
+        left: 10%;
     }
 }
 
