@@ -2221,8 +2221,10 @@ footer div small {
         width: 100%;
     }
     .homeInfo{
+        width: 100%;
         top:68%;
         align-items: center;
+        left: 0%;
     }
     .backgroundLogo {
         background-size: contain;
