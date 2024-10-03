@@ -39,6 +39,11 @@ ul li:hover {
       height: 380px
   }
 }
+@media (min-width:1024px){
+  .container {
+    width: 1091px;
+}
+}
 @media (max-width:640px) and (height > 0px) ,(width < 1025px) and (height > 769px){
   ul#templates{
     flex-wrap: wrap;
@@ -53,4 +58,6 @@ ul li:hover {
     margin: 0 0 30px 0;
   }
 }
+
+
 
