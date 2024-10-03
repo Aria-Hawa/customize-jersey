@@ -2037,7 +2037,7 @@ li.pbShape {
         right: 40px
     }
 }
-@media (width<1025px)and (hover: none) and (pointer: coarse)  {
+@media (width<1025px) {
     .pbCommodity{
         overflow: auto;
     }
@@ -2376,7 +2376,7 @@ li.pbShape {
         padding: 30px 40px 60px 40px;
     }
 }
-@media (width<1025px)and (hover: none) and (pointer: coarse) {
+@media (width<1025px){
     .contentDetails .size,
     .contentDetails .color{
         width: 100px;
