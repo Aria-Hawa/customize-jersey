@@ -2267,11 +2267,11 @@ footer div small {
         align-items: center;
     }
     .brandName h1{
-        font-size: 18vw;
+        font-size: 16vw;
         letter-spacing: 0.2rem;
     }
     .sloganNbtn h3{
-        font-size: 45px;
+        font-size: 40px;
     }
 }
 @media (max-width:640px)and (height > 0px){
