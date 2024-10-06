@@ -154,7 +154,7 @@ a {
 }
 
 .menuItem ul li a {
-    margin-left: 40px;
+    margin-left: 80px;
     font-size: 1.25vw;
     font-weight: 400;
     letter-spacing: 0.08rem;
@@ -479,7 +479,7 @@ footer div img {
         width: 100%;
     }
 }
-@media (max-width:640px)and (height > 0px){
+@media (max-width:640px){
     .navigation ul li {
         padding: 15px 0px;
     }

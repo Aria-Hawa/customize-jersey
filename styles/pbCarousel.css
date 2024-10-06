@@ -47,7 +47,7 @@ ul li:hover {
   overflow: auto;
 }
 }
-@media (max-width:640px) and (height > 0px) ,(width < 1025px) and (height > 769px){
+@media (max-width:640px) and (height > 0px) ,(width < 840px){
   ul#templates{
     flex-wrap: wrap;
   }
