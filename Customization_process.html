@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VSER</title>
   <link rel="icon" href="./favicon.ico">
-  <link rel="stylesheet" href="./styles/jiun.css">
-  <link rel="stylesheet" href="./styles/headNfooter.css">
+
   <!-- 載入React -->
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -15,7 +14,10 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <!-- <script type="text/babel" src="https://aria-hawa.github.io/customizeJersey/jsx/Header.jsx"></script> -->
   <script type="text/babel" src="./jsx/Header.jsx"></script>
-
+  <!-- JQ ui -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="./styles/jiun.css">
+  <link rel="stylesheet" href="./styles/headNfooter.css">
 </head>
 
 <body>
@@ -41,17 +43,14 @@
 process -->
     <section id="content">
       <div class="Customization">
-        <div class="Introduction">
-
-          <div class="englishtitle">
+        <div class="englishtitle">
+          <div class="box">
             <h2>Customization <br>
               process</h2>
+            <div class="chinsestitle">
+              <h4>訂製流程</h4>
+            </div>
           </div>
-
-          <div class="chinsestitle">
-            <h4>訂製流程</h4>
-          </div>
-
         </div>
         <div class="process__box__list">
           <article class="process_item">
@@ -89,46 +88,132 @@ process -->
             </div>
           </article>
         </div>
-        <div class="button">
-          <a href="#">即刻設計客製化球衣</a>
+        <div class="buttonBOX">
+          <div class="button">
+            <a href="#">即刻設計客製化球衣</a>
+          </div>
         </div>
-      </div>
-      </div>
-      </div>
 
+      </div>
     </section>
 
     <!-- Dimensions -->
     <section id="Dimensions_content">
-
-      <div class="Customization">
-        <div class="Dimensions_Introduction">
-
-          <div class="Dimensions_englishtitle">
-            <h2>Dimensions</h2>
-          </div>
+      <div class="DEBOX">
+        <div class="Dimensions_englishtitle">
+          <h2>Dimensions</h2>
           <div class="Dimensions_chinsestitle">
             <h4>尺寸測量</h4>
           </div>
-
         </div>
+      </div>
 
-        <div class="Dimensions__box__list">
-          <article class="size-1">
-            <figure><img src="./images/Dimensions-1.png" alt=""></figure>
-          </article>
 
-          <article class="size-2">
-            <figure><img src="./images/Dimensions-3.png" alt=""></figure>
-            <figure><img src="./images/Dimensions-2.png" alt=""></figure>
-          </article>
-        </div>
-        <div class="sizetext">
-          <p>* 尺寸表僅供參考，全部平鋪均為手工測量，
-            因測量方式或車縫關係，２公分內為誤差範圍。</p>
-          <p>* 運動褲的褲頭因有鬆緊帶的關係，
-            挑選尺寸時請以褲長為優先依據。</p>
-        </div>
+      <div class="Dimensions__box__list">
+        <article class="size-1">
+          <div class="textBox">
+            <div class="t-shirttext">
+              <span class="t_width">衣寬</span>
+              <span class="t_height">衣長</span>
+            </div>
+            <div class="shorttext">
+              <span class="s_width">腰圍</span>
+              <span class="s_height">褲長</span>
+            </div>
+          </div>
+          <img src="./images/Dimensions-1.svg" alt="">
+        </article>
+
+        <article class="size-2">
+          <table>
+            <tr class="tr1">
+              <th>SIZE</th>
+              <td>120</td>
+              <td>130</td>
+              <td>140</td>
+              <td>XS</td>
+              <td>S</td>
+              <td>M</td>
+              <td>L</td>
+              <td>XL</td>
+              <td>2L</td>
+              <td>3L</td>
+            </tr>
+            <tr class="tr2">
+              <th>衣寬</th>
+              <td>37</td>
+              <td>40</td>
+              <td>43</td>
+              <td>47</td>
+              <td>51</td>
+              <td>54</td>
+              <td>57</td>
+              <td>61</td>
+              <td>65</td>
+              <td>72</td>
+            </tr>
+            <tr class="tr2">
+              <th>衣長</th>
+              <td>45</td>
+              <td>50</td>
+              <td>56</td>
+              <td>61</td>
+              <td>65</td>
+              <td>68</td>
+              <td>71</td>
+              <td>73</td>
+              <td>76</td>
+              <td>78</td>
+            </tr>
+          </table>
+          <table>
+            <tr class="tr1">
+              <th>SIZE</th>
+              <td>120</td>
+              <td>130</td>
+              <td>140</td>
+              <td>XS</td>
+              <td>S</td>
+              <td>M</td>
+              <td>L</td>
+              <td>XL</td>
+              <td>2L</td>
+              <td>3L</td>
+            </tr>
+            <tr class="tr2">
+              <th>衣寬</th>
+              <td>37</td>
+              <td>40</td>
+              <td>43</td>
+              <td>47</td>
+              <td>51</td>
+              <td>54</td>
+              <td>57</td>
+              <td>61</td>
+              <td>65</td>
+              <td>72</td>
+            </tr>
+            <tr class="tr2">
+              <th>衣長</th>
+              <td>45</td>
+              <td>50</td>
+              <td>56</td>
+              <td>61</td>
+              <td>65</td>
+              <td>68</td>
+              <td>71</td>
+              <td>73</td>
+              <td>76</td>
+              <td>78</td>
+            </tr>
+          </table>
+        </article>
+      </div>
+      <div class="sizetext">
+        <p>* 尺寸表僅供參考，全部平鋪均為手工測量，
+          因測量方式或車縫關係，２公分內為誤差範圍。</p>
+        <p>* 運動褲的褲頭因有鬆緊帶的關係，
+          挑選尺寸時請以褲長為優先依據。</p>
       </div>
 
     </section>
@@ -142,55 +227,125 @@ process -->
 
           <div class="englishtitle">
             <h2>Precautions</h2>
+            <div class="chinsestitle">
+              <h4>注意事項</h4>
+            </div>
           </div>
 
-          <div class="chinsestitle">
-            <h4>注意事項</h4>
-          </div>
+
 
         </div>
         <div class="Precautions__box__list">
-          <article class="Precautions_item">
+          <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">球衣設計上</a></li>
+              <li><a href="#tabs-2">退換貨規定</a></li>
+              <li><a href="#tabs-3">洗滌與保存</a></li>
+              <li><a href="#tabs-4">訂金與付款</a></li>
+              <li><a href="#tabs-5">製作與交期</a></li>
+              <li><a href="#tabs-6">其他的問題</a></li>
+            </ul>
+            <div id="tabs-1">
+              <div class="tabsBox">
+                <p class="numbered-paragraph">
+                  提供的圖片檔案須為可編輯的<span class="highlight-red">AI 或 PDF 格式</span>，若為 PNG 或 JPG 格式，解析度必須達到
+                  300dpi。由於低解析度導致球衣模糊，<span class="highlight-red">不接受重製</span>。</p>
+                <table class="jerseyRegulation">
 
-            <div class="content">
-              <p>球衣設計上應注意事項</p>
+                  <tr class="tr2">
+                    <th>檔案無風險,優先提供此格式</th>
+                    <td>ai / pdf / esp </td>
+                  </tr>
+                  <tr class="tr2">
+                    <th>有印刷風險,請確證解析度是否清晰 </th>
+                    <td>png / jpg (會酌收去被美工費用) </td>
+                  </tr>
+                </table>
+                <p class="numbered-paragraph">若提供的是 JPG 檔案，需<span
+                    class="highlight-red">加收描圖美工費</span>，費用將根據圖案的複雜度有所不同，預估為
+                  NT$500 至 NT$1000，<span class="highlight-red">具體金額將由我方評估決定</span>。</p>
+                <p class="numbered-paragraph">提供的圖片須<span
+                    class="highlight-red">符合智慧財產權規範</span>。我方僅代為代工，有任何侵權抄襲問題，我方不承擔責任，並保留視情況<span
+                    class="highlight-red">進行求償的權利</span>。</p>
+
+                <p class="numbered-paragraph">
+                  正規賽事對於球號有大小要求,如沒有特別標示球號尺寸,我們將依照賽事標準為依據。
+                </p>
+                <table class="jerseyRegulation">
+                  <tr class="tr2">
+                    <th></th>
+                    <td>尺寸</td>
+                    <td>前小號</td>
+                    <td>後大號</td>
+                  </tr>
+                  <tr class="tr2">
+                    <th>小童</th>
+                    <td>XS以下</td>
+                    <td>高度8公分</td>
+                    <td>高度20公分</td>
+                  </tr>
+                  <tr class="tr2">
+                    <th>成人</th>
+                    <td>S以上</td>
+                    <td>高度10公分</td>
+                    <td>高度25公分</td>
+                  </tr>
+                </table>
+              </div>
             </div>
-          </article>
+            <div id="tabs-2">
+              <div class="tabsBox">
+                <p class="numbered-paragraph">客製商品<span class="highlight-red">無法進行尺寸換貨</span>，請訂單前務必先確認您需挑選的尺寸。</p>
+                <p class="numbered-paragraph">昇華球衣及膠膜印製因電腦及裝置顯色不同，與實際完成品有些許色差可能，若要求與電腦等裝置顏色完全相同，請勿下單。</p>
+                <p class="numbered-paragraph">收到商品之後，<span
+                    class="highlight-red">請在7天內檢查清楚</span>，如有瑕疵問題請先把瑕疵處拍照傳給官方LINE(@vser1228) 確認溝通。</p>
+                <table class="goodsRegulation">
 
-          <article class="Precautions_item">
+                  <tr class="tr2">
+                    <th>瑕疵</th>
+                    <td>規格不符、大範圍破損或髒污、脫落、版型歪斜影響穿著之異常情形。</td>
+                  </tr>
+                  <tr class="tr2">
+                    <th>非瑕疵</th>
+                    <td>線頭、標記用微點、口袋保護車縫或釦眼未開、些許脫線、極小的汙點、尺寸3cm以內的誤差、照片色差</td>
+                  </tr>
+                </table>
+                <p class="numbered-paragraph">下單購買代表您能接受購物流程說明，除球衣本身有重大瑕疵<span class="highlight-red">否則不接受退換</span>。</p>
 
-            <div class="content">
-              <p>尺寸更改與退換貨規定</p>
+
+              </div>
+
             </div>
-          </article>
+            <div id="tabs-3">
+              <div class="tabsBox">
+                <div class="washAndSaveBox">
+                  <div class="washAndSave">
+                    <p class="bordertaxt">洗滌方式</p>
+                    <p class="numbered-paragraph">請使用洗衣機，溫和模式，水溫不超過30°C。</p>
+                    <p class="numbered-paragraph"> 避免使用任何含有漂白劑的洗滌劑。</p>
+                    <p class="numbered-paragraph">使用烘乾機，請選擇低溫模式。</p>
 
-          <article class="Precautions_item">
-
-            <div class="content">
-              <p>球衣洗滌與保存</p>
+                  </div>
+                  <div class="washAndSave">
+                    <p class="bordertaxt">保存方式</p>
+                    <p class="numbered-paragraph">選擇平放晾乾，保持球衣形狀。</p>
+                    <p class="numbered-paragraph">摺疊平整，避免陽光直射。</p>
+                    <p class="numbered-paragraph">長期懸掛可能會導致球衣變形。</p>
+                  </div>
+                </div>
+                
+              </div>
             </div>
-          </article>
-
-          <article class="Precautions_item">
-
-            <div class="content">
-              <p>下單後的訂金與付款時程</p>
+            <div id="tabs-4">
+              <p>製作中</p>
             </div>
-          </article>
-
-          <article class="Precautions_item">
-
-            <div class="content">
-              <p>製作時間與寄送時間</p>
+            <div id="tabs-5">
+              <p>製作中</p>
             </div>
-          </article>
-
-          <article class="Precautions_item">
-
-            <div class="content">
-              <p>另有其他問題 請聯絡我們</p>
+            <div id="tabs-6">
+              <p>製作中</p>
             </div>
-          </article>
+          </div>
 
         </div>
       </div>
@@ -205,31 +360,31 @@ process -->
   <!-- footer -->
   <footer>
     <ul class="footerList">
-        <li class="footerItem">About
-            <ul>
-                <li>關於VSER</li>
-            </ul>
-        </li>
-        <li class="footerItem">SERVICE
-            <ul>
-                <li>條款與細則</li>
-                <li>隱私權政策</li>
-                <li>客製化政策</li>
-            </ul>
-        </li>
-        <li class="footerItem">CONTACT
-            <ul>
-                <li>新北市汐止區新台五路二段77號15樓之3</li>
-                <li>vser.tw@gmail.com</li>
-                <li>02-86482203</li>
-            </ul>
-        </li>
+      <li class="footerItem">About
+        <ul>
+          <li>關於VSER</li>
+        </ul>
+      </li>
+      <li class="footerItem">SERVICE
+        <ul>
+          <li>條款與細則</li>
+          <li>隱私權政策</li>
+          <li>客製化政策</li>
+        </ul>
+      </li>
+      <li class="footerItem">CONTACT
+        <ul>
+          <li>新北市汐止區新台五路二段77號15樓之3</li>
+          <li>vser.tw@gmail.com</li>
+          <li>02-86482203</li>
+        </ul>
+      </li>
     </ul>
     <div>
-        <figure><img src="./images/logo-2.svg" alt="" style="width: 217px"/></figure>
-        <small>&copy;2024 VSER, Inc. 版權所有</small>
+      <figure><img src="./images/logo-2.svg" alt="" style="width: 217px" /></figure>
+      <small>&copy;2024 VSER, Inc. 版權所有</small>
     </div>
-</footer>
+  </footer>
 
 
 
@@ -246,7 +401,11 @@ process -->
       });
     });
   </script>
-
+  <!-- JQ 原生碼 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <!-- JQ ui -->
+  <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+  <script src="./js/jsSandyCustomization.js"></script>
 </body>
 
 </html>

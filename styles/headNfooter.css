@@ -104,6 +104,19 @@ a {
     --Darkblue-Blue: var(--Darkblue) 38%, var(--Blue) 100%;
 
 }
+  /* 滾動條 */
+  /* 滾動條底 */
+  ::-webkit-scrollbar {
+    background-color: var(--Darkblue);
+  }
+  /* 滾動條按鈕方框 */
+  ::-webkit-scrollbar-button {
+    background-color: var(--Orange);
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color:#FFFFFF
+  }
 
 
 /* fixed header區 */

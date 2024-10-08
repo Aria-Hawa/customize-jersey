@@ -254,7 +254,8 @@ let btn_1 = document.getElementById("btn_1");
 let btn1 = document.getElementById("btn1");
 let quantityNum = document.getElementById("quantityNum");
 
-let num = parseInt(localStorage.getItem('selectedNum')) || 1;
+let num = 1 ;
+localStorage.setItem('selectedNum', num); // 將 localStorage 的值設為 1
 // 將頁面上的數量顯示設置為讀取到的數量
 quantityNum.textContent = num;
 
