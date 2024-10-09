@@ -404,19 +404,6 @@ footer div small {
   align-items: flex-end;
 }
 
-
-
-.englishtitle h2 {
-  font-family: ROGFonts, sans-serif;
-  width: fit-content;
-  font-size: 3.5vw;
-  letter-spacing: .2rem;
-  line-height: 4vw;
-  color: #ffffff;
-}
-
-
-
 /* Customization process 圖 */
 .process__box__list {
   display: flex;
@@ -426,8 +413,8 @@ footer div small {
 
 .process__box__list .process_item {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
   margin: 0 20px 0 0;
   width: 330px;
   position: relative;
@@ -442,10 +429,8 @@ footer div small {
   font-size: 18px;
   letter-spacing: .12rem;
   width: fit-content;
-  position: absolute;
   text-align: center;
-  margin: auto;
-  bottom: 40px;
+
 }
 
 .process_item {
@@ -458,6 +443,33 @@ footer div small {
   object-fit: cover;
   align-items: center
 }
+.stepIcom{
+  width: 60%;
+  height: 50%;
+  margin: 0 0 8px 0;
+  background-position: center;
+  background-size:contain ;
+  background-repeat: no-repeat;
+}
+.icon_1{
+  background-image:url(../images/icon/stepicon2-02.svg) ;
+}
+.icon_2{
+  background-image:url(../images/icon/stepicon1-01.svg) ;
+}
+.icon_3{
+  background-image:url(../images/icon/stepicon3-03.svg) ;
+}
+.icon_4{
+  background-image:url(../images/icon/stepicon4--04.svg) ;
+}
+.icon_5{
+  background-image:url(../images/icon/stepicon5-05.svg) ;
+}
+.icon_6{
+  background-image:url(../images/icon/stepicon6-06.svg) ;
+}
+
 
 
 
@@ -833,7 +845,8 @@ footer div small {
 
 /* 1006_sandy */
 /* 文字區 */
-.englishtitle h2 {
+.englishtitle h2,
+.Dimensions_englishtitle h2 {
   font-family: ROGFonts, sans-serif;
   width: fit-content;
   font-size: 3.5vw;
@@ -842,15 +855,6 @@ footer div small {
   color: #ffffff;
 }
 
-.Dimensions_englishtitle h2 {
-  font-family: ROGFonts, sans-serif;
-  width: fit-content;
-  color: #ffffff;
-  padding-bottom: 0px;
-  font-size: 3.5vw;
-  letter-spacing: .2rem;
-  line-height: 4vw;
-}
 
 .chinsestitle h4,
 .Dimensions_chinsestitle h4 {
@@ -965,7 +969,7 @@ table {
 table,
 th,
 td {
-  border: .75px solid #fff;
+  border: 1px solid #fff;
   /* 给表格、表头和表格单元格添加边框 */
 }
 
@@ -1159,6 +1163,26 @@ a:visited.ui-button,
   .goodsRegulation th{
     width: 100px;
   }
+.moneyIcon{
+  width: 100%;
+  height: 5vw;
+  background-color: #FEB75D;
+  display: flex;
+}
+.mIcon{
+  width: 20%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.M_line{
+  background-image: url(../images/icon/line.svg);
+}
+.M_visa{
+  background-image: url(../images/icon/visa\ .svg);
+}
+
 
   /* 滾動條 */
   /* 滾動條底 */
@@ -1195,4 +1219,98 @@ a:visited.ui-button,
 .bordertaxt{
   border-bottom: 1px solid #FFF ;
   padding: 0 0 5px 0;
+}
+/* sandy_訂製說明RWD */
+@media(width < 840px) {
+  /* 文字  */
+  .englishtitle h2,
+  .Dimensions_englishtitle h2{
+    font-size: 45px;
+    line-height: 1.1;
+  }
+  .chinsestitle h4, .Dimensions_chinsestitle h4 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .content p,.button a,span,th, td ,.sizetext p,.ui-widget {
+    font-size: 18px;
+  }
+
+  /* 訂製流程 */
+  #content{
+    padding: 40px 10% 40px 10%;
+  }
+  .Customization{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #Precautions_content .chinsestitle {
+    right: auto;
+  }
+  .englishtitle {
+    display: flex;
+    justify-content: center;
+}
+.Precautions__box__list{
+  margin: 70px auto 0;
+}
+  .process__box__list .process_item {
+    width: 320px;
+    margin: 0 20px 30px 0;
+  }
+  .process__box__list .process_item:nth-child(even){
+    margin: 0 0 30px 0;
+  }
+  .process__box__list .process_item:nth-child(5){
+    margin: 0 20px 0 0 
+  }
+  .process__box__list .process_item:nth-child(6){
+    margin: 0 0 0 0 
+  }
+  .process__box__list{
+    flex-wrap: wrap;
+  }
+  .button{
+    width: 70%;
+    margin: 0;
+  }
+
+  /* 尺寸測量 */
+  #Dimensions_content{
+    padding: 0 10%;
+    height: 100vh;
+  }
+  .Dimensions__box__list{
+    flex-direction: column;
+    margin: 70px 0 0 0;
+  }
+  .Dimensions__box__list .size-1{
+    width: 90%;
+    margin: 0 0 10px 0;
+  }
+  .Dimensions__box__list .size-2{
+    width: 100%;
+  }
+  /* 注意事項 */
+  #Precautions_content {
+    padding: 0 10%;
+  }
+  .ui-tabs .ui-tabs-panel {
+    height: 70vh;
+  }
+  .ui-widget.ui-widget-content {
+    display: flex;
+  }
+  .ui-tabs .ui-tabs-nav .ui-tabs-anchor{
+    writing-mode: vertical-lr ;
+    letter-spacing: 0.2rem;
+  }
+  .ui-tabs .ui-tabs-nav{
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .ui-tabs .ui-tabs-nav li {
+    width: 100%;
+  }
 }
