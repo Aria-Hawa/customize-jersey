@@ -215,13 +215,43 @@ process -->
           </table>
         </article>
         <article class="size-2_RWD" >
-          <table>
+          <div class="sizeMune">
+            <p class="Mune_T" onclick="sizeMune_T()" >球衣尺寸表</p>
+            <p class="Mune_S" onclick="sizeMune_S()" >短褲尺寸表</p>
+          </div>
+          <div class="sizeMune_Timg">
+<span class="t_width_RWD">衣寬</span>
+<span class="t_height_RWD">衣長</span>
+          </div>
+          <div class="sizeMune_Simg" style="display: none;">
+            <span class="s_width_RWD">腰圍</span>
+            <span class="s_height_RWD">褲長</span>
+          </div>
+          <table class="sizeMune_T">
+           
             <tr class="tr1">
               <th>SIZE</th>
               <td>120</td>
               <td>130</td>
               <td>140</td>
               <td>XS</td>
+            </tr>
+            <tr class="tr2">
+              <th>衣寬</th>
+              <td>37</td>
+              <td>40</td>
+              <td>43</td>
+              <td>47</td>
+            </tr>
+            <tr class="tr2">
+              <th>衣長</th>
+              <td>45</td>
+              <td>50</td>
+              <td>56</td>
+              <td>61</td>
+            </tr>
+            <tr class="tr1">
+              <th>SIZE</th>
               <td>S</td>
               <td>M</td>
               <td>L</td>
@@ -231,10 +261,6 @@ process -->
             </tr>
             <tr class="tr2">
               <th>衣寬</th>
-              <td>37</td>
-              <td>40</td>
-              <td>43</td>
-              <td>47</td>
               <td>51</td>
               <td>54</td>
               <td>57</td>
@@ -244,10 +270,56 @@ process -->
             </tr>
             <tr class="tr2">
               <th>衣長</th>
+              <td>65</td>
+              <td>68</td>
+              <td>71</td>
+              <td>73</td>
+              <td>76</td>
+              <td>78</td>
+            </tr>
+          </table>
+          <table class="sizeMune_S" style="display: none;">
+            <tr class="tr1">
+              <th>SIZE</th>
+              <td>120</td>
+              <td>130</td>
+              <td>140</td>
+              <td>XS</td>
+            </tr>
+            <tr class="tr2">
+              <th>腰圍</th>
+              <td>37</td>
+              <td>40</td>
+              <td>43</td>
+              <td>47</td>
+            </tr>
+            <tr class="tr2">
+              <th>褲長</th>
               <td>45</td>
               <td>50</td>
               <td>56</td>
               <td>61</td>
+            </tr>
+            <tr class="tr1">
+              <th>SIZE</th>
+              <td>S</td>
+              <td>M</td>
+              <td>L</td>
+              <td>XL</td>
+              <td>2L</td>
+              <td>3L</td>
+            </tr>
+            <tr class="tr2">
+              <th>腰圍</th>
+              <td>51</td>
+              <td>54</td>
+              <td>57</td>
+              <td>61</td>
+              <td>65</td>
+              <td>72</td>
+            </tr>
+            <tr class="tr2">
+              <th>褲長</th>
               <td>65</td>
               <td>68</td>
               <td>71</td>
@@ -455,6 +527,7 @@ process -->
         $('#RLbtn').toggleClass('show');
       });
     });
+    
   </script>
   <!-- JQ 原生碼 -->
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>

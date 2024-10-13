@@ -1463,8 +1463,12 @@ a:visited.ui-button,
   }
 
   /* 尺寸測量 */
+  #Dimensions_content{
+    height: 120vh;
+  }
   .Dimensions__box__list {
     padding: 0 0 0 0;
+    margin: 50px 0 0 0;
   }
 
   .Dimensions__box__list .size-1 {
@@ -1500,10 +1504,62 @@ a:visited.ui-button,
   .s_height {
     right: 23%;
   }
-  .Dimensions__box__list .size-2 {
+  .Dimensions__box__list .size-2,
+  .Dimensions__box__list .size-1 {
     display: none;
   }
   .Dimensions__box__list .size-2_RWD{
     display: block; /* 顯示區塊 */
   }
+  .sizeMune{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px 0;
+  }
+  .sizeMune p{
+    margin: 0 10px ;
+    font-size: 18px;
+    letter-spacing: 0.08rem;
+    border-bottom: 1px solid;
+    padding: 0 1px 3px 1px;
+  }
+  .sizeMune_Timg,.sizeMune_Simg{
+    width: 100%;
+    height: 280px;
+  }
+  .sizeMune_Timg,.sizeMune_Simg{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 0 20px 0 ;
+    position: relative;
+  }
+  .t_width_RWD, .t_height_RWD,.s_width_RWD,.s_height_RWD{
+    position: absolute;
+  }
+  .t_width_RWD{
+    right: 33%;
+    top: 23%;
+  }
+  .t_height_RWD,  .s_height_RWD{
+    writing-mode: vertical-lr;
+    right: 52%;
+    top: 47%;
+  }
+  .s_width_RWD{
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  
+
+  .sizeMune_Timg{
+    background-image: url(../images/Customization/SIZE_T.svg);
+  }
+  .sizeMune_Simg{
+    background-image: url(../images/Customization/SIZE_S.svg);
+  }
+  /* .sizetext{
+    display: none;
+  } */
 }
