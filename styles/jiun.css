@@ -1464,7 +1464,7 @@ a:visited.ui-button,
 
   /* 尺寸測量 */
   #Dimensions_content{
-    height: 120dvh;
+    height: 800px;
   }
   .Dimensions__box__list {
     padding: 0 0 0 0;
@@ -1559,7 +1559,16 @@ a:visited.ui-button,
   .sizeMune_Simg{
     background-image: url(../images/Customization/SIZE_S.svg);
   }
-  /* .sizetext{
-    display: none;
-  } */
+  .sizetext p{
+    font-size: 16px;
+    text-align: left;
+    position: relative;
+    padding-left: 15px;
+  }
+  .symbol_sizetext::before {
+    content: "*";
+    position: absolute;
+    left: 0;
+    padding: 0 5px 0 0;
+}
 }
