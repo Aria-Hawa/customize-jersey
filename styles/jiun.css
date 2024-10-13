@@ -785,6 +785,7 @@ footer div small {
   .Dimensions__box__list .size-2 {
     gap: 10px;
   }
+  
 
 }
 
@@ -995,9 +996,11 @@ td {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-
   width: 50%;
   color: #FFFFFF;
+}
+.Dimensions__box__list .size-2_RWD{
+  display: none;
 }
 
 span {
@@ -1499,5 +1502,8 @@ a:visited.ui-button,
   }
   .Dimensions__box__list .size-2 {
     display: none;
+  }
+  .Dimensions__box__list .size-2_RWD{
+    display: block; /* 顯示區塊 */
   }
 }
