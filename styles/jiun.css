@@ -1231,6 +1231,7 @@ a:visited.ui-button,
   .chinsestitle h4, .Dimensions_chinsestitle h4 {
     font-size: 20px;
     line-height: 1.4;
+    white-space: nowrap;
   }
   .content p,.button a,span,th, td ,.sizetext p,.ui-widget {
     font-size: 18px;
@@ -1332,5 +1333,52 @@ a:visited.ui-button,
   .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr{
     border-top-right-radius:0;
     border-bottom-left-radius:15px;
+  }
+}
+@media (max-width:640px) {
+  /* 文字 */
+  .englishtitle h2, .Dimensions_englishtitle h2{
+    font-size: 30px;
+  }
+
+  /* 訂購說明 */
+  #content{
+    padding: 0 10%;
+  }
+  .process__box__list{
+    gap: 0px;
+    margin: 30px 0 ;
+  }
+  .process__box__list .process_item{
+    height: 150px;
+  }
+  .chinsestitle {
+    left:auto;
+    padding: 68px 60px 8px 50px;
+    right: -3%;
+    top: -46%;
+  }
+  .button a{
+    white-space: nowrap;
+    padding: 16px 40px 16px 40px;
+  }
+
+  /* 尺寸測量 */
+  .Dimensions__box__list{
+    padding: 0 0 0 0;
+  }
+  .Dimensions__box__list .size-1{
+    width: 100%;
+  }
+  .Dimensions_chinsestitle{
+      padding-left: 60px;
+      padding-right: 50px;
+      padding-bottom: 8px;
+      padding-top: 40px;
+      top: -5px;
+      right: 50%;
+  }
+  .sizetext {
+    margin: 0 0 ;
   }
 }
