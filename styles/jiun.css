@@ -1464,7 +1464,7 @@ a:visited.ui-button,
 
   /* 尺寸測量 */
   #Dimensions_content{
-    height: 120vh;
+    height: 100%;
   }
   .Dimensions__box__list {
     padding: 0 0 0 0;
