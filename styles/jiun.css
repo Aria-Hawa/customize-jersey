@@ -844,7 +844,6 @@ footer div small {
 
 
   #Precautions_content .Precautions_Introduction {
-    border: 2px solid #FC8D00;
     margin: 0;
     justify-content: space-around
   }
@@ -1465,7 +1464,8 @@ a:visited.ui-button,
 
   /* 尺寸測量 */
   #Dimensions_content{
-    height: 800px;
+    height: 850px;
+    justify-content: flex-start;
   }
   .Dimensions__box__list {
     padding: 0 0 0 0;
@@ -1551,9 +1551,6 @@ a:visited.ui-button,
     right: 50%;
     transform: translateX(50%);
   }
-
-  
-
   .sizeMune_Timg{
     background-image: url(../images/Customization/SIZE_T.svg);
   }
@@ -1572,4 +1569,57 @@ a:visited.ui-button,
     left: 0;
     padding: 0 5px 0 0;
 }
+/* 注意事項 */
+.Precautions_Introduction .chinsestitle {
+  left: auto;
+}
+#Precautions_content .chinsestitle {
+  padding: 45px 45px 8px 50px;;}
+  .ui-tabs .ui-tabs-nav .ui-tabs-anchor{
+    writing-mode:horizontal-tb;
+    letter-spacing: 0.08rem;
+  }
+  .ui-widget.ui-widget-content{
+    flex-direction: column;
+  }
+  .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: 8px 0px;
+  }
+  .ui-tabs .ui-tabs-nav li {
+    border-right:1px solid ;
+  }
+  .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    border-bottom-left-radius:0px;
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+  }
+  #Precautions_content {
+    height: 730px;
+    justify-content: flex-start;
+  }
+  #Precautions_content .Customization {
+    margin: 0 0 0 0;
+  }
+  .Precautions__box__list {
+    margin: 50px 0 0 0 ;
+    width: 100%;
+  }
+  .ui-tabs .ui-tabs-panel{
+    height: 350px;
+    padding: 20px;
+  }
+  .ui-tabs .ui-tabs-nav li:nth-child(6){
+    border-bottom:none;
+  }
+  .ui-tabs .ui-tabs-nav li:nth-child(1){
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+  }
+  .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl{
+    border-top-right-radius:0px;
+  }
+  .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    background-image: linear-gradient(90deg, #55C9EA 0%, #000E2B 70%);
+}
+
 }
