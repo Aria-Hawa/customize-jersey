@@ -1422,6 +1422,7 @@ a:visited.ui-button,
   #content {
     padding: 0 10%;
     justify-content: flex-start;
+    height: 750px;
   }
 
   .Customization {
