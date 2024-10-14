@@ -90,7 +90,7 @@ $(function () {
             $('.priceTxt').html(priceTxt);
         };
 
-        $(document).on('click', '.content.act', function () {
+        $(document).on('click', '.content_1.act', function () {
             let contentId = $(this).attr('id');
             if (contentId == 'act1') {
                 $('.leftInfo').find('.infoImg').attr('src', './images/price1.png');
