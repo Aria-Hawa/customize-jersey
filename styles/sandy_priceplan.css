@@ -497,6 +497,9 @@ text-align: center;
     padding-right: 52px;
 }}
 @media (width < 640px) {
+  #pricepage{
+    height: 800px;
+  }
   .title_RWD{
     line-height: 1;
     top: 50px;
@@ -554,4 +557,9 @@ display: none;
         transform: translateX(50%);
         bottom: 10%;
     }
+    .rightInfo {
+      height: 800px;
+    }
+    
+
 }
