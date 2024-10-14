@@ -496,3 +496,62 @@ text-align: center;
     width:fit-content;
     padding-right: 52px;
 }}
+@media (width < 640px) {
+  .title_RWD{
+    line-height: 1;
+    top: 50px;
+    text-align: center;
+  }
+.leftInfo figure {
+    height: 100vh;
+  }
+  .contentBox {
+    flex-direction: row;
+    bottom: 7%;
+  }
+  .contentBox p{
+display: none;
+  }
+  .rightInfo h2{
+    font-size: 70px;
+    letter-spacing: .2rem;
+  }
+  .textShadow{
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    writing-mode: vertical-lr;
+    left: 77.5%;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+  .txtDiv{
+    bottom: auto;
+    width: 100%;
+ height: 100%;
+  }
+  .priceTxt {
+    position: absolute;
+    top: 71%;
+    right: 50%;
+    transform: translateX(50%);}
+    .rightInfo .rightTag {
+      bottom: 13%;
+    }
+    .rightInfo .leftTag{
+      top: 66%;
+    }
+    .clothe{
+      z-index: 1;
+      width: 60%;
+        right: 50%;
+        transform: translateX(50%);
+        left: auto;
+        bottom: 20%;
+    }
+    .short{
+      z-index: 2;
+      right: 50%;
+        transform: translateX(50%);
+        bottom: 10%;
+    }
+}

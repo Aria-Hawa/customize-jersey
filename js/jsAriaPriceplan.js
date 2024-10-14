@@ -51,26 +51,34 @@ $(function () {
             let short = '';
             let textShadow = '';
             let priceTxt = '';
+            let leftTag='';
+            let rightTag='';
             if (itemId == 'price-1') {
                 clothe = './images/pricePlan_yelloClothe.png';
                 short = './images/productBrowsing_pbShapeC_2.png';
                 textShadow = 'BASIC';
                 priceTxt = '<small>$</small>700';
-                showRightInfo(clothe, short, textShadow, priceTxt);
+                leftTag='單色排汗上衣';
+                rightTag='單色訓練短褲';
+                showRightInfo(clothe, short, textShadow, priceTxt,leftTag,rightTag);
             }
             if (itemId == 'price-2') {
                 clothe = './images/pricePlan_pinkClothe.png';
                 short = './images/productBrowsing_pbShapeC_3.png';
                 textShadow = 'ADVANCED';
                 priceTxt = '<small>$</small>800';
-                showRightInfo(clothe, short, textShadow, priceTxt);
+                leftTag='彩色昇華上衣';
+                rightTag='單色訓練短褲';
+                showRightInfo(clothe, short, textShadow, priceTxt,leftTag,rightTag);
             }
             if (itemId == 'price-3') {
                 clothe = './images/pricePlan_orangeClothe.png';
                 short = './images/pricePlan_orangeShort.png';
                 textShadow = 'PRO+++';
                 priceTxt = '<small>$</small>1100';
-                showRightInfo(clothe, short, textShadow, priceTxt);
+                leftTag='彩色昇華上衣';
+                rightTag='彩色昇華短褲';
+                showRightInfo(clothe, short, textShadow, priceTxt,leftTag,rightTag);
             }
             $('.rightInfo').fadeIn(1200);
             // 陸續顯示.content
@@ -83,10 +91,12 @@ $(function () {
         });
 
         // 把showRightInfo獨立出來
-        function showRightInfo(clothe, short, textShadow, priceTxt) {
+        function showRightInfo(clothe, short, textShadow, priceTxt,leftTag,rightTag) {
             $('.clothe').attr('src', clothe);
             $('.short').attr('src', short);
             $('.textShadow').text(textShadow);
+            $('.leftTag').text(leftTag);
+            $('.rightTag').text(rightTag);
             $('.priceTxt').html(priceTxt);
         };
 
@@ -98,7 +108,9 @@ $(function () {
                 short = './images/productBrowsing_pbShapeC_2.png';
                 textShadow = 'BASIC';
                 priceTxt = '<small>$</small>700';
-                showRightInfo(clothe, short, textShadow, priceTxt);
+                leftTag='單色排汗上衣';
+                rightTag='單色訓練短褲';
+                showRightInfo(clothe, short, textShadow, priceTxt,leftTag,rightTag);
             }
             if (contentId == 'act2') {
                 $('.leftInfo').find('.infoImg').attr('src', './images/price2.png');
@@ -106,15 +118,19 @@ $(function () {
                 short = './images/productBrowsing_pbShapeC_3.png';
                 textShadow = 'ADVANCED';
                 priceTxt = '<small>$</small>800';
-                showRightInfo(clothe, short, textShadow, priceTxt);
+                leftTag='彩色昇華上衣';
+                rightTag='單色訓練短褲';
+                showRightInfo(clothe, short, textShadow, priceTxt,leftTag,rightTag);
             }
             if (contentId == 'act3') {
                 $('.leftInfo').find('.infoImg').attr('src', './images/price3.png');
                 clothe = './images/pricePlan_orangeClothe.png';
                 short = './images/pricePlan_orangeShort.png';
                 textShadow = 'PRO+++';
+                leftTag='彩色昇華上衣';
+                rightTag='彩色昇華短褲';
                 priceTxt = '<small>$</small>1100';
-                showRightInfo(clothe, short, textShadow, priceTxt);
+                showRightInfo(clothe, short, textShadow, priceTxt,leftTag,rightTag);
             }
         });
 
