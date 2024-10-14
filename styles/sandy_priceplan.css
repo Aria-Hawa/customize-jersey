@@ -419,7 +419,8 @@ footer div small {
     width: 100%;
     flex-direction: row;
     justify-content: center;
-    top: 11%;
+    top: auto;
+    bottom: 18%;
 
         z-index: 3;
   }
@@ -442,14 +443,16 @@ text-align: center;
 }
 .clothe{
   width:62%;
+  bottom: 14%;
 }
 .short{
   right: 10%;
-  width: 50%;}
+  width: 50%;
+  bottom: 8%;}
 .txtDiv{
   right: 50%;
   transform: translateX(50%);
-  bottom: 5%;
+  bottom: 12%;
 
 }
 .priceTxt {
@@ -467,10 +470,29 @@ text-align: center;
   font-family: "ROGFonts", sans-serif;
   right: 50%;
   transform: translateX(50%);
-  top: 60px;
+  top: 30%;
   letter-spacing: .2rem;
 }
 .rightInfo h2{
   line-height: 1;
 }
+
+.rightInfo h4{
+  font-size: 20px;
+  white-space: nowrap;
+  padding: 15px 20px;
+  width: fit-content;
 }
+.rightInfo .leftTag {
+
+  left: 10%;
+  top: 64.5%;
+  z-index: 5;
+}
+.rightInfo .rightTag{
+  right: 10%;
+    bottom: 17%;
+    z-index: 5;
+    width:fit-content;
+    padding-right: 52px;
+}}

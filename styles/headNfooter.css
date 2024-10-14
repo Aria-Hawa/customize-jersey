@@ -95,7 +95,7 @@ a {
     --Orange-White: var(--Orange) 0%, #fff 100%;
     --Lightbluevar-Darkblue: var(--Lightblue)100%, var(--Darkblue)0%;
     --ToRight-Blue-Darkblue: var(--Darkblue) 0%, var(--Blue) 25%, var(--Blue2) 50%, var(--Blue) 75%, var(--Darkblue) 100%;
-    --Lightblue-Lightblue: rgba(85, 201, 234, .5), 50%, rgba(85, 201, 234, .0) 95%;
+    --Lightblue-Lightblue: rgba(85, 201, 234), 50%, rgba(85, 201, 234, .0) 95%;
     --Orange-Darkblue: var(--Orange) 0%, rgba(0, 14, 43, .0) 80%;
     --Orange-Darkblue-2: var(--Orange) 0%, var(--Darkblue) 80%;
     --Orange-Lightblue-Orange: var(--Orange) 0%, var(--Lightblue_04) 50%, var(--Orange) 100%;
