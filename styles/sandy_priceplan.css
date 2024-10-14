@@ -498,7 +498,7 @@ text-align: center;
 }}
 @media (width < 640px) {
   #pricepage{
-    height: 800px;
+    height: 720px;
   }
   .title_RWD{
     line-height: 1;
@@ -558,7 +558,7 @@ display: none;
         bottom: 10%;
     }
     .rightInfo {
-      height: 800px;
+      height: 720px;
     }
     
 
