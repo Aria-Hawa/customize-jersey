@@ -53,6 +53,7 @@ footer div small {
 }
 
 /* footer區 */
+
 @media (max-width:820px) {
   footer {
     padding: 0px 56px;
@@ -89,6 +90,19 @@ footer div small {
     bottom: 40px;
     width: 100%;
   }
+}
+@media (width < 840px)  {
+  .footerList li{
+      font-size: 20px;
+      letter-spacing: 0.06rem;
+  }
+  .footerItem li{
+      font-size: 16px;
+      letter-spacing: 0.06rem;
+  }
+  footer div figure img {
+    width: 100%;
+}
 }
 
 /* 訂製流程頁面 */

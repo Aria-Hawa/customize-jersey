@@ -344,37 +344,6 @@ footer div small {
 }
 
 
-/* @media (max-width:820px){
-  .frontCarousel {
-      bottom: 80px;
-      right: 9%;
-      width: 83%;
-      height: 63vh;
-      background-position:bottom;
-  }
-  .homeInfo {
-      left: 23%;
-      top: 15%;
-      width: 56%;
-  }
-  .backgroundCarousel {
-      display: none;
-  }
-  .bottomIcon {
-      background-image: none;
-      background-color: var(--Darkblue);
-  }
-  .bottomIcon ul {
-      justify-content: center;
-      padding-left: 0px;
-  }
-  .bottomIcon ul li {
-      padding-right: 80px;
-  }
-  .bottomIcon ul li:last-child {
-      padding-right: 0px;
-  }
-} */
 
 
 /* footer區 */
@@ -391,10 +360,21 @@ footer div small {
     padding-top: 16px;
   }
 }
-
-@media (max-width:820px) {
-  
+@media (width < 840px)  {
+  .footerList li{
+      font-size: 20px;
+      letter-spacing: 0.06rem;
+  }
+  .footerItem li{
+      font-size: 16px;
+      letter-spacing: 0.06rem;
+  }
+  footer div figure img {
+    width: 100%;
 }
+}
+
+
 
 /* sandy RWD */
 @media (width < 840px) {

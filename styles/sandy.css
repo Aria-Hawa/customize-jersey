@@ -2721,3 +2721,14 @@ footer div small {
     padding-top: 12px;
     width: fit-content;
 }
+@media (width < 840px)  {
+    .footerList li{
+        font-size: 20px;
+        letter-spacing: 0.06rem;
+    }
+    .footerItem li{
+        font-size: 16px;
+        letter-spacing: 0.06rem;
+    }
+    
+}
