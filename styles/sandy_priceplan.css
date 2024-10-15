@@ -523,9 +523,9 @@ display: none;
     letter-spacing: .2rem;
   }
   .textShadow{
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
     writing-mode: vertical-lr;
-    left: 77.5%;
+    left: 79.5%;
     top: 50%;
     position: absolute;
     transform: translateY(-50%);
@@ -548,22 +548,28 @@ display: none;
     }
     .clothe{
       z-index: 1;
-      width: 60%;
-        right: 50%;
-        transform: translateX(50%);
-        left: auto;
-        bottom: 47%;
-        height: auto;
+      width: 70%;
+      right: auto;
+      left: 5%;
+      bottom: 38%;
+      height: auto;
     }
     .short{
       z-index: 2;
-      right: 50%;
-        transform: translateX(50%);
-        bottom: 10%;
-    }
-    .rightInfo {
-      height: 720px;
-    }
+      right: 4%;
+      /* transform: translateX(50%); */
+      bottom: 34%;
+      height: auto;
+      width: 55%;
+  }
+  .rightInfo {
+    height: 720px;
+  }
+
+  h2.textShadow {
+    font-size: 110px;
+    opacity: .5;
+}
     
 
 }
