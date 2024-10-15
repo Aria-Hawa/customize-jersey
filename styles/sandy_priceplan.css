@@ -500,6 +500,9 @@ text-align: center;
   #pricepage{
     height: 720px;
   }
+  #pricepage .box_list{
+    height: 240px;
+  }
   .title_RWD{
     line-height: 1;
     top: 50px;
@@ -549,7 +552,8 @@ display: none;
         right: 50%;
         transform: translateX(50%);
         left: auto;
-        bottom: 20%;
+        bottom: 47%;
+        height: auto;
     }
     .short{
       z-index: 2;
