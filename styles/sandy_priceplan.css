@@ -200,8 +200,10 @@ white-space: nowrap;
 .priceTxt {
   text-align: end;
 }
-
-
+.content:hover,
+.content:focus{
+  color: var(--Orange);
+}
 .content h2 {
   letter-spacing: 0.08rem;
   font-size: 18px;
@@ -242,6 +244,7 @@ white-space: nowrap;
   display: flex;
   flex-direction: column;
   display: none;
+  align-items: center;
 }
 
 
@@ -250,6 +253,18 @@ white-space: nowrap;
   position: static;
   width: 100%;
   margin: 4% 0px;
+}
+.content_1{
+  margin: 0 0 30px 0;
+  width: fit-content;
+}
+.content_1:hover,
+.content_1:focus{
+  color: var(--Orange);
+}
+.content_1 h2{
+  font-size: 1.25vw;
+  letter-spacing: 0.08rem;
 }
 
 

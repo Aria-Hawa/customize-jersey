@@ -414,7 +414,9 @@ footer div img {
         flex-direction: column; /* 垂直排列 */
     justify-content: center; /* 垂直置中 */
     }
-
+    .navigation a:hover{
+        color: var(--Orange);
+    }
     .navigation ul {
         display: flex;
         flex-direction: column;
