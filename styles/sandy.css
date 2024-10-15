@@ -1322,7 +1322,9 @@ body {
 }
 
 @media (max-width:640px) and (height > 0px) {
-
+    #projectBanner{
+        height: 800px;
+    }
     .projectContent {
         height: 58%;
     }
