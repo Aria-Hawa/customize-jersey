@@ -2,6 +2,6 @@
 [![VSER](images/indexImg.png)](https://aria-hawa.github.io/customizeJersey/)
 
 ## Customize Jersey Demo
-[![VSER](images/indexGif.gif)](https://aria-hawa.github.io/customizeJersey/customize.html)
+[![VSER](images/indexGif.gif)](https://aria-hawa.github.io/customizeJersey/customize-React.html)
 
 
